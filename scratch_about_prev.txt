@@ -1,0 +1,356 @@
+"use client";
+
+import Link from 'next/link';
+import { Navbar } from '@/components/site/navbar';
+import { Footer } from '@/components/site/footer';
+import { useReveal } from '@/hooks/use-reveal';
+import { CtaBanner } from '@/components/site/cta-banner';
+import { AnimatedCounter } from '@/components/ui/animated-counter';
+import { LiveSignalBeacon } from '@/components/ui/live-signal-beacon';
+import { 
+  Building2, 
+  Globe2, 
+  MapPin, 
+  ShieldCheck, 
+  ArrowRight, 
+  ArrowUpRight,
+  Activity,
+  CheckCircle2,
+  Lock
+} from 'lucide-react';
+
+export default function AboutPage() {
+  useReveal();
+
+  return (
+    <div className="bg-background min-h-screen">
+      <Navbar />
+
+      {/* ═══════════════════════════════════════════════════════════
+          1. HERO: DEEP DARK STEEL (#101820) EXECUTIVE CONSOLE
+          ═══════════════════════════════════════════════════════════ */}
+      <section className="relative min-h-[620px] lg:min-h-[680px] bg-[#101820] pt-32 pb-20 lg:pt-40 lg:pb-28 overflow-hidden flex items-center">
+        {/* Ambient Glows */}
+        <div 
+          className="pointer-events-none absolute top-1/4 right-1/4 h-[550px] w-[550px] rounded-full bg-[#1A6FA8]/20 blur-[150px]" 
+          aria-hidden="true" 
+        />
+        <div 
+          className="pointer-events-none absolute bottom-10 left-10 h-[450px] w-[450px] rounded-full bg-[#29A8E0]/15 blur-[140px]" 
+          aria-hidden="true" 
+        />
+        <div 
+          className="pointer-events-none absolute inset-0 bg-grid-dark opacity-35" 
+          aria-hidden="true" 
+        />
+
+        <div className="relative mx-auto max-w-7xl px-6 lg:px-8 w-full z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-14 items-center">
+            
+            {/* Left Column: Narrative & Position */}
+            <div className="lg:col-span-6 space-y-6">
+              <div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1.5 shadow-sm backdrop-blur-md">
+                <LiveSignalBeacon color="brand" size="sm" />
+                <span className="text-[11px] font-bold uppercase tracking-[0.18em] text-[#8FD6F5] font-ui">
+                  ABOUT MYER SYSTEMS · CORPORATE PROFILE
+                </span>
+              </div>
+
+              <h1 className="text-4xl sm:text-5xl lg:text-[3.4rem] font-bold tracking-tight text-white font-heading leading-[1.1]">
+                Accountability is not our tagline.{' '}
+                <span className="font-quote italic font-normal text-[#8FD6F5] block mt-1">
+                  It is how we built this company.
+                </span>
+              </h1>
+
+              <p className="text-base sm:text-lg leading-relaxed text-[#8FD6F5]/85 font-sans border-l-2 border-[#29A8E0]/40 pl-5">
+                Myer Systems exists because AI adoption without structure creates more operational risk than it solves. We combine direct Dallas executive governance with 24/7 global execution to deliver predictable, audit-ready performance.
+              </p>
+
+              <div className="pt-3 flex flex-wrap items-center gap-4">
+                <Link
+                  href="/how-we-operate"
+                  className="group inline-flex items-center gap-2 rounded-full bg-[#29A8E0] px-6 py-3.5 text-xs sm:text-sm font-bold text-[#101820] shadow-[0_2px_14px_rgba(41,168,224,0.3)] transition-all hover:bg-[#8FD6F5] font-ui"
+                >
+                  <span>See How We Operate</span>
+                  <ArrowRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5" />
+                </Link>
+
+                <Link
+                  href="/services"
+                  className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-6 py-3.5 text-xs sm:text-sm font-bold text-white transition-all hover:bg-white/10 hover:border-white/30 font-ui"
+                >
+                  <span>Explore 6 Disciplines</span>
+                  <ArrowUpRight className="h-4 w-4 text-[#8FD6F5]" />
+                </Link>
+              </div>
+            </div>
+
+            {/* Right Column: Global Dual-Hub Operations Telemetry Console */}
+            <div className="lg:col-span-6">
+              <div className="relative rounded-3xl border border-white/15 bg-[#0D1B2A]/90 p-6 sm:p-7 shadow-2xl backdrop-blur-xl overflow-hidden group">
+                
+                {/* Scanning Horizon Beam */}
+                <div 
+                  className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#29A8E0] to-transparent opacity-75"
+                  aria-hidden="true" 
+                />
+
+                {/* Console Top Header */}
+                <div className="flex items-center justify-between border-b border-white/10 pb-4">
+                  <div className="flex items-center gap-2">
+                    <Building2 className="h-4 w-4 text-[#29A8E0]" />
+                    <span className="text-xs font-bold uppercase tracking-wider text-white font-ui">
+                      Global Governance Infrastructure
+                    </span>
+                  </div>
+                  <span className="inline-flex items-center gap-1.5 rounded-full bg-[#29A8E0]/15 px-3 py-1 text-[10px] font-mono text-[#8FD6F5] border border-[#29A8E0]/30 font-bold">
+                    <LiveSignalBeacon color="brand" size="sm" />
+                    Synchronous 24/7
+                  </span>
+                </div>
+
+                {/* Dual-Hub Nodes Split */}
+                <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  
+                  {/* Dallas HQ Card */}
+                  <div className="rounded-2xl border border-white/10 bg-white/5 p-4 space-y-2">
+                    <div className="flex items-center justify-between">
+                      <span className="text-[10px] font-bold uppercase tracking-wider text-[#8FD6F5] font-ui">
+                        HQ Governance
+                      </span>
+                      <span className="h-2 w-2 rounded-full bg-[#29A8E0] animate-ping" />
+                    </div>
+                    <div className="text-lg font-bold text-white font-heading">Dallas, Texas</div>
+                    <p className="text-xs text-slate-300 font-sans leading-relaxed">
+                      Executive leadership, client contracts, regulatory compliance, and onshore strategy sign-off.
+                    </p>
+                    <div className="pt-2 text-[10px] font-mono text-[#8FD6F5] flex items-center gap-1">
+                      <ShieldCheck className="h-3.5 w-3.5 text-[#29A8E0]" />
+                      Direct US Oversight
+                    </div>
+                  </div>
+
+                  {/* Lahore Hub Card */}
+                  <div className="rounded-2xl border border-white/10 bg-white/5 p-4 space-y-2">
+                    <div className="flex items-center justify-between">
+                      <span className="text-[10px] font-bold uppercase tracking-wider text-emerald-400 font-ui">
+                        Global Delivery Hub
+                      </span>
+                      <span className="h-2 w-2 rounded-full bg-emerald-400 animate-ping" />
+                    </div>
+                    <div className="text-lg font-bold text-white font-heading">Lahore, PK</div>
+                    <p className="text-xs text-slate-300 font-sans leading-relaxed">
+                      100+ AAPC/AHIMA certified clinical billing specialists and specialized AI engineers.
+                    </p>
+                    <div className="pt-2 text-[10px] font-mono text-emerald-400 flex items-center gap-1">
+                      <Activity className="h-3.5 w-3.5" />
+                      Continuous Throughput
+                    </div>
+                  </div>
+
+                </div>
+
+                {/* Real-time Telemetry Metrics Row */}
+                <div className="mt-5 grid grid-cols-3 gap-3 pt-5 border-t border-white/10 text-center font-mono">
+                  <div className="rounded-xl bg-black/30 p-2.5 border border-white/5">
+                    <span className="text-[9px] uppercase tracking-wider text-slate-400 block">Bridge Latency</span>
+                    <span className="text-sm font-bold text-[#8FD6F5] mt-0.5 block">
+                      <AnimatedCounter value={18} prefix="<" suffix="ms" />
+                    </span>
+                  </div>
+                  <div className="rounded-xl bg-black/30 p-2.5 border border-white/5">
+                    <span className="text-[9px] uppercase tracking-wider text-slate-400 block">Workforce</span>
+                    <span className="text-sm font-bold text-white mt-0.5 block">
+                      <AnimatedCounter value={100} suffix="+ Pods" />
+                    </span>
+                  </div>
+                  <div className="rounded-xl bg-black/30 p-2.5 border border-white/5">
+                    <span className="text-[9px] uppercase tracking-wider text-slate-400 block">Contract SLA</span>
+                    <span className="text-sm font-bold text-emerald-400 mt-0.5 block">
+                      <AnimatedCounter value={99.8} decimals={1} suffix="%" />
+                    </span>
+                  </div>
+                </div>
+
+                {/* Bottom Immutable Ledger Banner */}
+                <div className="mt-4 rounded-xl bg-[#29A8E0]/10 border border-[#29A8E0]/20 px-3.5 py-2 flex items-center justify-between text-[11px] font-mono text-[#8FD6F5]">
+                  <span className="flex items-center gap-1.5 truncate">
+                    <Lock className="h-3 w-3 text-[#29A8E0]" />
+                    SHA-256 Audit Trail Active
+                  </span>
+                  <span className="text-emerald-400 font-bold shrink-0">100% HIPAA</span>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* ─── 2. OUR STORY — 2x2 Clean Bento Grid ───────────────── */}
+      <section className="py-20 lg:py-24 bg-background">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="reveal flex items-center gap-4 mb-12">
+            <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-brand-steel font-ui">OUR ORIGIN & PURPOSE</span>
+            <div className="flex-1 h-px bg-border" />
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-6 lg:gap-8">
+            {/* Big statement card */}
+            <div className="reveal md:col-span-7 bg-[#101820] text-white rounded-3xl p-8 sm:p-10 flex flex-col justify-between min-h-[260px] shadow-xl">
+              <p className="text-2xl lg:text-3xl font-medium text-white leading-[1.35] font-sans">
+                Most AI adoption fails not because the technology does not work, but because nobody engineered{' '}
+                <span className="font-quote italic font-normal text-brand-light">accountability</span>{' '}
+                into how it executes.
+              </p>
+              <div className="mt-6 h-1 w-16 bg-brand rounded-full" />
+            </div>
+
+            {/* Context card */}
+            <div className="reveal-up md:col-span-5 bg-card rounded-3xl p-8 sm:p-10 border border-border min-h-[260px] flex flex-col justify-between shadow-sm">
+              <p className="text-base text-muted-foreground leading-relaxed font-sans">
+                In regulated, high-stakes environments like healthcare revenue cycle management, unverified decisions are not just inconvenient — they trigger costly compliance fines and cash-flow leakage.
+              </p>
+              <div className="mt-6 flex items-center gap-2 text-brand-steel text-xs font-bold uppercase tracking-widest font-ui">
+                <span className="h-1.5 w-1.5 rounded-full bg-brand" />
+                Proven In Production
+              </div>
+            </div>
+
+            {/* What we built */}
+            <div className="reveal-up md:col-span-5 bg-white rounded-3xl p-8 sm:p-10 border border-border shadow-sm min-h-[220px] flex flex-col justify-between">
+              <span className="text-[11px] font-bold uppercase tracking-widest text-brand-steel font-ui mb-3 block">What We Built</span>
+              <p className="text-sm sm:text-base text-muted-foreground leading-relaxed font-sans">
+                AI-enabled business process reengineering, intelligent RCM automation, and hybrid resource augmentation — engineered with human-in-the-loop sign-offs from day one.
+              </p>
+            </div>
+
+            {/* Who we are */}
+            <div className="reveal-up md:col-span-7 bg-card rounded-3xl p-8 sm:p-10 border border-border min-h-[220px] flex flex-col justify-between shadow-sm">
+              <span className="text-[11px] font-bold uppercase tracking-widest text-brand-steel font-ui mb-3 block">Who We Are</span>
+              <p className="text-sm sm:text-base text-muted-foreground leading-relaxed font-sans">
+                A specialized solutions and technology partner helping US healthcare organizations and enterprises transition from reactive firefighting to predictable, data-driven performance.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ─── 3. MISSION STATEMENT ─────────────────────────────── */}
+      <section className="py-20 lg:py-24 bg-card/60 border-y border-border/80">
+        <div className="mx-auto max-w-5xl px-6 lg:px-8 text-center">
+          <div className="reveal flex items-center justify-center gap-6 mb-8">
+            <div className="h-px bg-border flex-1 max-w-[80px]" />
+            <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-brand-steel font-ui">OUR MISSION</span>
+            <div className="h-px bg-border flex-1 max-w-[80px]" />
+          </div>
+          <p className="reveal text-2xl md:text-3xl lg:text-4xl font-semibold leading-[1.3] text-ink tracking-tight font-sans">
+            To make enterprise AI adoption something organizations can{' '}
+            <span className="font-quote italic font-normal text-brand-steel">
+              stand behind with total certainty
+            </span>
+            {' '}— not just deployed quickly, but governed completely with empirical SLAs and verified accountability.
+          </p>
+        </div>
+      </section>
+
+      {/* ─── 4. GLOBAL REACH ──────────────────────────────────── */}
+      <section className="py-20 lg:py-24 bg-background">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="reveal flex items-center gap-4 mb-14">
+            <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-brand-steel font-ui">OPERATING PRESENCE</span>
+            <div className="flex-1 h-px bg-border" />
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            <div className="reveal">
+              <h2 className="text-3xl font-semibold tracking-tight text-ink sm:text-4xl lg:text-[2.65rem] leading-[1.15] mb-5 font-sans">
+                Built for US compliance, powered by{' '}
+                <span className="font-quote italic font-normal text-brand-steel">
+                  global technical scale
+                </span>.
+              </h2>
+              <p className="text-base sm:text-lg text-muted-foreground leading-relaxed font-sans">
+                We work with healthcare organizations and enterprise clients across the United States, pairing domestic regulatory governance with trained technical and clinical personnel in our dedicated Lahore offshore hub.
+              </p>
+            </div>
+
+            <div className="reveal-up space-y-4">
+              <div className="flex items-start gap-5 p-7 bg-white rounded-3xl border border-border shadow-md transition-all hover:border-brand/40 group">
+                <div className="w-12 h-12 rounded-2xl bg-card border border-border flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
+                  <MapPin className="w-5 h-5 text-brand" />
+                </div>
+                <div>
+                  <h4 className="text-lg font-bold text-ink mb-1 font-heading">United States · Dallas HQ</h4>
+                  <p className="text-sm text-muted-foreground leading-relaxed font-sans">
+                    Executive leadership, client relationship governance, contractual accountability, and HIPAA regulatory oversight.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-5 p-7 bg-white rounded-3xl border border-border shadow-md transition-all hover:border-brand/40 group">
+                <div className="w-12 h-12 rounded-2xl bg-card border border-border flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
+                  <Globe2 className="w-5 h-5 text-brand-steel" />
+                </div>
+                <div>
+                  <h4 className="text-lg font-bold text-ink mb-1 font-heading">Pakistan · Lahore Global Hub</h4>
+                  <p className="text-sm text-muted-foreground leading-relaxed font-sans">
+                    Dedicated clinical coding pods (AAPC/AHIMA certified), full-stack software engineers, and 24/7 technical operations.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ─── 5. CORE PRINCIPLES ───────────────────────────────── */}
+      <section className="py-20 lg:py-24 bg-card/40 border-t border-border/80">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="reveal flex items-center gap-4 mb-14">
+            <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-brand-steel font-ui">OUR GOVERNING PRINCIPLES</span>
+            <div className="flex-1 h-px bg-border" />
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[
+              {
+                num: '01',
+                title: 'Structure Over Promises',
+                desc: 'Strong operations are built on procedure, not marketing language. Every engagement starts with a structured workflow audit and empirical baseline before code is written.',
+              },
+              {
+                num: '02',
+                title: 'Radical Transparency',
+                desc: 'Clear ownership and visibility at every stage. We establish shared real-time telemetry dashboards so clients see accuracy rates and claim velocity live.',
+              },
+              {
+                num: '03',
+                title: 'Engineered Accountability',
+                desc: 'Every system we deploy has a designated human sign-off gate and immutable cryptographic audit trail. Control is engineered in, never bolted on as an afterthought.',
+              },
+            ].map((p) => (
+              <div key={p.num} className="reveal-up rounded-3xl border border-border bg-white p-8 shadow-sm transition-all hover:border-brand/40 hover:shadow-lg">
+                <span className="text-4xl font-light text-brand/35 font-heading select-none block mb-4">
+                  {p.num}
+                </span>
+                <h3 className="text-xl font-bold text-ink font-heading mb-3">
+                  {p.title}
+                </h3>
+                <p className="text-sm text-muted-foreground leading-relaxed font-sans">
+                  {p.desc}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ─── 6. FINAL CTA & FOOTER ────────────────────────────── */}
+      <CtaBanner />
+      <Footer />
+    </div>
+  );
+}

@@ -1,0 +1,68 @@
+Created At: 2026-09-04T03:48:02+05:00
+Completed At: 2026-09-04T03:48:02+05:00
+File Path: `file:///d:/myer-systems-website/app/about/page.tsx`
+Total Lines: 239
+Total Bytes: 15339
+Showing lines 1 to 60
+The following code has been modified to include a line number before every line, in the format: <line_number>: <original_line>. Please note that any changes targeting the original code should remove the line number, colon, and leading space.
+1: "use client";
+2: 
+3: import { Navbar } from '@/components/site/navbar';
+4: import { Footer } from '@/components/site/footer';
+5: import { useReveal } from '@/hooks/use-reveal';
+6: import { CtaBanner } from '@/components/site/cta-banner';
+7: import { Linkedin, MapPin, Globe2 } from 'lucide-react';
+8: 
+9: export default function AboutPage() {
+10:   useReveal();
+11: 
+12:   return (
+13:     <div className="bg-background min-h-screen">
+14:       <Navbar />
+15: 
+16:       {/* ─── 1. HERO ──────────────────────────────────────────── */}
+17:       <main className="relative pt-28 pb-16 lg:pt-36 lg:pb-20 overflow-hidden">
+18:         <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_50%_at_60%_-10%,rgba(91,69,255,0.07),transparent)]" />
+19:         <div className="mx-auto max-w-7xl px-6 lg:px-8 relative z-10">
+20:           <div className="max-w-5xl">
+21:             <div className="reveal inline-flex items-center gap-2 rounded-full border border-brand/20 bg-brand/5 px-4 py-1.5 mb-8">
+22:               <span className="h-1.5 w-1.5 rounded-full bg-brand block" />
+23:               <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-brand">
+24:                 About Myer Systems
+25:               </span>
+26:             </div>
+27:             <h1 className="reveal text-4xl font-semibold tracking-tight text-ink sm:text-5xl lg:text-[3.5rem] leading-[1.08] mb-6">
+28:               Accountability isn't our tagline.{' '}
+29:               <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand to-brand-hover">
+30:                 It's how we built this company.
+31:               </span>
+32:             </h1>
+33:             <p className="reveal-up text-base text-muted-foreground leading-relaxed max-w-2xl font-medium border-l-4 border-brand/20 pl-5">
+34:               Myer Systems exists because AI adoption without structure creates more risk than it solves — so we built a company around doing it differently.
+35:             </p>
+36:           </div>
+37:         </div>
+38:       </main>
+39: 
+40:       {/* ─── 2. OUR STORY — Premium Bento Grid ───────────────── */}
+41:       <section className="pb-24 lg:pb-32 bg-background">
+42:         <div className="mx-auto max-w-7xl px-6 lg:px-8">
+43:           <div className="reveal flex items-center gap-4 mb-12">
+44:             <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-brand">Our Story</span>
+45:             <div className="flex-1 h-px bg-border" />
+46:           </div>
+47: 
+48:           <div className="grid grid-cols-1 md:grid-cols-12 gap-4 lg:gap-6">
+49:             {/* Big statement card */}
+50:             <div className="reveal md:col-span-7 bg-[#05030A] rounded-[2rem] p-10 lg:p-12 flex flex-col justify-between min-h-[280px]">
+51:               <p className="text-2xl lg:text-3xl font-medium text-white leading-[1.4]">
+52:                 Most AI adoption fails not because the technology doesn't work, but because nobody built{' '}
+53:                 <span className="text-brand">accountability</span>{' '}
+54:                 into how it's used.
+55:               </p>
+56:               <div className="mt-8 h-px w-16 bg-brand/40" />
+57:             </div>
+58: 
+59:             {/* Context card */}
+60:             <div className="reveal-up md:col-span-5 bg-secondary rounded-[2rem] p-10 lg:p-12 border border-black/5 min-h-[280px] flex flex-col justify-between">
+The above content does NOT show the entire file contents. If you need to view any lines of the file which were not shown to complete your task, call this tool again to view those lines.

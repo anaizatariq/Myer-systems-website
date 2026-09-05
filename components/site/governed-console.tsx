@@ -65,46 +65,26 @@ const STEPS: StepItem[] = [
 
 export function GovernedConsole() {
   const [activeIdx, setActiveIdx] = useState<number>(0);
-  const [progress, setProgress] = useState<number>(0);
-  const [isPaused, setIsPaused] = useState<boolean>(false);
 
-  // Deterministic 3-second auto-cycle cycling cleanly: 1 -> 2 -> 3 -> 4 -> 1
+  // Guaranteed 2.0-second auto-cycle (1 -> 2 -> 3 -> 4 -> 1) that never freezes on hover
   useEffect(() => {
-    if (isPaused) return;
+    const timer = setTimeout(() => {
+      setActiveIdx((curr) => (curr + 1) % STEPS.length);
+    }, 2000);
 
-    const STEP_DURATION = 3000; // 3.0 seconds per step
-    const TICK_INTERVAL = 30; // 30ms smooth updates
-    let startTime = Date.now();
-
-    const timer = setInterval(() => {
-      const elapsed = Date.now() - startTime;
-      
-      if (elapsed >= STEP_DURATION) {
-        startTime = Date.now();
-        setProgress(0);
-        setActiveIdx((curr) => (curr + 1) % STEPS.length);
-      } else {
-        const pct = Math.min((elapsed / STEP_DURATION) * 100, 100);
-        setProgress(pct);
-      }
-    }, TICK_INTERVAL);
-
-    return () => clearInterval(timer);
-  }, [isPaused, activeIdx]);
+    return () => clearTimeout(timer);
+  }, [activeIdx]);
 
   const handleStepClick = (idx: number) => {
     setActiveIdx(idx);
-    setProgress(0);
   };
 
   const handlePrev = () => {
     setActiveIdx((curr) => (curr - 1 + STEPS.length) % STEPS.length);
-    setProgress(0);
   };
 
   const handleNext = () => {
     setActiveIdx((curr) => (curr + 1) % STEPS.length);
-    setProgress(0);
   };
 
   const current = STEPS[activeIdx];
@@ -112,8 +92,6 @@ export function GovernedConsole() {
   return (
     <section 
       className="relative bg-[#F0FAFF] py-10 sm:py-12 lg:py-16 overflow-hidden border-b border-border/80"
-      onMouseEnter={() => setIsPaused(true)}
-      onMouseLeave={() => setIsPaused(false)}
     >
       {/* ── Ambient Under-Glow (Myer Sky Blue & Steel) ── */}
       <div 
@@ -167,7 +145,7 @@ export function GovernedConsole() {
                         )}
                       </div>
 
-                      {/* Circular Progress Ring on Active Item (Ref 2 exact style) */}
+                      {/* Circular Progress Ring on Active Item (GPU-accelerated, 2s exact duration, never freezes) */}
                       {isActive ? (
                         <div className="relative h-6 w-6 shrink-0 flex items-center justify-center">
                           <svg className="h-6 w-6 -rotate-90">
@@ -180,16 +158,18 @@ export function GovernedConsole() {
                               fill="none"
                             />
                             <circle
+                              key={activeIdx}
                               cx="12"
                               cy="12"
                               r="9"
                               stroke="#29A8E0"
                               strokeWidth="2.2"
-                              strokeDasharray={56}
-                              strokeDashoffset={56 - (56 * progress) / 100}
+                              strokeDasharray={56.55}
+                              strokeDashoffset={56.55}
                               strokeLinecap="round"
                               fill="none"
-                              className="transition-all duration-75"
+                              className="animate-console-ring"
+                              style={{ animation: 'console-ring-fill 2s linear forwards' }}
                             />
                           </svg>
                         </div>
@@ -339,10 +319,16 @@ export function GovernedConsole() {
 
                   {/* ── Interactive Floating Bottom Action Buttons (Ref 2 Exact Style) ── */}
                   <div className="pt-3 border-t border-white/10 flex items-center justify-end gap-3">
-                    <button className="px-4 py-2 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-xs font-semibold text-white/80 font-ui transition-colors">
+                    <button 
+                      onClick={handleNext}
+                      className="px-4 py-2 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-xs font-semibold text-white/80 font-ui transition-colors active:scale-95"
+                    >
                       Request change
                     </button>
-                    <button className="px-5 py-2 rounded-xl bg-[#101820] hover:bg-[#1A2530] border border-[#29A8E0]/40 text-xs font-bold text-white font-ui shadow-lg shadow-[#29A8E0]/15 flex items-center gap-1.5 transition-all">
+                    <button 
+                      onClick={handleNext}
+                      className="px-5 py-2 rounded-xl bg-[#101820] hover:bg-[#1A2530] border border-[#29A8E0]/40 text-xs font-bold text-white font-ui shadow-lg shadow-[#29A8E0]/15 flex items-center gap-1.5 transition-all active:scale-95"
+                    >
                       <Check className="h-3.5 w-3.5 text-[#29A8E0]" />
                       <span>Approve request</span>
                     </button>

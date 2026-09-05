@@ -278,6 +278,19 @@
     animation: scan-packet 6s cubic-bezier(0.4, 0, 0.2, 1) infinite;
   }
 
+  /* Governed Console 2-second circular progress ring (hardware-accelerated, never freezes) */
+  @keyframes console-ring-fill {
+    0% {
+      stroke-dashoffset: 56.55;
+    }
+    100% {
+      stroke-dashoffset: 0;
+    }
+  }
+  .animate-console-ring {
+    animation: console-ring-fill 2s linear forwards;
+  }
+
   /* 3D Flip Card Utilities */
   .perspective-1000 {
     perspective: 1000px;

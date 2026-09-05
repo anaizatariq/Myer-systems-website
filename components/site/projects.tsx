@@ -56,7 +56,7 @@ const PROJECTS: ProjectItem[] = [
 
 export function Projects() {
   return (
-    <section id="work" className="relative scroll-mt-24 bg-[#101820] py-14 lg:py-18 overflow-hidden">
+    <section id="work" className="relative scroll-mt-24 bg-[#101820] py-20 sm:py-24 lg:py-28 overflow-hidden">
       
       {/* ── Ambient Dark Steel Depth ── */}
       <div 
@@ -92,7 +92,7 @@ export function Projects() {
         </div>
 
         {/* ── 3-Column Systems Grid with Living Micro-Interactions ── */}
-        <div className="mt-14 sm:mt-18 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-12 sm:mt-16 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
           {PROJECTS.map((project) => (
             <div 
               key={project.title} 

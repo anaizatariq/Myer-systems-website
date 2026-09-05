@@ -173,7 +173,7 @@ export function Disciplines() {
             Left: Sticky at top-32 with 4 pure titles (no taglines).
             Right: Vertically stacked cards that float past smoothly.
         ══════════════════════════════════════════════════════════════════ */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 pt-12 sm:pt-16 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 pt-12 sm:pt-16 pb-20 sm:pb-24 lg:pb-28 items-start">
           
           {/* ──────────────────────────────────────────────────────────
               LEFT COLUMN: Sticky Navigation Sidebar

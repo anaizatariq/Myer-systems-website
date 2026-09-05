@@ -117,7 +117,7 @@ export function HowWeOperate() {
   return (
     <section 
       id="how-we-operate" 
-      className="relative scroll-mt-32 border-t border-border/70 bg-background pt-18 sm:pt-20 lg:pt-24 pb-16 lg:pb-20 overflow-hidden"
+      className="relative scroll-mt-32 border-t border-border/70 bg-background py-16 sm:py-20 lg:py-24 overflow-hidden"
     >
       {/* ── Anchor Helper for #industries ── */}
       <span id="industries" className="sr-only" aria-hidden="true" />

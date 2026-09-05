@@ -91,7 +91,7 @@ export function GovernedConsole() {
 
   return (
     <section 
-      className="relative bg-[#F0FAFF] py-10 sm:py-12 lg:py-16 overflow-hidden border-b border-border/80"
+      className="relative bg-[#F0FAFF] pt-2 sm:pt-4 pb-16 sm:pb-20 lg:pb-24 overflow-hidden border-b border-border/80"
     >
       {/* ── Ambient Under-Glow (Myer Sky Blue & Steel) ── */}
       <div 

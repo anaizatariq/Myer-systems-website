@@ -11,7 +11,7 @@ import { LiveSignalBeacon } from '@/components/ui/live-signal-beacon';
 
 export function FlagshipPlatform() {
   return (
-    <section id="flagship" className="relative scroll-mt-32 bg-background pt-20 pb-16 lg:pt-28 lg:pb-24 overflow-hidden">
+    <section id="flagship" className="relative scroll-mt-32 border-t border-border/70 bg-background py-16 sm:py-20 lg:py-24 overflow-hidden">
       
       {/* ── Ambient Background Depth ── */}
       <div 

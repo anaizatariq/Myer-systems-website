@@ -5,7 +5,7 @@ import { ArrowUpRight, Calendar, Mail, Building2, ShieldCheck, Globe2 } from 'lu
 
 export function CtaBanner() {
   return (
-    <section id="contact" className="relative scroll-mt-24 bg-[#F0FAFF] pt-8 pb-16 lg:pt-12 lg:pb-24 overflow-hidden">
+    <section id="contact" className="relative scroll-mt-24 bg-[#F0FAFF] pt-4 pb-16 sm:pb-20 lg:pt-6 lg:pb-24 overflow-hidden">
       
       {/* ── Ambient Glows ── */}
       <div

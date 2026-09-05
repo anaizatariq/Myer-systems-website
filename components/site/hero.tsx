@@ -7,7 +7,7 @@ export function Hero() {
   return (
     <section 
       id="home" 
-      className="relative overflow-hidden bg-background pt-20 sm:pt-24 lg:pt-28 pb-12 lg:pb-16"
+      className="relative overflow-hidden bg-background pt-20 sm:pt-24 lg:pt-28 pb-8 lg:pb-10"
     >
       {/* ── Ambient Background Lighting in Precision & Data Theme ── */}
       <div 

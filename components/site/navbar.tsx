@@ -56,16 +56,16 @@ export function Navbar() {
         </Link>
 
         {/* ── Desktop Nav Links (Center) ──────────────── */}
-        <div className="hidden items-center gap-6 md:flex">
+        <div className="hidden items-center gap-7 lg:gap-8 lg:flex">
           {NAV_LINKS.map((link) => (
             <Link
               key={link.href}
               href={link.href}
               className={cn(
-                'text-[13px] font-medium tracking-wide transition-colors font-ui duration-200',
+                'text-[14.5px] font-semibold tracking-normal transition-colors font-ui duration-200',
                 isActive(link.href)
-                  ? 'text-brand-steel font-semibold'
-                  : 'text-muted-foreground hover:text-ink'
+                  ? 'text-[#1A6FA8] font-bold'
+                  : 'text-[#101820]/75 hover:text-[#101820]'
               )}
             >
               {link.label}
@@ -74,7 +74,7 @@ export function Navbar() {
         </div>
 
         {/* ── Desktop CTA Pill (Right) ────────────────── */}
-        <div className="hidden md:flex items-center">
+        <div className="hidden lg:flex items-center">
           <Link
             href="/contact"
             className="group relative inline-flex items-center gap-1.5 rounded-full bg-brand px-5 py-2 text-[13px] font-bold text-ink shadow-[0_2px_12px_rgba(41,168,224,0.25)] transition-all duration-200 hover:bg-[#209FD6] hover:shadow-[0_4px_16px_rgba(41,168,224,0.38)] hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.99] font-ui"
@@ -86,9 +86,9 @@ export function Navbar() {
           </Link>
         </div>
 
-        {/* ── Mobile Menu Toggle Button ────────────────── */}
+        {/* ── Mobile & Tablet Menu Toggle Button ────────────────── */}
         <button
-          className="flex h-9 w-9 items-center justify-center rounded-full text-ink hover:bg-slate-100 transition-colors md:hidden"
+          className="flex h-9 w-9 items-center justify-center rounded-full text-ink hover:bg-slate-100 transition-colors lg:hidden cursor-pointer"
           onClick={() => setMobileOpen((v) => !v)}
           aria-label="Toggle menu"
         >
@@ -96,10 +96,10 @@ export function Navbar() {
         </button>
       </nav>
 
-      {/* ── Mobile Menu Dropdown ─────────────────────── */}
+      {/* ── Mobile & Tablet Menu Dropdown ─────────────────────── */}
       <div
         className={cn(
-          'pointer-events-auto fixed inset-x-4 top-20 rounded-3xl border border-border bg-white/95 backdrop-blur-2xl p-6 shadow-2xl transition-all duration-300 md:hidden',
+          'pointer-events-auto fixed inset-x-4 top-20 max-w-md sm:mx-auto rounded-3xl border border-border bg-white/95 backdrop-blur-2xl p-6 shadow-2xl transition-all duration-300 lg:hidden',
           mobileOpen ? 'opacity-100 translate-y-0' : 'pointer-events-none opacity-0 -translate-y-4'
         )}
       >

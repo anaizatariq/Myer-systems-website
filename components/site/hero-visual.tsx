@@ -12,12 +12,12 @@ export function HeroVisual() {
       
       {/* Ambient Luminous Sky Blue & Steel Blue Glow Bloom */}
       <div 
-        className="absolute h-[340px] w-[340px] sm:h-[420px] sm:w-[420px] rounded-full bg-gradient-to-tr from-brand/20 via-[#1A6FA8]/15 to-brand-tint/40 blur-[90px] animate-pulse" 
+        className="absolute h-[280px] w-[280px] sm:h-[420px] sm:w-[420px] rounded-full bg-gradient-to-tr from-brand/20 via-[#1A6FA8]/15 to-brand-tint/40 blur-[80px] sm:blur-[90px] animate-pulse" 
         style={{ animationDuration: '6s' }}
         aria-hidden="true" 
       />
 
-      <div className="relative w-[320px] h-[320px] sm:w-[380px] sm:h-[380px] flex items-center justify-center">
+      <div className="relative w-[275px] h-[275px] xs:w-[320px] xs:h-[320px] sm:w-[380px] sm:h-[380px] flex items-center justify-center">
         
         {/* ── Outer Planetary Orbital Ring ── */}
         <svg 

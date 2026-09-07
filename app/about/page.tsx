@@ -126,9 +126,9 @@ export default function AboutPage() {
 
             <h2 className="text-3xl sm:text-4xl lg:text-[2.85rem]/[1.15] font-semibold tracking-tight text-[#101820] font-sans">
               Founded on one standard:{' '}
-              <span className="inline-block pr-1.5 font-quote italic font-normal text-transparent bg-clip-text bg-gradient-to-r from-[#1A6FA8] via-[#29A8E0] to-[#1A6FA8]">
-                structure over shortcuts
-              </span>.
+              <span className="inline-block pr-1 font-quote italic font-normal text-brand-steel">
+                structure over shortcuts.
+              </span>
             </h2>
           </div>
 
@@ -296,7 +296,7 @@ export default function AboutPage() {
 
           <p className="reveal text-3xl md:text-4xl lg:text-[2.75rem]/[1.25] font-semibold leading-snug text-[#101820] font-sans tracking-tight max-w-4xl mx-auto">
             To empower healthcare and commercial enterprises to transition from reactive operations to{' '}
-            <span className="inline-block pr-1.5 font-quote italic font-normal text-transparent bg-clip-text bg-gradient-to-r from-[#1A6FA8] via-[#29A8E0] to-[#1A6FA8]">
+            <span className="inline-block pr-1 font-quote italic font-normal text-brand-steel">
               predictable, data-driven performance
             </span>
             {' '}— reducing workflow friction and building scalable, resilient operations through intelligent systems.
@@ -322,9 +322,9 @@ export default function AboutPage() {
             <div className="lg:col-span-6">
               <h2 className="reveal text-3xl sm:text-4xl lg:text-[2.85rem]/[1.15] font-semibold tracking-tight text-[#101820] font-sans">
                 Led with accountability and{' '}
-                <span className="inline-block pr-1.5 font-quote italic font-normal text-transparent bg-clip-text bg-gradient-to-r from-[#1A6FA8] via-[#29A8E0] to-[#1A6FA8]">
-                  engineering precision
-                </span>.
+                <span className="inline-block pr-1 font-quote italic font-normal text-brand-steel">
+                  engineering precision.
+                </span>
               </h2>
             </div>
             <div className="lg:col-span-6">
@@ -428,9 +428,9 @@ export default function AboutPage() {
             <div className="reveal">
               <h2 className="text-3xl sm:text-4xl lg:text-[2.85rem]/[1.15] font-semibold tracking-tight text-[#101820] font-sans leading-[1.15] mb-6">
                 Built for client operations, delivered through a{' '}
-                <span className="inline-block pr-1.5 font-quote italic font-normal text-transparent bg-clip-text bg-gradient-to-r from-[#1A6FA8] via-[#29A8E0] to-[#1A6FA8]">
-                  global delivery hub
-                </span>.
+                <span className="inline-block pr-1 font-quote italic font-normal text-brand-steel">
+                  global delivery hub.
+                </span>
               </h2>
               <p className="text-base sm:text-lg text-slate-600 font-sans leading-relaxed mb-6">
                 Business registration and client-facing operations are based in Dallas, Texas, while core engineering, RCM processing, and AI development operate from our hub in Lahore, Pakistan.
@@ -496,9 +496,9 @@ export default function AboutPage() {
               {/* Heading */}
               <h2 className="text-3xl sm:text-4xl lg:text-[2.85rem]/[1.15] font-semibold tracking-tight text-[#101820] font-sans leading-[1.15]">
                 The principles that govern{' '}
-                <span className="inline-block pr-1.5 font-quote italic font-normal text-transparent bg-clip-text bg-gradient-to-r from-[#1A6FA8] via-[#29A8E0] to-[#1A6FA8]">
-                  our work
-                </span>.
+                <span className="inline-block pr-1 font-quote italic font-normal text-brand-steel">
+                  our work.
+                </span>
               </h2>
 
               {/* Supporting Subtext */}

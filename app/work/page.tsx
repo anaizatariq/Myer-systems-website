@@ -177,7 +177,7 @@ export default function WorkPage() {
               <h1 className="reveal text-4xl font-semibold tracking-tight text-[#101820] sm:text-5xl lg:text-[3.25rem] leading-[1.08] mb-6 font-heading">
                 Systems that hold up
                 <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#1A6FA8] via-[#29A8E0] to-[#1A6FA8]">when it actually matters.</span>
+                <span className="font-quote italic font-normal text-brand-steel inline-block pr-1">when it actually matters.</span>
               </h1>
 
               <p className="reveal-up text-base text-slate-600 leading-relaxed max-w-lg mb-8 border-l-4 border-[#29A8E0]/40 pl-5 font-sans">

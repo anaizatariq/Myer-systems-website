@@ -5,7 +5,7 @@ import { ArrowUpRight, Calendar, Mail, Building2, ShieldCheck, Globe2 } from 'lu
 
 export function CtaBanner() {
   return (
-    <section id="contact" className="relative scroll-mt-24 bg-[#F0FAFF] pt-4 pb-16 sm:pb-20 lg:pt-6 lg:pb-24 overflow-hidden">
+    <section id="contact" className="relative scroll-mt-24 bg-[#F8FAFC] pt-6 pb-16 sm:pb-20 lg:pt-10 lg:pb-24 overflow-hidden border-t border-slate-200/70">
       
       {/* ── Ambient Glows ── */}
       <div
@@ -13,8 +13,8 @@ export function CtaBanner() {
         aria-hidden="true"
       />
 
-      <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="relative overflow-hidden rounded-3xl bg-gradient-to-r from-[#1A6FA8] via-[#218DC4] to-[#29A8E0] px-8 py-14 sm:px-12 sm:py-16 text-center shadow-2xl shadow-[#29A8E0]/20 border border-white/20">
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="relative overflow-hidden rounded-3xl bg-gradient-to-r from-[#1A6FA8] via-[#218DC4] to-[#29A8E0] px-5 py-10 sm:px-12 sm:py-16 text-center shadow-2xl shadow-[#29A8E0]/20 border border-white/20">
           
           {/* Subtle Inner Glass Highlights */}
           <div
@@ -26,18 +26,18 @@ export function CtaBanner() {
             aria-hidden="true"
           />
 
-          <div className="relative z-10 max-w-3xl mx-auto space-y-6">
+          <div className="relative z-10 max-w-3xl mx-auto space-y-5 sm:space-y-6">
             
             {/* Pill */}
-            <div className="inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/10 px-4 py-1.5 backdrop-blur-md">
+            <div className="inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/10 px-3.5 sm:px-4 py-1.5 backdrop-blur-md">
               <span className="h-1.5 w-1.5 rounded-full bg-white animate-pulse" />
-              <span className="text-[11px] font-bold uppercase tracking-[0.18em] text-white font-ui">
+              <span className="text-[10.5px] sm:text-[11px] font-bold uppercase tracking-[0.16em] sm:tracking-[0.18em] text-white font-ui">
                 WORK WITH US · GET STARTED
               </span>
             </div>
 
             {/* Display Title */}
-            <h2 className="text-3xl sm:text-4xl lg:text-[2.85rem]/[1.15] font-semibold tracking-tight text-white font-sans">
+            <h2 className="text-2xl sm:text-4xl lg:text-[2.85rem]/[1.15] font-semibold tracking-tight text-white font-sans">
               Ready to build what your operation{' '}
               <span className="font-quote italic font-normal text-white drop-shadow-sm">
                 needs next
@@ -45,15 +45,15 @@ export function CtaBanner() {
             </h2>
 
             {/* Subtext */}
-            <p className="text-base sm:text-lg leading-relaxed text-white/95 font-sans max-w-2xl mx-auto">
-              Schedule a consultation with Myer Systems to discuss your AI, healthcare technology, software, or operational needs.
+            <p className="text-sm sm:text-lg leading-relaxed text-white/95 font-sans max-w-2xl mx-auto">
+              Schedule a consultation with Myer Systems to discuss custom enterprise AI architectures, automated workflows, or operational engineering pods.
             </p>
 
             {/* Dual CTAs */}
-            <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-4">
+            <div className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 sm:gap-4">
               <Link
                 href="/contact"
-                className="group inline-flex items-center justify-center gap-2.5 rounded-full bg-white px-8 py-4 text-sm font-bold text-[#101820] shadow-lg transition-all duration-200 hover:bg-[#F0FAFF] hover:shadow-xl hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.99] font-ui cursor-pointer"
+                className="group inline-flex w-full sm:w-auto items-center justify-center gap-2.5 rounded-full bg-white px-8 py-3.5 sm:py-4 text-sm font-bold text-[#101820] shadow-lg transition-all duration-200 hover:bg-[#F0FAFF] hover:shadow-xl hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.99] font-ui cursor-pointer"
               >
                 <Calendar className="h-4 w-4 text-[#1A6FA8]" />
                 <span>Start a Conversation</span>
@@ -62,7 +62,7 @@ export function CtaBanner() {
 
               <a
                 href="mailto:info@myersystems.ai"
-                className="group inline-flex items-center justify-center gap-2.5 rounded-full border border-white/40 bg-white/10 px-7 py-4 text-sm font-semibold text-white backdrop-blur-md transition-all duration-200 hover:bg-white/20 hover:border-white/60 hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.99] font-ui cursor-pointer"
+                className="group inline-flex w-full sm:w-auto items-center justify-center gap-2.5 rounded-full border border-white/40 bg-white/10 px-7 py-3.5 sm:py-4 text-sm font-semibold text-white backdrop-blur-md transition-all duration-200 hover:bg-white/20 hover:border-white/60 hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.99] font-ui cursor-pointer"
               >
                 <Mail className="h-4 w-4 text-white" />
                 <span>info@myersystems.ai</span>
@@ -70,7 +70,7 @@ export function CtaBanner() {
             </div>
 
             {/* Dual Hub Badges */}
-            <div className="pt-2 flex flex-wrap items-center justify-center gap-6 text-xs text-white/90 font-sans font-medium">
+            <div className="pt-2 flex flex-wrap items-center justify-center gap-3 sm:gap-6 text-[11px] sm:text-xs text-white/90 font-sans font-medium">
               <span className="flex items-center gap-1.5">
                 <Building2 className="h-3.5 w-3.5 text-white" />
                 Dallas, Texas · US Headquarters

@@ -33,13 +33,13 @@ const PROJECTS: ProjectItem[] = [
     url: '/services#ai-solutions',
   },
   {
-    title: 'MedSynthea Healthcare Platform',
-    badge: 'Flagship SaaS',
-    tags: ['Healthcare AI', 'Clinical Workflows', 'Data Structuring'],
-    description: 'A specialized healthcare platform developed by Myer Systems that organizes medical records and reduces administrative workload for providers.',
+    title: 'High-Throughput Revenue & Data Pipelines',
+    badge: 'Process Intelligence',
+    tags: ['Real-Time Validation', 'Automated Reconciliation', 'Zero-Error SLA'],
+    description: 'High-velocity data pipelines and audit engines that catch discrepancies, streamline complex filings, and eliminate operational friction.',
     image: '/project-health.jpg',
     isNumeric: false,
-    statusLabel: 'Clinical SaaS Deployment',
+    statusLabel: 'Enterprise Data Pipeline',
     url: '/services#saas',
   },
   {
@@ -68,7 +68,7 @@ export function Projects() {
         aria-hidden="true" 
       />
 
-      <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         
         {/* ── Section Header ── */}
         <div className="max-w-3xl">
@@ -79,24 +79,24 @@ export function Projects() {
             </span>
           </div>
 
-          <h2 className="mt-6 text-3xl sm:text-4xl lg:text-[2.85rem]/[1.15] font-semibold tracking-tight text-white font-sans">
+          <h2 className="mt-5 sm:mt-6 text-2xl sm:text-4xl lg:text-[2.85rem]/[1.15] font-semibold tracking-tight text-white font-sans">
             Solutions built around{' '}
             <span className="font-quote italic font-normal text-[#8FD6F5]">
-              real operational needs
-            </span>.
+              real operational needs.
+            </span>
           </h2>
 
-          <p className="mt-4 text-base sm:text-lg leading-relaxed text-[#8FD6F5]/80 font-sans max-w-2xl">
-            From custom enterprise AI and business process reengineering to specialized healthcare platforms, we engineer reliable systems for modern organizations.
+          <p className="mt-3 sm:mt-4 text-sm sm:text-lg leading-relaxed text-white font-sans max-w-2xl">
+            From autonomous AI pipelines and workflow reengineering to dedicated engineering pods, we build dependable systems for modern enterprises.
           </p>
         </div>
 
         {/* ── 3-Column Systems Grid with Living Micro-Interactions ── */}
-        <div className="mt-12 sm:mt-16 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-10 sm:mt-16 grid grid-cols-1 gap-6 sm:gap-8 md:grid-cols-2 lg:grid-cols-3">
           {PROJECTS.map((project) => (
             <div 
               key={project.title} 
-              className="group relative flex flex-col justify-between overflow-hidden rounded-3xl border border-white/10 bg-[#0D1B2A] p-6 sm:p-7 shadow-2xl transition-all duration-300 hover:border-[#29A8E0]/40 hover:shadow-[#29A8E0]/10 hover:-translate-y-1.5"
+              className="group relative flex flex-col justify-between overflow-hidden rounded-3xl border border-white/10 bg-[#0D1B2A] p-5 sm:p-7 shadow-2xl transition-all duration-300 hover:border-[#29A8E0]/40 hover:shadow-[#29A8E0]/10 hover:-translate-y-1.5"
             >
               {/* Subtle Scanning Horizon Beam on Card Hover */}
               <div 
@@ -123,7 +123,7 @@ export function Projects() {
                 </div>
 
                 {/* Content */}
-                <div className="mt-6">
+                <div className="mt-5 sm:mt-6">
                   {/* Tags */}
                   <div className="flex flex-wrap gap-1.5">
                     {project.tags.map((tag) => (
@@ -136,18 +136,18 @@ export function Projects() {
                     ))}
                   </div>
 
-                  <h3 className="mt-4 text-xl font-bold tracking-tight text-white font-heading leading-snug">
+                  <h3 className="mt-3.5 sm:mt-4 text-lg sm:text-xl font-bold tracking-tight text-white font-heading leading-snug">
                     {project.title}
                   </h3>
 
-                  <p className="mt-2.5 text-xs sm:text-[13.5px] leading-relaxed text-slate-300 font-sans">
+                  <p className="mt-2 text-xs sm:text-[13.5px] leading-relaxed text-slate-300 font-sans">
                     {project.description}
                   </p>
                 </div>
               </div>
 
               {/* Bottom Metric & Link */}
-              <div className="mt-6 pt-4 border-t border-white/10 flex items-center justify-between">
+              <div className="mt-5 sm:mt-6 pt-4 border-t border-white/10 flex flex-wrap items-center justify-between gap-2">
                 <span className="text-xs font-bold text-[#8FD6F5] font-mono">
                   {project.statusLabel}
                 </span>
@@ -166,10 +166,10 @@ export function Projects() {
         </div>
 
         {/* ── Direct Link to Full Case Studies ── */}
-        <div className="mt-12 text-center">
+        <div className="mt-10 sm:mt-12 text-center">
           <Link
             href="/services"
-            className="group inline-flex items-center gap-2 rounded-full bg-[#29A8E0] px-8 py-3.5 text-xs sm:text-sm font-bold text-[#101820] shadow-[0_4px_16px_rgba(41,168,224,0.3)] hover:bg-[#209FD6] hover:shadow-[0_6px_22px_rgba(41,168,224,0.42)] hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.99] transition-all duration-200 font-ui"
+            className="group inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-full bg-[#29A8E0] px-8 py-3.5 text-xs sm:text-sm font-bold text-[#101820] shadow-[0_4px_16px_rgba(41,168,224,0.3)] hover:bg-[#209FD6] hover:shadow-[0_6px_22px_rgba(41,168,224,0.42)] hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.99] transition-all duration-200 font-ui"
           >
             <span>Explore All Architecture & Systems</span>
             <ArrowUpRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />

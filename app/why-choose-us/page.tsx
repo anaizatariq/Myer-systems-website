@@ -38,7 +38,7 @@ export default function WhyChooseUsPage() {
               </div>
               <h1 className="text-4xl sm:text-5xl lg:text-[4.25rem] font-bold tracking-tight text-[#101820] font-heading leading-[1.08]">
                 Control is never optional. <br/>
-                <span className="inline-block pr-1 font-quote italic font-normal text-transparent bg-clip-text bg-gradient-to-r from-[#1A6FA8] via-[#29A8E0] to-[#1A6FA8]">
+                <span className="inline-block pr-1 font-quote italic font-normal text-brand-steel">
                   That&apos;s the actual difference.
                 </span>
               </h1>

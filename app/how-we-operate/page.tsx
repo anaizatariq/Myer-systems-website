@@ -123,8 +123,8 @@ export default function HowWeOperatePage() {
                 </div>
                 <h2 className="text-3xl font-semibold tracking-tight text-[#101820] sm:text-4xl lg:text-[2.85rem]/[1.15] font-sans">
                   What &ldquo;accountable AI&rdquo;{' '}
-                  <span className="inline-block pr-1.5 font-quote italic font-normal text-transparent bg-clip-text bg-gradient-to-r from-[#1A6FA8] via-[#29A8E0] to-[#1A6FA8]">
-                    actually looks like
+                  <span className="inline-block pr-1 font-quote italic font-normal text-brand-steel">
+                    actually looks like.
                   </span>
                 </h2>
               </div>
@@ -250,8 +250,8 @@ export default function HowWeOperatePage() {
               </div>
               <h2 className="text-3xl font-semibold tracking-tight text-[#101820] sm:text-4xl lg:text-[2.85rem]/[1.15] font-sans">
                 How we turn operational needs into{' '}
-                <span className="inline-block pr-1.5 font-quote italic font-normal text-transparent bg-clip-text bg-gradient-to-r from-[#1A6FA8] via-[#29A8E0] to-[#1A6FA8]">
-                  working systems
+                <span className="inline-block pr-1 font-quote italic font-normal text-brand-steel">
+                  working systems.
                 </span>
               </h2>
             </div>
@@ -359,9 +359,9 @@ export default function HowWeOperatePage() {
 
           <h2 className="reveal text-3xl sm:text-4xl lg:text-[2.85rem]/[1.2] font-semibold tracking-tight text-[#101820] font-sans max-w-3xl mx-auto mb-6">
             Technology that improves the way the{' '}
-            <span className="inline-block pr-1.5 font-quote italic font-normal text-transparent bg-clip-text bg-gradient-to-r from-[#1A6FA8] via-[#29A8E0] to-[#1A6FA8]">
-              operation works
-            </span>.
+            <span className="inline-block pr-1 font-quote italic font-normal text-brand-steel">
+              operation works.
+            </span>
           </h2>
 
           <p className="reveal-up text-base sm:text-lg lg:text-[18.5px] text-slate-600 leading-relaxed font-sans max-w-3xl mx-auto">

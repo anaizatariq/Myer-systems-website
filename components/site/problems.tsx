@@ -1,174 +1,270 @@
 'use client';
 
+import { useState } from 'react';
 import Link from 'next/link';
 import { 
-  HeartHandshake, 
-  Database, 
-  ShieldCheck, 
   Workflow, 
+  ShieldCheck, 
+  RefreshCw, 
+  FileSpreadsheet, 
+  Database, 
   Globe2, 
-  TrendingUp, 
-  ArrowUpRight, 
-  CheckCircle2, 
-  FileSpreadsheet,
-  RefreshCw
+  ArrowUpRight
 } from 'lucide-react';
+import { cn } from '@/lib/utils';
 
-interface ProblemCard {
+interface ProblemCategory {
   id: string;
-  category: string;
-  title: string;
+  stepNum: string;
+  tileTitle: string;
+  icon: typeof Workflow;
+  headline: string;
   description: string;
-  metricBadge: string;
-  icon: any;
+  solutions: string[];
   href: string;
 }
 
-const PROBLEMS_DATA: ProblemCard[] = [
+const CATEGORIES: ProblemCategory[] = [
   {
     id: 'manual-work',
-    category: 'Operational Efficiency',
-    title: 'Manual Work & Data Bottlenecks',
-    description: 'Teams spend valuable hours manually copying information, updating spreadsheets, and chasing repetitive administrative tasks.',
-    metricBadge: 'Automated Workflows',
+    stepNum: '01',
+    tileTitle: 'Manual Work',
     icon: Workflow,
+    headline: 'Repetitive Typing & Data Bottlenecks',
+    description: 'Teams spend hours retyping and moving information between spreadsheets and separate software tools, causing avoidable mistakes and delayed work.',
+    solutions: [
+      'Automated Data Reading & Entry',
+      'Fewer Human Errors',
+      'Direct Tool Integration',
+      'Faster Team Handoffs',
+      'Real-Time Status Tracking',
+      'Instant Bottleneck Alerts',
+    ],
     href: '/services#ai-solutions',
   },
   {
     id: 'unreliable-ai',
-    category: 'Enterprise AI Solutions',
-    title: 'Unpredictable AI & Black-Box Tools',
-    description: 'Generic AI tools that make unverified mistakes or operate without transparent accountability and human checkpoints.',
-    metricBadge: 'Human-in-the-Loop',
+    stepNum: '02',
+    tileTitle: 'Unreliable AI',
     icon: ShieldCheck,
+    headline: 'Unpredictable AI & Wrong Answers',
+    description: 'Generic AI tools make up facts, break business rules, and cannot be audited, making leadership hesitant to trust them in daily work.',
+    solutions: [
+      'Strict Accuracy Rules',
+      'Human Verification Gates',
+      'Complete Audit Trails',
+      'Zero AI Hallucinations',
+      'Data Privacy Safeguards',
+      'Predictable, Safe Execution',
+    ],
     href: '/services#ai-solutions',
   },
   {
-    id: 'disconnected-ops',
-    category: 'Business Process Reengineering',
-    title: 'Disconnected Teams & Siloed Systems',
-    description: 'Departments operating in separate silos, causing slow handoffs, missed deadlines, and poor operational visibility.',
-    metricBadge: 'Streamlined SOPs',
+    id: 'system-silos',
+    stepNum: '03',
+    tileTitle: 'System Silos',
     icon: RefreshCw,
+    headline: 'Disconnected Tools & Lost Updates',
+    description: 'Different departments use separate software tools that do not talk to each other, resulting in lost messages, duplicate tasks, and confusion.',
+    solutions: [
+      'Connected Team Workflows',
+      'Single Source of Truth',
+      'Clear Responsibility Trails',
+      'Automated Task Handoffs',
+      'Fewer Missed Deadlines',
+      'Live Operational Visibility',
+    ],
     href: '/services#saas',
   },
   {
-    id: 'billing-rcm',
-    category: 'Revenue Cycle Management',
-    title: 'Medical Billing Errors & Claim Denials',
-    description: 'Complex medical coding mistakes and payer rejections that create revenue leakage and slow down reimbursements.',
-    metricBadge: 'Claim Validation',
+    id: 'medical-billing',
+    stepNum: '04',
+    tileTitle: 'Medical Billing',
     icon: FileSpreadsheet,
+    headline: 'Claim Denials & Billing Delays',
+    description: 'Complex insurance guidelines and missing clinical details lead to rejected claims, slow payments, and hours of administrative follow-up.',
+    solutions: [
+      'Pre-Submission Error Checks',
+      'Faster Payer Reimbursements',
+      'Organized Clinical Notes',
+      'Fewer Avoidable Denials',
+      'Clear Revenue Tracking',
+      'HIPAA-Compliant Security',
+    ],
     href: '/services#rcm',
   },
   {
-    id: 'clinical-backlog',
-    category: 'Healthcare Technology',
-    title: 'Scattered Medical Data & Paperwork',
-    description: 'Clinical providers overwhelmed by fragmented patient records and administrative paperwork instead of focusing on care.',
-    metricBadge: 'MedSynthea Platform',
+    id: 'legacy-software',
+    stepNum: '05',
+    tileTitle: 'Legacy Software',
     icon: Database,
-    href: '/services#saas',
+    headline: 'Old Databases Trapped in Silos',
+    description: 'Valuable company records are locked inside outdated systems that cannot easily connect with modern cloud tools and applications.',
+    solutions: [
+      'Real-Time Data Connections',
+      'Modern Cloud Bridges',
+      'Clean, Unified Records',
+      'No Manual Exporting',
+      'Secure Data Synchronization',
+      'Zero System Downtime',
+    ],
+    href: '/services#ai-solutions',
   },
   {
-    id: 'talent-scaling',
-    category: 'Intelligent Resource Augmentation',
-    title: 'Slow Hiring & Capacity Constraints',
-    description: 'Finding, training, and retaining skilled operational and technical talent takes months and inflates operating costs.',
-    metricBadge: 'Hybrid Human + AI Pods',
+    id: 'team-overload',
+    stepNum: '06',
+    tileTitle: 'Team Overload',
     icon: Globe2,
+    headline: 'Hiring Constraints & Overloaded Teams',
+    description: 'Hiring skilled in-house specialists takes months and costs a fortune, making it difficult to handle sudden spikes in business volume.',
+    solutions: [
+      'Ready-to-Deploy Specialists',
+      'US Management + Global Hub',
+      'Faster Project Delivery',
+      'Flexible Capacity On Demand',
+      'AI-Assisted Productivity',
+      'No Lengthy Hiring Delays',
+    ],
     href: '/services#resource-augmentation',
   },
 ];
 
 export function Problems() {
+  const [activeId, setActiveId] = useState<string>(CATEGORIES[0].id);
+  const active = CATEGORIES.find((c) => c.id === activeId) || CATEGORIES[0];
+
   return (
-    <section id="problems" className="relative scroll-mt-24 bg-white py-20 sm:py-24 lg:py-28 overflow-hidden border-b border-border/70">
-      
-      {/* ── Background Subtle Ambient Glows (Theme Colors: Steel Blue & Sky Blue) ── */}
+    <section 
+      id="problems" 
+      className="relative scroll-mt-32 bg-white py-14 sm:py-16 lg:py-20 overflow-hidden border-b border-border/70"
+    >
+      {/* ── Subtle Ambient Lighting ── */}
       <div 
-        className="pointer-events-none absolute top-10 left-1/3 h-[500px] w-[500px] rounded-full bg-[#29A8E0]/7 blur-[160px]" 
+        className="pointer-events-none absolute top-10 left-1/4 h-[500px] w-[500px] rounded-full bg-[#29A8E0]/6 blur-[150px]" 
         aria-hidden="true" 
       />
       <div 
-        className="pointer-events-none absolute bottom-10 right-10 h-[450px] w-[450px] rounded-full bg-[#1A6FA8]/6 blur-[140px]" 
+        className="pointer-events-none absolute bottom-10 right-1/4 h-[450px] w-[450px] rounded-full bg-[#1A6FA8]/5 blur-[140px]" 
         aria-hidden="true" 
       />
 
-      <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         
-        {/* ══════════════════════════════════════════════════════════════════
-            SECTION HEADER
-        ══════════════════════════════════════════════════════════════════ */}
-        <div className="reveal max-w-3xl">
-          <div className="inline-flex items-center gap-2 rounded-full border border-[#1A6FA8]/20 bg-[#F0FAFF] px-3.5 py-1.5 shadow-2xs mb-4">
-            <span className="h-1.5 w-1.5 rounded-full bg-[#29A8E0] animate-pulse" />
-            <span className="text-[11px] font-bold uppercase tracking-[0.18em] text-[#1A6FA8] font-ui">
-              PROBLEMS WE SOLVE
+        {/* ── Clean & Confident Section Headline (No top pill clash with navbar) ── */}
+        <div className="max-w-3xl mb-8 sm:mb-12">
+          <h2 className="text-2xl sm:text-4xl lg:text-[2.65rem]/[1.15] font-semibold tracking-tight text-[#101820] font-sans">
+            Everyday operational bottlenecks{' '}
+            <span className="font-quote italic font-normal text-brand-steel inline-block pr-1">
+              we solve for your business.
             </span>
-          </div>
-
-          <h2 className="text-3xl sm:text-4xl lg:text-[2.85rem]/[1.15] font-semibold tracking-tight text-[#101820] font-sans">
-            Helping organisations move from reactive operations to{' '}
-            <span className="font-quote italic font-normal text-transparent bg-clip-text bg-gradient-to-r from-[#1A6FA8] via-[#29A8E0] to-[#1A6FA8]">
-              predictable performance
-            </span>.
           </h2>
         </div>
 
         {/* ══════════════════════════════════════════════════════════════════
-            3-COLUMN CARDS GRID: Theme Color Palette
-            - Default: Clean Ice-Sky Architectural Blue (#F0FAFF)
-            - Hover: Dark Midnight Steel Chassis (#0B141D / #101820) with Cyan Glow
+            2-COLUMN INTERACTIVE SHOWCASE (HARMONIOUS, SPACIOUS & PROPORTIONATE)
+            Left: 3x2 Grid of App-Like Tiles
+            Right: Large, Readable Detail Panel with Proper Typography
         ══════════════════════════════════════════════════════════════════ */}
-        <div className="reveal mt-12 sm:mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-          {PROBLEMS_DATA.map((item) => {
-            const Icon = item.icon;
-            return (
-              <div
-                key={item.id}
-                className="group relative rounded-3xl border border-[#1A6FA8]/15 bg-[#F0FAFF] hover:bg-[#0B141D] hover:border-[#29A8E0]/40 p-7 sm:p-8 transition-all duration-400 ease-out hover:-translate-y-1.5 hover:shadow-2xl hover:shadow-[#101820]/15 flex flex-col justify-between cursor-default"
-              >
-                <div>
-                  {/* Circular Icon Badge: Sky Ice in default -> Electric Cyan Glow on hover */}
-                  <div className="h-16 w-16 rounded-full bg-white border border-[#1A6FA8]/20 group-hover:bg-white/10 group-hover:border-[#29A8E0]/40 flex items-center justify-center text-[#1A6FA8] group-hover:text-[#29A8E0] mb-6 shadow-xs group-hover:scale-105 transition-all duration-400">
-                    <Icon className="h-7 w-7 stroke-[1.75]" />
-                  </div>
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center">
+          
+          {/* ── LEFT COLUMN: 3x2 Grid of App-Like Tiles ── */}
+          <div className="lg:col-span-5 grid grid-cols-3 gap-2.5 sm:gap-3.5">
+            {CATEGORIES.map((cat) => {
+              const Icon = cat.icon;
+              const isActive = cat.id === activeId;
 
-                  {/* Micro Category Tag */}
-                  <div className="text-xs font-mono font-bold tracking-wider text-[#1A6FA8] group-hover:text-[#29A8E0] uppercase mb-2 transition-colors duration-300">
-                    {item.category}
-                  </div>
+              return (
+                <button
+                  key={cat.id}
+                  onClick={() => setActiveId(cat.id)}
+                  onMouseEnter={() => setActiveId(cat.id)}
+                  className={cn(
+                    "relative flex flex-col items-center justify-center p-2 sm:p-4 rounded-2xl sm:rounded-3xl text-center transition-all duration-300 cursor-pointer aspect-square focus:outline-hidden",
+                    isActive
+                      ? "bg-[#101820] text-white shadow-xl shadow-[#101820]/25 border-2 border-[#29A8E0] scale-[1.03] z-10"
+                      : "bg-[#F0FAFF] hover:bg-[#E3F4FC] text-[#101820] border border-[#1A6FA8]/15 hover:border-[#29A8E0]/40 shadow-xs hover:shadow-md hover:-translate-y-0.5"
+                  )}
+                  aria-label={cat.tileTitle}
+                >
+                  {/* Subtle top indicator on active */}
+                  {isActive && (
+                    <div className="absolute top-2 sm:top-2.5 h-1 w-5 sm:w-6 rounded-full bg-[#29A8E0] animate-pulse" />
+                  )}
 
-                  {/* Bold Title: Dark Steel in default -> Pure White on hover */}
-                  <h3 className="text-xl sm:text-[1.35rem] font-bold text-[#101820] group-hover:text-white tracking-tight leading-snug mb-3 transition-colors duration-300">
-                    {item.title}
-                  </h3>
-
-                  {/* 2-Line Punchy Description: Slate in default -> Soft light slate on hover */}
-                  <p className="text-sm sm:text-[15px] text-slate-600 group-hover:text-slate-300 leading-relaxed transition-colors duration-300">
-                    {item.description}
-                  </p>
-                </div>
-
-                {/* Bottom Metric Badge & Action Link */}
-                <div className="mt-6 pt-4 border-t border-[#1A6FA8]/15 group-hover:border-white/10 flex items-center justify-between transition-colors duration-300">
-                  <span className="inline-flex items-center gap-1.5 text-xs font-mono font-semibold text-[#1A6FA8] group-hover:text-emerald-300 transition-colors duration-300">
-                    <CheckCircle2 className="h-3.5 w-3.5 text-[#29A8E0] group-hover:text-emerald-400" />
-                    {item.metricBadge}
-                  </span>
-
-                  <Link
-                    href={item.href}
-                    className="inline-flex items-center gap-1 text-xs font-bold text-[#1A6FA8] group-hover:text-[#29A8E0] transition-colors duration-300"
+                  {/* Squircle Icon Box */}
+                  <div 
+                    className={cn(
+                      "h-9 w-9 sm:h-11 sm:w-11 rounded-xl sm:rounded-2xl flex items-center justify-center transition-all duration-300 mb-1.5 sm:mb-2",
+                      isActive
+                        ? "bg-[#1A6FA8] text-white shadow-md shadow-[#29A8E0]/20"
+                        : "bg-[#101820] text-[#29A8E0] shadow-xs"
+                    )}
                   >
-                    <span>Details</span>
-                    <ArrowUpRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-                  </Link>
+                    <Icon className="h-4.5 w-4.5 sm:h-5.5 sm:w-5.5" />
+                  </div>
+
+                  {/* Tile Title */}
+                  <span 
+                    className={cn(
+                      "text-[11px] xs:text-[12px] sm:text-[12.5px] font-bold tracking-tight leading-tight font-heading",
+                      isActive ? "text-white" : "text-[#101820]"
+                    )}
+                  >
+                    {cat.tileTitle}
+                  </span>
+                </button>
+              );
+            })}
+          </div>
+
+          {/* ── RIGHT COLUMN: Prominent, Highly-Readable Solution Panel ── */}
+          <div className="lg:col-span-7 space-y-4 sm:space-y-5 lg:pl-4">
+            
+            {/* Elegant Pill Eyebrow (Replacing the small plain text) */}
+            <div className="inline-flex items-center gap-2 rounded-full border border-[#1A6FA8]/20 bg-[#F0FAFF] px-3.5 py-1.5 shadow-2xs">
+              <span className="h-1.5 w-1.5 rounded-full bg-[#29A8E0] animate-pulse" />
+              <span className="text-[10.5px] sm:text-[11px] font-bold uppercase tracking-[0.16em] sm:tracking-[0.18em] text-[#1A6FA8] font-ui">
+                PROBLEM {active.stepNum} · {active.tileTitle}
+              </span>
+            </div>
+
+            {/* Display Headline: Bold, Confident & Proper Size */}
+            <h3 className="text-xl sm:text-3xl lg:text-[2rem]/[1.2] font-bold tracking-tight text-[#101820] font-sans">
+              {active.headline}
+            </h3>
+
+            {/* Clear, Highly-Readable 2-Line Explanation */}
+            <p className="text-sm sm:text-[17px] leading-relaxed text-slate-700 font-sans max-w-2xl">
+              {active.description}
+            </p>
+
+            {/* 2-Column Solution Bullets with Proper Size & Spacing */}
+            <div className="pt-2 grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2.5 sm:gap-y-3.5">
+              {active.solutions.map((item, idx) => (
+                <div key={idx} className="flex items-start gap-2.5">
+                  <span className="text-[#1A6FA8] font-bold text-sm leading-none mt-1 shrink-0 select-none">
+                    ➤
+                  </span>
+                  <span className="text-[13.5px] sm:text-[15px] font-semibold text-slate-800 font-sans leading-snug">
+                    {item}
+                  </span>
                 </div>
-              </div>
-            );
-          })}
+              ))}
+            </div>
+
+            {/* Action CTA Button */}
+            <div className="pt-3">
+              <Link
+                href={active.href}
+                className="group inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-full bg-[#29A8E0] px-7 py-3 text-sm font-bold text-[#101820] shadow-md shadow-[#29A8E0]/20 hover:bg-[#209FD6] hover:shadow-[0_6px_20px_rgba(41,168,224,0.38)] hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.99] transition-all duration-200 font-ui cursor-pointer"
+              >
+                <span>Explore Our Solutions</span>
+                <ArrowUpRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+              </Link>
+            </div>
+
+          </div>
+
         </div>
 
       </div>

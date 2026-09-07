@@ -103,8 +103,8 @@ export function GovernedConsole() {
         aria-hidden="true" 
       />
 
-      {/* ── Container Matching Hero Section Margins Exactly (max-w-7xl px-6 lg:px-8) ── */}
-      <div className="relative mx-auto w-full max-w-7xl px-6 lg:px-8">
+      {/* ── Container Matching Hero Section Margins Exactly (max-w-7xl px-4 sm:px-6 lg:px-8) ── */}
+      <div className="relative mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
         
         {/* ══════════════════════════════════════════════════════════════════
             THE CINEMATIC SCREEN CONSOLE (PROPER MARGINS, ROUNDED-3XL)
@@ -120,8 +120,8 @@ export function GovernedConsole() {
           <div className="grid grid-cols-1 md:grid-cols-12 min-h-[480px] sm:min-h-[520px] lg:min-h-[540px] items-stretch">
             
             {/* ════════ LEFT SIDEBAR: PURE MINIMALIST TYPOGRAPHY (Ref 2 Style) ════════ */}
-            <div className="md:col-span-4 lg:col-span-3 p-6 sm:p-8 lg:p-10 flex flex-col justify-center border-b md:border-b-0 md:border-r border-white/10 bg-[#060D14]/70">
-              <div className="space-y-6 sm:space-y-8">
+            <div className="md:col-span-4 lg:col-span-3 p-5 sm:p-8 lg:p-10 flex flex-col justify-center border-b md:border-b-0 md:border-r border-white/10 bg-[#060D14]/70">
+              <div className="space-y-4 sm:space-y-6 lg:space-y-8">
                 {STEPS.map((step, idx) => {
                   const isActive = activeIdx === idx;
 
@@ -129,7 +129,7 @@ export function GovernedConsole() {
                     <button
                       key={step.id}
                       onClick={() => handleStepClick(idx)}
-                      className="w-full text-left transition-all duration-300 flex items-center justify-between group focus:outline-hidden"
+                      className="w-full text-left transition-all duration-300 flex items-center justify-between group focus:outline-hidden cursor-pointer"
                     >
                       <div>
                         <div className={`text-base sm:text-lg lg:text-xl font-bold font-heading transition-colors duration-200 ${
@@ -183,7 +183,7 @@ export function GovernedConsole() {
             </div>
 
             {/* ════════ RIGHT STAGE: FLOATING DYNAMIC MOCKUP (Ref 2 Style) ════════ */}
-            <div className="md:col-span-8 lg:col-span-9 p-6 sm:p-10 lg:p-14 relative flex items-center justify-center bg-[#09121B]">
+            <div className="md:col-span-8 lg:col-span-9 p-3 sm:p-10 lg:p-14 relative flex items-center justify-center bg-[#09121B]">
               
               {/* Subtle Radial Center Glow */}
               <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(41,168,224,0.12)_0,transparent_70%)]" />
@@ -191,7 +191,7 @@ export function GovernedConsole() {
               {/* Left & Right Step Buttons (Ref 2 Style) */}
               <button 
                 onClick={handlePrev}
-                className="absolute left-3 sm:left-6 top-1/2 -translate-y-1/2 h-9 w-9 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-white/50 hover:text-white hover:bg-white/10 transition-colors z-20"
+                className="absolute left-1.5 sm:left-4 lg:left-6 top-1/2 -translate-y-1/2 h-8 w-8 sm:h-9 sm:w-9 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-white/50 hover:text-white hover:bg-white/10 transition-colors z-20 cursor-pointer"
                 aria-label="Previous step"
               >
                 <ChevronLeft className="h-4 w-4" />
@@ -199,25 +199,25 @@ export function GovernedConsole() {
 
               <button 
                 onClick={handleNext}
-                className="absolute right-3 sm:right-6 top-1/2 -translate-y-1/2 h-9 w-9 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-white/50 hover:text-white hover:bg-white/10 transition-colors z-20"
+                className="absolute right-1.5 sm:right-4 lg:right-6 top-1/2 -translate-y-1/2 h-8 w-8 sm:h-9 sm:w-9 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-white/50 hover:text-white hover:bg-white/10 transition-colors z-20 cursor-pointer"
                 aria-label="Next step"
               >
                 <ChevronRight className="h-4 w-4" />
               </button>
 
               {/* ── THE CENTER FLOATING STACKED CARD (Exact Ref 2 Architecture) ── */}
-              <div className="relative w-full max-w-lg lg:max-w-xl">
+              <div className="relative w-full max-w-[90%] sm:max-w-lg lg:max-w-xl mx-auto">
                 
                 {/* Back Stack Layer 2 */}
-                <div className="absolute -top-3.5 inset-x-8 h-full rounded-2xl bg-white/[0.02] border border-white/5 pointer-events-none" />
+                <div className="absolute -top-3.5 inset-x-6 sm:inset-x-8 h-full rounded-2xl bg-white/[0.02] border border-white/5 pointer-events-none" />
                 {/* Back Stack Layer 1 */}
-                <div className="absolute -top-1.5 inset-x-4 h-full rounded-2xl bg-white/[0.04] border border-white/10 pointer-events-none" />
+                <div className="absolute -top-1.5 inset-x-3 sm:inset-x-4 h-full rounded-2xl bg-white/[0.04] border border-white/10 pointer-events-none" />
 
                 {/* Main Foreground Card */}
-                <div className="relative rounded-2xl border border-[#1A6FA8]/40 bg-[#0F1B26] p-6 sm:p-8 shadow-2xl shadow-black/80 backdrop-blur-2xl">
+                <div className="relative rounded-2xl border border-[#1A6FA8]/40 bg-[#0F1B26] p-4 sm:p-8 shadow-2xl shadow-black/80 backdrop-blur-2xl">
                   
                   {/* Card Header */}
-                  <div className="flex items-start justify-between gap-4 pb-4 border-b border-white/10">
+                  <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-2.5 sm:gap-4 pb-4 border-b border-white/10">
                     <div className="space-y-1">
                       <h4 className="text-base sm:text-lg lg:text-xl font-bold text-white font-heading leading-tight">
                         {current.cardTitle}
@@ -228,7 +228,7 @@ export function GovernedConsole() {
                       </div>
                     </div>
 
-                    <span className="shrink-0 inline-flex items-center rounded-md bg-white/5 border border-white/15 px-2.5 py-1 text-[10px] font-mono text-[#8FD6F5] uppercase tracking-wider">
+                    <span className="self-start sm:self-auto shrink-0 inline-flex items-center rounded-md bg-white/5 border border-white/15 px-2.5 py-1 text-[10px] font-mono text-[#8FD6F5] uppercase tracking-wider">
                       {current.badge}
                     </span>
                   </div>
@@ -241,7 +241,7 @@ export function GovernedConsole() {
                       <div className="space-y-3.5 animate-fadeIn">
                         {/* 3 Model/System Avatar Icons + Counter */}
                         <div className="flex items-center gap-2.5">
-                          <div className="flex -space-x-1.5">
+                          <div className="flex -space-x-1.5 shrink-0">
                             <span className="h-7 w-7 rounded-full bg-[#1A6FA8] border-2 border-[#0F1B26] flex items-center justify-center text-[9px] text-white font-bold uppercase">
                               DATA
                             </span>

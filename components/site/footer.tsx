@@ -4,20 +4,26 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Mail, MapPin, ExternalLink, Globe, ArrowUpRight } from 'lucide-react';
 
-const COMPANY_LINKS = [
+interface CompanyLink {
+  label: string;
+  href: string;
+  isExternal?: boolean;
+}
+
+const COMPANY_LINKS: CompanyLink[] = [
   { label: 'Home', href: '/' },
   { label: 'About Us', href: '/about' },
   { label: 'Services', href: '/services' },
   { label: 'How We Operate', href: '/how-we-operate' },
-  { label: 'MedSynthea Flagship', href: 'https://medsynthea.com', isExternal: true },
+  { label: 'Why Choose Us', href: '/why-choose-us' },
   { label: 'Contact Leadership', href: '/contact' },
 ];
 
 const SERVICE_LINKS = [
   { label: 'Enterprise-Grade AI Solutions', href: '/services#ai-solutions' },
-  { label: 'Revenue Cycle Management (RCM)', href: '/services#rcm' },
-  { label: 'Medical Billing Services', href: '/services#rcm' },
-  { label: 'Business Process Reengineering', href: '/services#ai-solutions' },
+  { label: 'Autonomous Workflow Pipelines', href: '/services#ai-solutions' },
+  { label: 'Business Process Reengineering', href: '/services#saas' },
+  { label: 'Healthcare Systems & RCM', href: '/services#rcm' },
   { label: 'Intelligent Resource Augmentation', href: '/services#resource-augmentation' },
   { label: 'Industry SaaS Platforms', href: '/services#saas' },
 ];
@@ -32,8 +38,8 @@ export function Footer() {
         aria-hidden="true" 
       />
 
-      <div className="relative mx-auto max-w-7xl px-6 py-16 lg:px-8 lg:py-24">
-        <div className="grid grid-cols-1 gap-12 lg:grid-cols-[1.8fr_1fr_1.3fr_1.3fr] lg:gap-10">
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 py-12 sm:py-16 lg:px-8 lg:py-24">
+        <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-[1.8fr_1fr_1.3fr_1.3fr] lg:gap-10">
           
           {/* ════════ COLUMN 1: Brand & Official Mission ════════ */}
           <div className="max-w-sm space-y-5">
@@ -58,18 +64,6 @@ export function Footer() {
             <p className="text-sm leading-relaxed text-[#8FD6F5]/80 font-sans">
               AI Systems Built for Accountability, Scale, and Control. Bridging Dallas strategic governance with global 24/7 technical execution.
             </p>
-
-            <div className="pt-2">
-              <a
-                href="https://medsynthea.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group inline-flex items-center gap-2 rounded-xl border border-[#29A8E0]/30 bg-white/5 px-4 py-2.5 text-xs font-semibold text-white transition-all hover:bg-[#29A8E0]/15 hover:border-[#29A8E0] font-ui"
-              >
-                <span>Flagship Platform: MedSynthea.com</span>
-                <ExternalLink className="h-3.5 w-3.5 text-[#29A8E0] transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-              </a>
-            </div>
           </div>
 
           {/* ════════ COLUMN 2: Company Navigation ════════ */}
@@ -163,12 +157,12 @@ export function Footer() {
         </div>
 
         {/* ── Bottom Horizon Line & Legal ── */}
-        <div className="mt-16 flex flex-col items-start justify-between gap-4 border-t border-white/10 pt-8 sm:flex-row sm:items-center text-xs text-[#8FD6F5]/70 font-sans">
+        <div className="mt-12 sm:mt-16 flex flex-col items-start justify-between gap-4 border-t border-white/10 pt-8 sm:flex-row sm:items-center text-xs text-[#8FD6F5]/70 font-sans">
           <p>
             &copy; {new Date().getFullYear()} Myer Systems LLC. All rights reserved.
           </p>
           
-          <div className="flex flex-wrap items-center gap-4 text-[11px] font-ui">
+          <div className="flex flex-wrap items-center gap-2.5 sm:gap-4 text-[10.5px] sm:text-[11px] font-ui">
             <span className="text-white font-medium">Dallas, Texas</span>
             <span>·</span>
             <span className="text-white font-medium">HIPAA-Compliant AI Systems</span>

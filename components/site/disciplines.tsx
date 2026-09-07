@@ -16,9 +16,15 @@ import {
   Workflow,
   TrendingUp,
   Layers,
-  Zap
+  Zap,
+  Database,
+  FileText,
+  Lock,
+  ArrowRight,
+  AlertTriangle,
+  FileCheck,
+  Gauge
 } from 'lucide-react';
-import { AnimatedCounter } from '@/components/ui/animated-counter';
 
 interface CapabilityPillar {
   id: string;
@@ -78,9 +84,6 @@ export function Disciplines() {
   const [activeIdx, setActiveIdx] = useState<number>(0);
   const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
 
-  // Subtab switcher for Card 01
-  const [benchmarkSubtab, setBenchmarkSubtab] = useState<'pipeline' | 'hash'>('pipeline');
-
   // Exact Cerebrium-style IntersectionObserver for scroll-driven active state
   useEffect(() => {
     const observers: IntersectionObserver[] = [];
@@ -111,11 +114,11 @@ export function Disciplines() {
     };
   }, []);
 
-  // Smooth jump to card on left-item click
+  // Smooth jump to card on left-item click with ample scroll margin
   const scrollToCard = (idx: number) => {
     const el = cardRefs.current[idx];
     if (el) {
-      const navOffset = 140;
+      const navOffset = 150;
       const targetPosition = el.getBoundingClientRect().top + window.pageYOffset - navOffset;
       window.scrollTo({
         top: targetPosition,
@@ -140,27 +143,27 @@ export function Disciplines() {
         aria-hidden="true" 
       />
 
-      <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         
         {/* ══════════════════════════════════════════════════════════════════
             1. SECTION HEADER (Exact Cerebrium Split in Normal Document Flow)
         ══════════════════════════════════════════════════════════════════ */}
-        <div className="pt-16 sm:pt-20 lg:pt-24 pb-12 sm:pb-16 border-b border-slate-200/70">
+        <div className="pt-14 sm:pt-20 lg:pt-24 pb-10 sm:pb-16 border-b border-slate-200/70">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12 items-end">
             
             {/* Left Subtitle */}
             <div className="lg:col-span-5">
-              <p className="text-base sm:text-lg text-slate-500 font-medium font-ui leading-relaxed max-w-sm">
-                From enterprise AI to healthcare operations, Myer Systems combines technology and specialised expertise to build more dependable, scalable ways of working.
+              <p className="text-base sm:text-lg sm:text-[1.2rem] text-slate-700 font-normal leading-relaxed max-w-md font-sans">
+                From autonomous enterprise AI to mission-critical operations, Myer Systems combines deterministic engineering and specialized talent to build dependable, scalable ways of working.
               </p>
             </div>
 
             {/* Right Heading with Gradient Accent */}
             <div className="lg:col-span-7">
-              <h2 className="text-3xl sm:text-4xl lg:text-[2.85rem]/[1.15] font-semibold tracking-tight text-[#101820] font-sans">
+              <h2 className="text-2xl sm:text-4xl lg:text-[2.85rem]/[1.15] font-semibold tracking-tight text-[#101820] font-sans">
                 Built for scale,<br className="hidden sm:inline" />{' '}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#1A6FA8] via-[#29A8E0] to-[#1A6FA8]">
-                  governed by design
+                <span className="font-quote italic font-normal text-brand-steel inline-block pr-1">
+                  governed by design.
                 </span>
               </h2>
             </div>
@@ -170,10 +173,10 @@ export function Disciplines() {
 
         {/* ══════════════════════════════════════════════════════════════════
             2. TWO-COLUMN LAYOUT (CEREBRIUM NATURAL FLOAT SCROLL)
-            Left: Sticky at top-32 with 4 pure titles (no taglines).
+            Left: Sticky at top-32 with 4 pure titles.
             Right: Vertically stacked cards that float past smoothly.
         ══════════════════════════════════════════════════════════════════ */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 pt-12 sm:pt-16 pb-20 sm:pb-24 lg:pb-28 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 pt-10 sm:pt-16 pb-16 sm:pb-24 lg:pb-28 items-start">
           
           {/* ──────────────────────────────────────────────────────────
               LEFT COLUMN: Sticky Navigation Sidebar
@@ -237,109 +240,101 @@ export function Disciplines() {
           {/* ──────────────────────────────────────────────────────────
               RIGHT COLUMN: Vertically Stacked Feature Cards (Natural Flow)
           ────────────────────────────────────────────────────────── */}
-          <div className="lg:col-span-7 space-y-28 sm:space-y-36 lg:space-y-44 pb-24">
+          <div className="lg:col-span-7 space-y-16 sm:space-y-24 lg:space-y-36 pb-16 sm:pb-24">
             
             {/* ══════════════════════════════════════════════════════
                 CARD 01: Custom Enterprise AI Systems
+                Visual: Horizontal Neural Agent Flow & Pulsing Center Core
             ══════════════════════════════════════════════════════ */}
             <div 
               ref={(el) => (cardRefs.current[0] = el)}
-              className="scroll-mt-36 space-y-6"
+              className="scroll-mt-44 space-y-6"
             >
-              <div className="group relative rounded-3xl border border-slate-200/90 bg-[#0B141D] p-6 sm:p-8 shadow-2xl shadow-[#101820]/15 overflow-hidden text-white transition-all duration-300 hover:border-[#29A8E0]/40">
+              <div className="group relative rounded-3xl border border-slate-800/90 bg-[#0B141D] p-4 sm:p-7 shadow-2xl shadow-[#101820]/30 overflow-hidden text-white transition-all duration-300 hover:border-[#29A8E0]/40 min-h-[360px] sm:h-[400px] flex flex-col justify-between">
                 
                 {/* Ambient Glow */}
-                <div className="pointer-events-none absolute -top-24 -right-24 h-64 w-64 rounded-full bg-[#29A8E0]/20 blur-3xl" />
-                <div className="pointer-events-none absolute -bottom-24 -left-24 h-64 w-64 rounded-full bg-[#1A6FA8]/25 blur-3xl" />
+                <div className="pointer-events-none absolute -top-20 -right-20 h-56 w-56 rounded-full bg-[#29A8E0]/15 blur-3xl" />
+                <div className="pointer-events-none absolute -bottom-20 -left-20 h-56 w-56 rounded-full bg-[#1A6FA8]/20 blur-3xl" />
 
-                {/* Top Nav Switcher */}
-                <div className="relative flex flex-wrap items-center justify-between gap-4 pb-5 border-b border-white/10">
-                  <div className="inline-flex rounded-xl bg-white/5 p-1 border border-white/10 backdrop-blur-md">
-                    <button
-                      onClick={() => setBenchmarkSubtab('pipeline')}
-                      className={`px-3.5 py-1.5 rounded-lg text-xs font-medium transition-all cursor-pointer ${
-                        benchmarkSubtab === 'pipeline'
-                          ? 'bg-[#1A6FA8] text-white shadow-sm font-semibold'
-                          : 'text-slate-400 hover:text-white'
-                      }`}
-                    >
-                      Intelligent Pipeline
-                    </button>
-                    <button
-                      onClick={() => setBenchmarkSubtab('hash')}
-                      className={`px-3.5 py-1.5 rounded-lg text-xs font-medium transition-all cursor-pointer ${
-                        benchmarkSubtab === 'hash'
-                          ? 'bg-[#1A6FA8] text-white shadow-sm font-semibold'
-                          : 'text-slate-400 hover:text-white'
-                      }`}
-                    >
-                      Verification Ledger
-                    </button>
-                  </div>
-
+                {/* Top Header Badge */}
+                <div className="relative flex flex-wrap items-center justify-between gap-2 z-10">
                   <div className="flex items-center gap-2">
-                    <span className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
-                    <span className="text-[11px] font-mono font-semibold tracking-wider text-emerald-300">
-                      ACTIVE ENTERPRISE SYSTEM
+                    <span className="relative flex h-2 w-2">
+                      <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
+                      <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500" />
+                    </span>
+                    <span className="text-[10.5px] sm:text-[11px] font-mono font-bold tracking-widest text-slate-300 uppercase">
+                      MULTI-AGENT NEURAL PIPELINE
                     </span>
                   </div>
+                  <span className="text-[9.5px] sm:text-[10px] font-mono px-2.5 py-1 rounded-full bg-[#29A8E0]/10 text-[#29A8E0] border border-[#29A8E0]/25 font-bold">
+                    AUTONOMOUS RUNTIME
+                  </span>
                 </div>
 
-                {/* Benchmark Execution Bars */}
-                <div className="mt-5 rounded-2xl bg-white/5 border border-white/10 p-5 sm:p-6 backdrop-blur-xl space-y-4">
-                  <div className="flex items-center justify-between text-xs font-mono text-slate-400">
-                    <span>TASK ACCURACY &amp; RELIABILITY COMPARISON</span>
-                    <span className="text-[#29A8E0]">ACCOUNTABLE EXECUTION</span>
+                {/* Main Dynamic Visual: 3 Interconnected Nodes with Pulsing Center Core */}
+                <div className="relative my-auto py-4">
+                  {/* Horizontal Connection Beam with Traveling Laser Packet */}
+                  <div className="absolute top-1/2 left-8 right-8 -translate-y-1/2 h-[2px] bg-gradient-to-r from-slate-800 via-[#29A8E0]/40 to-slate-800 overflow-hidden">
+                    <div className="h-full w-24 bg-gradient-to-r from-transparent via-[#29A8E0] to-transparent animate-beam-travel" />
                   </div>
 
-                  {/* Benchmark 1 */}
-                  <div className="space-y-1.5">
-                    <div className="flex justify-between items-center text-xs">
-                      <span className="font-mono font-semibold text-white flex items-center gap-1.5">
-                        <ShieldCheck className="h-3.5 w-3.5 text-[#29A8E0]" />
-                        MYER SYSTEMS HYBRID AI ENGINE
-                      </span>
-                      <span className="font-mono font-bold text-[#29A8E0] text-sm">95% High Speed &amp; Verified</span>
+                  <div className="relative grid grid-cols-3 gap-2 sm:gap-4 items-center z-10">
+                    
+                    {/* Node 1: Input Streams */}
+                    <div className="flex flex-col items-center text-center space-y-2">
+                      <div className="h-14 w-14 rounded-2xl bg-white/[0.04] border border-amber-400/30 flex items-center justify-center shadow-lg relative group-hover:border-amber-400/50 transition-all">
+                        <Database className="h-6 w-6 text-amber-400" />
+                        <span className="absolute -top-1.5 -right-1.5 h-2.5 w-2.5 rounded-full bg-amber-400 animate-pulse" />
+                      </div>
+                      <div>
+                        <div className="text-xs sm:text-sm font-bold text-white">Data Streams</div>
+                        <span className="text-[10px] font-mono text-slate-400">PDFs · ERP · SQL</span>
+                      </div>
                     </div>
-                    <div className="h-2.5 w-full rounded-full bg-white/10 overflow-hidden">
-                      <div className="h-full bg-gradient-to-r from-[#1A6FA8] to-[#29A8E0] rounded-full w-[95%] shadow-[0_0_12px_rgba(41,168,224,0.6)]" />
-                    </div>
-                  </div>
 
-                  {/* Benchmark 2 */}
-                  <div className="space-y-1.5">
-                    <div className="flex justify-between items-center text-xs">
-                      <span className="font-mono text-slate-300">HUMAN-IN-THE-LOOP CHECKPOINT</span>
-                      <span className="font-mono font-semibold text-slate-200">88% Specialist Approved</span>
+                    {/* Node 2 (Hero Center): Pulsing AI Core */}
+                    <div className="flex flex-col items-center text-center space-y-2">
+                      <div className="relative h-20 w-20 sm:h-24 sm:w-24 rounded-full flex items-center justify-center">
+                        {/* Spinning Radar Ring */}
+                        <div className="absolute inset-0 rounded-full border border-dashed border-[#29A8E0]/40 animate-orbit-spin" />
+                        {/* Expanding Pulse Ring */}
+                        <div className="absolute inset-2 rounded-full border border-[#29A8E0]/30 animate-pulse-radar" />
+                        {/* Center Core */}
+                        <div className="h-14 w-14 sm:h-16 sm:w-16 rounded-2xl bg-gradient-to-br from-[#1A6FA8] to-[#29A8E0] flex items-center justify-center shadow-[0_0_25px_rgba(41,168,224,0.5)]">
+                          <Bot className="h-7 w-7 text-white" />
+                        </div>
+                      </div>
+                      <div>
+                        <div className="text-xs sm:text-sm font-bold text-[#29A8E0]">AI Agent Pods</div>
+                        <span className="text-[10px] font-mono text-emerald-400 font-semibold">99.6% Confidence</span>
+                      </div>
                     </div>
-                    <div className="h-2.5 w-full rounded-full bg-white/10 overflow-hidden">
-                      <div className="h-full bg-blue-400/80 rounded-full w-[88%]" />
-                    </div>
-                  </div>
 
-                  {/* Benchmark 3 */}
-                  <div className="space-y-1.5">
-                    <div className="flex justify-between items-center text-xs">
-                      <span className="font-mono text-slate-400">GENERIC / UNCHECKED AI PROMPTS</span>
-                      <span className="font-mono text-rose-400">35% High Error Rate &amp; Drift</span>
+                    {/* Node 3: Governed Enterprise Action */}
+                    <div className="flex flex-col items-center text-center space-y-2">
+                      <div className="h-14 w-14 rounded-2xl bg-white/[0.04] border border-emerald-400/30 flex items-center justify-center shadow-lg relative group-hover:border-emerald-400/50 transition-all">
+                        <ShieldCheck className="h-6 w-6 text-emerald-400" />
+                        <span className="absolute -top-1.5 -right-1.5 h-2.5 w-2.5 rounded-full bg-emerald-400 animate-ping" />
+                      </div>
+                      <div>
+                        <div className="text-xs sm:text-sm font-bold text-white">Governed Sync</div>
+                        <span className="text-[10px] font-mono text-emerald-400">Zero Drift Gate</span>
+                      </div>
                     </div>
-                    <div className="h-2.5 w-full rounded-full bg-white/10 overflow-hidden">
-                      <div className="h-full bg-rose-500/40 rounded-full w-[35%]" />
-                    </div>
-                  </div>
 
-                  {/* Micro Footer Inside Card */}
-                  <div className="pt-3 border-t border-white/10 flex flex-wrap items-center justify-between text-[11px] font-mono text-slate-400">
-                    <span>CONTROL : ROLE-BASED ACCESS &amp; SUPERVISION</span>
-                    <span className="text-emerald-300">● Checkpoints Active</span>
                   </div>
                 </div>
 
-                {/* Card Bottom Status */}
-                <div className="mt-5 flex items-center justify-between text-[11px] font-mono text-slate-400 px-1">
-                  <span>DEPLOYMENT : SECURE ENTERPRISE CLOUD</span>
-                  <span className="text-[#29A8E0]">HUMAN GOVERNANCE ACTIVE</span>
+                {/* Bottom Status Chip */}
+                <div className="relative z-10 flex items-center justify-between text-[11px] font-mono text-slate-400 pt-3 border-t border-white/5">
+                  <span className="flex items-center gap-1.5">
+                    <Sparkles className="h-3.5 w-3.5 text-[#29A8E0]" />
+                    Autonomous Execution with Human Guardrails
+                  </span>
+                  <span className="text-emerald-400 font-semibold">● ACTIVE</span>
                 </div>
+
               </div>
 
               {/* Text & Capability Details Below Visual */}
@@ -364,7 +359,7 @@ export function Disciplines() {
                 <div className="pt-2">
                   <Link 
                     href={PILLARS[0].href}
-                    className="inline-flex items-center gap-1.5 text-sm font-bold text-[#1A6FA8] hover:text-[#101820] transition-colors group"
+                    className="inline-flex items-center gap-1.5 text-sm font-bold text-[#1A6FA8] hover:text-[#1A6FA8] transition-colors group"
                   >
                     <span>Explore Custom Enterprise AI</span>
                     <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
@@ -375,88 +370,89 @@ export function Disciplines() {
 
             {/* ══════════════════════════════════════════════════════
                 CARD 02: Business Process Reengineering
+                Visual: Kinetic Velocity Tunnel (Chaos -> 3.2x Velocity)
             ══════════════════════════════════════════════════════ */}
             <div 
               ref={(el) => (cardRefs.current[1] = el)}
-              className="scroll-mt-36 space-y-6"
+              className="scroll-mt-44 space-y-6"
             >
-              <div className="group relative rounded-3xl border border-[#29A8E0]/30 bg-gradient-to-br from-white via-[#F4FAFD] to-[#EAF5FC] p-6 sm:p-8 shadow-xl shadow-[#1A6FA8]/10 overflow-hidden transition-all duration-300 hover:border-[#1A6FA8]/40">
+              <div className="group relative rounded-3xl border border-slate-800/90 bg-[#0B141D] p-4 sm:p-7 shadow-2xl shadow-[#101820]/30 overflow-hidden text-white transition-all duration-300 hover:border-[#29A8E0]/40 min-h-[360px] sm:h-[400px] flex flex-col justify-between">
                 
-                {/* Ambient Highlight */}
-                <div className="pointer-events-none absolute top-0 right-0 h-48 w-48 rounded-full bg-[#29A8E0]/15 blur-2xl" />
+                {/* Ambient Glow */}
+                <div className="pointer-events-none absolute top-0 right-0 h-56 w-56 rounded-full bg-[#29A8E0]/15 blur-3xl" />
 
-                {/* Top Cockpit Header */}
-                <div className="flex items-center justify-between pb-5 border-b border-slate-200/80">
+                {/* Top Header */}
+                <div className="relative flex flex-wrap items-center justify-between gap-2 z-10">
                   <div className="flex items-center gap-2">
                     <span className="h-2 w-2 rounded-full bg-[#29A8E0]" />
-                    <span className="text-xs font-mono font-bold tracking-wider text-[#101820] uppercase">
-                      WORKFLOW DIAGNOSTICS : PROCESS REENGINEERING
+                    <span className="text-[10.5px] sm:text-[11px] font-mono font-bold tracking-wider text-slate-300 uppercase">
+                      PROCESS VELOCITY ENGINE
                     </span>
                   </div>
-                  <span className="text-xs font-mono font-semibold px-2.5 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200">
-                    ● BOTTLENECKS REMOVED
+                  <span className="text-[9.5px] sm:text-[10px] font-mono px-2.5 py-1 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/25 font-bold">
+                    BOTTLENECKS ELIMINATED
                   </span>
                 </div>
 
-                {/* 3 Operational Focus Areas */}
-                <div className="grid grid-cols-3 gap-3 sm:gap-4 my-5">
-                  <div className="rounded-2xl bg-white p-4 border border-slate-200/80 shadow-xs text-center sm:text-left">
-                    <span className="text-[11px] font-mono text-slate-500 uppercase tracking-wider block">DIAGNOSE</span>
-                    <div className="mt-1 text-lg sm:text-xl font-bold text-[#101820] font-sans">
-                      Friction
+                {/* Main Dynamic Visual: Kinetic Velocity Acceleration */}
+                <div className="relative my-auto py-2 grid grid-cols-1 sm:grid-cols-12 gap-4 items-center z-10">
+                  
+                  {/* Left: Legacy Friction (Dimmed Red) */}
+                  <div className="sm:col-span-5 rounded-2xl bg-white/[0.03] border border-rose-500/25 p-4 space-y-2">
+                    <div className="flex items-center justify-between text-[10px] font-mono text-rose-400">
+                      <span>LEGACY STATE</span>
+                      <span className="px-1.5 py-0.5 rounded bg-rose-500/20 text-rose-300">FLAGGED</span>
                     </div>
-                    <span className="text-[11px] text-[#1A6FA8] font-semibold block mt-0.5">Identified &amp; Mapped</span>
+                    <div className="text-sm font-bold text-slate-300">14 Manual Touchpoints</div>
+                    <p className="text-[11px] text-slate-400 leading-snug">
+                      Fragmented department handoffs &amp; spreadsheet queues.
+                    </p>
+                    <div className="h-1.5 w-full bg-rose-500/20 rounded-full overflow-hidden">
+                      <div className="h-full bg-rose-500 w-[35%]" />
+                    </div>
                   </div>
 
-                  <div className="rounded-2xl bg-white p-4 border border-slate-200/80 shadow-xs text-center sm:text-left">
-                    <span className="text-[11px] font-mono text-slate-500 uppercase tracking-wider block">RESTRUCTURE</span>
-                    <div className="mt-1 text-lg sm:text-xl font-bold text-[#1A6FA8] font-sans">
-                      Streamlined
+                  {/* Middle: Kinetic Speed Bars Tunnel */}
+                  <div className="sm:col-span-2 flex flex-col items-center justify-center py-2">
+                    <div className="flex items-end gap-1 h-12">
+                      <div className="w-1.5 bg-[#29A8E0] rounded-full animate-bar-1" />
+                      <div className="w-1.5 bg-[#29A8E0] rounded-full animate-bar-2" />
+                      <div className="w-1.5 bg-emerald-400 rounded-full animate-bar-3" />
+                      <div className="w-1.5 bg-[#29A8E0] rounded-full animate-bar-4" />
+                      <div className="w-1.5 bg-emerald-400 rounded-full animate-bar-5" />
                     </div>
-                    <span className="text-[11px] text-emerald-600 block mt-0.5">Zero Redundant Steps</span>
+                    <span className="text-[9px] font-mono text-slate-400 mt-1 uppercase">Acceleration</span>
                   </div>
 
-                  <div className="rounded-2xl bg-white p-4 border border-slate-200/80 shadow-xs text-center sm:text-left">
-                    <span className="text-[11px] font-mono text-slate-500 uppercase tracking-wider block">VELOCITY</span>
-                    <div className="mt-1 text-lg sm:text-xl font-bold text-[#101820] font-sans">
-                      Predictable
+                  {/* Right: Modern Velocity Gain (Glowing Cyan/Emerald) */}
+                  <div className="sm:col-span-5 rounded-2xl bg-gradient-to-br from-[#1A6FA8]/25 to-emerald-500/10 border border-emerald-500/40 p-4 space-y-2 shadow-lg shadow-emerald-500/10">
+                    <div className="flex items-center justify-between text-[10px] font-mono text-emerald-400">
+                      <span>STREAMLINED FLOW</span>
+                      <span className="px-1.5 py-0.5 rounded bg-emerald-500/20 text-emerald-300 font-bold">PEAK VELOCITY</span>
                     </div>
-                    <span className="text-[11px] text-slate-500 block mt-0.5">Faster Cycle Time</span>
+                    <div className="flex items-baseline gap-2">
+                      <span className="text-2xl sm:text-3xl font-black text-white font-sans tracking-tight">3.2x</span>
+                      <span className="text-xs font-mono text-emerald-300 font-semibold">Faster Cycle Time</span>
+                    </div>
+                    <p className="text-[11px] text-slate-200 leading-snug">
+                      Automated routing &amp; unified digital Standard Operating Procedures.
+                    </p>
+                    <div className="h-1.5 w-full bg-white/10 rounded-full overflow-hidden">
+                      <div className="h-full bg-gradient-to-r from-[#29A8E0] to-emerald-400 rounded-full w-[96%]" />
+                    </div>
                   </div>
+
                 </div>
 
-                {/* 4-Stage Modernization Pipeline */}
-                <div className="rounded-2xl bg-white/90 border border-slate-200/80 p-5 space-y-3 shadow-xs">
-                  <div className="flex items-center justify-between text-xs font-mono text-slate-500">
-                    <span>OPERATIONAL MODERNIZATION PIPELINE</span>
-                    <span className="text-[#1A6FA8] font-semibold">LEAN EXECUTION</span>
-                  </div>
-
-                  <div className="grid grid-cols-4 gap-2 text-center">
-                    <div className="p-2.5 rounded-xl bg-slate-50 border border-slate-100">
-                      <span className="text-[10px] font-mono text-slate-400 block">STEP 01</span>
-                      <span className="text-xs font-semibold text-slate-700 block mt-0.5">Process Audit</span>
-                    </div>
-                    <div className="p-2.5 rounded-xl bg-slate-50 border border-slate-100">
-                      <span className="text-[10px] font-mono text-slate-400 block">STEP 02</span>
-                      <span className="text-xs font-semibold text-slate-700 block mt-0.5">Remove Friction</span>
-                    </div>
-                    <div className="p-2.5 rounded-xl bg-slate-50 border border-slate-100">
-                      <span className="text-[10px] font-mono text-slate-400 block">STEP 03</span>
-                      <span className="text-xs font-semibold text-slate-700 block mt-0.5">Smart Routing</span>
-                    </div>
-                    <div className="p-2.5 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-800">
-                      <span className="text-[10px] font-mono text-emerald-600 block">STEP 04</span>
-                      <span className="text-xs font-bold block mt-0.5">Peak Velocity</span>
-                    </div>
-                  </div>
+                {/* Bottom Status Chip */}
+                <div className="relative z-10 flex items-center justify-between text-[11px] font-mono text-slate-400 pt-3 border-t border-white/5">
+                  <span className="flex items-center gap-1.5">
+                    <Workflow className="h-3.5 w-3.5 text-[#29A8E0]" />
+                    Predictable Throughput · Zero Process Drift
+                  </span>
+                  <span className="text-emerald-400 font-semibold">-68% LATENCY</span>
                 </div>
 
-                {/* Bottom Footer Info */}
-                <div className="mt-5 flex items-center justify-between text-[11px] font-mono text-slate-500">
-                  <span>METHODOLOGY : LEAN REENGINEERING &amp; SOPS</span>
-                  <span className="text-[#1A6FA8] font-semibold">CONTINUOUS WORKFLOW AUDIT</span>
-                </div>
               </div>
 
               {/* Text & Capability Details Below Visual */}
@@ -481,7 +477,7 @@ export function Disciplines() {
                 <div className="pt-2">
                   <Link 
                     href={PILLARS[1].href}
-                    className="inline-flex items-center gap-1.5 text-sm font-bold text-[#1A6FA8] hover:text-[#101820] transition-colors group"
+                    className="inline-flex items-center gap-1.5 text-sm font-bold text-[#1A6FA8] hover:text-[#1A6FA8] transition-colors group"
                   >
                     <span>Explore Process Reengineering</span>
                     <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
@@ -491,90 +487,72 @@ export function Disciplines() {
             </div>
 
             {/* ══════════════════════════════════════════════════════
-                CARD 03: Healthcare Operations & Dual-Hub Synchrony
+                CARD 03: Healthcare Technology & Medical Billing
+                Visual: Clinical Cardiogram Pulse & Clean Claim Seal
             ══════════════════════════════════════════════════════ */}
             <div 
               ref={(el) => (cardRefs.current[2] = el)}
-              className="scroll-mt-36 space-y-6"
+              className="scroll-mt-44 space-y-6"
             >
-              <div className="group relative rounded-3xl border border-slate-200/90 bg-[#0B141D] p-6 sm:p-8 shadow-2xl shadow-[#101820]/15 overflow-hidden text-white transition-all duration-300 hover:border-[#29A8E0]/40">
+              <div className="group relative rounded-3xl border border-slate-800/90 bg-[#0B141D] p-4 sm:p-7 shadow-2xl shadow-[#101820]/30 overflow-hidden text-white transition-all duration-300 hover:border-[#29A8E0]/40 min-h-[360px] sm:h-[400px] flex flex-col justify-between">
                 
-                {/* Ambient Mesh */}
-                <div className="pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-72 w-72 rounded-full bg-[#1A6FA8]/20 blur-3xl" />
+                {/* Ambient Glow */}
+                <div className="pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-64 w-64 rounded-full bg-[#1A6FA8]/15 blur-3xl" />
 
                 {/* Top Header */}
-                <div className="flex items-center justify-between pb-5 border-b border-white/10">
-                  <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-white/10 border border-white/15">
-                    <span className="text-xs font-mono font-bold tracking-widest text-[#29A8E0]">
-                      GLOBAL HEALTHCARE OPERATIONS
+                <div className="relative flex flex-wrap items-center justify-between gap-2 z-10">
+                  <div className="flex items-center gap-2">
+                    <span className="relative flex h-2 w-2">
+                      <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
+                      <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500" />
+                    </span>
+                    <span className="text-[10.5px] sm:text-[11px] font-mono font-bold tracking-widest text-slate-300 uppercase">
+                      MEDSYNTHEA RCM · CLINICAL-TO-CASH
                     </span>
                   </div>
-                  <span className="text-xs font-mono text-emerald-400 flex items-center gap-1.5">
-                    <span className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
-                    DUAL-HUB ACTIVE
+                  <span className="text-[9.5px] sm:text-[10px] font-mono px-2.5 py-1 rounded-full bg-emerald-500/10 text-emerald-300 border border-emerald-500/25 font-bold flex items-center gap-1">
+                    <ShieldCheck className="h-3 w-3 text-emerald-400" />
+                    HIPAA &amp; BAA CERTIFIED
                   </span>
                 </div>
 
-                {/* Dual Nodes Visual */}
-                <div className="my-5 rounded-2xl bg-white/5 border border-white/10 p-5 sm:p-6 backdrop-blur-md relative overflow-hidden">
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 items-center">
-                    
-                    {/* Node 1: Dallas */}
-                    <div className="p-4 rounded-xl bg-white/5 border border-white/10 space-y-1.5 hover:border-[#29A8E0]/50 transition-all">
-                      <div className="flex items-center justify-between">
-                        <span className="text-[10px] font-mono font-bold text-[#29A8E0] uppercase tracking-wider">
-                          HQ JURISDICTION
-                        </span>
-                        <span className="text-[10px] font-mono text-slate-400">US-CENTRAL</span>
-                      </div>
-                      <div className="text-base sm:text-lg font-bold text-white flex items-center gap-2">
-                        <Building2 className="h-4 w-4 text-[#29A8E0]" />
-                        Dallas, Texas HQ
-                      </div>
-                      <p className="text-xs text-slate-300">
-                        Corporate Governance, Executive Leadership, US Compliance &amp; Texas Corporate Law.
-                      </p>
-                      <div className="pt-1 text-[11px] font-mono text-emerald-300">
-                        ● Direct US Contractual Entity
-                      </div>
-                    </div>
-
-                    {/* Node 2: Lahore */}
-                    <div className="p-4 rounded-xl bg-white/5 border border-white/10 space-y-1.5 hover:border-[#29A8E0]/50 transition-all">
-                      <div className="flex items-center justify-between">
-                        <span className="text-[10px] font-mono font-bold text-emerald-400 uppercase tracking-wider">
-                          PRODUCTION HUB
-                        </span>
-                        <span className="text-[10px] font-mono text-slate-400">PK-PUNJAB</span>
-                      </div>
-                      <div className="text-base sm:text-lg font-bold text-white flex items-center gap-2">
-                        <Globe2 className="h-4 w-4 text-emerald-400" />
-                        Lahore Global Hub
-                      </div>
-                      <p className="text-xs text-slate-300">
-                        AAPC/AHIMA Certified Billing Specialists, Dedicated Delivery Pods, Continuous Execution.
-                      </p>
-                      <div className="pt-1 text-[11px] font-mono text-[#29A8E0]">
-                        ● Disciplined Reimbursement Velocity
-                      </div>
-                    </div>
+                {/* Main Visual: Neon Cardiogram ECG Line with Expanding Ripple Seal */}
+                <div className="relative my-auto py-2 z-10 flex flex-col items-center text-center">
+                  
+                  {/* SVG ECG Cardiogram Line flowing horizontally */}
+                  <div className="w-full max-w-md h-12 relative overflow-hidden flex items-center justify-center">
+                    <svg viewBox="0 0 400 60" className="w-full h-full stroke-emerald-400 fill-none stroke-[2.5] opacity-90 animate-ecg">
+                      <path d="M0,30 L90,30 L105,10 L120,50 L135,15 L145,38 L155,30 L230,30 L245,10 L260,50 L275,15 L285,38 L295,30 L400,30" />
+                    </svg>
                   </div>
 
-                  {/* Telemetry Bridge */}
-                  <div className="mt-4 pt-3 border-t border-white/10 flex flex-wrap items-center justify-between text-xs font-mono text-slate-400">
-                    <span className="flex items-center gap-1.5">
-                      <Activity className="h-3.5 w-3.5 text-[#29A8E0]" />
-                      COMMUNICATION : DIRECT SUPERVISION &amp; SOPS
-                    </span>
-                    <span className="text-emerald-400">ZERO PROCESS DRIFT</span>
+                  {/* Floating Verification Seal */}
+                  <div className="mt-2 relative flex flex-col items-center">
+                    <div className="relative h-16 w-16 rounded-full flex items-center justify-center mb-2">
+                      <div className="absolute inset-0 rounded-full border border-emerald-400/40 animate-pulse-radar" />
+                      <div className="h-12 w-12 rounded-full bg-emerald-500/20 border border-emerald-400/60 flex items-center justify-center shadow-[0_0_20px_rgba(16,185,129,0.4)]">
+                        <CheckCircle2 className="h-6 w-6 text-emerald-400" />
+                      </div>
+                    </div>
+                    <div className="text-xl sm:text-2xl font-bold text-white font-sans">
+                      99.1% First-Pass Clean Claim
+                    </div>
+                    <p className="text-xs text-slate-300 max-w-sm mt-1">
+                      Automated pre-filing denial scrubber checks 2,400+ payer guidelines with AAPC certified review.
+                    </p>
                   </div>
+
                 </div>
 
-                {/* Bottom Strip */}
-                <div className="rounded-xl bg-white/5 p-3 text-xs font-mono text-slate-300 flex flex-wrap items-center justify-between">
-                  <span>OPERATIONS : DALLAS TX (US HQ) ⇄ LAHORE HUB (GLOBAL DELIVERY)</span>
-                  <span className="text-emerald-400">HIPAA COMPLIANT &amp; BAA READY</span>
+                {/* Bottom Status Chip */}
+                <div className="relative z-10 flex items-center justify-between text-[11px] font-mono text-slate-400 pt-3 border-t border-white/5">
+                  <span className="flex items-center gap-1.5">
+                    <Activity className="h-3.5 w-3.5 text-[#29A8E0]" />
+                    Dallas HQ Governance ⇄ Lahore AAPC Hub
+                  </span>
+                  <span className="text-[#29A8E0] font-semibold">&lt; 28 DAYS IN A/R</span>
                 </div>
+
               </div>
 
               {/* Text & Capability Details Below Visual */}
@@ -599,7 +577,7 @@ export function Disciplines() {
                 <div className="pt-2">
                   <Link 
                     href={PILLARS[2].href}
-                    className="inline-flex items-center gap-1.5 text-sm font-bold text-[#1A6FA8] hover:text-[#101820] transition-colors group"
+                    className="inline-flex items-center gap-1.5 text-sm font-bold text-[#1A6FA8] hover:text-[#1A6FA8] transition-colors group"
                   >
                     <span>Explore Healthcare &amp; Medical Billing</span>
                     <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
@@ -609,126 +587,93 @@ export function Disciplines() {
             </div>
 
             {/* ══════════════════════════════════════════════════════
-                CARD 04: Intelligent Resource Augmentation (Human + AI Agent)
+                CARD 04: Intelligent Resource Augmentation
+                Visual: Global Dual-Hub Synchrony Orbit (Dallas <-> Lahore)
             ══════════════════════════════════════════════════════ */}
             <div 
               ref={(el) => (cardRefs.current[3] = el)}
-              className="scroll-mt-36 space-y-6"
+              className="scroll-mt-44 space-y-6"
             >
-              <div className="group relative rounded-3xl border border-slate-200/90 bg-[#0B141D] p-6 sm:p-8 shadow-2xl shadow-[#101820]/15 overflow-hidden text-white transition-all duration-300 hover:border-[#29A8E0]/40">
+              <div className="group relative rounded-3xl border border-slate-800/90 bg-[#0B141D] p-4 sm:p-7 shadow-2xl shadow-[#101820]/30 overflow-hidden text-white transition-all duration-300 hover:border-[#29A8E0]/40 min-h-[360px] sm:h-[400px] flex flex-col justify-between">
                 
                 {/* Ambient Glow */}
-                <div className="pointer-events-none absolute -top-20 right-10 h-64 w-64 rounded-full bg-[#29A8E0]/15 blur-3xl" />
-                <div className="pointer-events-none absolute -bottom-20 left-10 h-64 w-64 rounded-full bg-[#1A6FA8]/20 blur-3xl" />
+                <div className="pointer-events-none absolute -top-20 right-10 h-56 w-56 rounded-full bg-[#29A8E0]/15 blur-3xl" />
+                <div className="pointer-events-none absolute -bottom-20 left-10 h-56 w-56 rounded-full bg-[#1A6FA8]/20 blur-3xl" />
 
-                {/* Header */}
-                <div className="flex items-center justify-between pb-4 border-b border-white/10">
+                {/* Top Header */}
+                <div className="relative flex flex-wrap items-center justify-between gap-2 z-10">
                   <div className="flex items-center gap-2">
-                    <div className="h-2.5 w-2.5 rounded-full bg-rose-500/80" />
-                    <div className="h-2.5 w-2.5 rounded-full bg-amber-500/80" />
-                    <div className="h-2.5 w-2.5 rounded-full bg-emerald-500/80" />
-                    <span className="ml-2 text-xs font-mono font-semibold text-slate-300 tracking-wider">
-                      THE DELIVERY MODEL · EMBEDDED PODS
+                    <span className="relative flex h-2 w-2">
+                      <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#29A8E0] opacity-75" />
+                      <span className="relative inline-flex rounded-full h-2 w-2 bg-[#29A8E0]" />
+                    </span>
+                    <span className="text-[10.5px] sm:text-[11px] font-mono font-bold tracking-widest text-slate-300 uppercase">
+                      GLOBAL DUAL-HUB SYNCHRONY
                     </span>
                   </div>
-                  <span className="px-2.5 py-0.5 rounded-full text-[10px] font-mono bg-emerald-500/10 text-emerald-300 border border-emerald-500/20 font-bold flex items-center gap-1.5">
-                    <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse" />
-                    HYBRID SYNERGY ACTIVE
+                  <span className="text-[9.5px] sm:text-[10px] font-mono px-2.5 py-1 rounded-full bg-[#1A6FA8]/20 text-[#29A8E0] border border-[#29A8E0]/30 font-bold flex items-center gap-1">
+                    <Globe2 className="h-3 w-3 text-[#29A8E0]" />
+                    EMBEDDED PODS
                   </span>
                 </div>
 
-                {/* Visual Formula: Human + AI Agent = AI-Native Team */}
-                <div className="mt-5 rounded-2xl bg-white/5 border border-white/10 p-5 sm:p-6 backdrop-blur-md">
-                  <div className="grid grid-cols-1 md:grid-cols-11 gap-3 sm:gap-2 items-center text-center">
+                {/* Main Visual: Two Planetary Hubs connected by Orbiting AI Agent Satellite */}
+                <div className="relative my-auto py-2 z-10">
+                  
+                  {/* Connecting Orbital Arc */}
+                  <div className="absolute top-1/2 left-16 right-16 -translate-y-1/2 h-[1px] bg-gradient-to-r from-[#29A8E0]/40 via-emerald-400/40 to-[#29A8E0]/40" />
+
+                  <div className="grid grid-cols-1 sm:grid-cols-11 gap-3 items-center">
                     
-                    {/* Box 1: Human Specialist */}
-                    <div className="md:col-span-3 rounded-xl bg-white/5 border border-white/10 p-3.5 space-y-1.5 text-left">
+                    {/* Hub 1: Dallas HQ */}
+                    <div className="sm:col-span-4 rounded-2xl bg-white/[0.04] border border-[#29A8E0]/30 p-4 space-y-1.5 text-left shadow-lg">
                       <div className="flex items-center justify-between">
-                        <span className="text-[10px] font-mono font-bold text-[#29A8E0] uppercase tracking-wider">
-                          HUMAN OPERATORS
-                        </span>
-                        <UserCheck className="h-4 w-4 text-[#29A8E0]" />
+                        <span className="text-[10px] font-mono font-bold text-[#29A8E0]">US HQ</span>
+                        <Building2 className="h-4 w-4 text-[#29A8E0]" />
                       </div>
-                      <div className="text-sm font-bold text-white">
-                        AI-Fluent Specialists
-                      </div>
+                      <div className="text-sm font-bold text-white">Dallas, Texas</div>
                       <p className="text-[11px] text-slate-300 leading-snug">
-                        Trained professionals handling context, exceptions &amp; quality.
+                        Executive governance, US contracts &amp; SLA accountability.
                       </p>
                     </div>
 
-                    {/* Operator + */}
-                    <div className="md:col-span-1 flex items-center justify-center py-1">
-                      <div className="h-7 w-7 rounded-full bg-white/10 border border-white/20 flex items-center justify-center font-bold text-base text-[#29A8E0]">
-                        +
+                    {/* Orbiting Satellite Center */}
+                    <div className="sm:col-span-3 flex flex-col items-center justify-center py-2 relative">
+                      <div className="relative h-14 w-14 rounded-full flex items-center justify-center">
+                        <div className="absolute inset-0 rounded-full border border-dashed border-[#29A8E0]/50 animate-orbit-spin" />
+                        <div className="h-9 w-9 rounded-xl bg-gradient-to-br from-[#1A6FA8] to-[#29A8E0] flex items-center justify-center shadow-[0_0_15px_rgba(41,168,224,0.6)]">
+                          <Bot className="h-5 w-5 text-white animate-pulse" />
+                        </div>
                       </div>
+                      <span className="text-[10px] font-mono text-[#29A8E0] font-bold mt-1 uppercase tracking-wider">
+                        AI Leverage
+                      </span>
                     </div>
 
-                    {/* Box 2: Trained AI Agents */}
-                    <div className="md:col-span-3 rounded-xl bg-white/5 border border-white/10 p-3.5 space-y-1.5 text-left">
+                    {/* Hub 2: Lahore Global Hub */}
+                    <div className="sm:col-span-4 rounded-2xl bg-gradient-to-br from-white/[0.03] to-emerald-500/10 border border-emerald-500/30 p-4 space-y-1.5 text-left shadow-lg">
                       <div className="flex items-center justify-between">
-                        <span className="text-[10px] font-mono font-bold text-[#29A8E0] uppercase tracking-wider">
-                          AUTOMATION
-                        </span>
-                        <Bot className="h-4 w-4 text-[#29A8E0]" />
+                        <span className="text-[10px] font-mono font-bold text-emerald-400">DELIVERY HUB</span>
+                        <Globe2 className="h-4 w-4 text-emerald-400" />
                       </div>
-                      <div className="text-sm font-bold text-white">
-                        Trained AI Agents
-                      </div>
+                      <div className="text-sm font-bold text-white">Lahore Hub</div>
                       <p className="text-[11px] text-slate-300 leading-snug">
-                        Automated intake, routine routing &amp; rapid data execution.
+                        AAPC certified specialists, software pods &amp; dedicated QA.
                       </p>
                     </div>
 
-                    {/* Operator = */}
-                    <div className="md:col-span-1 flex items-center justify-center py-1">
-                      <div className="h-7 w-7 rounded-full bg-white/10 border border-white/20 flex items-center justify-center font-bold text-base text-emerald-400">
-                        =
-                      </div>
-                    </div>
-
-                    {/* Box 3: Embedded AI-Native Team */}
-                    <div className="md:col-span-3 rounded-xl bg-gradient-to-br from-[#1A6FA8]/30 via-white/5 to-emerald-500/10 border border-[#29A8E0]/40 p-3.5 space-y-1.5 text-left shadow-lg shadow-[#1A6FA8]/20">
-                      <div className="flex items-center justify-between">
-                        <span className="text-[10px] font-mono font-bold text-emerald-400 uppercase tracking-wider">
-                          YOUR TEAM
-                        </span>
-                        <Sparkles className="h-4 w-4 text-emerald-400" />
-                      </div>
-                      <div className="text-sm font-bold text-white">
-                        AI-Native Scale
-                      </div>
-                      <p className="text-[11px] text-slate-200 leading-snug">
-                        Immediate operational capacity without bloated overhead.
-                      </p>
-                    </div>
-
-                  </div>
-
-                  {/* Philosophy banner */}
-                  <div className="mt-4 pt-3.5 border-t border-white/10 flex items-center gap-2.5 text-xs text-slate-300 font-sans">
-                    <span className="h-1.5 w-1.5 rounded-full bg-[#29A8E0] shrink-0" />
-                    <span className="italic">
-                      &quot;Our mission is not to replace humans. It is to empower ambitious teams with AI leverage.&quot;
-                    </span>
                   </div>
                 </div>
 
-                {/* Telemetry Stats */}
-                <div className="mt-5 grid grid-cols-3 gap-3 text-center font-mono text-xs">
-                  <div className="p-2.5 rounded-xl bg-white/5 border border-white/5">
-                    <span className="text-[10px] text-slate-400 block">COLLABORATION</span>
-                    <span className="text-white font-bold block mt-0.5 text-sm">Instant Handoff</span>
-                  </div>
-                  <div className="p-2.5 rounded-xl bg-white/5 border border-white/5">
-                    <span className="text-[10px] text-slate-400 block">CAPACITY</span>
-                    <span className="text-[#29A8E0] font-bold block mt-0.5 text-sm">Elastic Pods</span>
-                  </div>
-                  <div className="p-2.5 rounded-xl bg-white/5 border border-white/5">
-                    <span className="text-[10px] text-slate-400 block">QUALITY</span>
-                    <span className="text-emerald-400 font-bold block mt-0.5 text-sm">Human Supervised</span>
-                  </div>
+                {/* Bottom Status Chip */}
+                <div className="relative z-10 flex items-center justify-between text-[11px] font-mono text-slate-400 pt-3 border-t border-white/5">
+                  <span className="flex items-center gap-1.5">
+                    <UserCheck className="h-3.5 w-3.5 text-emerald-400" />
+                    Scale Without Overhead Bloat
+                  </span>
+                  <span className="text-emerald-400 font-semibold">72H RAPID DEPLOY</span>
                 </div>
+
               </div>
 
               {/* Text & Capability Details Below Visual */}
@@ -753,7 +698,7 @@ export function Disciplines() {
                 <div className="pt-2">
                   <Link 
                     href={PILLARS[3].href}
-                    className="inline-flex items-center gap-1.5 text-sm font-bold text-[#1A6FA8] hover:text-[#101820] transition-colors group"
+                    className="inline-flex items-center gap-1.5 text-sm font-bold text-[#1A6FA8] hover:text-[#1A6FA8] transition-colors group"
                   >
                     <span>Explore Resource Augmentation</span>
                     <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
@@ -770,3 +715,4 @@ export function Disciplines() {
     </section>
   );
 }
+

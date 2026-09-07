@@ -63,8 +63,8 @@ export default function ServicesPage() {
               {/* 1. HERO H1 */}
               <h1 className="text-3xl sm:text-4xl lg:text-[2.75rem] xl:text-[3.15rem] leading-[1.28] sm:leading-[1.26] lg:leading-[1.24] font-bold tracking-tight text-[#101820] font-heading max-w-2xl pt-1">
                 Systems built to make complex operations{' '}
-                <span className="inline-block pr-1 font-quote italic font-normal text-transparent bg-clip-text bg-gradient-to-r from-[#1A6FA8] via-[#29A8E0] to-[#1A6FA8]">
-                  more predictable
+                <span className="inline-block pr-1 font-quote italic font-normal text-brand-steel">
+                  more predictable.
                 </span>
               </h1>
               

@@ -84,33 +84,34 @@ export function Disciplines() {
   const [activeIdx, setActiveIdx] = useState<number>(0);
   const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
 
-  // Exact Cerebrium-style IntersectionObserver for scroll-driven active state
+  // Real-time scroll listener and IntersectionObserver for silky-smooth active state tracking
   useEffect(() => {
-    const observers: IntersectionObserver[] = [];
+    const handleScroll = () => {
+      const navOffset = 220;
+      let closestIdx = 0;
+      let minDistance = Infinity;
 
-    cardRefs.current.forEach((el, idx) => {
-      if (!el) return;
-
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              setActiveIdx(idx);
-            }
-          });
-        },
-        {
-          rootMargin: '-25% 0px -40% 0px',
-          threshold: 0.1,
+      cardRefs.current.forEach((el, idx) => {
+        if (!el) return;
+        const rect = el.getBoundingClientRect();
+        // Check if card has entered upper viewport area
+        if (rect.top <= window.innerHeight * 0.65) {
+          const dist = Math.abs(rect.top - navOffset);
+          if (dist < minDistance) {
+            minDistance = dist;
+            closestIdx = idx;
+          }
         }
-      );
+      });
 
-      observer.observe(el);
-      observers.push(observer);
-    });
+      setActiveIdx(closestIdx);
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll();
 
     return () => {
-      observers.forEach((obs) => obs.disconnect());
+      window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
@@ -240,7 +241,7 @@ export function Disciplines() {
           {/* ──────────────────────────────────────────────────────────
               RIGHT COLUMN: Vertically Stacked Feature Cards (Natural Flow)
           ────────────────────────────────────────────────────────── */}
-          <div className="lg:col-span-7 space-y-16 sm:space-y-24 lg:space-y-36 pb-16 sm:pb-24">
+          <div className="lg:col-span-7 space-y-20 sm:space-y-28 lg:space-y-36 pb-20 sm:pb-28">
             
             {/* ══════════════════════════════════════════════════════
                 CARD 01: Custom Enterprise AI Systems

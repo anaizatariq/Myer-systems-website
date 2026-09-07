@@ -21,7 +21,7 @@ export default function Home() {
     <>
       <ScrollProgress />
       <Navbar />
-      <main className="overflow-x-hidden w-full">
+      <main>
         <Hero />
         <GovernedConsole />
         <Problems />

@@ -53,7 +53,7 @@ export function CtaBanner() {
             <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link
                 href="/contact"
-                className="group inline-flex items-center justify-center gap-2.5 rounded-full bg-white px-8 py-4 text-sm font-bold text-[#101820] shadow-lg transition-all duration-300 hover:bg-[#F0FAFF] hover:scale-[1.02] font-ui"
+                className="group inline-flex items-center justify-center gap-2.5 rounded-full bg-white px-8 py-4 text-sm font-bold text-[#101820] shadow-lg transition-all duration-200 hover:bg-[#F0FAFF] hover:shadow-xl hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.99] font-ui cursor-pointer"
               >
                 <Calendar className="h-4 w-4 text-[#1A6FA8]" />
                 <span>Start a Conversation</span>
@@ -62,7 +62,7 @@ export function CtaBanner() {
 
               <a
                 href="mailto:info@myersystems.ai"
-                className="group inline-flex items-center justify-center gap-2.5 rounded-full border border-white/40 bg-white/10 px-7 py-4 text-sm font-semibold text-white backdrop-blur-md transition-all duration-300 hover:bg-white/20 font-ui"
+                className="group inline-flex items-center justify-center gap-2.5 rounded-full border border-white/40 bg-white/10 px-7 py-4 text-sm font-semibold text-white backdrop-blur-md transition-all duration-200 hover:bg-white/20 hover:border-white/60 hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.99] font-ui cursor-pointer"
               >
                 <Mail className="h-4 w-4 text-white" />
                 <span>info@myersystems.ai</span>

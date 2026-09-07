@@ -64,7 +64,7 @@ export function AboutUs() {
             <div className="pt-2">
               <Link
                 href="/about"
-                className="group inline-flex items-center gap-2 rounded-full bg-brand px-8 py-3.5 text-xs sm:text-sm font-bold text-[#101820] shadow-[0_2px_14px_rgba(41,168,224,0.25)] transition-all duration-200 hover:bg-brand-hover hover:text-white font-ui"
+                className="group inline-flex items-center gap-2 rounded-full bg-brand px-8 py-3.5 text-xs sm:text-sm font-bold text-[#101820] shadow-[0_2px_14px_rgba(41,168,224,0.25)] transition-all duration-200 hover:bg-[#209FD6] hover:shadow-[0_4px_18px_rgba(41,168,224,0.38)] hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.99] font-ui"
               >
                 <span>Learn More About Us</span>
                 <ArrowUpRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />

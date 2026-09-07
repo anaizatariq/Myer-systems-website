@@ -51,14 +51,14 @@ export default function WhyChooseUsPage() {
                 <div className="mt-8 flex flex-wrap gap-4">
                   <Link 
                     href="/contact" 
-                    className="group inline-flex items-center gap-2 rounded-full bg-[#29A8E0] px-7 py-3.5 text-sm font-bold text-[#101820] shadow-md shadow-[#29A8E0]/20 hover:bg-[#1A6FA8] hover:text-white transition-all duration-200 font-ui cursor-pointer"
+                    className="group inline-flex items-center gap-2 rounded-full bg-[#29A8E0] px-7 py-3.5 text-sm font-bold text-[#101820] shadow-md shadow-[#29A8E0]/20 hover:bg-[#209FD6] hover:shadow-[0_6px_20px_rgba(41,168,224,0.38)] hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.99] transition-all duration-200 font-ui cursor-pointer"
                   >
                     <span>Talk to Our Team</span>
                     <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
                   </Link>
                   <Link 
                     href="/how-we-operate" 
-                    className="inline-flex items-center justify-center gap-2 rounded-full border border-[#1A6FA8]/25 bg-white/90 px-6 py-3.5 text-sm font-semibold text-[#101820] shadow-2xs backdrop-blur-md transition-all duration-200 hover:bg-white hover:border-[#29A8E0] hover:text-[#1A6FA8] font-ui cursor-pointer"
+                    className="inline-flex items-center justify-center gap-2 rounded-full border border-[#1A6FA8]/25 bg-white/90 px-6 py-3.5 text-sm font-semibold text-[#101820] shadow-2xs backdrop-blur-md transition-all duration-200 hover:bg-white hover:border-[#29A8E0]/60 hover:shadow-md hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.99] font-ui cursor-pointer"
                   >
                     See How We Operate
                   </Link>

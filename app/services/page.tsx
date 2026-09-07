@@ -77,7 +77,7 @@ export default function ServicesPage() {
               <div className="pt-2 flex flex-wrap items-center gap-4">
                 <Link 
                   href="/contact" 
-                  className="group inline-flex items-center gap-2.5 rounded-full bg-[#29A8E0] px-7 py-3.5 text-sm font-bold text-[#101820] shadow-md shadow-[#29A8E0]/20 hover:bg-[#1A6FA8] hover:text-white transition-all duration-200 font-ui cursor-pointer"
+                  className="group inline-flex items-center gap-2.5 rounded-full bg-[#29A8E0] px-7 py-3.5 text-sm font-bold text-[#101820] shadow-md shadow-[#29A8E0]/20 hover:bg-[#209FD6] hover:shadow-[0_6px_20px_rgba(41,168,224,0.38)] hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.99] transition-all duration-200 font-ui cursor-pointer"
                 >
                   <span>Schedule Technical Consultation</span>
                   <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
@@ -85,10 +85,10 @@ export default function ServicesPage() {
 
                 <a 
                   href="#capabilities" 
-                  className="group inline-flex items-center gap-2 rounded-full border border-[#1A6FA8]/25 bg-white/90 px-6 py-3.5 text-sm font-semibold text-[#101820] shadow-2xs backdrop-blur-md hover:bg-white hover:border-[#29A8E0] hover:text-[#1A6FA8] transition-all duration-200 font-ui"
+                  className="group inline-flex items-center gap-2 rounded-full border border-[#1A6FA8]/25 bg-white/90 px-6 py-3.5 text-sm font-semibold text-[#101820] shadow-2xs backdrop-blur-md hover:bg-white hover:border-[#29A8E0]/60 hover:shadow-md hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.99] transition-all duration-200 font-ui"
                 >
                   <span>Explore Capabilities</span>
-                  <ChevronRight className="w-4 h-4 text-slate-400 group-hover:text-[#1A6FA8] transition-colors" />
+                  <ChevronRight className="w-4 h-4 text-slate-400 group-hover:text-[#29A8E0] transition-colors" />
                 </a>
               </div>
 
@@ -984,7 +984,7 @@ export default function ServicesPage() {
                 <div className="pt-3 flex flex-wrap items-center gap-4">
                   <Link 
                     href="/contact" 
-                    className="inline-flex items-center gap-2 rounded-full bg-[#29A8E0] px-6 py-3 text-xs sm:text-sm font-bold text-[#101820] shadow-md shadow-[#29A8E0]/20 hover:bg-[#1A6FA8] hover:text-white transition-all font-ui"
+                    className="inline-flex items-center gap-2 rounded-full bg-[#29A8E0] px-6 py-3 text-xs sm:text-sm font-bold text-[#101820] shadow-md shadow-[#29A8E0]/20 hover:bg-[#209FD6] hover:shadow-[0_6px_20px_rgba(41,168,224,0.38)] hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.99] transition-all duration-200 font-ui"
                   >
                     <span>Request Platform Briefing</span>
                     <ArrowRight className="w-4 h-4" />
@@ -994,7 +994,7 @@ export default function ServicesPage() {
                     href="https://medsynthea.com" 
                     target="_blank" 
                     rel="noopener noreferrer" 
-                    className="inline-flex items-center gap-1.5 rounded-full border border-slate-300 bg-white px-5 py-3 text-xs sm:text-sm font-semibold text-[#101820] hover:border-[#1A6FA8] hover:text-[#1A6FA8] transition-all font-ui shadow-2xs"
+                    className="inline-flex items-center gap-1.5 rounded-full border border-slate-300 bg-white px-5 py-3 text-xs sm:text-sm font-semibold text-[#101820] hover:border-[#29A8E0]/60 hover:shadow-md hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.99] transition-all duration-200 font-ui shadow-2xs"
                   >
                     <span>Visit medsynthea.com</span>
                     <ExternalLink className="w-3.5 h-3.5 text-slate-400" />

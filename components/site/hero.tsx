@@ -57,7 +57,7 @@ export function Hero() {
             <div className="mt-8 flex flex-wrap items-center gap-4">
               <Link
                 href="/contact"
-                className="group inline-flex items-center gap-2 rounded-full bg-brand px-7 py-3.5 text-[14px] font-bold text-ink shadow-[0_4px_16px_rgba(41,168,224,0.3)] transition-all duration-200 hover:bg-brand-hover hover:text-white hover:shadow-[0_6px_22px_rgba(41,168,224,0.45)] hover:scale-[1.02] font-ui"
+                className="group inline-flex items-center gap-2 rounded-full bg-brand px-7 py-3.5 text-[14px] font-bold text-ink shadow-[0_4px_16px_rgba(41,168,224,0.28)] transition-all duration-200 hover:bg-[#209FD6] hover:shadow-[0_6px_22px_rgba(41,168,224,0.42)] hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.99] font-ui"
               >
                 <span>Schedule Consultation</span>
                 <span className="text-xs transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
@@ -67,7 +67,7 @@ export function Hero() {
               
               <a
                 href="#disciplines"
-                className="group inline-flex items-center gap-2 rounded-full border border-border bg-card/80 px-7 py-3.5 text-[14px] font-semibold text-ink shadow-sm backdrop-blur-md transition-all duration-200 hover:bg-white hover:border-brand/40 hover:text-brand-steel font-ui"
+                className="group inline-flex items-center gap-2 rounded-full border border-border/80 bg-white/80 px-7 py-3.5 text-[14px] font-semibold text-ink shadow-xs backdrop-blur-md transition-all duration-200 hover:bg-white hover:border-brand/50 hover:shadow-md hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.99] font-ui"
               >
                 <span>Explore Solutions</span>
                 <span className="text-xs text-muted-foreground transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5">

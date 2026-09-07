@@ -166,7 +166,7 @@ export function WhyChooseUs() {
 
             <Link
               href="/contact"
-              className="group inline-flex items-center gap-2 rounded-full bg-brand px-7 py-3 text-xs sm:text-[13px] font-bold text-ink shadow-[0_2px_12px_rgba(41,168,224,0.25)] transition-all hover:bg-brand-hover hover:text-white font-ui"
+              className="group inline-flex items-center gap-2 rounded-full bg-brand px-7 py-3 text-xs sm:text-[13px] font-bold text-ink shadow-[0_2px_12px_rgba(41,168,224,0.25)] hover:bg-[#209FD6] hover:shadow-[0_4px_16px_rgba(41,168,224,0.38)] hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.99] transition-all duration-200 font-ui"
             >
               <span>Schedule Architecture Review</span>
               <ArrowUpRight className="h-3.5 w-3.5 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />

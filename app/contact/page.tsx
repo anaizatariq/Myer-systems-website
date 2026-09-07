@@ -181,7 +181,7 @@ export default function ContactPage() {
               <div className="pt-2 flex flex-wrap items-center gap-4">
                 <a 
                   href="#booking-form"
-                  className="group inline-flex items-center gap-2.5 rounded-full bg-[#29A8E0] px-8 py-3.5 text-sm font-bold text-[#101820] shadow-md shadow-[#29A8E0]/20 hover:bg-[#1A6FA8] hover:text-white transition-all duration-200 font-ui cursor-pointer"
+                  className="group inline-flex items-center gap-2.5 rounded-full bg-[#29A8E0] px-8 py-3.5 text-sm font-bold text-[#101820] shadow-md shadow-[#29A8E0]/20 hover:bg-[#209FD6] hover:shadow-[0_6px_20px_rgba(41,168,224,0.38)] hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.99] transition-all duration-200 font-ui cursor-pointer"
                 >
                   <span>Start a Conversation</span>
                   <ArrowRight className="w-4 h-4 ml-1 transition-transform group-hover:translate-x-0.5" />
@@ -189,7 +189,7 @@ export default function ContactPage() {
 
                 <a
                   href="#consultation-tracks"
-                  className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-8 py-3.5 text-sm font-semibold text-white transition-all hover:bg-white/10 hover:border-[#29A8E0]/40 font-ui"
+                  className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-8 py-3.5 text-sm font-semibold text-white transition-all hover:bg-white/10 hover:border-[#29A8E0]/60 hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.99] font-ui"
                 >
                   Explore Consultation Areas
                 </a>
@@ -476,7 +476,7 @@ export default function ContactPage() {
                     <div>
                       <button
                         type="submit"
-                        className="w-full inline-flex items-center justify-center gap-2.5 rounded-full bg-[#29A8E0] px-8 py-4 text-sm sm:text-base font-bold text-[#101820] shadow-[0_4px_18px_rgba(41,168,224,0.3)] hover:bg-[#1A6FA8] hover:text-white transition-all duration-200 font-ui cursor-pointer"
+                        className="w-full inline-flex items-center justify-center gap-2.5 rounded-full bg-[#29A8E0] px-8 py-4 text-sm sm:text-base font-bold text-[#101820] shadow-[0_4px_18px_rgba(41,168,224,0.28)] hover:bg-[#209FD6] hover:shadow-[0_6px_24px_rgba(41,168,224,0.42)] hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.99] transition-all duration-200 font-ui cursor-pointer"
                       >
                         <span>Submit Consultation Request</span>
                         <ArrowRight className="w-4 h-4" />

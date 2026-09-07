@@ -64,7 +64,7 @@ const config: Config = {
         ink: '#101820',              // Dark Steel — headings on light bg
         brand: {
           DEFAULT: '#29A8E0',        // Sky Blue — primary CTA, interactive accent
-          hover: '#1A6FA8',          // Steel Blue — deeper on hover/press
+          hover: '#209FD6',          // Refined Sky Blue — subtle, premium hover without harsh color change
           tint: '#E0F4FC',           // Pale Blue — badge bg, light tints
           steel: '#1A6FA8',          // Steel Blue — secondary buttons, structural accents
           sky: '#29A8E0',            // Sky Blue (alias for clarity)

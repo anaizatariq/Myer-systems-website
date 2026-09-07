@@ -94,7 +94,7 @@ export function Industries() {
 
           <Link
             href="/contact"
-            className="group hidden shrink-0 items-center gap-2 rounded-full border border-border bg-card/60 px-6 py-3 text-xs sm:text-[13px] font-bold text-ink transition-all hover:bg-white hover:border-brand/40 hover:text-brand-steel md:inline-flex font-ui shadow-xs"
+            className="group hidden shrink-0 items-center gap-2 rounded-full border border-border/80 bg-white/80 px-6 py-3 text-xs sm:text-[13px] font-bold text-ink transition-all duration-200 hover:bg-white hover:border-brand/50 hover:shadow-md hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.99] md:inline-flex font-ui shadow-xs cursor-pointer"
           >
             <span>Discuss your sector</span>
             <ArrowUpRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />

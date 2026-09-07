@@ -123,7 +123,7 @@ export function FlagshipPlatform() {
                 href="https://medsynthea.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group inline-flex items-center gap-2 rounded-full bg-[#29A8E0] px-6 py-3 text-xs sm:text-sm font-bold text-[#101820] shadow-md shadow-[#29A8E0]/20 hover:bg-[#1A6FA8] hover:text-white transition-all font-ui cursor-pointer"
+                className="group inline-flex items-center gap-2 rounded-full bg-[#29A8E0] px-6 py-3 text-xs sm:text-sm font-bold text-[#101820] shadow-md shadow-[#29A8E0]/20 hover:bg-[#209FD6] hover:shadow-[0_6px_20px_rgba(41,168,224,0.38)] hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.99] transition-all duration-200 font-ui cursor-pointer"
               >
                 <span>Visit MedSynthea Platform</span>
                 <ExternalLink className="h-3.5 w-3.5 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
@@ -131,7 +131,7 @@ export function FlagshipPlatform() {
 
               <Link
                 href="/contact"
-                className="group inline-flex items-center gap-1.5 rounded-full border border-border bg-card/80 px-6 py-3 text-xs sm:text-sm font-semibold text-ink shadow-xs backdrop-blur-md transition-all duration-200 hover:bg-white hover:border-brand/40 hover:text-brand-steel font-ui cursor-pointer"
+                className="group inline-flex items-center gap-1.5 rounded-full border border-border/80 bg-white/80 px-6 py-3 text-xs sm:text-sm font-semibold text-ink shadow-xs backdrop-blur-md transition-all duration-200 hover:bg-white hover:border-brand/50 hover:shadow-md hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.99] font-ui cursor-pointer"
               >
                 <span>Request Consultation</span>
                 <ArrowUpRight className="h-3.5 w-3.5 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />

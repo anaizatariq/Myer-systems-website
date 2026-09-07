@@ -77,7 +77,7 @@ export function Navbar() {
         <div className="hidden md:flex items-center">
           <Link
             href="/contact"
-            className="group relative inline-flex items-center gap-1.5 rounded-full bg-brand px-5 py-2 text-[13px] font-bold text-ink shadow-[0_2px_12px_rgba(41,168,224,0.25)] transition-all duration-200 hover:bg-brand-hover hover:text-white hover:shadow-[0_4px_16px_rgba(41,168,224,0.4)] hover:scale-[1.02] font-ui"
+            className="group relative inline-flex items-center gap-1.5 rounded-full bg-brand px-5 py-2 text-[13px] font-bold text-ink shadow-[0_2px_12px_rgba(41,168,224,0.25)] transition-all duration-200 hover:bg-[#209FD6] hover:shadow-[0_4px_16px_rgba(41,168,224,0.38)] hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.99] font-ui"
           >
             <span>Schedule Consultation</span>
             <span className="text-xs transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
@@ -124,7 +124,7 @@ export function Navbar() {
             <Link
               href="/contact"
               onClick={() => setMobileOpen(false)}
-              className="flex w-full items-center justify-center gap-2 rounded-full bg-brand py-3 text-[14px] font-bold text-ink transition-colors hover:bg-brand-hover hover:text-white font-ui shadow-md shadow-brand/20"
+              className="flex w-full items-center justify-center gap-2 rounded-full bg-brand py-3 text-[14px] font-bold text-ink transition-all hover:bg-[#209FD6] hover:shadow-md active:scale-[0.99] font-ui shadow-md shadow-brand/20"
             >
               <span>Schedule Consultation</span>
               <span>↗</span>

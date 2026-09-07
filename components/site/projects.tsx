@@ -169,7 +169,7 @@ export function Projects() {
         <div className="mt-12 text-center">
           <Link
             href="/services"
-            className="group inline-flex items-center gap-2 rounded-full bg-[#29A8E0] px-8 py-3.5 text-xs sm:text-sm font-bold text-[#101820] shadow-[0_2px_14px_rgba(41,168,224,0.3)] transition-all hover:bg-[#1A6FA8] hover:text-white font-ui"
+            className="group inline-flex items-center gap-2 rounded-full bg-[#29A8E0] px-8 py-3.5 text-xs sm:text-sm font-bold text-[#101820] shadow-[0_4px_16px_rgba(41,168,224,0.3)] hover:bg-[#209FD6] hover:shadow-[0_6px_22px_rgba(41,168,224,0.42)] hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.99] transition-all duration-200 font-ui"
           >
             <span>Explore All Architecture & Systems</span>
             <ArrowUpRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />

@@ -106,11 +106,11 @@ export function WhyChooseUs() {
               <div className="absolute inset-0 bg-gradient-to-tr from-[#101820]/40 to-transparent z-10 pointer-events-none mix-blend-multiply opacity-50 group-hover:opacity-30 transition-opacity duration-700" />
               <div className="aspect-[4/5] sm:aspect-square relative w-full h-full">
                 <Image
-                  src="/images/why-choose-us.jpg"
+                  src="/why-myers-section.png"
                   alt="Myer Systems Enterprise Team"
                   fill
                   className="object-cover transition-transform duration-700 group-hover:scale-105"
-                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  sizes="(max-width: 500px) 80vw, 30vw"
                   priority
                 />
               </div>

@@ -10,10 +10,10 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['var(--font-inter)', 'system-ui', 'sans-serif'],
-        heading: ['var(--font-sora)', 'system-ui', 'sans-serif'],
-        ui: ['var(--font-dm-sans)', 'system-ui', 'sans-serif'],
-        quote: ['var(--font-lora)', 'serif'],
+        sans: ['Inter', 'var(--font-inter)', 'system-ui', 'sans-serif'],
+        heading: ['Sora', 'var(--font-sora)', 'system-ui', 'sans-serif'],
+        ui: ['"DM Sans"', 'var(--font-dm-sans)', 'system-ui', 'sans-serif'],
+        quote: ['Lora', 'var(--font-lora)', 'serif'],
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',

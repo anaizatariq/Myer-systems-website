@@ -70,9 +70,9 @@ export function Testimonials() {
         
         {/* ── Section Header ── */}
         <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-16">
-          <div className="inline-flex items-center gap-2 rounded-full border border-[#1A6FA8]/20 bg-[#F0FAFF] px-3.5 py-1.5 shadow-2xs mb-4">
-            <span className="h-1.5 w-1.5 rounded-full bg-[#29A8E0] animate-pulse" />
-            <span className="text-[11px] font-bold uppercase tracking-[0.18em] text-[#1A6FA8] font-ui">
+          <div className="inline-flex w-fit items-center gap-2 rounded-full border border-white/10 bg-[#29A8E0] px-4 py-1.5 mb-6 shadow-md shadow-[#29A8E0]/20">
+            <span className="h-1.5 w-1.5 rounded-full bg-white animate-pulse" />
+            <span className="text-[11px] font-bold uppercase tracking-[0.18em] text-white font-ui">
               PROVEN OPERATIONAL IMPACT
             </span>
           </div>

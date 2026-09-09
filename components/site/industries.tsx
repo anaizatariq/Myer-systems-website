@@ -2,180 +2,127 @@
 
 import Link from 'next/link';
 import { 
-  Activity, 
   Building2, 
   Workflow, 
+  Activity, 
   ArrowUpRight, 
   CheckCircle2, 
-  ShieldCheck, 
-  FileCheck2, 
-  Zap 
+  ShieldCheck 
 } from 'lucide-react';
 
 const INDUSTRIES = [
   {
-    monogram: 'HC',
-    tag: 'CLINICAL & HOSPITAL NETWORKS',
-    title: 'Healthcare Systems & Hospital Networks',
-    description: 'HIPAA-compliant AI architectures, clinical data synthesis, and predictive workflow automation engineered for North American hospital networks and clinical provider groups.',
-    icon: Activity,
-    capabilities: [
-      'Clinical data synthesis & administrative triage',
-      'HIPAA-compliant dedicated VPC boundaries',
-      'Predictive inpatient & outpatient workflow routing',
-    ],
-    metric: '100% HIPAA Bound',
-    href: '/services#rcm',
-  },
-  {
-    monogram: 'MB',
-    tag: 'REVENUE CYCLE & CODING',
-    title: 'US Medical Billing Organizations',
-    description: 'High-volume offshore claim processing, automated CPT-4/ICD-10 coding verification, real-time denial mitigation, and accounts receivable recovery for US billing companies.',
+    monogram: 'CE',
+    tag: 'ENTERPRISE & OPERATIONS',
+    title: 'Commercial Enterprises',
+    description: 'Helping growing businesses automate routine operations, integrate legacy systems, and scale back-office capacity with dependable technology.',
     icon: Building2,
     capabilities: [
-      'Certified AAPC & AHIMA offshore coding teams',
-      'Automated pre-submission claim discrepancy audit',
-      'Accelerated reimbursement & cash-flow velocity',
+      'Automated back-office workflows & approvals',
+      'Integration bridges for legacy database systems',
+      'Scalable hybrid operational support pods',
     ],
-    metric: '99.4% Billing Precision',
-    href: '/services#rcm',
+    href: '/services#ai-solutions',
   },
   {
-    monogram: 'EN',
-    tag: 'COMMERCIAL OPERATIONS',
-    title: 'Commercial Enterprises & Regulated Ops',
-    description: 'Intelligent resource augmentation, automated back-office business reengineering, and auditable AI systems built for organizations where unverified black-box output is unacceptable.',
+    monogram: 'DI',
+    tag: 'DOCUMENT & TRANSACTION PIPELINES',
+    title: 'Data-Intensive Businesses',
+    description: 'Providing automated processing tools and specialized operational teams for companies managing high volumes of documents and complex records.',
     icon: Workflow,
     capabilities: [
-      'Business process & workflow bottleneck reengineering',
-      'Immutable SHA-256 decision audit logging',
-      'Dedicated offshore engineering & operational pods',
+      'Automated invoice, contract & records ingestion',
+      'High-speed validation and discrepancy checking',
+      'Clear, auditable logs across every transaction',
     ],
-    metric: 'Zero Black-Box Output',
-    href: '/services#ai-solutions',
+    href: '/services#saas',
+  },
+  {
+    monogram: 'HC',
+    tag: 'HEALTHCARE & CLINICAL PROVIDERS',
+    title: 'Healthcare Organizations',
+    description: 'Delivering specialized revenue cycle management, medical billing, and clinical AI tools engineered for strict accuracy and regulatory compliance.',
+    icon: Activity,
+    capabilities: [
+      'End-to-end revenue cycle management (RCM)',
+      'Certified US medical billing & coding teams',
+      'Data synthesis through our MedSynthea platform',
+    ],
+    href: '#healthcare-vertical',
   },
 ];
 
 export function Industries() {
   return (
-    <section id="industries" className="relative scroll-mt-24 border-t border-border/80 bg-background py-20 lg:py-28 overflow-hidden">
-      
+    <section 
+      id="industries" 
+      className="relative scroll-mt-24 border-t border-[#29A8E0]/10 bg-[#E0F4FC] py-16 sm:py-20 lg:py-24 overflow-hidden"
+    >
       {/* ── Ambient Background Lighting ── */}
       <div 
-        className="pointer-events-none absolute top-1/2 left-0 h-[500px] w-[500px] rounded-full bg-brand/5 blur-[130px]" 
+        className="pointer-events-none absolute top-1/2 left-0 h-[450px] w-[450px] rounded-full bg-[#29A8E0]/5 blur-[140px]" 
         aria-hidden="true" 
       />
 
-      <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         
-        {/* ── Section Header (Strictly from Business Profile) ── */}
-        <div className="flex flex-col items-start gap-6 md:flex-row md:items-end md:justify-between mb-14 sm:mb-18">
-          <div className="max-w-2xl">
-            <div className="inline-flex items-center gap-2 rounded-full border border-brand/25 bg-card px-4 py-1.5 shadow-sm">
-              <span className="h-1.5 w-1.5 rounded-full bg-brand animate-pulse" />
-              <span className="text-[11px] font-bold uppercase tracking-[0.18em] text-brand-steel font-ui">
-                SECTORS & VERTICALS · TARGET MARKETS
-              </span>
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+          
+          {/* ── Left Side: Reverse Triangle Boxes ── */}
+          <div className="lg:col-span-5 flex flex-col items-center gap-6 lg:order-1 order-2">
+            {/* Top Row: 2 Boxes */}
+            <div className="flex gap-5 sm:gap-6">
+              {[INDUSTRIES[0], INDUSTRIES[1]].map((ind) => (
+                <div key={ind.title} className="group flex flex-col items-center justify-center p-6 bg-[#8FD6F5] rounded-[10px] w-36 h-36 sm:w-48 sm:h-48 text-center shadow-md hover:-translate-y-2 hover:shadow-xl hover:shadow-[#1A6FA8]/10 transition-all duration-500 border border-[#29A8E0]/30 cursor-default">
+                  <ind.icon className="h-10 w-10 sm:h-12 sm:w-12 text-[#101820] mb-3 sm:mb-5 group-hover:scale-110 transition-transform duration-500" />
+                  <h3 className="text-[#101820] font-extrabold text-sm sm:text-base leading-tight font-heading">{ind.title}</h3>
+                </div>
+              ))}
             </div>
-
-            <h2 className="mt-5 text-3xl sm:text-4xl lg:text-[2.85rem]/[1.15] font-bold tracking-tight text-ink font-heading">
-              Engineered for sectors where{' '}
-              <span className="font-quote italic font-normal text-brand-steel">
-                accuracy
-              </span>{' '}
-              is non-negotiable.
-            </h2>
-
-            <p className="mt-4 text-base sm:text-lg leading-relaxed text-muted-foreground font-sans">
-              From regulated healthcare clinical operations to commercial enterprise reengineering, we deliver accountable technology under direct Dallas governance.
-            </p>
+            {/* Bottom Row: 1 Box */}
+            <div className="flex justify-center">
+              <div className="group flex flex-col items-center justify-center p-6 bg-[#8FD6F5] rounded-[10px] w-36 h-36 sm:w-48 sm:h-48 text-center shadow-md hover:-translate-y-2 hover:shadow-xl hover:shadow-[#1A6FA8]/10 transition-all duration-500 border border-[#29A8E0]/30 cursor-default">
+                {(() => {
+                  const ind = INDUSTRIES[2];
+                  return (
+                    <>
+                      <ind.icon className="h-10 w-10 sm:h-12 sm:w-12 text-[#101820] mb-3 sm:mb-5 group-hover:scale-110 transition-transform duration-500" />
+                      <h3 className="text-[#101820] font-extrabold text-sm sm:text-base leading-tight font-heading">{ind.title}</h3>
+                    </>
+                  );
+                })()}
+              </div>
+            </div>
           </div>
 
-          <Link
-            href="/contact"
-            className="group hidden shrink-0 items-center gap-2 rounded-full border border-border/80 bg-white/80 px-6 py-3 text-xs sm:text-[13px] font-bold text-ink transition-all duration-200 hover:bg-white hover:border-brand/50 hover:shadow-md hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.99] md:inline-flex font-ui shadow-xs cursor-pointer"
-          >
-            <span>Discuss your sector</span>
-            <ArrowUpRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-          </Link>
-        </div>
+          {/* ── Right Side: Text & Info ── */}
+          <div className="lg:col-span-7 flex flex-col items-center md:items-start text-center md:text-left lg:order-2 order-1 lg:pl-4 xl:pl-8">
+            <div className="inline-flex w-fit items-center gap-2 rounded-full border border-white/10 bg-[#29A8E0] px-4 py-1.5 mb-6 shadow-md shadow-[#29A8E0]/20">
+            <span className="h-1.5 w-1.5 rounded-full bg-white animate-pulse" />
+            <span className="text-[11px] font-bold uppercase tracking-[0.18em] text-white font-ui">
+              WHO WE SERVE
+            </span>
+          </div>
 
-        {/* ── Monogram Bento Cards Grid ── */}
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
-          {INDUSTRIES.map((ind) => (
-            <div
-              key={ind.title}
-              className="group relative flex flex-col justify-between rounded-3xl border border-border bg-white/95 p-7 sm:p-8 shadow-xl shadow-brand/5 backdrop-blur-xl transition-all duration-300 hover:border-brand/40 hover:shadow-2xl hover:shadow-brand/10 hover:-translate-y-1.5"
+            <h2 className="text-3xl sm:text-4xl lg:text-[3.25rem]/[1.1] font-extrabold tracking-tight text-[#101820] font-sans mb-6">
+              Solutions built for demanding industries.
+            </h2>
+            
+            <p className="text-base sm:text-lg text-slate-700 font-sans leading-relaxed mb-8 max-w-xl">
+              We work with organizations where efficiency, data accuracy, and reliable operations directly impact revenue and day-to-day performance. Our platforms are designed to handle complex workflows and high-volume data streams across critical sectors.
+            </p>
+            
+            <Link 
+              href="/services" 
+              className="group relative inline-flex items-center gap-1.5 rounded-full bg-[#29A8E0] px-6 py-3 text-[14px] font-bold text-[#101820] shadow-[0_2px_12px_rgba(41,168,224,0.25)] transition-all duration-200 hover:bg-[#209FD6] hover:shadow-[0_4px_16px_rgba(41,168,224,0.38)] hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.99] font-ui"
             >
-              <div>
-                {/* Header: Icon & Monogram Mark */}
-                <div className="flex items-center justify-between border-b border-border/70 pb-5">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-brand/10 text-brand-steel transition-colors group-hover:bg-brand group-hover:text-white">
-                    <ind.icon className="h-6 w-6" />
-                  </div>
-                  
-                  {/* High-Fashion Monogram Mark */}
-                  <span className="font-heading font-light text-2xl tracking-widest text-brand/35 select-none transition-colors group-hover:text-brand-steel">
-                    [{ind.monogram}]
-                  </span>
-                </div>
+              <span>Explore Our Solutions</span>
+              <span className="text-[10px] transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
+                ↗
+              </span>
+            </Link>
+          </div>
 
-                {/* Industry Tag & Title */}
-                <div className="mt-5">
-                  <span className="text-[10px] font-bold uppercase tracking-wider text-brand-steel font-ui block">
-                    {ind.tag}
-                  </span>
-                  
-                  <h3 className="mt-1.5 text-xl sm:text-2xl font-bold tracking-tight text-ink font-heading leading-snug">
-                    {ind.title}
-                  </h3>
-                  
-                  <p className="mt-3 text-sm leading-relaxed text-muted-foreground font-sans">
-                    {ind.description}
-                  </p>
-                </div>
-
-                {/* Core Capabilities */}
-                <div className="mt-6 border-t border-border/60 pt-4 space-y-2">
-                  <span className="text-[10px] font-bold uppercase tracking-wider text-ink/70 font-ui block">
-                    Tailored Capabilities:
-                  </span>
-                  {ind.capabilities.map((c, i) => (
-                    <div key={i} className="flex items-start gap-2 text-xs sm:text-[13px] text-muted-foreground font-sans">
-                      <CheckCircle2 className="h-3.5 w-3.5 text-brand shrink-0 mt-0.5" />
-                      <span>{c}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              {/* Bottom Metric & Action */}
-              <div className="mt-8 pt-4 border-t border-border/70 flex items-center justify-between">
-                <Link
-                  href={ind.href}
-                  className="group/link inline-flex items-center gap-1.5 text-xs font-bold text-ink hover:text-brand-steel transition-colors font-ui uppercase tracking-wider"
-                >
-                  <span>Explore Sector</span>
-                  <ArrowUpRight className="h-3.5 w-3.5 transition-transform duration-200 group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5" />
-                </Link>
-                <span className="text-xs font-bold text-brand font-ui">
-                  {ind.metric}
-                </span>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        {/* Mobile View CTA */}
-        <div className="mt-8 md:hidden text-center">
-          <Link
-            href="/contact"
-            className="inline-flex items-center gap-2 rounded-full bg-brand px-7 py-3 text-xs font-bold text-ink font-ui shadow-sm"
-          >
-            <span>Discuss your sector</span>
-            <ArrowUpRight className="h-4 w-4" />
-          </Link>
         </div>
 
       </div>

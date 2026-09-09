@@ -16,17 +16,9 @@ const NAV_LINKS = [
 ];
 
 export function Navbar() {
-  const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const pathname = usePathname();
   const isActive = (path: string) => pathname === path;
-
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 15);
-    onScroll();
-    window.addEventListener('scroll', onScroll, { passive: true });
-    return () => window.removeEventListener('scroll', onScroll);
-  }, []);
 
   useEffect(() => {
     document.body.style.overflow = mobileOpen ? 'hidden' : '';
@@ -36,7 +28,7 @@ export function Navbar() {
   return (
     <header className="fixed top-3.5 sm:top-5 inset-x-0 z-50 flex justify-center px-4 pointer-events-none transition-all duration-300">
       <nav
-        className="pointer-events-auto flex w-full max-w-5xl items-center justify-between rounded-full border border-slate-200/90 bg-white px-4 py-2 sm:px-6 sm:py-2.5 shadow-[0_6px_24px_rgba(16,24,32,0.1)] transition-all duration-300"
+        className="pointer-events-auto flex w-full max-w-5xl items-center justify-between rounded-full border border-slate-200/90 bg-white px-4 py-2 sm:px-6 sm:py-2.5 shadow-[0_6px_24px_rgba(16,24,32,0.12)] transition-all duration-300"
       >
         {/* ── Logo ─────────────────────────────────────── */}
         <Link href="/" className="group flex items-center gap-2.5" aria-label="Myer Systems home">
@@ -112,7 +104,7 @@ export function Navbar() {
               className={cn(
                 'rounded-xl px-4 py-2.5 text-[15px] font-semibold transition-colors font-ui',
                 isActive(link.href)
-                  ? 'bg-brand/10 text-brand-steel'
+                  ? 'bg-brand/10 text-brand-steel font-bold'
                   : 'text-ink hover:bg-slate-50'
               )}
             >

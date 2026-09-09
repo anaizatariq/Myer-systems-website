@@ -72,9 +72,9 @@ export function Projects() {
         
         {/* ── Section Header ── */}
         <div className="max-w-3xl">
-          <div className="inline-flex items-center gap-2 rounded-full border border-[#29A8E0]/25 bg-[#29A8E0]/10 px-3.5 py-1.5 shadow-2xs backdrop-blur-sm">
-            <span className="h-1.5 w-1.5 rounded-full bg-[#29A8E0] animate-pulse" />
-            <span className="text-[11px] font-bold uppercase tracking-[0.18em] text-[#8FD6F5] font-ui">
+          <div className="inline-flex w-fit items-center gap-2 rounded-full border border-white/10 bg-[#29A8E0] px-4 py-1.5 mb-6 shadow-md shadow-[#29A8E0]/20">
+            <span className="h-1.5 w-1.5 rounded-full bg-white animate-pulse" />
+            <span className="text-[11px] font-bold uppercase tracking-[0.18em] text-white font-ui">
               CORE CAPABILITY AREAS
             </span>
           </div>

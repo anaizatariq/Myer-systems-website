@@ -29,7 +29,7 @@ export function Hero() {
   return (
     <section 
       id="home" 
-      className="relative min-h-[90vh] lg:min-h-[94vh] flex items-center overflow-hidden bg-[#101820] pt-24 sm:pt-28 lg:pt-32 pb-14 sm:pb-16 lg:pb-20"
+      className="relative min-h-[90vh] lg:min-h-[94vh] flex items-center overflow-hidden bg-ink pt-24 sm:pt-28 lg:pt-32 pb-14 sm:pb-16 lg:pb-20"
     >
       {/* ── 1. Pure Background Video (No grids, no artificial effects) ── */}
       <div className="absolute inset-0 z-0 overflow-hidden">
@@ -59,7 +59,7 @@ export function Hero() {
           <div className="lg:col-span-8 z-10">
             
             {/* Top Eyebrow Chip */}
-            <div className="inline-flex max-w-full items-center gap-2 rounded-full border border-white/20 bg-[#101820]/75 px-3.5 py-1.5 shadow-sm backdrop-blur-md">
+            <div className="inline-flex max-w-full items-center gap-2 rounded-full border border-white/20 bg-ink/75 px-3.5 py-1.5 shadow-sm backdrop-blur-md">
               <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-brand animate-pulse shadow-[0_0_8px_#29A8E0]" />
               <span className="text-[10px] xs:text-[11px] sm:text-[11.5px] font-bold tracking-[0.14em] sm:tracking-[0.18em] uppercase text-brand-light font-ui truncate">
                 AUTONOMOUS ENTERPRISE AI &amp; WORKFLOW SYSTEMS
@@ -69,9 +69,7 @@ export function Hero() {
             {/* Display Headline */}
             <h1 className="mt-4 sm:mt-5 text-[2.2rem]/[1.15] sm:text-5xl lg:text-[3.5rem]/[1.12] xl:text-[3.9rem]/[1.12] font-bold tracking-tight text-white font-heading drop-shadow-[0_2px_14px_rgba(0,0,0,0.95)]">
               AI Systems Built for <br className="hidden sm:inline" />
-              <span className="font-bold text-[#29A8E0]">
-                Accountability
-              </span>
+              Accountability
               , Scale &amp; Control.
             </h1>
 
@@ -112,7 +110,7 @@ export function Hero() {
       </div>
 
       {/* ── 3. Bottom-Right Interactive Live Feed & Playback Controls ── */}
-      <div className="absolute bottom-5 right-6 z-30 hidden sm:flex items-center gap-2.5 rounded-full border border-white/15 bg-[#101820]/80 px-3.5 py-1.5 backdrop-blur-xl shadow-lg">
+      <div className="absolute bottom-5 right-6 z-30 hidden sm:flex items-center gap-2.5 rounded-full border border-white/15 bg-ink/80 px-3.5 py-1.5 backdrop-blur-xl shadow-lg">
         <div className="flex items-center gap-2 pr-2 border-r border-white/15">
           <span className="h-2 w-2 rounded-full bg-[#29A8E0] animate-ping" />
           <span className="text-[11px] font-semibold tracking-wider uppercase text-slate-300 font-ui">

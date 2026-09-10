@@ -49,7 +49,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} ${sora.variable} ${dmSans.variable} ${lora.variable} font-sans`}>{children}</body>
+      <body className={`${inter.variable} ${sora.variable} ${dmSans.variable} ${lora.variable} font-sans overflow-x-hidden`}>{children}</body>
     </html>
   );
 }

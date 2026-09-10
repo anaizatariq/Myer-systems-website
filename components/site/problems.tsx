@@ -51,7 +51,7 @@ export function Problems() {
               WHAT WE SOLVE
             </span>
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-[3.25rem]/[1.1] font-semibold tracking-tight text-[#101820]">
+          <h2 className="text-3xl sm:text-4xl lg:text-[3.25rem]/[1.1] font-semibold tracking-tight text-ink">
             Stop letting manual work slow down your growth.
           </h2>
         </div>
@@ -65,8 +65,8 @@ export function Problems() {
             // Brand cards: solid Light Sky background
             // Non-brand cards: White background with subtle dots
             const baseClass = isBrand
-              ? "bg-[#8FD6F5] border-[#29A8E0]/30 hover:bg-[#101820]"
-              : "bg-white border-slate-200 hover:bg-[#101820]";
+              ? "bg-[#8FD6F5] border-[#29A8E0]/30 hover:bg-ink"
+              : "bg-white border-slate-200 hover:bg-ink";
               
             // Dots overlay for non-brand cards
             const dotsOverlay = !isBrand 
@@ -83,14 +83,14 @@ export function Problems() {
                 {/* Icon */}
                 <div className={`relative z-10 h-14 w-14 rounded-xl flex items-center justify-center mb-7 transition-all duration-500 shadow-sm ${
                   isBrand 
-                    ? "bg-white border-white text-[#1A6FA8] group-hover:bg-[#8FD6F5] group-hover:text-[#101820] group-hover:border-[#8FD6F5]" 
-                    : "bg-[#E0F4FC] border-[#29A8E0]/20 text-[#1A6FA8] group-hover:bg-[#8FD6F5] group-hover:text-[#101820] group-hover:border-[#8FD6F5]"
+                    ? "bg-white border-white text-[#1A6FA8] group-hover:bg-[#8FD6F5] group-hover:text-ink group-hover:border-[#8FD6F5]" 
+                    : "bg-[#E0F4FC] border-[#29A8E0]/20 text-[#1A6FA8] group-hover:bg-[#8FD6F5] group-hover:text-ink group-hover:border-[#8FD6F5]"
                 }`}>
                   <Icon className="h-[26px] w-[26px]" />
                 </div>
 
                 {/* Title */}
-                <h3 className="relative z-10 text-xl font-extrabold tracking-tight font-heading leading-snug mb-3 text-[#101820] group-hover:text-white transition-colors duration-500">
+                <h3 className="relative z-10 text-xl font-extrabold tracking-tight font-heading leading-snug mb-3 text-ink group-hover:text-white transition-colors duration-500">
                   {p.title}
                 </h3>
 

@@ -74,8 +74,8 @@ export function Industries() {
             <div className="flex gap-5 sm:gap-6">
               {[INDUSTRIES[0], INDUSTRIES[1]].map((ind) => (
                 <div key={ind.title} className="group flex flex-col items-center justify-center p-6 bg-[#8FD6F5] rounded-[10px] w-36 h-36 sm:w-48 sm:h-48 text-center shadow-md hover:-translate-y-2 hover:shadow-xl hover:shadow-[#1A6FA8]/10 transition-all duration-500 border border-[#29A8E0]/30 cursor-default">
-                  <ind.icon className="h-10 w-10 sm:h-12 sm:w-12 text-[#101820] mb-3 sm:mb-5 group-hover:scale-110 transition-transform duration-500" />
-                  <h3 className="text-[#101820] font-extrabold text-sm sm:text-base leading-tight font-heading">{ind.title}</h3>
+                  <ind.icon className="h-10 w-10 sm:h-12 sm:w-12 text-ink mb-3 sm:mb-5 group-hover:scale-110 transition-transform duration-500" />
+                  <h3 className="text-ink font-extrabold text-sm sm:text-base leading-tight font-heading">{ind.title}</h3>
                 </div>
               ))}
             </div>
@@ -86,8 +86,8 @@ export function Industries() {
                   const ind = INDUSTRIES[2];
                   return (
                     <>
-                      <ind.icon className="h-10 w-10 sm:h-12 sm:w-12 text-[#101820] mb-3 sm:mb-5 group-hover:scale-110 transition-transform duration-500" />
-                      <h3 className="text-[#101820] font-extrabold text-sm sm:text-base leading-tight font-heading">{ind.title}</h3>
+                      <ind.icon className="h-10 w-10 sm:h-12 sm:w-12 text-ink mb-3 sm:mb-5 group-hover:scale-110 transition-transform duration-500" />
+                      <h3 className="text-ink font-extrabold text-sm sm:text-base leading-tight font-heading">{ind.title}</h3>
                     </>
                   );
                 })()}
@@ -104,7 +104,7 @@ export function Industries() {
             </span>
           </div>
 
-            <h2 className="text-3xl sm:text-4xl lg:text-[3.25rem]/[1.1] font-extrabold tracking-tight text-[#101820] font-sans mb-6">
+            <h2 className="text-3xl sm:text-4xl lg:text-[3.25rem]/[1.1] font-extrabold tracking-tight text-ink font-sans mb-6">
               Solutions built for demanding industries.
             </h2>
             
@@ -114,7 +114,7 @@ export function Industries() {
             
             <Link 
               href="/services" 
-              className="group relative inline-flex items-center gap-1.5 rounded-full bg-[#29A8E0] px-6 py-3 text-[14px] font-bold text-[#101820] shadow-[0_2px_12px_rgba(41,168,224,0.25)] transition-all duration-200 hover:bg-[#209FD6] hover:shadow-[0_4px_16px_rgba(41,168,224,0.38)] hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.99] font-ui"
+              className="group relative inline-flex items-center gap-1.5 rounded-full bg-[#29A8E0] px-6 py-3 text-[14px] font-bold text-ink shadow-[0_2px_12px_rgba(41,168,224,0.25)] transition-all duration-200 hover:bg-[#209FD6] hover:shadow-[0_4px_16px_rgba(41,168,224,0.38)] hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.99] font-ui"
             >
               <span>Explore Our Solutions</span>
               <span className="text-[10px] transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5">

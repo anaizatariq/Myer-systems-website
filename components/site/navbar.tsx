@@ -57,7 +57,7 @@ export function Navbar() {
                 'text-[14.5px] font-semibold tracking-normal transition-colors font-ui duration-200',
                 isActive(link.href)
                   ? 'text-[#1A6FA8] font-bold'
-                  : 'text-[#101820]/75 hover:text-[#101820]'
+                  : 'text-ink/75 hover:text-ink'
               )}
             >
               {link.label}
@@ -88,40 +88,59 @@ export function Navbar() {
         </button>
       </nav>
 
-      {/* ── Mobile & Tablet Menu Dropdown ─────────────────────── */}
+      {/* ── Mobile Overlay ── */}
+      <div 
+        className={cn(
+          'fixed inset-0 bg-ink/40 backdrop-blur-sm z-40 transition-opacity duration-300 lg:hidden pointer-events-auto',
+          mobileOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'
+        )}
+        onClick={() => setMobileOpen(false)}
+      />
+
+      {/* ── Mobile & Tablet Menu Left Slide ─────────────────────── */}
       <div
         className={cn(
-          'pointer-events-auto fixed inset-x-4 top-20 max-w-md sm:mx-auto rounded-3xl border border-border bg-white/95 backdrop-blur-2xl p-6 shadow-2xl transition-all duration-300 lg:hidden',
-          mobileOpen ? 'opacity-100 translate-y-0' : 'pointer-events-none opacity-0 -translate-y-4'
+          'pointer-events-auto fixed inset-y-0 left-0 w-64 sm:w-80 bg-white z-50 flex flex-col p-6 shadow-2xl transition-transform duration-300 ease-in-out lg:hidden',
+          mobileOpen ? 'translate-x-0' : '-translate-x-full'
         )}
       >
-        <div className="flex flex-col space-y-3">
+        <div className="flex items-center justify-between mb-8">
+          <Link href="/" className="flex items-center gap-2" onClick={() => setMobileOpen(false)}>
+            <Image src="/myers-mark.png" alt="Myer Systems" width={32} height={32} className="object-contain" />
+            <span className="text-[17px] font-bold text-ink font-heading">Myer Systems</span>
+          </Link>
+          <button onClick={() => setMobileOpen(false)} className="p-2 -mr-2 text-slate-400 hover:text-ink transition-colors rounded-full hover:bg-slate-100">
+            <X className="h-5 w-5" />
+          </button>
+        </div>
+
+        <div className="flex flex-col flex-1 space-y-1.5 overflow-y-auto">
           {NAV_LINKS.map((link) => (
             <Link
               key={link.href}
               href={link.href}
               onClick={() => setMobileOpen(false)}
               className={cn(
-                'rounded-xl px-4 py-2.5 text-[15px] font-semibold transition-colors font-ui',
+                'rounded-xl px-4 py-3.5 text-[16px] transition-colors font-ui',
                 isActive(link.href)
-                  ? 'bg-brand/10 text-brand-steel font-bold'
-                  : 'text-ink hover:bg-slate-50'
+                  ? 'bg-[#E0F4FC] text-[#1A6FA8] font-bold'
+                  : 'text-ink/80 font-semibold hover:bg-slate-50 hover:text-ink'
               )}
             >
               {link.label}
             </Link>
           ))}
+        </div>
 
-          <div className="pt-2">
-            <Link
-              href="/contact"
-              onClick={() => setMobileOpen(false)}
-              className="flex w-full items-center justify-center gap-2 rounded-full bg-brand py-3 text-[14px] font-bold text-ink transition-all hover:bg-[#209FD6] hover:shadow-md active:scale-[0.99] font-ui shadow-md shadow-brand/20"
-            >
-              <span>Schedule Consultation</span>
-              <span>↗</span>
-            </Link>
-          </div>
+        <div className="pt-6 border-t border-slate-100 mt-auto">
+          <Link
+            href="/contact"
+            onClick={() => setMobileOpen(false)}
+            className="flex w-full items-center justify-center gap-2 rounded-full bg-[#29A8E0] py-3.5 text-[15px] font-bold text-ink transition-all hover:bg-[#209FD6] font-ui shadow-[0_4px_14px_rgba(41,168,224,0.3)] active:scale-[0.98]"
+          >
+            <span>Schedule Consultation</span>
+            <span>↗</span>
+          </Link>
         </div>
       </div>
     </header>

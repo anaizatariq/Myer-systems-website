@@ -50,10 +50,10 @@ export function CtaBanner() {
             <div className="pt-4 flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-4">
               <Link
                 href="/contact"
-                className="group inline-flex w-full sm:w-auto items-center justify-center gap-2.5 rounded-full bg-white px-8 py-4 text-sm font-bold text-[#101820] shadow-[0_0_20px_rgba(255,255,255,0.15)] transition-all duration-300 hover:bg-[#F0FAFF] hover:shadow-[0_0_30px_rgba(255,255,255,0.3)] hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.99] font-ui cursor-pointer"
+                className="group inline-flex w-full sm:w-auto items-center justify-center gap-2.5 rounded-full bg-white px-8 py-4 text-sm font-bold text-ink shadow-[0_0_20px_rgba(255,255,255,0.15)] transition-all duration-300 hover:bg-[#F0FAFF] hover:shadow-[0_0_30px_rgba(255,255,255,0.3)] hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.99] font-ui cursor-pointer"
               >
                 <Calendar className="h-4 w-4 text-[#1A6FA8]" />
-                <span>Schedule a Consultation</span>
+                <span className="whitespace-nowrap">Schedule a Consultation</span>
                 <ArrowUpRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
               </Link>
 
@@ -62,7 +62,7 @@ export function CtaBanner() {
                 className="group inline-flex w-full sm:w-auto items-center justify-center gap-2.5 rounded-full border border-white/30 bg-white/5 px-8 py-4 text-sm font-semibold text-white backdrop-blur-md transition-all duration-300 hover:bg-white/20 hover:border-white/60 hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.99] font-ui cursor-pointer"
               >
                 <Mail className="h-4 w-4 text-white" />
-                <span>info@myersystems.ai</span>
+                <span className="whitespace-nowrap">info@myersystems.ai</span>
               </a>
             </div>
 

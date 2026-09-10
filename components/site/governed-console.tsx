@@ -327,7 +327,7 @@ export function GovernedConsole() {
                     </button>
                     <button 
                       onClick={handleNext}
-                      className="px-5 py-2 rounded-xl bg-[#101820] hover:bg-[#1A2530] border border-[#29A8E0]/40 text-xs font-bold text-white font-ui shadow-lg shadow-[#29A8E0]/15 flex items-center gap-1.5 transition-all active:scale-95"
+                      className="px-5 py-2 rounded-xl bg-ink hover:bg-[#1A2530] border border-[#29A8E0]/40 text-xs font-bold text-white font-ui shadow-lg shadow-[#29A8E0]/15 flex items-center gap-1.5 transition-all active:scale-95"
                     >
                       <Check className="h-3.5 w-3.5 text-[#29A8E0]" />
                       <span>Approve request</span>

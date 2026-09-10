@@ -174,10 +174,10 @@ export default function WorkPage() {
                 <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#1A6FA8] font-ui">Our Work</span>
               </div>
 
-              <h1 className="reveal text-4xl font-semibold tracking-tight text-[#101820] sm:text-5xl lg:text-[3.25rem] leading-[1.08] mb-6 font-heading">
+              <h1 className="reveal text-4xl font-semibold tracking-tight text-ink sm:text-5xl lg:text-[3.25rem] leading-[1.08] mb-6 font-heading">
                 Systems that hold up
                 <br />
-                <span className="font-quote italic font-normal text-brand-steel inline-block pr-1">when it actually matters.</span>
+                when it actually matters.
               </h1>
 
               <p className="reveal-up text-base text-slate-600 leading-relaxed max-w-lg mb-8 border-l-4 border-[#29A8E0]/40 pl-5 font-sans">
@@ -279,7 +279,7 @@ export default function WorkPage() {
                 { num: '0', label: 'Compliance Gaps' },
               ].map((s, i) => (
                 <div key={i} className="flex items-center gap-4 px-8 py-5 first:pl-0 group hover:bg-[#F0FAFF] transition-colors flex-1">
-                  <div className="text-2xl font-bold text-[#101820] tracking-tight group-hover:text-[#1A6FA8] transition-colors font-heading">{s.num}</div>
+                  <div className="text-2xl font-bold text-ink tracking-tight group-hover:text-[#1A6FA8] transition-colors font-heading">{s.num}</div>
                   <div className="text-[12px] font-semibold text-slate-500 uppercase tracking-wider leading-tight font-ui">{s.label}</div>
                 </div>
               ))}
@@ -326,7 +326,7 @@ export default function WorkPage() {
                     <span className="text-[12px] text-slate-400 font-mono">{p.year}</span>
                   </div>
 
-                  <h2 className="text-3xl lg:text-4xl font-bold text-[#101820] tracking-tight mb-4 leading-tight group-hover:text-[#1A6FA8] transition-colors duration-300 font-heading">
+                  <h2 className="text-3xl lg:text-4xl font-bold text-ink tracking-tight mb-4 leading-tight group-hover:text-[#1A6FA8] transition-colors duration-300 font-heading">
                     {p.name}
                   </h2>
 
@@ -342,7 +342,7 @@ export default function WorkPage() {
                   <div className="flex items-center gap-6 mb-8">
                     <div>
                       <div className="text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-1 font-ui">Key Result</div>
-                      <div className="text-2xl font-bold text-[#101820] group-hover:text-[#1A6FA8] transition-colors font-heading">{p.outcome}</div>
+                      <div className="text-2xl font-bold text-ink group-hover:text-[#1A6FA8] transition-colors font-heading">{p.outcome}</div>
                     </div>
                     <div className="h-10 w-px bg-slate-200" />
                     <span className={cn(

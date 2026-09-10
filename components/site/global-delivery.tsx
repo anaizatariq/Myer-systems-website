@@ -4,7 +4,7 @@ import { Building2, Globe2, ShieldCheck, Clock, Users, ArrowRight } from 'lucide
 
 const HUBS = [
   {
-    city: 'Dallas, Texas',
+    city: 'Sugar Land, TX',
     country: 'United States',
     role: 'GLOBAL HEADQUARTERS & GOVERNANCE',
     icon: Building2,
@@ -52,7 +52,7 @@ export function GlobalDelivery() {
             </span>
           </div>
 
-          <h2 className="text-2xl sm:text-4xl lg:text-[2.75rem]/[1.15] font-semibold tracking-tight text-[#101820] font-sans">
+          <h2 className="text-2xl sm:text-4xl lg:text-[2.75rem]/[1.15] font-semibold tracking-tight text-ink font-sans">
             US accountability. Global delivery scale.
           </h2>
           <p className="mt-3 text-base sm:text-lg text-slate-600 font-sans leading-relaxed">
@@ -74,11 +74,11 @@ export function GlobalDelivery() {
                   {/* Card Header */}
                   <div className="flex items-center justify-between border-b border-slate-200/70 pb-5">
                     <div className="flex items-center gap-3">
-                      <div className="h-12 w-12 rounded-2xl bg-[#101820] text-[#29A8E0] flex items-center justify-center shadow-xs">
+                      <div className="h-12 w-12 rounded-2xl bg-ink text-[#29A8E0] flex items-center justify-center shadow-xs">
                         <Icon className="h-6 w-6" />
                       </div>
                       <div>
-                        <h3 className="text-xl font-bold tracking-tight text-[#101820] font-heading">
+                        <h3 className="text-xl font-bold tracking-tight text-ink font-heading">
                           {hub.city}
                         </h3>
                         <span className="text-xs text-slate-500 font-sans">
@@ -119,7 +119,7 @@ export function GlobalDelivery() {
                     <Clock className="h-3.5 w-3.5 text-[#1A6FA8]" />
                     Synchronized Execution
                   </span>
-                  <span className="text-[#101820] font-bold">Myer Systems</span>
+                  <span className="text-ink font-bold">Myer Systems</span>
                 </div>
               </div>
             );

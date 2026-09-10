@@ -62,7 +62,7 @@ export function Footer() {
             </Link>
 
             <p className="text-sm leading-relaxed text-[#8FD6F5]/80 font-sans">
-              AI Systems Built for Accountability, Scale, and Control. Bridging Dallas strategic governance with global 24/7 technical execution.
+              AI Systems Built for Accountability, Scale, and Control. Bridging strategic governance with global 24/7 technical execution.
             </p>
           </div>
 
@@ -128,7 +128,7 @@ export function Footer() {
                   <strong className="block text-white font-medium font-ui">
                     Headquarters (US):
                   </strong>
-                  Dallas, Texas, USA
+                  42 Dorothea Ln, Sugar Land, TX 77479
                 </div>
               </li>
 
@@ -163,9 +163,9 @@ export function Footer() {
           </p>
           
           <div className="flex flex-wrap items-center gap-2.5 sm:gap-4 text-[10.5px] sm:text-[11px] font-ui">
-            <span className="text-white font-medium">Dallas, Texas</span>
+            <span className="text-white font-medium">Sugar Land, TX</span>
             <span>·</span>
-            <span className="text-white font-medium">HIPAA-Compliant AI Systems</span>
+            <span className="text-white font-medium">Enterprise AI Systems</span>
             <span>·</span>
             <span className="text-white font-medium">24/7 Global Hub</span>
             <span>·</span>

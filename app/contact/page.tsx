@@ -167,9 +167,7 @@ export default function ContactPage() {
               {/* Display Heading */}
               <h1 className="text-4xl font-semibold tracking-tight text-white sm:text-5xl lg:text-[3.4rem] leading-[1.16] font-heading">
                 Schedule a Consultation with{' '}
-                <span className="inline-block pr-1.5 font-quote italic font-normal text-[#8FD6F5]">
-                  Myer Systems
-                </span>
+                Myer Systems
               </h1>
 
               {/* Short Info Paragraph */}
@@ -181,7 +179,7 @@ export default function ContactPage() {
               <div className="pt-2 flex flex-wrap items-center gap-4">
                 <a 
                   href="#booking-form"
-                  className="group inline-flex items-center gap-2.5 rounded-full bg-[#29A8E0] px-8 py-3.5 text-sm font-bold text-[#101820] shadow-md shadow-[#29A8E0]/20 hover:bg-[#209FD6] hover:shadow-[0_6px_20px_rgba(41,168,224,0.38)] hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.99] transition-all duration-200 font-ui cursor-pointer"
+                  className="group inline-flex items-center gap-2.5 rounded-full bg-[#29A8E0] px-8 py-3.5 text-sm font-bold text-ink shadow-md shadow-[#29A8E0]/20 hover:bg-[#209FD6] hover:shadow-[0_6px_20px_rgba(41,168,224,0.38)] hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.99] transition-all duration-200 font-ui cursor-pointer"
                 >
                   <span>Start a Conversation</span>
                   <ArrowRight className="w-4 h-4 ml-1 transition-transform group-hover:translate-x-0.5" />
@@ -199,7 +197,7 @@ export default function ContactPage() {
 
             {/* Right Column: High-End Consultation Visual */}
             <div className="reveal lg:col-span-5 relative">
-              <div className="relative rounded-3xl overflow-hidden border border-[#29A8E0]/30 bg-[#101820] shadow-[0_20px_50px_rgba(0,0,0,0.5),0_0_40px_rgba(41,168,224,0.15)] group">
+              <div className="relative rounded-3xl overflow-hidden border border-[#29A8E0]/30 bg-ink shadow-[0_20px_50px_rgba(0,0,0,0.5),0_0_40px_rgba(41,168,224,0.15)] group">
                 <Image
                   src="/consultation-meeting.jpg"
                   alt="Myer Systems Consultation Discussion"
@@ -224,7 +222,7 @@ export default function ContactPage() {
                     </span>
                   </div>
                   <span className="text-[10px] font-mono font-bold text-[#8FD6F5] uppercase tracking-wider">
-                    Dallas · Lahore
+                    Sugar Land, TX · Lahore
                   </span>
                 </div>
               </div>
@@ -255,7 +253,7 @@ export default function ContactPage() {
                 CONSULTATION REQUEST
               </span>
             </div>
-            <h2 className="text-3xl sm:text-4xl lg:text-[2.6rem] font-bold tracking-tight text-[#101820] font-heading">
+            <h2 className="text-3xl sm:text-4xl lg:text-[2.6rem] font-bold tracking-tight text-ink font-heading">
               Tell us about your project and goals
             </h2>
             <p className="mt-3 text-base sm:text-lg text-slate-600 font-sans">
@@ -274,7 +272,7 @@ export default function ContactPage() {
                   <div className="h-9 w-9 rounded-xl bg-[#F0FAFF] border border-[#1A6FA8]/20 flex items-center justify-center text-[#29A8E0]">
                     <Sparkles className="w-5 h-5 text-[#29A8E0]" />
                   </div>
-                  <h3 className="text-xl font-bold text-[#101820] font-heading">
+                  <h3 className="text-xl font-bold text-ink font-heading">
                     What happens next?
                   </h3>
                 </div>
@@ -285,7 +283,7 @@ export default function ContactPage() {
                       01
                     </div>
                     <div>
-                      <div className="text-[14.5px] font-bold text-[#101820] font-heading">Initial Review</div>
+                      <div className="text-[14.5px] font-bold text-ink font-heading">Initial Review</div>
                       <p className="text-[13px] text-slate-600 leading-relaxed font-sans mt-0.5">
                         Our team reviews your requirements and identifies the right area of expertise for the conversation.
                       </p>
@@ -297,7 +295,7 @@ export default function ContactPage() {
                       02
                     </div>
                     <div>
-                      <div className="text-[14.5px] font-bold text-[#101820] font-heading">Consultation</div>
+                      <div className="text-[14.5px] font-bold text-ink font-heading">Consultation</div>
                       <p className="text-[13px] text-slate-600 leading-relaxed font-sans mt-0.5">
                         A focused conversation with the relevant Myer Systems team members based on your needs.
                       </p>
@@ -309,7 +307,7 @@ export default function ContactPage() {
                       03
                     </div>
                     <div>
-                      <div className="text-[14.5px] font-bold text-[#101820] font-heading">Recommended Next Steps</div>
+                      <div className="text-[14.5px] font-bold text-ink font-heading">Recommended Next Steps</div>
                       <p className="text-[13px] text-slate-600 leading-relaxed font-sans mt-0.5">
                         We&apos;ll discuss practical next steps, potential solutions, and the appropriate path forward for your organisation.
                       </p>
@@ -326,7 +324,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <span className="text-[11px] font-mono uppercase tracking-wider text-[#1A6FA8] font-bold block">Direct Email</span>
-                    <a href="mailto:hello@myersystems.ai" className="text-sm font-bold text-[#101820] hover:text-[#29A8E0] transition-colors font-sans mt-0.5 block">
+                    <a href="mailto:hello@myersystems.ai" className="text-sm font-bold text-ink hover:text-[#29A8E0] transition-colors font-sans mt-0.5 block">
                       hello@myersystems.ai
                     </a>
                   </div>
@@ -338,8 +336,8 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <span className="text-[11px] font-mono uppercase tracking-wider text-[#1A6FA8] font-bold block">Dual-Hub Operating Model</span>
-                    <span className="text-sm font-bold text-[#101820] font-sans mt-0.5 block">
-                      Dallas, Texas · US Headquarters<br />
+                    <span className="text-sm font-bold text-ink font-sans mt-0.5 block">
+                      Sugar Land, TX · US Headquarters<br />
                       <span className="text-slate-600 font-normal">Lahore, Pakistan · Global Delivery Hub</span>
                     </span>
                   </div>
@@ -357,13 +355,13 @@ export default function ContactPage() {
                     <div className="w-16 h-16 rounded-full bg-[#F0FAFF] border border-[#29A8E0]/40 flex items-center justify-center mx-auto text-[#29A8E0]">
                       <CheckCircle2 className="w-8 h-8 text-[#29A8E0]" />
                     </div>
-                    <h3 className="text-2xl font-bold text-[#101820] font-heading">Consultation Request Received</h3>
+                    <h3 className="text-2xl font-bold text-ink font-heading">Consultation Request Received</h3>
                     <p className="text-base text-slate-600 font-sans max-w-md mx-auto">
                       Thank you. Our team will review your project scope and get back to you about the next steps.
                     </p>
                     <button
                       onClick={() => setSubmitted(false)}
-                      className="inline-flex items-center gap-2 rounded-full border border-[#1A6FA8]/20 bg-[#F0FAFF] px-6 py-2.5 text-xs font-bold text-[#1A6FA8] font-ui hover:bg-[#29A8E0] hover:text-[#101820] transition-all mt-4 cursor-pointer"
+                      className="inline-flex items-center gap-2 rounded-full border border-[#1A6FA8]/20 bg-[#F0FAFF] px-6 py-2.5 text-xs font-bold text-[#1A6FA8] font-ui hover:bg-[#29A8E0] hover:text-ink transition-all mt-4 cursor-pointer"
                     >
                       Submit Another Request
                     </button>
@@ -390,7 +388,7 @@ export default function ContactPage() {
                             onClick={() => setSelectedTopic(topic)}
                             className={`rounded-full px-4 py-2 text-xs font-semibold font-ui transition-all duration-200 cursor-pointer ${
                               selectedTopic === topic
-                                ? 'bg-[#29A8E0] text-[#101820] shadow-[0_2px_10px_rgba(41,168,224,0.3)] border border-[#29A8E0]'
+                                ? 'bg-[#29A8E0] text-ink shadow-[0_2px_10px_rgba(41,168,224,0.3)] border border-[#29A8E0]'
                                 : 'bg-[#F8FAFD] text-slate-700 border border-[#1A6FA8]/20 hover:border-[#29A8E0] hover:bg-white'
                             }`}
                           >
@@ -403,7 +401,7 @@ export default function ContactPage() {
                     {/* Name & Email */}
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 pt-1">
                       <div className="space-y-2">
-                        <label htmlFor="full-name" className="text-xs font-bold uppercase tracking-wider text-[#101820] font-ui">
+                        <label htmlFor="full-name" className="text-xs font-bold uppercase tracking-wider text-ink font-ui">
                           Your Name *
                         </label>
                         <input
@@ -411,12 +409,12 @@ export default function ContactPage() {
                           id="full-name"
                           required
                           placeholder="Evelyn Reed"
-                          className="w-full rounded-xl bg-[#F8FAFD] border border-[#1A6FA8]/20 px-4 py-3.5 text-sm text-[#101820] placeholder-slate-400 focus:bg-white focus:outline-none focus:border-[#29A8E0] focus:ring-2 focus:ring-[#29A8E0]/20 transition-all font-sans"
+                          className="w-full rounded-xl bg-[#F8FAFD] border border-[#1A6FA8]/20 px-4 py-3.5 text-sm text-ink placeholder-slate-400 focus:bg-white focus:outline-none focus:border-[#29A8E0] focus:ring-2 focus:ring-[#29A8E0]/20 transition-all font-sans"
                         />
                       </div>
 
                       <div className="space-y-2">
-                        <label htmlFor="work-email" className="text-xs font-bold uppercase tracking-wider text-[#101820] font-ui">
+                        <label htmlFor="work-email" className="text-xs font-bold uppercase tracking-wider text-ink font-ui">
                           Email Address *
                         </label>
                         <input
@@ -424,7 +422,7 @@ export default function ContactPage() {
                           id="work-email"
                           required
                           placeholder="evelyn@company.com"
-                          className="w-full rounded-xl bg-[#F8FAFD] border border-[#1A6FA8]/20 px-4 py-3.5 text-sm text-[#101820] placeholder-slate-400 focus:bg-white focus:outline-none focus:border-[#29A8E0] focus:ring-2 focus:ring-[#29A8E0]/20 transition-all font-sans"
+                          className="w-full rounded-xl bg-[#F8FAFD] border border-[#1A6FA8]/20 px-4 py-3.5 text-sm text-ink placeholder-slate-400 focus:bg-white focus:outline-none focus:border-[#29A8E0] focus:ring-2 focus:ring-[#29A8E0]/20 transition-all font-sans"
                         />
                       </div>
                     </div>
@@ -432,7 +430,7 @@ export default function ContactPage() {
                     {/* Company & Timeline */}
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                       <div className="space-y-2">
-                        <label htmlFor="company" className="text-xs font-bold uppercase tracking-wider text-[#101820] font-ui">
+                        <label htmlFor="company" className="text-xs font-bold uppercase tracking-wider text-ink font-ui">
                           Organisation / Company *
                         </label>
                         <input
@@ -440,17 +438,17 @@ export default function ContactPage() {
                           id="company"
                           required
                           placeholder="Company Name"
-                          className="w-full rounded-xl bg-[#F8FAFD] border border-[#1A6FA8]/20 px-4 py-3.5 text-sm text-[#101820] placeholder-slate-400 focus:bg-white focus:outline-none focus:border-[#29A8E0] focus:ring-2 focus:ring-[#29A8E0]/20 transition-all font-sans"
+                          className="w-full rounded-xl bg-[#F8FAFD] border border-[#1A6FA8]/20 px-4 py-3.5 text-sm text-ink placeholder-slate-400 focus:bg-white focus:outline-none focus:border-[#29A8E0] focus:ring-2 focus:ring-[#29A8E0]/20 transition-all font-sans"
                         />
                       </div>
 
                       <div className="space-y-2">
-                        <label htmlFor="timeline" className="text-xs font-bold uppercase tracking-wider text-[#101820] font-ui">
+                        <label htmlFor="timeline" className="text-xs font-bold uppercase tracking-wider text-ink font-ui">
                           Expected Deployment Timeline
                         </label>
                         <select
                           id="timeline"
-                          className="w-full rounded-xl bg-[#F8FAFD] border border-[#1A6FA8]/20 px-4 py-3.5 text-sm text-[#101820] focus:bg-white focus:outline-none focus:border-[#29A8E0] focus:ring-2 focus:ring-[#29A8E0]/20 transition-all font-sans"
+                          className="w-full rounded-xl bg-[#F8FAFD] border border-[#1A6FA8]/20 px-4 py-3.5 text-sm text-ink focus:bg-white focus:outline-none focus:border-[#29A8E0] focus:ring-2 focus:ring-[#29A8E0]/20 transition-all font-sans"
                         >
                           <option>Immediate</option>
                           <option>1–3 Months</option>
@@ -461,14 +459,14 @@ export default function ContactPage() {
 
                     {/* Project Overview */}
                     <div className="space-y-2">
-                      <label htmlFor="project-scope" className="text-xs font-bold uppercase tracking-wider text-[#101820] font-ui">
+                      <label htmlFor="project-scope" className="text-xs font-bold uppercase tracking-wider text-ink font-ui">
                         Project Scope &amp; Current Bottlenecks
                       </label>
                       <textarea
                         id="project-scope"
                         rows={4}
                         placeholder="Briefly describe your objectives, current systems, or operational needs..."
-                        className="w-full rounded-xl bg-[#F8FAFD] border border-[#1A6FA8]/20 px-4 py-3.5 text-sm text-[#101820] placeholder-slate-400 focus:bg-white focus:outline-none focus:border-[#29A8E0] focus:ring-2 focus:ring-[#29A8E0]/20 transition-all resize-none font-sans"
+                        className="w-full rounded-xl bg-[#F8FAFD] border border-[#1A6FA8]/20 px-4 py-3.5 text-sm text-ink placeholder-slate-400 focus:bg-white focus:outline-none focus:border-[#29A8E0] focus:ring-2 focus:ring-[#29A8E0]/20 transition-all resize-none font-sans"
                       />
                     </div>
 
@@ -476,7 +474,7 @@ export default function ContactPage() {
                     <div>
                       <button
                         type="submit"
-                        className="w-full inline-flex items-center justify-center gap-2.5 rounded-full bg-[#29A8E0] px-8 py-4 text-sm sm:text-base font-bold text-[#101820] shadow-[0_4px_18px_rgba(41,168,224,0.28)] hover:bg-[#209FD6] hover:shadow-[0_6px_24px_rgba(41,168,224,0.42)] hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.99] transition-all duration-200 font-ui cursor-pointer"
+                        className="w-full inline-flex items-center justify-center gap-2.5 rounded-full bg-[#29A8E0] px-8 py-4 text-sm sm:text-base font-bold text-ink shadow-[0_4px_18px_rgba(41,168,224,0.28)] hover:bg-[#209FD6] hover:shadow-[0_6px_24px_rgba(41,168,224,0.42)] hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.99] transition-all duration-200 font-ui cursor-pointer"
                       >
                         <span>Submit Consultation Request</span>
                         <ArrowRight className="w-4 h-4" />
@@ -507,7 +505,7 @@ export default function ContactPage() {
                 CONSULTATION AREAS
               </span>
             </div>
-            <h2 className="text-3xl sm:text-4xl lg:text-[2.5rem] font-bold tracking-tight text-[#101820] font-heading">
+            <h2 className="text-3xl sm:text-4xl lg:text-[2.5rem] font-bold tracking-tight text-ink font-heading">
               Explore Consultation Areas
             </h2>
             <p className="mt-3 text-base sm:text-lg text-slate-600 font-sans">
@@ -524,7 +522,7 @@ export default function ContactPage() {
                   className="reveal rounded-3xl bg-white border border-[#1A6FA8]/20 p-8 shadow-[0_10px_35px_rgba(26,111,168,0.06)] hover:shadow-[0_16px_45px_rgba(26,111,168,0.12)] hover:border-[#29A8E0]/60 transition-all duration-300 flex flex-col justify-between group"
                 >
                   <div className="space-y-5">
-                    <div className="h-12 w-12 rounded-2xl bg-[#F0FAFF] border border-[#1A6FA8]/25 flex items-center justify-center text-[#1A6FA8] group-hover:bg-[#29A8E0] group-hover:text-[#101820] transition-colors">
+                    <div className="h-12 w-12 rounded-2xl bg-[#F0FAFF] border border-[#1A6FA8]/25 flex items-center justify-center text-[#1A6FA8] group-hover:bg-[#29A8E0] group-hover:text-ink transition-colors">
                       <Icon className="w-6 h-6 transition-transform group-hover:scale-110" />
                     </div>
 
@@ -532,7 +530,7 @@ export default function ContactPage() {
                       <div className="text-[11px] font-mono font-bold uppercase tracking-wider text-[#1A6FA8]">
                         {track.target}
                       </div>
-                      <h3 className="text-xl font-bold text-[#101820] font-heading mt-1">
+                      <h3 className="text-xl font-bold text-ink font-heading mt-1">
                         {track.title}
                       </h3>
                     </div>
@@ -543,7 +541,7 @@ export default function ContactPage() {
 
                     <div className="pt-3 border-t border-[#1A6FA8]/10 space-y-2">
                       <div className="text-xs text-slate-500 font-sans">
-                        <span className="font-bold text-[#101820]">Session Deliverable:</span> {track.deliverable}
+                        <span className="font-bold text-ink">Session Deliverable:</span> {track.deliverable}
                       </div>
                       <div className="text-[11px] font-mono text-[#1A6FA8] font-semibold flex items-center gap-1.5">
                         <Clock className="w-3.5 h-3.5" />
@@ -555,7 +553,7 @@ export default function ContactPage() {
                   <div className="pt-6">
                     <button
                       onClick={() => handleSelectTrack(track.focusTopic)}
-                      className="w-full inline-flex items-center justify-center gap-2 rounded-full border border-[#1A6FA8]/25 bg-[#F8FAFD] py-3 text-xs font-bold text-[#101820] font-ui group-hover:bg-[#29A8E0] group-hover:border-[#29A8E0] transition-all cursor-pointer"
+                      className="w-full inline-flex items-center justify-center gap-2 rounded-full border border-[#1A6FA8]/25 bg-[#F8FAFD] py-3 text-xs font-bold text-ink font-ui group-hover:bg-[#29A8E0] group-hover:border-[#29A8E0] transition-all cursor-pointer"
                     >
                       <span>Explore This Area</span>
                       <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
@@ -582,7 +580,7 @@ export default function ContactPage() {
                 FREQUENTLY ASKED QUESTIONS
               </span>
             </div>
-            <h2 className="text-3xl sm:text-4xl lg:text-[2.5rem] font-bold tracking-tight text-[#101820] font-heading">
+            <h2 className="text-3xl sm:text-4xl lg:text-[2.5rem] font-bold tracking-tight text-ink font-heading">
               Frequently Asked Questions
             </h2>
             <p className="mt-3 text-base sm:text-lg text-slate-600 font-sans">
@@ -602,10 +600,10 @@ export default function ContactPage() {
                     onClick={() => setOpenFaqIndex(isOpen ? null : idx)}
                     className="w-full flex items-center justify-between p-6 text-left cursor-pointer hover:bg-[#F0FAFF]/40 transition-colors"
                   >
-                    <span className="text-base sm:text-[17px] font-bold text-[#101820] font-heading pr-4">
+                    <span className="text-base sm:text-[17px] font-bold text-ink font-heading pr-4">
                       {faq.question}
                     </span>
-                    <div className={`h-8 w-8 rounded-full bg-[#F0FAFF] border border-[#1A6FA8]/20 flex items-center justify-center text-[#1A6FA8] shrink-0 transition-transform duration-300 ${isOpen ? 'rotate-180 bg-[#29A8E0] text-[#101820]' : ''}`}>
+                    <div className={`h-8 w-8 rounded-full bg-[#F0FAFF] border border-[#1A6FA8]/20 flex items-center justify-center text-[#1A6FA8] shrink-0 transition-transform duration-300 ${isOpen ? 'rotate-180 bg-[#29A8E0] text-ink' : ''}`}>
                       <ChevronDown className="w-4 h-4" />
                     </div>
                   </button>
@@ -635,8 +633,8 @@ export default function ContactPage() {
                 <Building2 className="w-5 h-5 text-[#29A8E0]" />
               </div>
               <div>
-                <div className="text-xs font-bold text-[#101820] font-heading">Dallas, Texas · US Headquarters</div>
-                <div className="text-[11px] text-slate-500 font-sans">Strategic leadership &amp; advisory</div>
+                <div className="text-xs font-bold text-ink font-sans">Sugar Land, TX — US Headquarters</div>
+                <div className="text-[11px] text-slate-500 font-ui mt-0.5">Business Registration &amp; Operations</div>
               </div>
             </div>
 
@@ -645,7 +643,7 @@ export default function ContactPage() {
                 <Globe className="w-5 h-5 text-[#29A8E0]" />
               </div>
               <div>
-                <div className="text-xs font-bold text-[#101820] font-heading">Lahore, Pakistan · Global Delivery Hub</div>
+                <div className="text-xs font-bold text-ink font-heading">Lahore, Pakistan · Global Delivery Hub</div>
                 <div className="text-[11px] text-slate-500 font-sans">Technical execution &amp; operational support</div>
               </div>
             </div>
@@ -655,7 +653,7 @@ export default function ContactPage() {
                 <BadgeCheck className="w-5 h-5 text-[#29A8E0]" />
               </div>
               <div>
-                <div className="text-xs font-bold text-[#101820] font-heading">Enterprise AI · Healthcare Technology</div>
+                <div className="text-xs font-bold text-ink font-heading">Enterprise AI · Healthcare Technology</div>
                 <div className="text-[11px] text-slate-500 font-sans">Accountable systems built for scale and control</div>
               </div>
             </div>

@@ -77,7 +77,7 @@ export function HealthcareVertical() {
             </span>
           </div>
 
-            <h2 className="text-3xl sm:text-4xl lg:text-[3.25rem]/[1.1] font-extrabold tracking-tight text-[#101820] font-sans">
+            <h2 className="text-3xl sm:text-4xl lg:text-[3.25rem]/[1.1] font-extrabold tracking-tight text-ink font-sans">
               Protecting revenue and reducing paperwork.
             </h2>
           </div>
@@ -95,12 +95,12 @@ export function HealthcareVertical() {
                 
                 // Pipeline is static. Color changes on hover.
                 const lineClass = isMiddle 
-                  ? "bg-[#101820] group-hover:bg-white" 
-                  : "bg-[#8FD6F5] group-hover:bg-[#101820]";
+                  ? "bg-ink group-hover:bg-white" 
+                  : "bg-[#8FD6F5] group-hover:bg-ink";
                 
-                const iconBgClass = isMiddle ? "bg-[#101820] text-[#8FD6F5]" : "bg-[#E0F4FC] text-[#1A6FA8]";
-                const textClass = isMiddle ? "text-[#101820]/90" : "text-slate-600";
-                const checkClass = isMiddle ? "text-[#101820]" : "text-[#29A8E0]";
+                const iconBgClass = isMiddle ? "bg-ink text-[#8FD6F5]" : "bg-[#E0F4FC] text-[#1A6FA8]";
+                const textClass = isMiddle ? "text-ink/90" : "text-slate-600";
+                const checkClass = isMiddle ? "text-ink" : "text-[#29A8E0]";
 
                 return (
                   <div 
@@ -117,7 +117,7 @@ export function HealthcareVertical() {
 
                     {/* Content */}
                     <div>
-                      <h3 className="text-xl sm:text-2xl font-extrabold text-[#101820] mb-3 font-heading">
+                      <h3 className="text-xl sm:text-2xl font-extrabold text-ink mb-3 font-heading">
                         {item.title}
                       </h3>
                       

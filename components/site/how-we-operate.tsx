@@ -81,7 +81,7 @@ export function HowWeOperate() {
             </span>
           </div>
 
-          <h2 className="text-3xl sm:text-4xl lg:text-[3.25rem]/[1.1] font-semibold tracking-tight text-[#101820] font-sans">
+          <h2 className="text-3xl sm:text-4xl lg:text-[3.25rem]/[1.1] font-semibold tracking-tight text-ink font-sans">
             AI speed. Human judgment.
           </h2>
           <p className="mt-4 text-base sm:text-lg text-slate-600 font-sans leading-relaxed max-w-2xl">
@@ -102,37 +102,37 @@ export function HowWeOperate() {
             return (
               <div
                 key={step.stepNum}
-                className={`group relative flex-1 flex flex-col justify-between p-6 sm:p-8 lg:p-10 transition-colors duration-500 hover:bg-[#101820] ${
+                className={`group relative flex-1 flex flex-col justify-between p-6 sm:p-8 lg:p-10 transition-colors duration-500 hover:bg-ink ${
                   !isLast ? 'border-b md:border-b-0 md:border-r border-[#1A6FA8]/10' : ''
                 }`}
               >
                 {/* Abstract UI Mockup */}
-                <div className="relative z-10 w-[72px] h-[72px] rounded-2xl border-2 border-[#101820] bg-white/40 shadow-sm group-hover:border-[#8FD6F5] group-hover:bg-transparent transition-all duration-500 mx-auto md:mx-0 mb-8 p-2.5 flex flex-col gap-1.5">
-                  <div className="absolute -top-3 -right-3 bg-[#101820] text-[#F0FAFF] font-mono text-[11px] font-bold px-2 py-0.5 rounded group-hover:bg-[#8FD6F5] group-hover:text-[#101820] transition-colors duration-500 shadow-sm">
+                <div className="relative z-10 w-[72px] h-[72px] rounded-2xl border-2 border-ink bg-white/40 shadow-sm group-hover:border-[#8FD6F5] group-hover:bg-transparent transition-all duration-500 mx-auto md:mx-0 mb-8 p-2.5 flex flex-col gap-1.5">
+                  <div className="absolute -top-3 -right-3 bg-ink text-[#F0FAFF] font-mono text-[11px] font-bold px-2 py-0.5 rounded group-hover:bg-[#8FD6F5] group-hover:text-ink transition-colors duration-500 shadow-sm">
                     {step.stepNum}
                   </div>
                   
                   {step.stepNum === '01' && (
                     <>
-                      <div className="w-full h-2.5 rounded border border-[#101820] group-hover:border-[#8FD6F5] transition-colors duration-500" />
-                      <div className="w-full h-2.5 rounded border border-[#101820] group-hover:border-[#8FD6F5] transition-colors duration-500" />
-                      <div className="w-4/5 h-2.5 rounded bg-[#101820] group-hover:bg-[#8FD6F5] transition-colors duration-500" />
+                      <div className="w-full h-2.5 rounded border border-ink group-hover:border-[#8FD6F5] transition-colors duration-500" />
+                      <div className="w-full h-2.5 rounded border border-ink group-hover:border-[#8FD6F5] transition-colors duration-500" />
+                      <div className="w-4/5 h-2.5 rounded bg-ink group-hover:bg-[#8FD6F5] transition-colors duration-500" />
                     </>
                   )}
                   {step.stepNum === '02' && (
                     <div className="flex-1 flex items-center justify-center">
-                      <div className="w-7 h-7 rounded border-2 border-[#101820] group-hover:border-[#8FD6F5] transition-colors duration-500 flex items-center justify-center">
-                        <div className="w-2.5 h-2.5 rounded-full bg-[#101820] group-hover:bg-[#8FD6F5] transition-colors duration-500 animate-pulse" />
+                      <div className="w-7 h-7 rounded border-2 border-ink group-hover:border-[#8FD6F5] transition-colors duration-500 flex items-center justify-center">
+                        <div className="w-2.5 h-2.5 rounded-full bg-ink group-hover:bg-[#8FD6F5] transition-colors duration-500 animate-pulse" />
                       </div>
                     </div>
                   )}
                   {step.stepNum === '03' && (
                     <>
                       <div className="w-full flex gap-1.5 h-1/2">
-                        <div className="flex-1 rounded bg-[#101820] group-hover:bg-[#8FD6F5] transition-colors duration-500" />
-                        <div className="w-1/3 rounded border border-[#101820] group-hover:border-[#8FD6F5] transition-colors duration-500" />
+                        <div className="flex-1 rounded bg-ink group-hover:bg-[#8FD6F5] transition-colors duration-500" />
+                        <div className="w-1/3 rounded border border-ink group-hover:border-[#8FD6F5] transition-colors duration-500" />
                       </div>
-                      <div className="w-full h-1/2 rounded border border-[#101820] group-hover:border-[#8FD6F5] transition-colors duration-500" />
+                      <div className="w-full h-1/2 rounded border border-ink group-hover:border-[#8FD6F5] transition-colors duration-500" />
                     </>
                   )}
                 </div>
@@ -158,7 +158,7 @@ export function HowWeOperate() {
                 <div className="flex-1 flex flex-col items-center md:items-start relative z-10">
                   {/* Title & Tagline */}
                   <div className="text-center md:text-left">
-                    <h3 className="text-2xl lg:text-3xl font-extrabold tracking-tight text-[#101820] group-hover:text-white transition-colors duration-500 mb-2.5 leading-tight">
+                    <h3 className="text-2xl lg:text-3xl font-extrabold tracking-tight text-ink group-hover:text-white transition-colors duration-500 mb-2.5 leading-tight">
                       {step.title}
                     </h3>
                     <p className="text-sm lg:text-[15px] font-semibold text-slate-600 group-hover:text-slate-400 transition-colors duration-500 mb-2">

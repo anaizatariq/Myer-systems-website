@@ -71,7 +71,7 @@ export function WhyChooseUs() {
             </span>
           </div>
 
-            <h2 className="text-3xl sm:text-4xl lg:text-[3.25rem]/[1.1] font-extrabold tracking-tight text-[#101820] font-sans">
+            <h2 className="text-3xl sm:text-4xl lg:text-[3.25rem]/[1.1] font-extrabold tracking-tight text-ink font-sans">
               Built for control, accountability, and results.
             </h2>
             <p className="mt-4 mb-10 text-base sm:text-lg text-slate-600 font-sans leading-relaxed">
@@ -87,7 +87,7 @@ export function WhyChooseUs() {
                       <Icon className="h-6 w-6" />
                     </div>
                     <div>
-                      <h3 className="text-xl font-extrabold text-[#101820] mb-2 font-heading">
+                      <h3 className="text-xl font-extrabold text-ink mb-2 font-heading">
                         {reason.title}
                       </h3>
                       <p className="text-[15px] font-medium text-slate-700 leading-relaxed max-w-md">
@@ -117,7 +117,7 @@ export function WhyChooseUs() {
               
               {/* Optional UI Overlay to make it feel more "tech/enterprise" */}
               <div className="absolute bottom-6 left-6 z-20 flex justify-between items-end">
-                <div className="bg-[#101820]/90 backdrop-blur-md border border-white/10 rounded-2xl p-4 shadow-xl">
+                <div className="bg-ink/90 backdrop-blur-md border border-white/10 rounded-2xl p-4 shadow-xl">
                   <div className="flex items-center gap-3 mb-2">
                     <div className="h-2 w-2 rounded-full bg-green-400 animate-pulse" />
                     <span className="text-xs font-mono text-white/80 uppercase tracking-widest">System Status</span>

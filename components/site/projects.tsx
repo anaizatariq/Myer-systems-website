@@ -56,7 +56,7 @@ const PROJECTS: ProjectItem[] = [
 
 export function Projects() {
   return (
-    <section id="work" className="relative scroll-mt-24 bg-[#101820] py-20 sm:py-24 lg:py-28 overflow-hidden">
+    <section id="work" className="relative scroll-mt-24 bg-ink py-20 sm:py-24 lg:py-28 overflow-hidden">
       
       {/* ── Ambient Dark Steel Depth ── */}
       <div 
@@ -81,9 +81,7 @@ export function Projects() {
 
           <h2 className="mt-5 sm:mt-6 text-2xl sm:text-4xl lg:text-[2.85rem]/[1.15] font-semibold tracking-tight text-white font-sans">
             Solutions built around{' '}
-            <span className="font-quote italic font-normal text-[#8FD6F5]">
-              real operational needs.
-            </span>
+            real operational needs.
           </h2>
 
           <p className="mt-3 sm:mt-4 text-sm sm:text-lg leading-relaxed text-white font-sans max-w-2xl">
@@ -169,7 +167,7 @@ export function Projects() {
         <div className="mt-10 sm:mt-12 text-center">
           <Link
             href="/services"
-            className="group inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-full bg-[#29A8E0] px-8 py-3.5 text-xs sm:text-sm font-bold text-[#101820] shadow-[0_4px_16px_rgba(41,168,224,0.3)] hover:bg-[#209FD6] hover:shadow-[0_6px_22px_rgba(41,168,224,0.42)] hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.99] transition-all duration-200 font-ui"
+            className="group inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-full bg-[#29A8E0] px-8 py-3.5 text-xs sm:text-sm font-bold text-ink shadow-[0_4px_16px_rgba(41,168,224,0.3)] hover:bg-[#209FD6] hover:shadow-[0_6px_22px_rgba(41,168,224,0.42)] hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.99] transition-all duration-200 font-ui"
           >
             <span>Explore All Architecture & Systems</span>
             <ArrowUpRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />

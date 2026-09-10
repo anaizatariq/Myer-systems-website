@@ -31,25 +31,23 @@ export function AboutUs() {
           </div>
 
             {/* Display Headline */}
-            <h2 className="text-3xl sm:text-4xl lg:text-[2.85rem]/[1.15] font-semibold tracking-tight text-[#101820] font-sans">
+            <h2 className="text-3xl sm:text-4xl lg:text-[2.85rem]/[1.15] font-semibold tracking-tight text-ink font-sans">
               Bridging onshore strategic{' '}
-              <span className="font-quote italic font-normal text-brand-steel">
-                accountability
-              </span>{' '}
+              accountability{' '}
               with global engineering scale.
             </h2>
 
             {/* Quote-style short statement */}
             <div className="pt-1">
               <blockquote className="border-l-[3px] border-brand pl-4 sm:pl-5 py-0.5">
-                <p className="font-quote italic text-lg sm:text-xl text-[#101820] leading-relaxed">
-                  &ldquo;Delivering dependable operational support through organized systems, trained specialists, and transparent accountability across Dallas and Lahore.&rdquo;
+                <p className="font-quote italic text-lg sm:text-xl text-ink leading-relaxed">
+                  &ldquo;Delivering dependable operational support through organized systems, trained specialists, and transparent accountability across Sugar Land, TX and Lahore.&rdquo;
                 </p>
               </blockquote>
             </div>
 
             {/* Direct Dual Hub Badges */}
-            <div className="pt-1 flex flex-wrap items-center gap-5 text-xs text-[#101820] font-ui font-semibold">
+            <div className="pt-1 flex flex-wrap items-center gap-5 text-xs text-ink font-ui font-semibold">
               <div className="flex items-center gap-2">
                 <Building2 className="h-4 w-4 text-brand-steel" />
                 <span>Dallas HQ · US Legal Jurisdiction</span>
@@ -64,7 +62,7 @@ export function AboutUs() {
             <div className="pt-2">
               <Link
                 href="/about"
-                className="group inline-flex items-center gap-2 rounded-full bg-brand px-8 py-3.5 text-xs sm:text-sm font-bold text-[#101820] shadow-[0_2px_14px_rgba(41,168,224,0.25)] transition-all duration-200 hover:bg-[#209FD6] hover:shadow-[0_4px_18px_rgba(41,168,224,0.38)] hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.99] font-ui"
+                className="group inline-flex items-center gap-2 rounded-full bg-brand px-8 py-3.5 text-xs sm:text-sm font-bold text-ink shadow-[0_2px_14px_rgba(41,168,224,0.25)] transition-all duration-200 hover:bg-[#209FD6] hover:shadow-[0_4px_18px_rgba(41,168,224,0.38)] hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.99] font-ui"
               >
                 <span>Learn More About Us</span>
                 <ArrowUpRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />

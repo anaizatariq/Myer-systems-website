@@ -102,7 +102,7 @@ export function TrustStrip() {
                   
                   {/* Clean, Refined Number with Animated Counter */}
                   <div className="flex items-baseline gap-1.5">
-                    <span className="text-xl sm:text-[1.35rem] font-medium tracking-tight text-[#101820] font-heading leading-none group-hover:text-[#1A6FA8] transition-colors duration-200">
+                    <span className="text-xl sm:text-[1.35rem] font-medium tracking-tight text-ink font-heading leading-none group-hover:text-[#1A6FA8] transition-colors duration-200">
                       {item.isNumeric && item.value !== undefined ? (
                         <AnimatedCounter
                           value={item.value}
@@ -130,7 +130,7 @@ export function TrustStrip() {
 
                   {/* Clean 2-Line Stacked Micro-Label (Light weight & small font) */}
                   <div className="flex flex-col">
-                    <span className="text-xs sm:text-[12.5px] font-normal text-[#101820]/85 font-sans leading-tight whitespace-nowrap">
+                    <span className="text-xs sm:text-[12.5px] font-normal text-ink/85 font-sans leading-tight whitespace-nowrap">
                       {item.title}
                     </span>
                     <span className="text-[10.5px] text-muted-foreground/75 font-sans leading-tight whitespace-nowrap mt-0.5 font-light">

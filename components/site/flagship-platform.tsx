@@ -45,7 +45,7 @@ export function FlagshipPlatform() {
           </div>
 
             {/* Display Headline */}
-            <h2 className="text-2xl sm:text-4xl lg:text-[2.65rem]/[1.15] font-semibold tracking-tight text-[#101820] font-sans">
+            <h2 className="text-2xl sm:text-4xl lg:text-[2.65rem]/[1.15] font-semibold tracking-tight text-ink font-sans">
               MedSynthea: Smarter data for healthcare teams.
             </h2>
 
@@ -61,7 +61,7 @@ export function FlagshipPlatform() {
                   <Check className="h-3.5 w-3.5" />
                 </div>
                 <div>
-                  <h3 className="text-sm font-bold text-[#101820]">Unified Medical Data</h3>
+                  <h3 className="text-sm font-bold text-ink">Unified Medical Data</h3>
                   <p className="text-xs sm:text-[13px] text-slate-600">Connects scattered clinical, billing, and operational records into one clear view.</p>
                 </div>
               </div>
@@ -71,7 +71,7 @@ export function FlagshipPlatform() {
                   <Check className="h-3.5 w-3.5" />
                 </div>
                 <div>
-                  <h3 className="text-sm font-bold text-[#101820]">Less Administrative Burden</h3>
+                  <h3 className="text-sm font-bold text-ink">Less Administrative Burden</h3>
                   <p className="text-xs sm:text-[13px] text-slate-600">Automates repetitive documentation and routine lookups so staff spend less time on paperwork.</p>
                 </div>
               </div>
@@ -81,7 +81,7 @@ export function FlagshipPlatform() {
                   <Check className="h-3.5 w-3.5" />
                 </div>
                 <div>
-                  <h3 className="text-sm font-bold text-[#101820]">Faster Answers</h3>
+                  <h3 className="text-sm font-bold text-ink">Faster Answers</h3>
                   <p className="text-xs sm:text-[13px] text-slate-600">Helps teams find critical information instantly, improving daily turnaround times.</p>
                 </div>
               </div>
@@ -93,7 +93,7 @@ export function FlagshipPlatform() {
                 href="https://medsynthea.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-full bg-[#29A8E0] px-6 py-3 text-xs sm:text-sm font-bold text-[#101820] shadow-md shadow-[#29A8E0]/20 hover:bg-[#209FD6] hover:shadow-[0_6px_20px_rgba(41,168,224,0.38)] hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.99] transition-all duration-200 font-ui cursor-pointer"
+                className="group inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-full bg-[#29A8E0] px-6 py-3 text-xs sm:text-sm font-bold text-ink shadow-md shadow-[#29A8E0]/20 hover:bg-[#209FD6] hover:shadow-[0_6px_20px_rgba(41,168,224,0.38)] hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.99] transition-all duration-200 font-ui cursor-pointer"
               >
                 <span>Visit MedSynthea Platform</span>
                 <ExternalLink className="h-3.5 w-3.5 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />

@@ -39,7 +39,7 @@ const TESTIMONIALS: TestimonialItem[] = [
   },
   {
     id: 'engineering',
-    quote: 'Their dual-hub pod model gave us elite engineers in Dallas and Lahore who took genuine architectural ownership. We accelerated our product release cadence by over 3x without having to scale internal recruiting.',
+    quote: 'Their dual-hub pod model gave us elite engineers in Sugar Land, TX and Lahore who took genuine architectural ownership. We accelerated our product release cadence by over 3x without having to scale internal recruiting.',
     author: 'Tariq Al-Mansoor',
     role: 'Head of Engineering & Systems',
     organization: 'Global Logistics Platform',
@@ -77,11 +77,9 @@ export function Testimonials() {
             </span>
           </div>
 
-          <h2 className="text-2xl sm:text-4xl lg:text-[2.75rem]/[1.15] font-semibold tracking-tight text-[#101820] font-sans">
+          <h2 className="text-2xl sm:text-4xl lg:text-[2.75rem]/[1.15] font-semibold tracking-tight text-ink font-sans">
             Delivering measurable results where{' '}
-            <span className="inline-block pr-1 font-quote italic font-normal text-brand-steel">
-              precision matters.
-            </span>
+            precision matters.
           </h2>
 
           <p className="mt-3 sm:mt-4 text-sm sm:text-lg leading-relaxed text-slate-600 font-sans max-w-2xl mx-auto">
@@ -130,7 +128,7 @@ export function Testimonials() {
                   {item.avatarInitials}
                 </div>
                 <div>
-                  <h4 className="text-sm font-bold text-[#101820] font-sans">
+                  <h4 className="text-sm font-bold text-ink font-sans">
                     {item.author}
                   </h4>
                   <p className="text-xs text-slate-600 font-sans mt-0.5">

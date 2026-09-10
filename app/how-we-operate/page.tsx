@@ -79,9 +79,7 @@ export default function HowWeOperatePage() {
             {/* Display Heading */}
             <h1 className="text-4xl font-semibold tracking-tight text-white sm:text-5xl lg:text-[3.5rem] leading-[1.15] font-heading">
               Structure isn&apos;t a formality here.{' '}
-              <span className="inline-block pr-1.5 font-quote italic font-normal text-[#8FD6F5]">
-                It&apos;s the whole point.
-              </span>
+              It&apos;s the whole point.
             </h1>
             
             {/* Lead Narrative */}
@@ -121,11 +119,9 @@ export default function HowWeOperatePage() {
                     GOVERNANCE IN PRACTICE · STRUCTURE &amp; CONTROL
                   </span>
                 </div>
-                <h2 className="text-3xl font-semibold tracking-tight text-[#101820] sm:text-4xl lg:text-[2.85rem]/[1.15] font-sans">
+                <h2 className="text-3xl font-semibold tracking-tight text-ink sm:text-4xl lg:text-[2.85rem]/[1.15] font-sans">
                   What &ldquo;accountable AI&rdquo;{' '}
-                  <span className="inline-block pr-1 font-quote italic font-normal text-brand-steel">
-                    actually looks like.
-                  </span>
+                  actually looks like.
                 </h2>
               </div>
               <div className="max-w-md">
@@ -214,13 +210,13 @@ export default function HowWeOperatePage() {
                    className="reveal-up relative overflow-hidden p-7 sm:p-8 rounded-[2rem] bg-gradient-to-br from-[#F8FAFD] via-[#F0FAFF] to-[#E0F4FC]/70 border border-[#1A6FA8]/20 shadow-2xs hover:shadow-xl hover:shadow-[#29A8E0]/10 hover:border-[#29A8E0]/60 transition-all duration-400 hover:-translate-y-1 group flex flex-col sm:flex-row gap-6 justify-between"
                  >
                    {/* Subtle Background Watermark Number */}
-                   <div className="absolute -bottom-4 -right-2 text-[90px] font-bold text-[#101820]/[0.05] group-hover:text-[#1A6FA8]/[0.08] group-hover:-translate-y-1 transition-all duration-400 pointer-events-none select-none font-heading">
+                   <div className="absolute -bottom-4 -right-2 text-[90px] font-bold text-ink/[0.05] group-hover:text-[#1A6FA8]/[0.08] group-hover:-translate-y-1 transition-all duration-400 pointer-events-none select-none font-heading">
                      {item.num}
                    </div>
 
                    {/* Text Content */}
                    <div className="relative z-10 flex-1 flex flex-col justify-center">
-                     <h3 className="text-xl sm:text-2xl font-bold text-[#101820] font-heading leading-snug mb-3 whitespace-pre-line">
+                     <h3 className="text-xl sm:text-2xl font-bold text-ink font-heading leading-snug mb-3 whitespace-pre-line">
                        {item.title}
                      </h3>
                      <p className="text-sm sm:text-[15px] text-slate-600 font-sans leading-relaxed">
@@ -248,11 +244,9 @@ export default function HowWeOperatePage() {
                   THE PROCESS · STRUCTURED DELIVERY
                 </span>
               </div>
-              <h2 className="text-3xl font-semibold tracking-tight text-[#101820] sm:text-4xl lg:text-[2.85rem]/[1.15] font-sans">
+              <h2 className="text-3xl font-semibold tracking-tight text-ink sm:text-4xl lg:text-[2.85rem]/[1.15] font-sans">
                 How we turn operational needs into{' '}
-                <span className="inline-block pr-1 font-quote italic font-normal text-brand-steel">
-                  working systems.
-                </span>
+                working systems.
               </h2>
             </div>
 
@@ -304,7 +298,7 @@ export default function HowWeOperatePage() {
                                 </span>
                             </div>
 
-                            <h3 className="text-2xl sm:text-3xl font-bold text-[#101820] font-heading mb-4">
+                            <h3 className="text-2xl sm:text-3xl font-bold text-ink font-heading mb-4">
                               {phase.step} — {phase.title}
                             </h3>
 
@@ -357,11 +351,9 @@ export default function HowWeOperatePage() {
             </span>
           </div>
 
-          <h2 className="reveal text-3xl sm:text-4xl lg:text-[2.85rem]/[1.2] font-semibold tracking-tight text-[#101820] font-sans max-w-3xl mx-auto mb-6">
+          <h2 className="reveal text-3xl sm:text-4xl lg:text-[2.85rem]/[1.2] font-semibold tracking-tight text-ink font-sans max-w-3xl mx-auto mb-6">
             Technology that improves the way the{' '}
-            <span className="inline-block pr-1 font-quote italic font-normal text-brand-steel">
-              operation works.
-            </span>
+            operation works.
           </h2>
 
           <p className="reveal-up text-base sm:text-lg lg:text-[18.5px] text-slate-600 leading-relaxed font-sans max-w-3xl mx-auto">
@@ -372,19 +364,19 @@ export default function HowWeOperatePage() {
           <div className="reveal-up mt-12 grid grid-cols-1 sm:grid-cols-3 gap-6 text-left">
             <div className="bg-gradient-to-br from-[#F8FAFD] to-[#F0FAFF] rounded-2xl p-6 sm:p-7 border border-[#1A6FA8]/20 shadow-2xs hover:border-[#29A8E0]/60 transition-all duration-300">
               <span className="text-xs font-bold uppercase tracking-wider text-[#1A6FA8] font-ui block mb-2">01 · Workload</span>
-              <h3 className="text-lg font-bold text-[#101820] font-heading mb-2">Reduced Manual Friction</h3>
+              <h3 className="text-lg font-bold text-ink font-heading mb-2">Reduced Manual Friction</h3>
               <p className="text-sm text-slate-600 font-sans leading-relaxed">Streamlining repetitive tasks and freeing domain teams to focus on high-value operational delivery.</p>
             </div>
 
             <div className="bg-gradient-to-br from-[#F8FAFD] to-[#F0FAFF] rounded-2xl p-6 sm:p-7 border border-[#1A6FA8]/20 shadow-2xs hover:border-[#29A8E0]/60 transition-all duration-300">
               <span className="text-xs font-bold uppercase tracking-wider text-[#1A6FA8] font-ui block mb-2">02 · Visibility</span>
-              <h3 className="text-lg font-bold text-[#101820] font-heading mb-2">Operational Visibility</h3>
+              <h3 className="text-lg font-bold text-ink font-heading mb-2">Operational Visibility</h3>
               <p className="text-sm text-slate-600 font-sans leading-relaxed">Providing clear insight and structured reporting across core enterprise, operational, and healthcare workflows.</p>
             </div>
 
             <div className="bg-gradient-to-br from-[#F8FAFD] to-[#F0FAFF] rounded-2xl p-6 sm:p-7 border border-[#1A6FA8]/20 shadow-2xs hover:border-[#29A8E0]/60 transition-all duration-300">
               <span className="text-xs font-bold uppercase tracking-wider text-[#1A6FA8] font-ui block mb-2">03 · Resilience</span>
-              <h3 className="text-lg font-bold text-[#101820] font-heading mb-2">Scalable Operations</h3>
+              <h3 className="text-lg font-bold text-ink font-heading mb-2">Scalable Operations</h3>
               <p className="text-sm text-slate-600 font-sans leading-relaxed">Building structured, dependable foundations that scale smoothly as operational demands expand.</p>
             </div>
           </div>

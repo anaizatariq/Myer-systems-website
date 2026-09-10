@@ -163,7 +163,7 @@ export function Disciplines() {
             {/* H2 Section Title & Description Split */}
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12 items-end pt-1">
               <div className="lg:col-span-8">
-                <h2 className="text-3xl sm:text-4xl lg:text-[3.25rem]/[1.1] font-semibold tracking-tight text-[#101820] font-sans">
+                <h2 className="text-3xl sm:text-4xl lg:text-[3.25rem]/[1.1] font-semibold tracking-tight text-ink font-sans">
                   Technology and teams built to scale your business.
                 </h2>
               </div>
@@ -211,7 +211,7 @@ export function Disciplines() {
                   >
                     <div className={`text-xl sm:text-2xl lg:text-[1.85rem] leading-[1.3] tracking-tight font-sans transition-colors duration-300 ${
                       isActive
-                        ? 'text-[#101820] font-semibold'
+                        ? 'text-ink font-semibold'
                         : 'text-slate-400 group-hover:text-slate-600 font-normal'
                     }`}>
                       {pillar.title}
@@ -225,7 +225,7 @@ export function Disciplines() {
             <div className="pt-6 border-t border-slate-200/80 flex items-center justify-between max-w-xs">
               <div className="flex items-center gap-2">
                 <span className="text-[11px] font-mono font-semibold text-slate-400">STAGE</span>
-                <span className="text-xs font-mono font-bold text-[#101820]">
+                <span className="text-xs font-mono font-bold text-ink">
                   0{activeIdx + 1} / 0{PILLARS.length}
                 </span>
                 <span className="text-[10px] font-mono text-slate-400 ml-1">
@@ -265,7 +265,7 @@ export function Disciplines() {
                 <div className="absolute inset-0 bg-gradient-to-t from-[#101820]/60 via-transparent to-transparent opacity-60 pointer-events-none" />
                 
                 {/* Subtle top-left badge overlay for enterprise feel */}
-                <div className="absolute top-4 left-4 sm:top-6 sm:left-6 inline-flex items-center gap-2 rounded-full border border-white/20 bg-[#101820]/75 px-3 py-1.5 backdrop-blur-md shadow-sm">
+                <div className="absolute top-4 left-4 sm:top-6 sm:left-6 inline-flex items-center gap-2 rounded-full border border-white/20 bg-ink/75 px-3 py-1.5 backdrop-blur-md shadow-sm">
                   <span className="h-1.5 w-1.5 rounded-full bg-[#29A8E0] animate-pulse" />
                   <span className="text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.18em] text-white font-ui">
                     AI CAPABILITY
@@ -292,7 +292,7 @@ export function Disciplines() {
                 <div className="absolute inset-0 bg-gradient-to-t from-[#101820]/60 via-transparent to-transparent opacity-60 pointer-events-none" />
                 
                 {/* Subtle top-left badge overlay */}
-                <div className="absolute top-4 left-4 sm:top-6 sm:left-6 inline-flex items-center gap-2 rounded-full border border-white/20 bg-[#101820]/75 px-3 py-1.5 backdrop-blur-md shadow-sm">
+                <div className="absolute top-4 left-4 sm:top-6 sm:left-6 inline-flex items-center gap-2 rounded-full border border-white/20 bg-ink/75 px-3 py-1.5 backdrop-blur-md shadow-sm">
                   <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse" />
                   <span className="text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.18em] text-white font-ui">
                     AUTOMATION
@@ -319,7 +319,7 @@ export function Disciplines() {
                 <div className="absolute inset-0 bg-gradient-to-t from-[#101820]/60 via-transparent to-transparent opacity-60 pointer-events-none" />
                 
                 {/* Subtle top-left badge overlay */}
-                <div className="absolute top-4 left-4 sm:top-6 sm:left-6 inline-flex items-center gap-2 rounded-full border border-white/20 bg-[#101820]/75 px-3 py-1.5 backdrop-blur-md shadow-sm">
+                <div className="absolute top-4 left-4 sm:top-6 sm:left-6 inline-flex items-center gap-2 rounded-full border border-white/20 bg-ink/75 px-3 py-1.5 backdrop-blur-md shadow-sm">
                   <span className="h-1.5 w-1.5 rounded-full bg-amber-400 animate-pulse" />
                   <span className="text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.18em] text-white font-ui">
                     REENGINEERING
@@ -346,7 +346,7 @@ export function Disciplines() {
                 <div className="absolute inset-0 bg-gradient-to-t from-[#101820]/60 via-transparent to-transparent opacity-60 pointer-events-none" />
                 
                 {/* Subtle top-left badge overlay */}
-                <div className="absolute top-4 left-4 sm:top-6 sm:left-6 inline-flex items-center gap-2 rounded-full border border-white/20 bg-[#101820]/75 px-3 py-1.5 backdrop-blur-md shadow-sm">
+                <div className="absolute top-4 left-4 sm:top-6 sm:left-6 inline-flex items-center gap-2 rounded-full border border-white/20 bg-ink/75 px-3 py-1.5 backdrop-blur-md shadow-sm">
                   <span className="h-1.5 w-1.5 rounded-full bg-[#1A6FA8] animate-pulse" />
                   <span className="text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.18em] text-white font-ui">
                     SCALABLE TEAMS

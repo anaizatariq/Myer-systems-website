@@ -36,11 +36,9 @@ export default function WhyChooseUsPage() {
                    WHY CHOOSE US · STRATEGIC DIFFERENTIATORS
                  </span>
               </div>
-              <h1 className="text-4xl sm:text-5xl lg:text-[4.25rem] font-bold tracking-tight text-[#101820] font-heading leading-[1.08]">
+              <h1 className="text-4xl sm:text-5xl lg:text-[4.25rem] font-bold tracking-tight text-ink font-heading leading-[1.08]">
                 Control is never optional. <br/>
-                <span className="inline-block pr-1 font-quote italic font-normal text-brand-steel">
-                  That&apos;s the actual difference.
-                </span>
+                That&apos;s the actual difference.
               </h1>
             </div>
             <div className="reveal-up lg:col-span-5 lg:pb-4">
@@ -51,14 +49,14 @@ export default function WhyChooseUsPage() {
                 <div className="mt-8 flex flex-wrap gap-4">
                   <Link 
                     href="/contact" 
-                    className="group inline-flex items-center gap-2 rounded-full bg-[#29A8E0] px-7 py-3.5 text-sm font-bold text-[#101820] shadow-md shadow-[#29A8E0]/20 hover:bg-[#209FD6] hover:shadow-[0_6px_20px_rgba(41,168,224,0.38)] hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.99] transition-all duration-200 font-ui cursor-pointer"
+                    className="group inline-flex items-center gap-2 rounded-full bg-[#29A8E0] px-7 py-3.5 text-sm font-bold text-ink shadow-md shadow-[#29A8E0]/20 hover:bg-[#209FD6] hover:shadow-[0_6px_20px_rgba(41,168,224,0.38)] hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.99] transition-all duration-200 font-ui cursor-pointer"
                   >
                     <span>Talk to Our Team</span>
                     <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
                   </Link>
                   <Link 
                     href="/how-we-operate" 
-                    className="inline-flex items-center justify-center gap-2 rounded-full border border-[#1A6FA8]/25 bg-white/90 px-6 py-3.5 text-sm font-semibold text-[#101820] shadow-2xs backdrop-blur-md transition-all duration-200 hover:bg-white hover:border-[#29A8E0]/60 hover:shadow-md hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.99] font-ui cursor-pointer"
+                    className="inline-flex items-center justify-center gap-2 rounded-full border border-[#1A6FA8]/25 bg-white/90 px-6 py-3.5 text-sm font-semibold text-ink shadow-2xs backdrop-blur-md transition-all duration-200 hover:bg-white hover:border-[#29A8E0]/60 hover:shadow-md hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.99] font-ui cursor-pointer"
                   >
                     See How We Operate
                   </Link>
@@ -91,7 +89,7 @@ export default function WhyChooseUsPage() {
                 CORE PHILOSOPHY
               </span>
             </div>
-            <h2 className="text-3xl font-semibold tracking-tight text-[#101820] sm:text-4xl font-heading">
+            <h2 className="text-3xl font-semibold tracking-tight text-ink sm:text-4xl font-heading">
               Six principles behind how we work.
             </h2>
           </div>
@@ -146,7 +144,7 @@ export default function WhyChooseUsPage() {
                   <div className="w-12 h-12 rounded-2xl bg-[#F0FAFF] border border-[#1A6FA8]/20 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-500">
                     {diff.icon}
                   </div>
-                  <h3 className="text-xl font-bold text-[#101820] mb-3 group-hover:text-[#1A6FA8] transition-colors font-heading">{diff.title}</h3>
+                  <h3 className="text-xl font-bold text-ink mb-3 group-hover:text-[#1A6FA8] transition-colors font-heading">{diff.title}</h3>
                   <p className="text-[15px] font-normal text-slate-600 leading-relaxed font-sans">
                     {diff.short}
                   </p>
@@ -176,7 +174,7 @@ export default function WhyChooseUsPage() {
                 FIT MATTERS · ALIGNED COLLABORATION
               </span>
             </div>
-            <h2 className="text-3xl font-semibold tracking-tight text-[#101820] sm:text-4xl font-heading">
+            <h2 className="text-3xl font-semibold tracking-tight text-ink sm:text-4xl font-heading">
               Who we work best with — and who we&apos;re not the right choice for
             </h2>
           </div>
@@ -216,7 +214,7 @@ export default function WhyChooseUsPage() {
               <div className="absolute top-0 right-0 p-8 opacity-[0.06]">
                 <XCircle className="w-32 h-32 text-[#1A6FA8]" />
               </div>
-              <h3 className="text-2xl font-bold text-[#101820] mb-8 relative z-10 flex items-center gap-3 font-heading">
+              <h3 className="text-2xl font-bold text-ink mb-8 relative z-10 flex items-center gap-3 font-heading">
                 <div className="w-10 h-10 rounded-xl bg-[#1A6FA8]/10 border border-[#1A6FA8]/20 flex items-center justify-center text-[#1A6FA8]">
                   <XCircle className="w-5 h-5 text-[#1A6FA8]/80" />
                 </div>
@@ -250,7 +248,7 @@ export default function WhyChooseUsPage() {
                 THE REAL DIFFERENCE
               </span>
             </div>
-            <h2 className="text-3xl font-semibold tracking-tight text-[#101820] sm:text-4xl font-heading">
+            <h2 className="text-3xl font-semibold tracking-tight text-ink sm:text-4xl font-heading">
               The Myer Systems approach
             </h2>
           </div>
@@ -302,7 +300,7 @@ export default function WhyChooseUsPage() {
                   </div>
                   <div>
                     <span className="block text-[10px] font-bold uppercase tracking-wider text-[#1A6FA8] font-ui mb-1.5">The Myer Systems Way</span>
-                    <p className="text-[15px] font-bold text-[#101820] font-sans leading-relaxed">{row.good}</p>
+                    <p className="text-[15px] font-bold text-ink font-sans leading-relaxed">{row.good}</p>
                   </div>
                 </div>
               </div>

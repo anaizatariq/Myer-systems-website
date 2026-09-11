@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { Mail, MapPin, ExternalLink, Globe, ArrowUpRight } from 'lucide-react';
+import { Mail, MapPin, ExternalLink, Globe, ArrowUpRight, Facebook, Linkedin } from 'lucide-react';
 
 interface CompanyLink {
   label: string;
@@ -14,9 +14,10 @@ const COMPANY_LINKS: CompanyLink[] = [
   { label: 'Home', href: '/' },
   { label: 'About Us', href: '/about' },
   { label: 'Services', href: '/services' },
-  { label: 'How We Operate', href: '/how-we-operate' },
-  { label: 'Why Choose Us', href: '/why-choose-us' },
-  { label: 'Contact Leadership', href: '/contact' },
+  { label: 'Industries', href: '/industries' },
+  { label: 'How It Works', href: '/how-it-works' },
+  { label: 'Technology / Platform', href: '/technology' },
+  { label: 'Contact Us', href: '/contact' },
 ];
 
 const SERVICE_LINKS = [
@@ -61,14 +62,24 @@ export function Footer() {
               </div>
             </Link>
 
-            <p className="text-sm leading-relaxed text-[#8FD6F5]/80 font-sans">
+            <p className="text-sm leading-relaxed text-[#8FD6F5]/80 font-sans font-normal">
               AI Systems Built for Accountability, Scale, and Control. Bridging strategic governance with global 24/7 technical execution.
             </p>
+            <div className="flex items-center gap-4 pt-2">
+              <a href="#" className="text-[#8FD6F5]/80 hover:text-white transition-colors">
+                <Facebook className="h-5 w-5" />
+                <span className="sr-only">Facebook</span>
+              </a>
+              <a href="#" className="text-[#8FD6F5]/80 hover:text-white transition-colors">
+                <Linkedin className="h-5 w-5" />
+                <span className="sr-only">LinkedIn</span>
+              </a>
+            </div>
           </div>
 
           {/* ════════ COLUMN 2: Company Navigation ════════ */}
           <div>
-            <h3 className="text-xs font-bold uppercase tracking-[0.2em] text-white font-ui">
+            <h3 className="text-xs uppercase tracking-[0.2em] text-white font-sans font-medium">
               Company
             </h3>
             <ul className="mt-5 space-y-3">
@@ -99,7 +110,7 @@ export function Footer() {
 
           {/* ════════ COLUMN 3: Services (From Profile) ════════ */}
           <div>
-            <h3 className="text-xs font-bold uppercase tracking-[0.2em] text-white font-ui">
+            <h3 className="text-xs uppercase tracking-[0.2em] text-white font-sans font-medium">
               Offerings
             </h3>
             <ul className="mt-5 space-y-3">
@@ -118,7 +129,7 @@ export function Footer() {
 
           {/* ════════ COLUMN 4: Dual-Hub Locations ════════ */}
           <div>
-            <h3 className="text-xs font-bold uppercase tracking-[0.2em] text-white font-ui">
+            <h3 className="text-xs uppercase tracking-[0.2em] text-white font-sans font-medium">
               Dual-Hub Locations
             </h3>
             <ul className="mt-5 space-y-4 text-xs sm:text-[13px] text-[#8FD6F5]/80 font-sans">
@@ -162,14 +173,12 @@ export function Footer() {
             &copy; {new Date().getFullYear()} Myer Systems LLC. All rights reserved.
           </p>
           
-          <div className="flex flex-wrap items-center gap-2.5 sm:gap-4 text-[10.5px] sm:text-[11px] font-ui">
-            <span className="text-white font-medium">Sugar Land, TX</span>
+          <div className="flex flex-wrap items-center gap-2.5 sm:gap-4 text-[10.5px] sm:text-[11px] font-ui uppercase tracking-wider">
+            <Link href="/faq" className="text-white hover:text-[#29A8E0] font-medium transition-colors">FAQ</Link>
             <span>·</span>
-            <span className="text-white font-medium">Enterprise AI Systems</span>
+            <Link href="/privacy" className="text-white hover:text-[#29A8E0] font-medium transition-colors">Privacy Policy</Link>
             <span>·</span>
-            <span className="text-white font-medium">24/7 Global Hub</span>
-            <span>·</span>
-            <span className="text-[#29A8E0] font-mono">myersystems.ai</span>
+            <Link href="/terms" className="text-white hover:text-[#29A8E0] font-medium transition-colors">Terms of Service</Link>
           </div>
         </div>
 

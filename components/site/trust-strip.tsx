@@ -17,92 +17,80 @@ interface MetricItem {
 
 const METRICS: MetricItem[] = [
   {
-    id: 'claims',
+    id: 'founded',
     isNumeric: true,
-    value: 100,
-    prefix: '$',
-    suffix: 'M+',
-    title: 'Healthcare Claims',
-    subtitle: 'Audited & Ingested',
-    hasLivePulse: true,
-  },
-  {
-    id: 'accuracy',
-    isNumeric: true,
-    value: 99.4,
-    decimals: 1,
-    suffix: '%',
-    title: 'Billing Accuracy',
-    subtitle: 'AAPC / AHIMA SLA',
+    value: 2023,
+    title: 'Founded',
+    subtitle: 'Dallas, TX',
   },
   {
     id: 'growth',
     isNumeric: true,
     value: 250,
     suffix: '%',
-    title: 'Operational Scale',
-    subtitle: 'Year-over-Year Growth',
+    title: 'Team Growth',
+    subtitle: 'Year-Over-Year',
+    hasLivePulse: true,
   },
   {
-    id: 'coverage',
-    isNumeric: true,
-    value: 24,
-    suffix: '/7',
-    title: 'Dual-Hub Synchrony',
-    subtitle: 'Dallas HQ + Global Hub',
-  },
-  {
-    id: 'trust',
+    id: 'hubs',
     isNumeric: false,
-    text: 'Zero',
-    title: 'Deterministic Trust',
-    subtitle: 'Unaudited Black Boxes',
+    text: 'Dual Hubs',
+    title: 'Dallas HQ',
+    subtitle: 'Lahore Delivery Hub',
+  },
+  {
+    id: 'clients',
+    isNumeric: false,
+    text: 'Global',
+    title: 'Serving Clients',
+    subtitle: 'North America & Beyond',
   },
 ];
 
 export function TrustStrip() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-[#F0FAFF] via-white/80 to-white py-6 sm:py-7 lg:py-8">
+    <section className="relative overflow-hidden bg-[#0A1017] border-t border-white/5 border-b border-[#29A8E0]/10 py-8 sm:py-10">
       
-      {/* ── Top Radiant Sky-Blue Horizon Glow Bar (Ref Image Style) ── */}
+      {/* ── Top Radiant Sky-Blue Horizon Glow Bar ── */}
       <div 
-        className="pointer-events-none absolute top-0 left-0 right-0 h-[1.5px] bg-gradient-to-r from-transparent via-[#29A8E0]/60 to-transparent" 
+        className="pointer-events-none absolute top-0 left-0 right-0 h-[1.5px] bg-gradient-to-r from-transparent via-[#29A8E0]/40 to-transparent" 
         aria-hidden="true" 
       />
       <div 
-        className="pointer-events-none absolute top-0 left-1/2 -translate-x-1/2 h-14 w-full max-w-4xl bg-gradient-to-b from-[#29A8E0]/15 via-[#29A8E0]/3 to-transparent blur-xl" 
+        className="pointer-events-none absolute top-0 left-1/2 -translate-x-1/2 h-14 w-full max-w-4xl bg-gradient-to-b from-[#29A8E0]/15 via-[#29A8E0]/5 to-transparent blur-xl" 
         aria-hidden="true" 
       />
 
-      {/* ── Main Horizon Flow with Left/Right Fading Mask (Ref Image Exact Style) ── */}
+      {/* ── Main Content ── */}
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="relative [mask-image:linear-gradient(to_right,transparent,black_6%,black_94%,transparent)] sm:[mask-image:linear-gradient(to_right,transparent,black_4%,black_96%,transparent)] py-1">
+        <div className="relative">
           
-          <div className="flex flex-wrap lg:flex-nowrap items-center justify-between gap-y-4 gap-x-6 sm:gap-x-8 lg:gap-x-10 px-4 sm:px-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:flex lg:flex-nowrap items-center justify-between gap-y-8 gap-x-6 sm:gap-x-8 lg:gap-x-10 px-0 lg:px-8">
             
-            {/* Left Vertical Hairline Anchor (Ref Image Style) */}
+            {/* Left Vertical Hairline Anchor */}
             <div 
-              className="hidden lg:block h-8 w-px bg-gradient-to-b from-transparent via-slate-300 to-transparent shrink-0" 
+              className="hidden lg:block h-8 w-px bg-gradient-to-b from-transparent via-slate-700 to-transparent shrink-0" 
               aria-hidden="true" 
             />
 
             {METRICS.map((item, idx) => (
-              <div key={item.id} className="flex items-center gap-6 lg:gap-8 shrink-0">
+              <div key={item.id} className="flex items-center gap-4 lg:gap-8 shrink-0">
                 
-                {/* Thin Vertical Hairline Separator between items */}
+                {/* Thin Vertical Hairline Separator between items (desktop only) */}
                 {idx > 0 && (
                   <div 
-                    className="hidden sm:block h-7 w-px bg-gradient-to-b from-transparent via-slate-300/70 to-transparent shrink-0" 
+                    className="hidden lg:block h-7 w-px bg-gradient-to-b from-transparent via-slate-700/70 to-transparent shrink-0" 
                     aria-hidden="true" 
                   />
                 )}
 
-                {/* Metric Unit - Lite, Small, Elegant (No Bold) */}
-                <div className="group flex items-center gap-3 transition-colors duration-200 cursor-default">
+                {/* Metric Unit */}
+                <div className="group flex items-center gap-3 sm:gap-4 transition-colors duration-200 cursor-default">
                   
-                  {/* Clean, Refined Number with Animated Counter */}
+                  {/* Number/Prefix */}
                   <div className="flex items-baseline gap-1.5">
-                    <span className="text-xl sm:text-[1.35rem] font-medium tracking-tight text-ink font-heading leading-none group-hover:text-[#1A6FA8] transition-colors duration-200">
+                    <span className="text-2xl sm:text-[1.55rem] font-medium tracking-tight text-white font-heading leading-none group-hover:text-[#29A8E0] transition-colors duration-200">
                       {item.isNumeric && item.value !== undefined ? (
                         <AnimatedCounter
                           value={item.value}
@@ -113,7 +101,7 @@ export function TrustStrip() {
                           delay={idx * 90}
                         />
                       ) : (
-                        <span className="text-[#1A6FA8] font-heading font-medium">
+                        <span className="text-[#29A8E0] font-heading font-medium">
                           {item.text}
                         </span>
                       )}
@@ -123,17 +111,17 @@ export function TrustStrip() {
                     {item.hasLivePulse && (
                       <span className="relative flex h-1.5 w-1.5">
                         <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#29A8E0] opacity-75" />
-                        <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-[#1A6FA8]" />
+                        <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-[#29A8E0]" />
                       </span>
                     )}
                   </div>
 
-                  {/* Clean 2-Line Stacked Micro-Label (Light weight & small font) */}
+                  {/* Micro-Label */}
                   <div className="flex flex-col">
-                    <span className="text-xs sm:text-[12.5px] font-normal text-ink/85 font-sans leading-tight whitespace-nowrap">
+                    <span className="text-xs sm:text-[13px] font-medium text-slate-200 font-sans leading-tight ">
                       {item.title}
                     </span>
-                    <span className="text-[10.5px] text-muted-foreground/75 font-sans leading-tight whitespace-nowrap mt-0.5 font-light">
+                    <span className="text-[10.5px] sm:text-[11px] text-slate-400 font-sans leading-tight  mt-0.5">
                       {item.subtitle}
                     </span>
                   </div>
@@ -143,9 +131,9 @@ export function TrustStrip() {
               </div>
             ))}
 
-            {/* Right Vertical Hairline Anchor (Ref Image Style) */}
+            {/* Right Vertical Hairline Anchor */}
             <div 
-              className="hidden lg:block h-8 w-px bg-gradient-to-b from-transparent via-slate-300 to-transparent shrink-0" 
+              className="hidden lg:block h-8 w-px bg-gradient-to-b from-transparent via-slate-700 to-transparent shrink-0" 
               aria-hidden="true" 
             />
 
@@ -153,12 +141,6 @@ export function TrustStrip() {
 
         </div>
       </div>
-
-      {/* ── Soft Bottom Fade Edge ── */}
-      <div 
-        className="pointer-events-none absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-slate-200/60 to-transparent" 
-        aria-hidden="true" 
-      />
     </section>
   );
 }

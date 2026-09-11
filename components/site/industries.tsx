@@ -75,7 +75,7 @@ export function Industries() {
               {[INDUSTRIES[0], INDUSTRIES[1]].map((ind) => (
                 <div key={ind.title} className="group flex flex-col items-center justify-center p-6 bg-[#8FD6F5] rounded-[10px] w-36 h-36 sm:w-48 sm:h-48 text-center shadow-md hover:-translate-y-2 hover:shadow-xl hover:shadow-[#1A6FA8]/10 transition-all duration-500 border border-[#29A8E0]/30 cursor-default">
                   <ind.icon className="h-10 w-10 sm:h-12 sm:w-12 text-ink mb-3 sm:mb-5 group-hover:scale-110 transition-transform duration-500" />
-                  <h3 className="text-ink font-extrabold text-sm sm:text-base leading-tight font-heading">{ind.title}</h3>
+                  <h3 className="text-ink text-sm sm:text-base leading-tight font-sans font-medium">{ind.title}</h3>
                 </div>
               ))}
             </div>
@@ -87,7 +87,7 @@ export function Industries() {
                   return (
                     <>
                       <ind.icon className="h-10 w-10 sm:h-12 sm:w-12 text-ink mb-3 sm:mb-5 group-hover:scale-110 transition-transform duration-500" />
-                      <h3 className="text-ink font-extrabold text-sm sm:text-base leading-tight font-heading">{ind.title}</h3>
+                      <h3 className="text-ink text-sm sm:text-base leading-tight font-sans font-medium">{ind.title}</h3>
                     </>
                   );
                 })()}
@@ -97,18 +97,18 @@ export function Industries() {
 
           {/* ── Right Side: Text & Info ── */}
           <div className="lg:col-span-7 flex flex-col items-center md:items-start text-center md:text-left lg:order-2 order-1 lg:pl-4 xl:pl-8">
-            <div className="inline-flex w-fit items-center gap-2 rounded-full border border-white/10 bg-[#29A8E0] px-4 py-1.5 mb-6 shadow-md shadow-[#29A8E0]/20">
-            <span className="h-1.5 w-1.5 rounded-full bg-white animate-pulse" />
-            <span className="text-[11px] font-bold uppercase tracking-[0.18em] text-white font-ui">
-              WHO WE SERVE
-            </span>
-          </div>
+            <div className="flex items-center gap-2">
+  <span className="h-1.5 w-1.5 rounded-full bg-[#1A6FA8] animate-pulse" />
+  <span className="text-[11px] uppercase tracking-[0.18em] text-[#1A6FA8] font-ui font-bold">
+    WHO WE SERVE
+  </span>
+</div>
 
-            <h2 className="text-3xl sm:text-4xl lg:text-[3.25rem]/[1.1] font-extrabold tracking-tight text-ink font-sans mb-6">
+            <h2 className="text-3xl sm:text-4xl lg:text-[3.25rem]/[1.1] tracking-tight text-ink font-sans mb-6 font-semibold">
               Solutions built for demanding industries.
             </h2>
             
-            <p className="text-base sm:text-lg text-slate-700 font-sans leading-relaxed mb-8 max-w-xl">
+            <p className="text-base sm:text-lg text-slate-700 font-sans leading-relaxed mb-8 max-w-xl font-normal">
               We work with organizations where efficiency, data accuracy, and reliable operations directly impact revenue and day-to-day performance. Our platforms are designed to handle complex workflows and high-volume data streams across critical sectors.
             </p>
             

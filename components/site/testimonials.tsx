@@ -70,19 +70,19 @@ export function Testimonials() {
         
         {/* ── Section Header ── */}
         <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-16">
-          <div className="inline-flex w-fit items-center gap-2 rounded-full border border-white/10 bg-[#29A8E0] px-4 py-1.5 mb-6 shadow-md shadow-[#29A8E0]/20">
-            <span className="h-1.5 w-1.5 rounded-full bg-white animate-pulse" />
-            <span className="text-[11px] font-bold uppercase tracking-[0.18em] text-white font-ui">
-              PROVEN OPERATIONAL IMPACT
-            </span>
-          </div>
+          <div className="flex items-center gap-2">
+  <span className="h-1.5 w-1.5 rounded-full bg-[#1A6FA8] animate-pulse" />
+  <span className="text-[11px] uppercase tracking-[0.18em] text-[#1A6FA8] font-ui font-bold">
+    PROVEN OPERATIONAL IMPACT
+  </span>
+</div>
 
           <h2 className="text-2xl sm:text-4xl lg:text-[2.75rem]/[1.15] font-semibold tracking-tight text-ink font-sans">
             Delivering measurable results where{' '}
             precision matters.
           </h2>
 
-          <p className="mt-3 sm:mt-4 text-sm sm:text-lg leading-relaxed text-slate-600 font-sans max-w-2xl mx-auto">
+          <p className="mt-3 sm:mt-4 text-sm sm:text-lg leading-relaxed text-slate-600 font-sans max-w-2xl mx-auto font-normal">
             See how enterprise leaders scale operational throughput, eliminate administrative lag, and deploy governed AI with Myer Systems.
           </p>
         </div>
@@ -117,7 +117,7 @@ export function Testimonials() {
                 </div>
 
                 {/* Quote Body */}
-                <p className="text-[14.5px] sm:text-[15px] leading-relaxed text-slate-700 font-sans italic">
+                <p className="text-[14.5px] sm:text-[15px] leading-relaxed text-slate-700 italic font-quote">
                   &ldquo;{item.quote}&rdquo;
                 </p>
               </div>
@@ -131,10 +131,10 @@ export function Testimonials() {
                   <h4 className="text-sm font-bold text-ink font-sans">
                     {item.author}
                   </h4>
-                  <p className="text-xs text-slate-600 font-sans mt-0.5">
+                  <p className="text-xs text-slate-600 font-sans mt-0.5 font-normal">
                     {item.role}
                   </p>
-                  <p className="text-[11px] text-slate-500 font-sans">
+                  <p className="text-[11px] text-slate-500 font-sans font-normal">
                     {item.organization}
                   </p>
                 </div>

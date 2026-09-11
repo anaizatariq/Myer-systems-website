@@ -72,19 +72,19 @@ export function Projects() {
         
         {/* ── Section Header ── */}
         <div className="max-w-3xl">
-          <div className="inline-flex w-fit items-center gap-2 rounded-full border border-white/10 bg-[#29A8E0] px-4 py-1.5 mb-6 shadow-md shadow-[#29A8E0]/20">
-            <span className="h-1.5 w-1.5 rounded-full bg-white animate-pulse" />
-            <span className="text-[11px] font-bold uppercase tracking-[0.18em] text-white font-ui">
-              CORE CAPABILITY AREAS
-            </span>
-          </div>
+          <div className="flex items-center gap-2">
+  <span className="h-1.5 w-1.5 rounded-full bg-[#1A6FA8] animate-pulse" />
+  <span className="text-[11px] uppercase tracking-[0.18em] text-[#1A6FA8] font-ui font-bold">
+    CORE CAPABILITY AREAS
+  </span>
+</div>
 
           <h2 className="mt-5 sm:mt-6 text-2xl sm:text-4xl lg:text-[2.85rem]/[1.15] font-semibold tracking-tight text-white font-sans">
             Solutions built around{' '}
             real operational needs.
           </h2>
 
-          <p className="mt-3 sm:mt-4 text-sm sm:text-lg leading-relaxed text-white font-sans max-w-2xl">
+          <p className="mt-3 sm:mt-4 text-sm sm:text-lg leading-relaxed text-white font-sans max-w-2xl font-normal">
             From autonomous AI pipelines and workflow reengineering to dedicated engineering pods, we build dependable systems for modern enterprises.
           </p>
         </div>
@@ -134,11 +134,11 @@ export function Projects() {
                     ))}
                   </div>
 
-                  <h3 className="mt-3.5 sm:mt-4 text-lg sm:text-xl font-bold tracking-tight text-white font-heading leading-snug">
+                  <h3 className="mt-3.5 sm:mt-4 text-lg sm:text-xl tracking-tight text-white leading-snug font-sans font-medium">
                     {project.title}
                   </h3>
 
-                  <p className="mt-2 text-xs sm:text-[13.5px] leading-relaxed text-slate-300 font-sans">
+                  <p className="mt-2 text-xs sm:text-[13.5px] leading-relaxed text-slate-300 font-sans font-normal">
                     {project.description}
                   </p>
                 </div>

@@ -1,49 +1,22 @@
 'use client';
 
-import Link from 'next/link';
-import Image from 'next/image';
-import { 
-  CheckCircle2, 
-  ShieldCheck, 
-  Layers, 
-  ArrowUpRight, 
-  Gauge, 
-  FileCheck 
-} from 'lucide-react';
+import { CheckCircle2 } from 'lucide-react';
 
-const REASONS = [
+const DIFFERENTIATORS = [
   {
-    num: '01',
-    title: 'Technology + People Together',
-    icon: Layers,
-    description: 'We don’t just license software or write code and disappear. We build the systems and can also provide the trained operational teams to run them day in and day out.',
-    benefits: [
-      'Complete end-to-end implementation',
-      'No gap between developers and daily operators',
-      'Smooth handoffs and continuous system maintenance',
-    ],
+    stepNum: '01',
+    title: 'Built for Accountability',
+    description: 'Every AI system we build includes full audit trails, explainable outputs, and human-in-the-loop checkpoints. You stay in control of every automated decision.',
   },
   {
-    num: '02',
-    title: 'Tested in High-Stakes Work',
-    icon: ShieldCheck,
-    description: 'We operate in US healthcare billing and clinical data synthesis where errors are costly and regulations are strict. If our systems can handle that complexity, they can handle your enterprise workflows.',
-    benefits: [
-      'Built for zero tolerance on compliance errors',
-      'Audit-ready data logs and transparent workflows',
-      'Rigorous quality control across every deliverable',
-    ],
+    stepNum: '02',
+    title: 'Enterprise-Grade Scale',
+    description: 'Our systems are engineered to handle enterprise volume, scaling with your operations without breaking, slowing down, or requiring constant oversight.',
   },
   {
-    num: '03',
-    title: 'Accountability First',
-    icon: Gauge,
-    description: 'We give leadership clear visibility into operational performance with live dashboards, predictable pricing, and direct communication through US-based management.',
-    benefits: [
-      'Clear, transparent operational reporting',
-      'Direct US corporate contract & liability',
-      'Dedicated managers who understand your business',
-    ],
+    stepNum: '03',
+    title: 'AI + Human Hybrid Teams',
+    description: 'We combine AI agents with trained human operators to create hybrid teams that deliver quality output at scale. Pairing automation with human judgment where it matters.',
   },
 ];
 
@@ -51,83 +24,125 @@ export function WhyChooseUs() {
   return (
     <section 
       id="why-choose-us" 
-      className="relative scroll-mt-24 bg-[#E0F4FC] py-16 sm:py-20 lg:py-24 overflow-hidden border-t border-border/70"
+      className="relative scroll-mt-24 bg-[#E0F4FC] pt-16 sm:pt-20 lg:pt-20 pb-20 sm:pb-24 lg:pb-28 overflow-hidden border-b border-slate-200"
     >
-      {/* ── Ambient Background Depth ── */}
-      <div 
-        className="pointer-events-none absolute top-10 left-1/3 h-[450px] w-[450px] rounded-full bg-[#29A8E0]/6 blur-[140px]" 
-        aria-hidden="true" 
-      />
-
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-          {/* ── Left Side: Intro & Points ── */}
-          <div className="lg:col-span-6 flex flex-col items-start">
-            <div className="inline-flex w-fit items-center gap-2 rounded-full border border-white/10 bg-[#29A8E0] px-4 py-1.5 mb-6 shadow-md shadow-[#29A8E0]/20">
-            <span className="h-1.5 w-1.5 rounded-full bg-white animate-pulse" />
-            <span className="text-[11px] font-bold uppercase tracking-[0.18em] text-white font-ui">
-              WHY MYER SYSTEMS
-            </span>
-          </div>
+        {/* ── Section Header ── */}
+        <div className="max-w-3xl mb-14 sm:mb-16">
+          <div className="flex items-center gap-2">
+  <span className="h-1.5 w-1.5 rounded-full bg-[#1A6FA8] animate-pulse" />
+  <span className="text-[11px] uppercase tracking-[0.18em] text-[#1A6FA8] font-ui font-bold">
+    WHAT MAKES US DIFFERENT
+  </span>
+</div>
 
-            <h2 className="text-3xl sm:text-4xl lg:text-[3.25rem]/[1.1] font-extrabold tracking-tight text-ink font-sans">
-              Built for control, accountability, and results.
-            </h2>
-            <p className="mt-4 mb-10 text-base sm:text-lg text-slate-600 font-sans leading-relaxed">
-              We don't just deliver advice or hand over software licenses. We take genuine responsibility for how your systems run.
-            </p>
+          <h2 className="text-3xl sm:text-4xl lg:text-[3.25rem]/[1.1] font-semibold tracking-tight text-ink font-sans">
+            Not just another AI tool. <br className="hidden lg:block" />
+            Enterprise automation built for reality.
+          </h2>
+        </div>
 
-            <div className="flex flex-col gap-8 w-full">
-              {REASONS.map((reason) => {
-                const Icon = reason.icon;
-                return (
-                  <div key={reason.num} className="flex gap-5">
-                    <div className="flex-shrink-0 mt-1 h-12 w-12 rounded-xl bg-white border border-[#29A8E0]/20 flex items-center justify-center text-[#1A6FA8] shadow-sm">
-                      <Icon className="h-6 w-6" />
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-extrabold text-ink mb-2 font-heading">
-                        {reason.title}
-                      </h3>
-                      <p className="text-[15px] font-medium text-slate-700 leading-relaxed max-w-md">
-                        {reason.description}
-                      </p>
-                    </div>
+        {/* ── 3 Steps Unified Pipeline Layout ── */}
+        <div className="relative rounded-[2rem] border border-[#29A8E0]/30 bg-[#8FD6F5] shadow-xl shadow-[#1A6FA8]/10 overflow-hidden flex flex-col md:flex-row">
+          
+          {/* Continuous Connecting Line (Desktop) */}
+          <div className="hidden md:block absolute top-[72px] left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-[#1A6FA8]/20 to-transparent z-0" />
+
+          {DIFFERENTIATORS.map((item, idx) => {
+            const isLast = idx === DIFFERENTIATORS.length - 1;
+
+            return (
+              <div
+                key={item.stepNum}
+                className={`group relative flex-1 flex flex-col justify-between p-6 sm:p-8 lg:p-10 transition-colors duration-500 hover:bg-ink ${
+                  !isLast ? 'border-b md:border-b-0 md:border-r border-[#1A6FA8]/10' : ''
+                }`}
+              >
+                {/* Abstract UI Mockup */}
+                <div className="relative z-10 w-[72px] h-[72px] rounded-2xl border-2 border-ink bg-white/40 shadow-sm group-hover:border-[#8FD6F5] group-hover:bg-transparent transition-all duration-500 mx-auto md:mx-0 mb-8 p-2.5 flex flex-col gap-1.5">
+                  <div className="absolute -top-3 -right-3 bg-ink text-[#F0FAFF] font-mono text-[11px] font-bold px-2 py-0.5 rounded group-hover:bg-[#8FD6F5] group-hover:text-ink transition-colors duration-500 shadow-sm">
+                    {item.stepNum}
                   </div>
-                );
-              })}
-            </div>
-          </div>
+                  
+                  {item.stepNum === '01' && (
+                    <div className="flex flex-col gap-1.5 w-full h-full justify-center">
+                      <div className="flex gap-1.5 items-center">
+                        <div className="w-2.5 h-2.5 rounded-full border border-ink group-hover:border-[#8FD6F5] transition-colors duration-500 flex items-center justify-center shrink-0">
+                          <div className="w-1 h-1 rounded-full bg-ink group-hover:bg-[#8FD6F5]" />
+                        </div>
+                        <div className="h-1.5 flex-1 rounded bg-ink group-hover:bg-[#8FD6F5] transition-colors duration-500" />
+                      </div>
+                      <div className="flex gap-1.5 items-center">
+                        <div className="w-2.5 h-2.5 rounded-full border border-ink group-hover:border-[#8FD6F5] transition-colors duration-500 shrink-0" />
+                        <div className="h-1.5 flex-1 rounded border border-ink group-hover:border-[#8FD6F5] transition-colors duration-500" />
+                      </div>
+                      <div className="flex gap-1.5 items-center">
+                         <div className="w-2.5 h-2.5 rounded-full border border-ink group-hover:border-[#8FD6F5] transition-colors duration-500 flex items-center justify-center shrink-0">
+                          <div className="w-1 h-1 rounded-full bg-ink group-hover:bg-[#8FD6F5]" />
+                        </div>
+                        <div className="h-1.5 w-3/4 rounded bg-ink group-hover:bg-[#8FD6F5] transition-colors duration-500" />
+                      </div>
+                    </div>
+                  )}
+                  {item.stepNum === '02' && (
+                    <div className="flex items-end gap-1.5 w-full h-full pt-3 px-1">
+                       <div className="flex-1 bg-ink group-hover:bg-[#8FD6F5] rounded-t transition-colors duration-500 h-1/3" />
+                       <div className="flex-1 border border-ink group-hover:border-[#8FD6F5] rounded-t transition-colors duration-500 h-2/3" />
+                       <div className="flex-1 bg-ink group-hover:bg-[#8FD6F5] rounded-t transition-colors duration-500 h-full" />
+                    </div>
+                  )}
+                  {item.stepNum === '03' && (
+                    <div className="flex w-full h-full relative items-center justify-center">
+                       <div className="absolute left-1.5 w-5 h-5 border-2 border-ink group-hover:border-[#8FD6F5] rounded flex items-center justify-center transition-colors duration-500 bg-white group-hover:bg-ink z-10">
+                          <div className="w-1.5 h-1.5 bg-ink group-hover:bg-[#8FD6F5] rounded-full animate-pulse" />
+                       </div>
+                       <div className="absolute left-4 w-6 h-[2px] bg-ink group-hover:bg-[#8FD6F5] transition-colors duration-500 z-0" />
+                       <div className="absolute right-1.5 w-5 h-5 border-2 border-ink group-hover:border-[#8FD6F5] rounded-full flex flex-col items-center justify-end overflow-hidden transition-colors duration-500 bg-white group-hover:bg-ink z-10">
+                          <div className="w-1.5 h-1.5 border border-ink group-hover:border-[#8FD6F5] rounded-full mt-[1px] transition-colors duration-500" />
+                          <div className="w-3 h-1.5 bg-ink group-hover:bg-[#8FD6F5] rounded-t-full mt-[1px] transition-colors duration-500" />
+                       </div>
+                    </div>
+                  )}
+                </div>
 
-          {/* ── Right Side: Real Visual ── */}
-          <div className="lg:col-span-6">
-            <div className="relative rounded-[2rem] overflow-hidden border-[6px] border-white/60 shadow-2xl shadow-[#1A6FA8]/10 group">
-              <div className="absolute inset-0 bg-gradient-to-tr from-[#101820]/40 to-transparent z-10 pointer-events-none mix-blend-multiply opacity-50 group-hover:opacity-30 transition-opacity duration-700" />
-              <div className="aspect-[4/5] sm:aspect-square relative w-full h-full">
-                <Image
-                  src="/why-myers-section.png"
-                  alt="Myer Systems Enterprise Team"
-                  fill
-                  className="object-cover transition-transform duration-700 group-hover:scale-105"
-                  sizes="(max-width: 500px) 80vw, 30vw"
-                  priority
-                />
-              </div>
-              
-              {/* Optional UI Overlay to make it feel more "tech/enterprise" */}
-              <div className="absolute bottom-6 left-6 z-20 flex justify-between items-end">
-                <div className="bg-ink/90 backdrop-blur-md border border-white/10 rounded-2xl p-4 shadow-xl">
-                  <div className="flex items-center gap-3 mb-2">
-                    <div className="h-2 w-2 rounded-full bg-green-400 animate-pulse" />
-                    <span className="text-xs font-mono text-white/80 uppercase tracking-widest">System Status</span>
+                {/* Overlapping Arrow (Desktop) */}
+                {!isLast && (
+                  <div className="hidden md:flex absolute top-[72px] -right-4 -translate-y-1/2 z-20 h-8 w-8 items-center justify-center rounded-full bg-white border border-[#29A8E0]/30 shadow-sm text-[#1A6FA8] transition-all">
+                    <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+                    </svg>
                   </div>
-                  <div className="text-white font-bold text-sm">Operational Readiness</div>
+                )}
+
+                {/* Overlapping Arrow (Mobile) */}
+                {!isLast && (
+                  <div className="flex md:hidden absolute -bottom-4 left-1/2 -translate-x-1/2 z-20 h-8 w-8 items-center justify-center rounded-full bg-white border border-[#29A8E0]/30 shadow-sm text-[#1A6FA8] transition-all">
+                    <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </div>
+                )}
+
+                <div className="flex-1 flex flex-col items-center md:items-start relative z-10">
+                  {/* Title & Tagline & Description */}
+                  <div className="text-center md:text-left mt-4">
+                    <h3 className="text-xl lg:text-[1.35rem] font-medium tracking-tight text-ink group-hover:text-white transition-colors duration-500 mb-1 leading-tight font-sans">
+                      {item.title}
+                    </h3>
+                    <p className="text-[13px] lg:text-[14px] text-[#1A6FA8] group-hover:text-[#8FD6F5] transition-colors duration-500 italic mb-4 font-quote">
+                      {item.tagline}
+                    </p>
+                    <p className="text-[14px] lg:text-[15px] font-normal text-ink/80 group-hover:text-white/80 transition-colors duration-500 leading-relaxed max-w-[280px] mx-auto md:mx-0 font-sans">
+                      {item.description}
+                    </p>
+                  </div>
                 </div>
               </div>
-            </div>
-          </div>
+            );
+          })}
         </div>
+
       </div>
     </section>
   );

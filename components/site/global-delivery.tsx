@@ -45,17 +45,17 @@ export function GlobalDelivery() {
         
         {/* ── Section Header ── */}
         <div className="max-w-3xl mb-12 sm:mb-16">
-          <div className="inline-flex w-fit items-center gap-2 rounded-full border border-white/10 bg-[#29A8E0] px-4 py-1.5 mb-6 shadow-md shadow-[#29A8E0]/20">
-            <span className="h-1.5 w-1.5 rounded-full bg-white animate-pulse" />
-            <span className="text-[11px] font-bold uppercase tracking-[0.18em] text-white font-ui">
-              GLOBAL PRESENCE
-            </span>
-          </div>
+          <div className="flex items-center gap-2">
+  <span className="h-1.5 w-1.5 rounded-full bg-[#1A6FA8] animate-pulse" />
+  <span className="text-[11px] uppercase tracking-[0.18em] text-[#1A6FA8] font-ui font-bold">
+    GLOBAL PRESENCE
+  </span>
+</div>
 
           <h2 className="text-2xl sm:text-4xl lg:text-[2.75rem]/[1.15] font-semibold tracking-tight text-ink font-sans">
             US accountability. Global delivery scale.
           </h2>
-          <p className="mt-3 text-base sm:text-lg text-slate-600 font-sans leading-relaxed">
+          <p className="mt-3 text-base sm:text-lg text-slate-600 font-sans leading-relaxed font-normal">
             We combine local, US-based leadership with dedicated technical and delivery centers to give you direct accountability paired with high-capacity execution.
           </p>
         </div>
@@ -78,7 +78,7 @@ export function GlobalDelivery() {
                         <Icon className="h-6 w-6" />
                       </div>
                       <div>
-                        <h3 className="text-xl font-bold tracking-tight text-ink font-heading">
+                        <h3 className="text-xl tracking-tight text-ink font-sans font-medium">
                           {hub.city}
                         </h3>
                         <span className="text-xs text-slate-500 font-sans">
@@ -97,7 +97,7 @@ export function GlobalDelivery() {
                     <span className="text-[10.5px] font-bold font-mono uppercase tracking-wider text-[#1A6FA8] block">
                       {hub.role}
                     </span>
-                    <p className="mt-2.5 text-sm text-slate-600 font-sans leading-relaxed">
+                    <p className="mt-2.5 text-sm text-slate-600 font-sans leading-relaxed font-normal">
                       {hub.description}
                     </p>
                   </div>

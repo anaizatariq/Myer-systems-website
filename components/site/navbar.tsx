@@ -9,10 +9,11 @@ import { cn } from '@/lib/utils';
 
 const NAV_LINKS = [
   { label: 'Home', href: '/' },
-  { label: 'About', href: '/about' },
+  { label: 'About Us', href: '/about' },
   { label: 'Services', href: '/services' },
-  { label: 'How We Operate', href: '/how-we-operate' },
-  { label: 'Why Choose Us', href: '/why-choose-us' },
+  { label: 'Industries', href: '/industries' },
+  { label: 'How It Works', href: '/how-it-works' },
+  { label: 'Technology / Platform', href: '/technology' },
 ];
 
 export function Navbar() {
@@ -71,7 +72,7 @@ export function Navbar() {
             href="/contact"
             className="group relative inline-flex items-center gap-1.5 rounded-full bg-brand px-5 py-2 text-[13px] font-bold text-ink shadow-[0_2px_12px_rgba(41,168,224,0.25)] transition-all duration-200 hover:bg-[#209FD6] hover:shadow-[0_4px_16px_rgba(41,168,224,0.38)] hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.99] font-ui"
           >
-            <span>Schedule Consultation</span>
+            <span>Contact Us</span>
             <span className="text-xs transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
               ↗
             </span>
@@ -138,7 +139,7 @@ export function Navbar() {
             onClick={() => setMobileOpen(false)}
             className="flex w-full items-center justify-center gap-2 rounded-full bg-[#29A8E0] py-3.5 text-[15px] font-bold text-ink transition-all hover:bg-[#209FD6] font-ui shadow-[0_4px_14px_rgba(41,168,224,0.3)] active:scale-[0.98]"
           >
-            <span>Schedule Consultation</span>
+            <span>Contact Us</span>
             <span>↗</span>
           </Link>
         </div>

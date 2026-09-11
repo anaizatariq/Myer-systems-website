@@ -70,14 +70,14 @@ export function HealthcareVertical() {
           
           {/* ── Left Side: Header ── */}
           <div className="lg:col-span-5 flex flex-col items-start">
-            <div className="inline-flex w-fit items-center gap-2 rounded-full border border-white/10 bg-[#29A8E0] px-4 py-1.5 mb-6 shadow-md shadow-[#29A8E0]/20">
-            <span className="h-1.5 w-1.5 rounded-full bg-white animate-pulse" />
-            <span className="text-[11px] font-bold uppercase tracking-[0.18em] text-white font-ui">
-              HEALTHCARE FOCUS
-            </span>
-          </div>
+            <div className="flex items-center gap-2">
+  <span className="h-1.5 w-1.5 rounded-full bg-[#1A6FA8] animate-pulse" />
+  <span className="text-[11px] uppercase tracking-[0.18em] text-[#1A6FA8] font-ui font-bold">
+    HEALTHCARE FOCUS
+  </span>
+</div>
 
-            <h2 className="text-3xl sm:text-4xl lg:text-[3.25rem]/[1.1] font-extrabold tracking-tight text-ink font-sans">
+            <h2 className="text-3xl sm:text-4xl lg:text-[3.25rem]/[1.1] tracking-tight text-ink font-sans font-semibold">
               Protecting revenue and reducing paperwork.
             </h2>
           </div>
@@ -117,7 +117,7 @@ export function HealthcareVertical() {
 
                     {/* Content */}
                     <div>
-                      <h3 className="text-xl sm:text-2xl font-extrabold text-ink mb-3 font-heading">
+                      <h3 className="text-xl sm:text-2xl text-ink mb-3 font-sans font-medium">
                         {item.title}
                       </h3>
                       

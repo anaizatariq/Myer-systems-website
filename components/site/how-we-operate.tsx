@@ -74,17 +74,17 @@ export function HowWeOperate() {
         
         {/* ── Section Header ── */}
         <div className="max-w-3xl mb-14 sm:mb-16">
-          <div className="inline-flex w-fit items-center gap-2 rounded-full border border-white/10 bg-[#29A8E0] px-4 py-1.5 mb-6 shadow-md shadow-[#29A8E0]/20">
-            <span className="h-1.5 w-1.5 rounded-full bg-white animate-pulse" />
-            <span className="text-[11px] font-bold uppercase tracking-[0.18em] text-white font-ui">
-              HOW WE WORK
-            </span>
-          </div>
+          <div className="flex items-center gap-2">
+  <span className="h-1.5 w-1.5 rounded-full bg-[#1A6FA8] animate-pulse" />
+  <span className="text-[11px] uppercase tracking-[0.18em] text-[#1A6FA8] font-ui font-bold">
+    HOW WE WORK
+  </span>
+</div>
 
           <h2 className="text-3xl sm:text-4xl lg:text-[3.25rem]/[1.1] font-semibold tracking-tight text-ink font-sans">
             AI speed. Human judgment.
           </h2>
-          <p className="mt-4 text-base sm:text-lg text-slate-600 font-sans leading-relaxed max-w-2xl">
+          <p className="mt-4 text-base sm:text-lg text-slate-600 font-sans leading-relaxed max-w-2xl font-normal">
             We don't believe in replacing people with black-box AI. We combine fast automation with experienced human oversight to ensure total accuracy and control.
           </p>
         </div>
@@ -158,10 +158,10 @@ export function HowWeOperate() {
                 <div className="flex-1 flex flex-col items-center md:items-start relative z-10">
                   {/* Title & Tagline */}
                   <div className="text-center md:text-left">
-                    <h3 className="text-2xl lg:text-3xl font-extrabold tracking-tight text-ink group-hover:text-white transition-colors duration-500 mb-2.5 leading-tight">
+                    <h3 className="text-2xl lg:text-3xl tracking-tight text-ink group-hover:text-white transition-colors duration-500 mb-2.5 leading-tight font-sans font-medium">
                       {step.title}
                     </h3>
-                    <p className="text-sm lg:text-[15px] font-semibold text-slate-600 group-hover:text-slate-400 transition-colors duration-500 mb-2">
+                    <p className="text-sm lg:text-[15px] text-slate-600 group-hover:text-slate-400 transition-colors duration-500 mb-2 font-sans font-normal">
                       {step.tagline}
                     </p>
                   </div>

@@ -223,7 +223,7 @@ export function GovernedConsole() {
                         {current.cardTitle}
                       </h4>
                       <div className="flex items-center gap-2 text-xs font-mono text-[#8FD6F5]">
-                        <span className="h-1.5 w-1.5 rounded-full bg-[#29A8E0] animate-pulse" />
+                        <span className="h-1.5 w-1.5 rounded-full bg-white animate-pulse" />
                         <span>{current.stat}</span>
                       </div>
                     </div>

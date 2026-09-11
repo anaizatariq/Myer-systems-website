@@ -23,12 +23,12 @@ export function AboutUs() {
           <div className="reveal-left lg:col-span-6 space-y-6">
             
             {/* Eyebrow */}
-            <div className="inline-flex w-fit items-center gap-2 rounded-full border border-white/10 bg-[#29A8E0] px-4 py-1.5 mb-6 shadow-md shadow-[#29A8E0]/20">
-            <span className="h-1.5 w-1.5 rounded-full bg-white animate-pulse" />
-            <span className="text-[11px] font-bold uppercase tracking-[0.18em] text-white font-ui">
-              ABOUT MYER SYSTEMS · DUAL-HUB MODEL
-            </span>
-          </div>
+            <div className="flex items-center gap-2">
+  <span className="h-1.5 w-1.5 rounded-full bg-[#1A6FA8] animate-pulse" />
+  <span className="text-[11px] uppercase tracking-[0.18em] text-[#1A6FA8] font-ui font-bold">
+    ABOUT MYER SYSTEMS · DUAL-HUB MODEL
+  </span>
+</div>
 
             {/* Display Headline */}
             <h2 className="text-3xl sm:text-4xl lg:text-[2.85rem]/[1.15] font-semibold tracking-tight text-ink font-sans">

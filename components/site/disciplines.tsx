@@ -35,48 +35,70 @@ interface CapabilityPillar {
   description: string;
   href: string;
   tags: string[];
+  image: string;
+  dotColor: string;
 }
 
 const PILLARS: CapabilityPillar[] = [
   {
     id: 'enterprise-ai',
     num: '01',
-    title: 'Enterprise AI Solutions',
-    badge: 'ENTERPRISE AI SOLUTIONS',
-    headline: 'Practical AI Systems Built for Real Workflows',
-    description: 'Custom AI systems engineered to automate complex workflows, extract data, and reduce repetitive business tasks without losing human control.',
-    href: '/services#ai-solutions',
-    tags: ['Smart Automation', 'Data Extraction', 'Human Guardrails'],
+    title: 'Enterprise-Grade AI Solutions',
+    badge: 'AI AUTOMATION',
+    headline: 'Custom AI that does the heavy lifting.',
+    description: 'We build enterprise-grade AI automation systems that plug directly into your existing operations, eliminating manual data entry and repetitive workflows.',
+    href: '/services#ai',
+    tags: ['Workflow Automation', 'Data Extraction', 'Task Routing'],
+    image: '/capabilities/enterprise-ai.jpeg',
+    dotColor: 'bg-[#29A8E0]',
   },
   {
-    id: 'workflow-automation',
+    id: 'saas-products',
     num: '02',
-    title: 'Autonomous Workflow & Automation',
-    badge: 'WORKFLOW & AUTOMATION',
-    headline: 'Process Automation That Removes Bottlenecks',
-    description: 'End-to-end process automation that speeds up task handoffs, eliminates repetitive data entry, and keeps operations running smoothly.',
-    href: '/services#ai-solutions',
-    tags: ['Zero Bottlenecks', 'Faster Handoffs', 'Consistent Quality'],
+    title: 'Industry SaaS Products',
+    badge: 'SOFTWARE PLATFORMS',
+    headline: 'Ready-to-deploy platforms for complex industries.',
+    description: 'Scalable software products built to solve specific industry bottlenecks, giving your business the operational capacity to grow without massive overhead.',
+    href: '/services#saas',
+    tags: ['Purpose-Built', 'Scalable Architecture', 'Secure Infrastructure'],
+    image: '/dashboard-mockup.jpg',
+    dotColor: 'bg-emerald-400',
   },
   {
     id: 'reengineering',
     num: '03',
-    title: 'Business Process Reengineering',
-    badge: 'PROCESS REENGINEERING',
-    headline: 'Fixing Inefficient Workflows Before Automating',
-    description: 'We analyze your daily operations, find hidden friction points, and rebuild processes so your teams move with predictable speed.',
-    href: '/services#saas',
-    tags: ['Workflow Audits', 'Friction Elimination', 'Standardized Procedures'],
+    title: 'Business Reengineering',
+    badge: 'PROCESS OPTIMIZATION',
+    headline: 'Fix the process before you automate it.',
+    description: 'We analyze your daily operations to find hidden friction points, rebuilding your processes so your teams move with predictable speed and perfect visibility.',
+    href: '/services#reengineering',
+    tags: ['Workflow Audits', 'Bottleneck Removal', 'Standardization'],
+    image: '/capabilities/process-reengineering.png',
+    dotColor: 'bg-amber-400',
   },
   {
-    id: 'saas-platforms',
+    id: 'resource-augmentation',
     num: '04',
-    title: 'Industry SaaS & Scalable Teams',
-    badge: 'SAAS & DELIVERY TEAMS',
-    headline: 'Software Platforms and Teams Built to Scale',
-    description: 'Scalable software products paired with trained delivery teams to give your business the technology and operational capacity to grow.',
-    href: '/services#saas',
-    tags: ['Purpose-Built SaaS', 'Dedicated Delivery', 'Compliance Ready'],
+    title: 'Resource Augmentation',
+    badge: 'HYBRID TEAMS',
+    headline: 'Human judgment where it matters.',
+    description: 'We provide highly trained human operators who work alongside AI agents, ensuring complex exceptions are handled with human precision and care.',
+    href: '/services#augmentation',
+    tags: ['Human-in-the-Loop', 'Expert Operators', 'Quality Assurance'],
+    image: '/capabilities/scalable-teams.png',
+    dotColor: 'bg-[#1A6FA8]',
+  },
+  {
+    id: 'rcm',
+    num: '05',
+    title: 'Revenue Cycle Management (RCM)',
+    badge: 'HEALTHCARE SPECIALTY',
+    headline: 'Precision billing and denial mitigation.',
+    description: 'Specialized healthcare revenue cycle management systems that reduce claim denials, accelerate payments, and ensure total compliance with AAPC standards.',
+    href: '/services#rcm',
+    tags: ['Claim Auditing', 'Denial Mitigation', 'Medical Billing'],
+    image: '/project-health.jpg',
+    dotColor: 'bg-purple-400',
   },
 ];
 
@@ -132,7 +154,7 @@ export function Disciplines() {
   return (
     <section 
       id="disciplines" 
-      className="relative bg-[#E0F4FC] border-b border-[#29A8E0]/10"
+      className="relative bg-[#F0FAFF]"
     >
       {/* ── Background Subtle Ambient Glows ── */}
       <div 
@@ -153,12 +175,12 @@ export function Disciplines() {
           <div className="flex flex-col space-y-4">
             
             {/* Section Eyebrow */}
-            <div className="inline-flex w-fit items-center gap-2 rounded-full border border-white/10 bg-[#29A8E0] px-4 py-1.5 mb-6 shadow-md shadow-[#29A8E0]/20">
-            <span className="h-1.5 w-1.5 rounded-full bg-white animate-pulse" />
-            <span className="text-[11px] font-bold uppercase tracking-[0.18em] text-white font-ui">
-              WHAT WE DO · CORE CAPABILITIES
-            </span>
-          </div>
+            <div className="flex items-center gap-2">
+  <span className="h-1.5 w-1.5 rounded-full bg-[#1A6FA8] animate-pulse" />
+  <span className="text-[11px] uppercase tracking-[0.18em] text-[#1A6FA8] font-ui font-bold">
+    WHAT WE DO · CORE CAPABILITIES
+  </span>
+</div>
 
             {/* H2 Section Title & Description Split */}
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12 items-end pt-1">
@@ -182,7 +204,7 @@ export function Disciplines() {
             Left: Sticky at top-32 with 4 pure titles.
             Right: Vertically stacked cards that float past smoothly.
         ══════════════════════════════════════════════════════════════════ */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 pt-10 sm:pt-16 pb-16 sm:pb-24 lg:pb-28 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 pt-10 sm:pt-16 pb-10 sm:pb-16 lg:pb-20 items-start">
           
           {/* ──────────────────────────────────────────────────────────
               LEFT COLUMN: Sticky Navigation Sidebar
@@ -221,24 +243,15 @@ export function Disciplines() {
               })}
             </div>
 
-            {/* Stage Progress Indicator */}
-            <div className="pt-6 border-t border-slate-200/80 flex items-center justify-between max-w-xs">
-              <div className="flex items-center gap-2">
-                <span className="text-[11px] font-mono font-semibold text-slate-400">STAGE</span>
-                <span className="text-xs font-mono font-bold text-ink">
-                  0{activeIdx + 1} / 0{PILLARS.length}
-                </span>
-                <span className="text-[10px] font-mono text-slate-400 ml-1">
-                  · Scroll to explore
-                </span>
-              </div>
-
-              <div className="h-1 w-24 rounded-full bg-slate-200 overflow-hidden">
-                <div 
-                  className="h-full bg-gradient-to-r from-[#1A6FA8] to-[#29A8E0] transition-all duration-300 ease-out"
-                  style={{ width: `${((activeIdx + 1) / PILLARS.length) * 100}%` }}
-                />
-              </div>
+            {/* CTA Button */}
+            <div className="pt-10">
+              <Link 
+                href="/services" 
+                className="group inline-flex items-center gap-2 rounded-full bg-[#29A8E0] px-6 py-3 text-[14px] font-semibold text-white shadow-md shadow-[#29A8E0]/20 hover:shadow-lg hover:bg-[#1A6FA8] hover:-translate-y-0.5 transition-all duration-300 font-sans"
+              >
+                Explore All Services
+                <ArrowRight className="h-4 w-4 text-white group-hover:translate-x-1 transition-transform" />
+              </Link>
             </div>
 
           </div>
@@ -246,115 +259,32 @@ export function Disciplines() {
           {/* ──────────────────────────────────────────────────────────
               RIGHT COLUMN: Vertically Stacked Feature Cards (Natural Flow)
           ────────────────────────────────────────────────────────── */}
-          <div className="lg:col-span-7 space-y-20 sm:space-y-28 lg:space-y-36 pb-20 sm:pb-28">
+          <div className="lg:col-span-7 space-y-20 sm:space-y-28 lg:space-y-36 pb-4 sm:pb-8">
             
-            {/* ══════════════════════════════════════════════════════
-                CARD 01: Custom Enterprise AI Systems
-                Visual: Horizontal Neural Agent Flow & Pulsing Center Core
-            ══════════════════════════════════════════════════════ */}
-            <div 
-              ref={(el) => (cardRefs.current[0] = el)}
-              className="scroll-mt-44 space-y-6"
-            >
-              <div className="group relative rounded-3xl overflow-hidden shadow-xl shadow-slate-200/50 border border-slate-200/80 aspect-[4/3] sm:aspect-video w-full bg-slate-100">
-                <img 
-                  src="/capabilities/enterprise-ai.jpeg" 
-                  alt="Enterprise AI Solutions"
-                  className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#101820]/60 via-transparent to-transparent opacity-60 pointer-events-none" />
-                
-                {/* Subtle top-left badge overlay for enterprise feel */}
-                <div className="absolute top-4 left-4 sm:top-6 sm:left-6 inline-flex items-center gap-2 rounded-full border border-white/20 bg-ink/75 px-3 py-1.5 backdrop-blur-md shadow-sm">
-                  <span className="h-1.5 w-1.5 rounded-full bg-[#29A8E0] animate-pulse" />
-                  <span className="text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.18em] text-white font-ui">
-                    AI CAPABILITY
-                  </span>
+            {PILLARS.map((pillar, idx) => (
+              <div 
+                key={pillar.id}
+                ref={(el) => { cardRefs.current[idx] = el; }}
+                className="scroll-mt-44 space-y-6"
+              >
+                <div className="group relative rounded-3xl overflow-hidden shadow-xl shadow-slate-200/50 border border-slate-200/80 aspect-[4/3] sm:aspect-video w-full bg-slate-100">
+                  <img 
+                    src={pillar.image} 
+                    alt={pillar.title}
+                    className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#101820]/60 via-transparent to-transparent opacity-60 pointer-events-none" />
+                  
+                  {/* Subtle top-left badge overlay */}
+                  <div className="absolute top-4 left-4 sm:top-6 sm:left-6 inline-flex items-center gap-2 rounded-full border border-white/20 bg-ink/75 px-3 py-1.5 backdrop-blur-md shadow-sm">
+                    <span className={`h-1.5 w-1.5 rounded-full ${pillar.dotColor} animate-pulse`} />
+                    <span className="text-[10px] sm:text-[11px] uppercase tracking-[0.18em] text-white font-ui font-normal">
+                      {pillar.badge}
+                    </span>
+                  </div>
                 </div>
               </div>
-
-            </div>
-
-            {/* ══════════════════════════════════════════════════════
-                CARD 02: Business Process Reengineering
-                Visual: Kinetic Velocity Tunnel (Chaos -> 3.2x Velocity)
-            ══════════════════════════════════════════════════════ */}
-            <div 
-              ref={(el) => (cardRefs.current[1] = el)}
-              className="scroll-mt-44 space-y-6"
-            >
-              <div className="group relative rounded-3xl overflow-hidden shadow-xl shadow-slate-200/50 border border-slate-200/80 aspect-[4/3] sm:aspect-video w-full bg-slate-100">
-                <img 
-                  src="/capabilities/workflow-automation.png" 
-                  alt="Autonomous Workflow & Automation"
-                  className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#101820]/60 via-transparent to-transparent opacity-60 pointer-events-none" />
-                
-                {/* Subtle top-left badge overlay */}
-                <div className="absolute top-4 left-4 sm:top-6 sm:left-6 inline-flex items-center gap-2 rounded-full border border-white/20 bg-ink/75 px-3 py-1.5 backdrop-blur-md shadow-sm">
-                  <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse" />
-                  <span className="text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.18em] text-white font-ui">
-                    AUTOMATION
-                  </span>
-                </div>
-              </div>
-
-            </div>
-
-            {/* ══════════════════════════════════════════════════════
-                CARD 03: Healthcare Technology & Medical Billing
-                Visual: Clinical Cardiogram Pulse & Clean Claim Seal
-            ══════════════════════════════════════════════════════ */}
-            <div 
-              ref={(el) => (cardRefs.current[2] = el)}
-              className="scroll-mt-44 space-y-6"
-            >
-              <div className="group relative rounded-3xl overflow-hidden shadow-xl shadow-slate-200/50 border border-slate-200/80 aspect-[4/3] sm:aspect-video w-full bg-slate-100">
-                <img 
-                  src="/capabilities/process-reengineering.png" 
-                  alt="Business Process Reengineering"
-                  className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#101820]/60 via-transparent to-transparent opacity-60 pointer-events-none" />
-                
-                {/* Subtle top-left badge overlay */}
-                <div className="absolute top-4 left-4 sm:top-6 sm:left-6 inline-flex items-center gap-2 rounded-full border border-white/20 bg-ink/75 px-3 py-1.5 backdrop-blur-md shadow-sm">
-                  <span className="h-1.5 w-1.5 rounded-full bg-amber-400 animate-pulse" />
-                  <span className="text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.18em] text-white font-ui">
-                    REENGINEERING
-                  </span>
-                </div>
-              </div>
-
-            </div>
-
-            {/* ══════════════════════════════════════════════════════
-                CARD 04: Intelligent Resource Augmentation
-                Visual: Global Dual-Hub Synchrony Orbit (Dallas <-> Lahore)
-            ══════════════════════════════════════════════════════ */}
-            <div 
-              ref={(el) => (cardRefs.current[3] = el)}
-              className="scroll-mt-44 space-y-6"
-            >
-              <div className="group relative rounded-3xl overflow-hidden shadow-xl shadow-slate-200/50 border border-slate-200/80 aspect-[4/3] sm:aspect-video w-full bg-slate-100">
-                <img 
-                  src="/capabilities/scalable-teams.png" 
-                  alt="Industry SaaS & Scalable Teams"
-                  className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#101820]/60 via-transparent to-transparent opacity-60 pointer-events-none" />
-                
-                {/* Subtle top-left badge overlay */}
-                <div className="absolute top-4 left-4 sm:top-6 sm:left-6 inline-flex items-center gap-2 rounded-full border border-white/20 bg-ink/75 px-3 py-1.5 backdrop-blur-md shadow-sm">
-                  <span className="h-1.5 w-1.5 rounded-full bg-[#1A6FA8] animate-pulse" />
-                  <span className="text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.18em] text-white font-ui">
-                    SCALABLE TEAMS
-                  </span>
-                </div>
-              </div>
-
-            </div>
+            ))}
 
           </div>
 

@@ -29,21 +29,21 @@ export function CtaBanner() {
           <div className="relative z-10 max-w-3xl mx-auto space-y-6">
             
             {/* Eyebrow Pill */}
-            <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-[#29A8E0] px-4 py-1.5 mb-2 shadow-md shadow-[#29A8E0]/20">
-              <span className="h-1.5 w-1.5 rounded-full bg-white animate-pulse" />
-              <span className="text-[11px] font-bold uppercase tracking-[0.18em] text-white font-ui">
-                GET STARTED
-              </span>
-            </div>
+            <div className="flex items-center gap-2">
+  {/* <span className="h-1.5 w-1.5 rounded-full bg-[#1A6FA8] animate-pulse" /> */}
+  {/* <span className="text-[11px] uppercase tracking-[0.18em] text-[#1A6FA8] font-ui font-bold">
+    GET STARTED
+  </span> */}
+</div>
 
             {/* Headline */}
-            <h2 className="text-3xl sm:text-5xl lg:text-[3.5rem]/[1.1] font-extrabold tracking-tight text-white font-sans">
-              Ready to build smarter?
+            <h2 className="text-3xl sm:text-5xl lg:text-[3.5rem]/[1.1] tracking-tight text-white font-sans font-semibold">
+              Ready to Automate What's Holding You Back?
             </h2>
 
             {/* Subhead */}
-            <p className="text-base sm:text-lg leading-relaxed text-white/90 font-sans max-w-xl mx-auto">
-              Schedule a briefing to discuss how our custom enterprise systems and dedicated teams can support your operations.
+            <p className="text-base sm:text-lg leading-relaxed text-white/90 font-sans max-w-2xl mx-auto font-normal">
+              Book a free discovery call. We'll walk through your operations and show you exactly where AI automation can make an impact.
             </p>
 
             {/* Dual CTAs */}
@@ -53,7 +53,7 @@ export function CtaBanner() {
                 className="group inline-flex w-full sm:w-auto items-center justify-center gap-2.5 rounded-full bg-white px-8 py-4 text-sm font-bold text-ink shadow-[0_0_20px_rgba(255,255,255,0.15)] transition-all duration-300 hover:bg-[#F0FAFF] hover:shadow-[0_0_30px_rgba(255,255,255,0.3)] hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.99] font-ui cursor-pointer"
               >
                 <Calendar className="h-4 w-4 text-[#1A6FA8]" />
-                <span className="whitespace-nowrap">Schedule a Consultation</span>
+                <span className="whitespace-nowrap">Book a Discovery Call</span>
                 <ArrowUpRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
               </Link>
 

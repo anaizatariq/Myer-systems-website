@@ -6,7 +6,7 @@ import { Navbar } from '@/components/site/navbar';
 import { Footer } from '@/components/site/footer';
 import { useReveal } from '@/hooks/use-reveal';
 import { CtaBanner } from '@/components/site/cta-banner';
-import { Linkedin, MapPin, Globe2, CheckCircle2, ShieldAlert, Layers, TrendingUp, Sparkles, ArrowRight, ChevronRight } from 'lucide-react';
+import { Linkedin, ArrowRight, ChevronRight, ShieldCheck, Zap, Users, Network } from 'lucide-react';
 
 export default function AboutPage() {
   useReveal();
@@ -22,11 +22,12 @@ export default function AboutPage() {
             
             {/* Left Content Side */}
             <div className="relative z-10 w-full max-w-2xl lg:col-span-5">
-              {/* Eyebrow Pill (Solid Brand Blue) */}
-              <div className="inline-flex w-fit items-center gap-2 rounded-full border border-white/10 bg-[#29A8E0] px-4 py-1.5 mb-6 shadow-md shadow-[#29A8E0]/20">
-                <span className="h-1.5 w-1.5 rounded-full bg-white animate-pulse" />
-                <span className="text-[11px] font-bold uppercase tracking-[0.18em] text-white font-ui">
-                  ABOUT MYER SYSTEMS · FOUNDED 2025
+              
+              {/* Global Text-Only Eyebrow */}
+              <div className="flex items-center gap-2 mb-6">
+                <span className="h-1.5 w-1.5 rounded-full bg-[#1A6FA8] animate-pulse" />
+                <span className="text-[11px] font-bold uppercase tracking-[0.18em] text-[#1A6FA8] font-ui">
+                  ABOUT MYER SYSTEMS · FOUNDED 2023
                 </span>
               </div>
 
@@ -75,426 +76,361 @@ export default function AboutPage() {
         </div>
       </main>
 
-      {/* ─── 2. OUR STORY — Premium Bento Grid ───────────────── */}
-      <section className="py-20 lg:py-28 bg-white border-b border-[#1A6FA8]/15">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          
-          {/* Section Header */}
-          <div className="reveal max-w-3xl mb-12 sm:mb-16">
-            <div className="inline-flex w-fit items-center gap-2 rounded-full border border-white/10 bg-[#29A8E0] px-4 py-1.5 mb-6 shadow-md shadow-[#29A8E0]/20">
-              <span className="h-1.5 w-1.5 rounded-full bg-white animate-pulse" />
-              <span className="text-[11px] font-bold uppercase tracking-[0.18em] text-white font-ui">
-                OUR STORY · BUILT FOR ACCOUNTABILITY
-              </span>
+      {/* ─── 2. OUR STORY (Editorial Narrative Layout) ───────────────── */}
+      <section className="py-20 lg:py-32 bg-white border-b border-slate-100">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+            
+            {/* Left: Sticky Title */}
+            <div className="lg:col-span-5 lg:sticky lg:top-32 reveal">
+              <div className="flex items-center gap-2 mb-6">
+                <span className="h-1.5 w-1.5 rounded-full bg-[#1A6FA8] animate-pulse" />
+                <span className="text-[11px] font-bold uppercase tracking-[0.18em] text-[#1A6FA8] font-ui">
+                  OUR STORY
+                </span>
+              </div>
+              <h2 className="text-4xl sm:text-5xl lg:text-[3.5rem]/[1.1] font-bold tracking-tight text-ink font-heading pr-8">
+                We believe in structure over shortcuts.
+              </h2>
             </div>
 
-            <h2 className="text-3xl sm:text-4xl lg:text-[2.85rem]/[1.15] font-semibold tracking-tight text-ink font-sans">
-              Founded on one standard:{' '}
-              structure over shortcuts.
+            {/* Right: Narrative */}
+            <div className="lg:col-span-7 text-base sm:text-[1.15rem] leading-[1.85] text-slate-700 font-sans font-normal reveal-up lg:pt-8">
+              <p className="mb-6">
+                <span className="font-bold text-ink text-xl mb-1 block">Myer Systems was founded in 2023 with a single conviction:</span>
+                businesses shouldn't waste human talent on work that machines can do better, faster, and more reliably.
+              </p>
+              <p className="mb-6">
+                We watched organisations hire more people to handle more volume, such as more data entry, more document processing, and more manual approvals, when the real solution was smarter systems, not bigger headcounts. Headquartered in Dallas, Texas with a dedicated delivery hub in Lahore, Pakistan, Myer Systems designs, builds, and deploys enterprise AI systems that automate manual work at scale.
+              </p>
+              <p className="mb-10">
+                We operate at the intersection of enterprise AI and operational efficiency to help organisations move from reactive operations to predictable, data-driven performance.
+              </p>
+              <div className="border-l-[3px] border-[#29A8E0] pl-6 py-4 bg-gradient-to-r from-[#29A8E0]/10 to-transparent rounded-r-2xl">
+                <p className="text-lg sm:text-[1.15rem] text-ink font-semibold leading-relaxed font-sans">
+                  We're not a consultancy that hands you a slide deck and walks away. We're engineers, AI specialists, and operations experts who build working systems, deploy them inside your workflows, and stand behind the results.
+                </p>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </section>
+
+      {/* ─── 3. MISSION & VISION (Dark Mode Impact) ───────────────── */}
+      <section className="py-24 lg:py-32 bg-ink text-white relative overflow-hidden">
+        {/* Ambient Glows */}
+        <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-[#29A8E0]/15 rounded-full blur-[160px] -translate-x-1/2 -translate-y-1/2" />
+        <div className="absolute bottom-0 right-0 w-[600px] h-[600px] bg-[#1A6FA8]/20 rounded-full blur-[160px] translate-x-1/3 translate-y-1/3" />
+
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 divide-y lg:divide-y-0 lg:divide-x divide-white/10">
+            
+            {/* Mission */}
+            <div className="lg:pr-12 reveal">
+              <div className="flex items-center gap-2 mb-8">
+                <span className="h-1.5 w-1.5 rounded-full bg-[#29A8E0] animate-pulse" />
+                <span className="text-[11px] font-bold uppercase tracking-[0.18em] text-[#8FD6F5] font-ui">
+                  OUR MISSION
+                </span>
+              </div>
+              <p className="text-2xl sm:text-3xl lg:text-[2.1rem]/[1.35] font-medium font-sans text-white">
+                To help organisations replace fragile, manual operations with intelligent, accountable AI systems — so they can scale faster, operate leaner, and compete smarter.
+              </p>
+            </div>
+
+            {/* Vision */}
+            <div className="lg:pl-12 pt-16 lg:pt-0 reveal-up">
+              <div className="flex items-center gap-2 mb-8">
+                <span className="h-1.5 w-1.5 rounded-full bg-[#29A8E0] animate-pulse" />
+                <span className="text-[11px] font-bold uppercase tracking-[0.18em] text-[#8FD6F5] font-ui">
+                  OUR VISION
+                </span>
+              </div>
+              <p className="text-2xl sm:text-3xl lg:text-[2.1rem]/[1.35] font-medium font-sans text-slate-300">
+                A world where no business wastes human potential on work a machine can do better, faster, and more reliably.
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* ─── 4. COMPANY AT A GLANCE (Minimalist Data Grid) ───────────────── */}
+      <section className="py-20 lg:py-28 bg-[#E0F4FC]">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          
+          <div className="flex flex-col items-center text-center mb-16 reveal">
+            <div className="flex items-center gap-2 mb-6">
+              <span className="h-1.5 w-1.5 rounded-full bg-[#1A6FA8] animate-pulse" />
+              <span className="text-[11px] font-bold uppercase tracking-[0.18em] text-[#1A6FA8] font-ui">
+                COMPANY AT A GLANCE
+              </span>
+            </div>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-ink font-heading tracking-tight">
+              By the numbers
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-6 lg:gap-8">
-            {/* Card 1: Big statement card (Dark Midnight) */}
-            <div className="reveal md:col-span-7 bg-ink rounded-[2rem] p-8 sm:p-10 lg:p-12 flex flex-col justify-between min-h-[340px] border border-white/10 shadow-2xl shadow-[#101820]/15 relative overflow-hidden group">
-              {/* Subtle ambient glow in card */}
-              <div className="pointer-events-none absolute -top-24 -right-24 h-64 w-64 rounded-full bg-[#29A8E0]/15 blur-[90px]" />
-              
-              <div>
-                <div className="inline-flex items-center gap-2 rounded-full bg-white/10 border border-white/15 px-3.5 py-1.5 text-[11px] font-bold uppercase tracking-wider text-[#8FD6F5] font-ui mb-6">
-                  <Sparkles className="w-3.5 h-3.5 text-[#29A8E0]" />
-                  THE FOUNDATIONAL CONVICTION
-                </div>
-
-                <p className="text-2xl sm:text-3xl lg:text-[2.1rem]/[1.3] font-semibold text-white font-sans tracking-tight">
-                  Myer Systems was founded on the belief that dependable technology requires{' '}
-                  structure, accountability, and clear ownership.
-                </p>
-              </div>
-
-              <div className="mt-8 pt-6 border-t border-white/10 flex flex-wrap items-center justify-between gap-4">
-                <div className="flex items-center gap-3">
-                  <div className="h-1.5 w-12 bg-[#29A8E0] rounded-full" />
-                  <span className="text-xs font-semibold uppercase tracking-wider text-slate-300 font-ui">
-                    Structured Processes &amp; Clear Ownership
-                  </span>
-                </div>
-                <span className="text-xs font-bold text-[#8FD6F5] font-ui bg-white/5 px-3 py-1 rounded-full border border-white/10">
-                  Transparent Accountability
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
+            {[
+              { label: 'Founded', value: '2023' },
+              { label: 'Headquarters', value: 'Dallas, TX' },
+              { label: 'Delivery Hub', value: 'Lahore, PK' },
+              { label: 'Team Size', value: '11–50' },
+              { label: 'Growth (25-26)', value: '250%' },
+              { label: 'Model', value: 'Distributed' },
+              { label: 'Clients', value: 'Global' },
+              { label: 'Website', value: 'myersystems.ai' }
+            ].map((stat, i) => (
+              <div key={i} className="reveal-up bg-[#8FD6F5] rounded-2xl p-6 lg:p-7 flex flex-col justify-start text-left hover:-translate-y-1 hover:shadow-lg hover:shadow-[#8FD6F5]/40 transition-all duration-300 group">
+                <span className="text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.18em] text-[#1A6FA8] font-ui mb-2 transition-colors">
+                  {stat.label}
+                </span>
+                <span className="text-xl sm:text-2xl lg:text-[1.7rem] font-semibold text-ink font-sans tracking-tight">
+                  {stat.value}
                 </span>
               </div>
-            </div>
-
-            {/* Card 2: High-Stakes Operations */}
-            <div className="reveal-up md:col-span-5 bg-gradient-to-br from-[#F8FAFD] via-[#F0FAFF] to-[#E0F4FC]/80 border border-[#1A6FA8]/20 shadow-[0_4px_20px_rgba(26,111,168,0.06),inset_0_1px_0_rgba(255,255,255,0.8)] rounded-[2rem] p-8 sm:p-10 lg:p-12 min-h-[340px] flex flex-col justify-between hover:border-[#29A8E0]/60 hover:shadow-[0_12px_36px_rgba(41,168,224,0.12)] hover:-translate-y-1 transition-all duration-400 ease-out group relative overflow-hidden">
-              <div>
-                <div className="w-12 h-12 rounded-2xl bg-white border border-[#1A6FA8]/25 flex items-center justify-center text-[#1A6FA8] mb-6 shadow-xs group-hover:scale-105 group-hover:border-[#29A8E0] group-hover:text-[#29A8E0] transition-all duration-300">
-                  <ShieldAlert className="w-6 h-6 stroke-[1.8]" />
-                </div>
-
-                <h3 className="text-xl sm:text-2xl font-extrabold text-ink font-sans mb-3 tracking-tight">
-                  High-Stakes Operational Standards
-                </h3>
-
-                <p className="text-base sm:text-[17px] text-slate-600 leading-relaxed font-sans">
-                  Mission-critical enterprise workflows and healthcare operations require systems that eliminate manual friction, reduce errors, and keep human leaders in full control.
-                </p>
-              </div>
-
-              <div className="mt-8 pt-5 border-t border-[#1A6FA8]/15 flex items-center justify-between">
-                <div className="flex items-center gap-2 text-[#1A6FA8] text-xs font-bold uppercase tracking-wider font-ui">
-                  <span className="h-2 w-2 rounded-full bg-[#29A8E0] animate-pulse" />
-                  Operational Visibility &amp; Control
-                </div>
-                <span className="text-xs font-semibold text-slate-500 font-ui bg-white/80 px-3 py-1 rounded-full border border-[#1A6FA8]/15 shadow-2xs">
-                  Founded · 2025
-                </span>
-              </div>
-            </div>
-
-            {/* Card 3: Six Core Capabilities */}
-            <div className="reveal-up md:col-span-5 bg-gradient-to-br from-[#F8FAFD] via-[#F0FAFF] to-[#E0F4FC]/80 border border-[#1A6FA8]/20 shadow-[0_4px_20px_rgba(26,111,168,0.06),inset_0_1px_0_rgba(255,255,255,0.8)] rounded-[2rem] p-8 sm:p-10 lg:p-12 min-h-[320px] flex flex-col justify-between hover:border-[#29A8E0]/60 hover:shadow-[0_12px_36px_rgba(41,168,224,0.12)] hover:-translate-y-1 transition-all duration-400 ease-out group relative overflow-hidden">
-              <div>
-                <div className="w-12 h-12 rounded-2xl bg-white border border-[#1A6FA8]/25 flex items-center justify-center text-[#1A6FA8] mb-6 shadow-xs group-hover:scale-105 group-hover:border-[#29A8E0] group-hover:text-[#29A8E0] transition-all duration-300">
-                  <Layers className="w-6 h-6 stroke-[1.8]" />
-                </div>
-
-                <h3 className="text-xl sm:text-2xl font-extrabold text-ink font-sans mb-3 tracking-tight">
-                  Six Core Capabilities
-                </h3>
-
-                <p className="text-base sm:text-[16.5px] text-slate-600 leading-relaxed font-sans mb-5">
-                  Industry SaaS, enterprise AI solutions, Revenue Cycle Management (RCM), business process reengineering, resource augmentation, and medical billing services.
-                </p>
-
-                <div className="flex flex-wrap gap-2">
-                  {[
-                    'Industry SaaS',
-                    'Enterprise AI Solutions',
-                    'Revenue Cycle Management',
-                    'Business Process Reengineering',
-                    'Resource Augmentation',
-                    'Medical Billing Services',
-                  ].map((pill) => (
-                    <span key={pill} className="inline-flex items-center px-3 py-1 rounded-full bg-white border border-[#1A6FA8]/20 text-xs font-semibold text-[#1A6FA8] font-ui shadow-2xs">
-                      {pill}
-                    </span>
-                  ))}
-                </div>
-              </div>
-
-              <div className="mt-8 pt-4 border-t border-[#1A6FA8]/15 flex items-center justify-between text-xs font-bold text-[#1A6FA8] font-ui">
-                <span>Integrated Delivery</span>
-                <span className="text-slate-500 font-normal">Structured execution &amp; operational continuity</span>
-              </div>
-            </div>
-
-            {/* Card 4: Dual-Hub Distributed Delivery Model */}
-            <div className="reveal-up md:col-span-7 bg-gradient-to-br from-[#F8FAFD] via-[#F0FAFF] to-[#E0F4FC]/80 border border-[#1A6FA8]/20 shadow-[0_4px_20px_rgba(26,111,168,0.06),inset_0_1px_0_rgba(255,255,255,0.8)] rounded-[2rem] p-8 sm:p-10 lg:p-12 min-h-[320px] flex flex-col justify-between hover:border-[#29A8E0]/60 hover:shadow-[0_12px_36px_rgba(41,168,224,0.12)] hover:-translate-y-1 transition-all duration-400 ease-out group relative overflow-hidden">
-              <div>
-                <div className="flex flex-wrap items-center justify-between gap-4 mb-6">
-                  <div className="w-12 h-12 rounded-2xl bg-white border border-[#1A6FA8]/25 flex items-center justify-center text-[#1A6FA8] shadow-xs group-hover:scale-105 group-hover:border-[#29A8E0] group-hover:text-[#29A8E0] transition-all duration-300">
-                    <TrendingUp className="w-6 h-6 stroke-[1.8]" />
-                  </div>
-                  <div className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-1.5 border border-[#1A6FA8]/20 shadow-2xs">
-                    <span className="h-2 w-2 rounded-full bg-[#29A8E0] animate-pulse" />
-                    <span className="text-xs font-extrabold text-ink font-sans">+250% Growth (2025–2026)</span>
-                  </div>
-                </div>
-
-                <h3 className="text-xl sm:text-2xl font-extrabold text-ink font-sans mb-3 tracking-tight">
-                  Dual-Hub Distributed Delivery Model
-                </h3>
-
-                <p className="text-base sm:text-[17px] text-slate-600 leading-relaxed font-sans mb-6">
-                  Operating a distributed delivery model with registered headquarters in Sugar Land, TX and a core engineering hub in Lahore, Pakistan — serving North American and international clients through a distributed delivery model.
-                </p>
-
-                {/* Interactive Dual-Hub Cards */}
-                <div className="grid sm:grid-cols-2 gap-3 mb-2">
-                  <div className="bg-white rounded-xl p-3.5 border border-[#1A6FA8]/20 flex items-center gap-3 shadow-2xs">
-                    <div className="w-8 h-8 rounded-lg bg-[#F0FAFF] flex items-center justify-center text-[#1A6FA8] font-bold text-xs font-ui">
-                      US
-                    </div>
-                    <div>
-                      <span className="block text-xs font-extrabold text-ink font-sans">Sugar Land, TX · US Headquarters</span>
-                      <span className="text-[11px] text-slate-500 font-ui">Business Registration &amp; Client Operations</span>
-                    </div>
-                  </div>
-                  <div className="bg-white rounded-xl p-3.5 border border-[#1A6FA8]/20 flex items-center gap-3 shadow-2xs">
-                    <div className="w-8 h-8 rounded-lg bg-[#F0FAFF] flex items-center justify-center text-[#1A6FA8] font-bold text-xs font-ui">
-                      PK
-                    </div>
-                    <div>
-                      <span className="block text-xs font-extrabold text-ink font-sans">Lahore · Global Delivery Hub</span>
-                      <span className="text-[11px] text-slate-500 font-ui">Core Engineering &amp; Operations</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="mt-6 pt-4 border-t border-[#1A6FA8]/15 flex flex-wrap items-center justify-between text-xs font-semibold text-slate-600 font-ui gap-2">
-                <span>Sugar Land, TX · US Headquarters</span>
-                <span className="text-[#1A6FA8] font-bold">Lahore, Pakistan · Global Delivery Hub</span>
-              </div>
-            </div>
+            ))}
           </div>
+
         </div>
       </section>
 
-      {/* ─── 3. MISSION STATEMENT ─────────────────────────────── */}
-      <section className="py-20 lg:py-28 bg-[#F0FAFF] border-y border-[#1A6FA8]/15">
-        <div className="mx-auto max-w-5xl px-6 lg:px-8 text-center">
+      {/* ─── 5. WHAT DRIVES US (Horizontal Joined Box) ───────────────── */}
+      <section className="pt-12 pb-20 lg:pt-16 lg:pb-28 bg-white overflow-hidden">
+        <div className="mx-auto max-w-[90rem] px-4 sm:px-6 lg:px-8 relative">
           
-          {/* Eyebrow Pill (Matches Home) */}
-          <div className="inline-flex w-fit items-center gap-2 rounded-full border border-white/10 bg-[#29A8E0] px-4 py-1.5 mb-6 shadow-md shadow-[#29A8E0]/20">
-              <span className="h-1.5 w-1.5 rounded-full bg-white animate-pulse" />
-              <span className="text-[11px] font-bold uppercase tracking-[0.18em] text-white font-ui">
-                OUR MISSION · CORPORATE PURPOSE
+          <div className="max-w-2xl mb-12 lg:mb-16 reveal">
+            <div className="flex items-center gap-2 mb-6">
+              <span className="h-1.5 w-1.5 rounded-full bg-[#1A6FA8] animate-pulse" />
+              <span className="text-[11px] font-bold uppercase tracking-[0.18em] text-[#1A6FA8] font-ui">
+                WHAT DRIVES US
               </span>
             </div>
-
-          <p className="reveal text-3xl md:text-4xl lg:text-[2.75rem]/[1.25] font-semibold leading-snug text-ink font-sans tracking-tight max-w-4xl mx-auto">
-            To empower healthcare and commercial enterprises to transition from reactive operations to{' '}
-            predictable, data-driven performance
-            {' '}— reducing workflow friction and building scalable, resilient operations through intelligent systems.
-          </p>
-        </div>
-      </section>
-
-      {/* ─── 4. LEADERSHIP ────────────────────────────────────── */}
-      <section className="pt-20 lg:pt-28 pb-16 sm:pb-20 lg:pb-24 bg-white border-b border-[#1A6FA8]/15">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          
-          {/* Eyebrow Pill (Matches Home) */}
-          <div className="reveal mb-8">
-            <div className="inline-flex w-fit items-center gap-2 rounded-full border border-white/10 bg-[#29A8E0] px-4 py-1.5 mb-6 shadow-md shadow-[#29A8E0]/20">
-              <span className="h-1.5 w-1.5 rounded-full bg-white animate-pulse" />
-              <span className="text-[11px] font-bold uppercase tracking-[0.18em] text-white font-ui">
-                EXECUTIVE LEADERSHIP · GOVERNANCE
-              </span>
-            </div>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-ink font-heading tracking-tight">
+              Our Guiding Principles
+            </h2>
           </div>
 
-          <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-end mb-16">
-            <div className="lg:col-span-6">
-              <h2 className="reveal text-3xl sm:text-4xl lg:text-[2.85rem]/[1.15] font-semibold tracking-tight text-ink font-sans">
-                Led with accountability and{' '}
-                engineering precision.
-              </h2>
-            </div>
-            <div className="lg:col-span-6">
-              <p className="reveal-up text-base sm:text-lg text-slate-600 leading-relaxed font-sans border-l-4 border-[#29A8E0]/40 pl-6">
-                Founded with a focus on enterprise strategy, AI systems, and operational delivery, Myer Systems unites technical execution and clinical operations under one uncompromising standard: structure over shortcuts.
+          <div className="reveal-up rounded-[10px] overflow-hidden border border-[#1A6FA8]/15 shadow-[0_8px_30px_rgb(0,0,0,0.06)] flex flex-col lg:flex-row bg-white">
+            
+            {/* Column 1: Sky Blue */}
+            <div className="lg:w-1/4 p-8 sm:p-10 bg-[#29A8E0] relative border-b lg:border-b-0 lg:border-r border-[#1A6FA8]/20">
+              <div className="w-12 h-12 rounded-[10px] bg-white/10 border border-white/20 flex items-center justify-center text-white mb-6">
+                <ShieldCheck className="w-6 h-6" />
+              </div>
+              <h3 className="text-xl font-bold text-white font-heading mb-3 leading-snug">Accountability First</h3>
+              <p className="text-[14.5px] text-white/90 font-sans leading-relaxed">
+                Every AI system we build is auditable, explainable, and transparent. We don't ship black boxes.
               </p>
             </div>
+
+            {/* Column 2: Dots */}
+            <div 
+              className="lg:w-1/4 p-8 sm:p-10 relative bg-white border-b lg:border-b-0 lg:border-r border-[#1A6FA8]/15"
+              style={{ backgroundImage: 'radial-gradient(rgba(143,214,245,0.4) 1px, transparent 1px)', backgroundSize: '16px 16px' }}
+            >
+              <div className="w-12 h-12 rounded-[10px] bg-[#F0FAFF] border border-[#1A6FA8]/15 flex items-center justify-center text-[#1A6FA8] mb-6">
+                <Zap className="w-6 h-6" />
+              </div>
+              <h3 className="text-xl font-bold text-ink font-heading mb-3 leading-snug">Execution Over Theory</h3>
+              <p className="text-[14.5px] text-slate-600 font-sans leading-relaxed">
+                We deliver working systems — deployed, tested, and producing measurable results.
+              </p>
+            </div>
+
+            {/* Column 3: Sky Blue */}
+            <div className="lg:w-1/4 p-8 sm:p-10 bg-[#29A8E0] relative border-b lg:border-b-0 lg:border-r border-[#1A6FA8]/20">
+              <div className="w-12 h-12 rounded-[10px] bg-white/10 border border-white/20 flex items-center justify-center text-white mb-6">
+                <Users className="w-6 h-6" />
+              </div>
+              <h3 className="text-xl font-bold text-white font-heading mb-3 leading-snug">Human + AI Collaboration</h3>
+              <p className="text-[14.5px] text-white/90 font-sans leading-relaxed">
+                The best outcomes come from pairing intelligent automation with skilled human oversight.
+              </p>
+            </div>
+
+            {/* Column 4: Dots */}
+            <div 
+              className="lg:w-1/4 p-8 sm:p-10 relative bg-white"
+              style={{ backgroundImage: 'radial-gradient(rgba(143,214,245,0.4) 1px, transparent 1px)', backgroundSize: '16px 16px' }}
+            >
+              <div className="w-12 h-12 rounded-[10px] bg-[#F0FAFF] border border-[#1A6FA8]/15 flex items-center justify-center text-[#1A6FA8] mb-6">
+                <Network className="w-6 h-6" />
+              </div>
+              <h3 className="text-xl font-bold text-ink font-heading mb-3 leading-snug">Scale Without Compromise</h3>
+              <p className="text-[14.5px] text-slate-600 font-sans leading-relaxed">
+                Our systems handle enterprise volume without sacrificing accuracy, speed, or compliance.
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* ─── 6. LEADERSHIP (Executive Deep Dives) ───────────────── */}
+      <section className="py-16 lg:py-24 bg-[#E0F4FC]">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          
+          <div className="text-center mb-16 lg:mb-20 reveal">
+            <div className="flex justify-center items-center gap-2 mb-4">
+              <span className="h-1.5 w-1.5 rounded-full bg-[#1A6FA8] animate-pulse" />
+              <span className="text-[11px] font-bold uppercase tracking-[0.18em] text-[#1A6FA8] font-ui">
+                EXECUTIVE LEADERSHIP
+              </span>
+            </div>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-ink font-heading tracking-tight">
+              Our Leadership
+            </h2>
           </div>
 
-          {/* 3 Executive Leaders — Boxy Style Images, Name & Designation (No Bio) */}
-          <div className="grid md:grid-cols-3 gap-6 lg:gap-8 max-w-7xl mx-auto">
-            {[
-              {
-                role: 'Founder & Chairman',
-                name: 'Yassir Humayun (Raja Yasir)',
-                image: '/images/yassir-humayun.jpg',
-                linkedin: 'https://www.linkedin.com/company/myer-systems/',
-              },
-              {
-                role: 'Chief Executive Officer',
-                name: 'Osman Akram',
-                image: '/images/osman-akram.jpg',
-                linkedin: 'https://www.linkedin.com/company/myer-systems/',
-              },
-              {
-                role: 'Chief Technology Officer',
-                name: 'Ali Hamza',
-                image: '/images/ali-hamza.jpg',
-                linkedin: 'https://www.linkedin.com/company/myer-systems/',
-              },
-            ].map((person, i) => (
-              <div 
-                key={i} 
-                className="reveal-up group relative overflow-hidden rounded-[2rem] bg-white border border-[#1A6FA8]/20 hover:border-[#29A8E0]/60 transition-all duration-400 hover:shadow-xl hover:shadow-[#29A8E0]/10 hover:-translate-y-1.5 p-4 flex flex-col justify-between"
-              >
-                <div>
-                  {/* Boxy Style Image Frame */}
-                  <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[1.5rem] bg-[#F0FAFF] border border-[#1A6FA8]/15">
-                    <Image
-                      src={person.image}
-                      alt={person.name}
-                      fill
-                      className="object-cover object-top transition-transform duration-500 ease-out group-hover:scale-105"
-                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 380px"
-                      priority={i === 0}
-                    />
-                    
-                    {/* Subtle Bottom Ambient Gradient */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#101820]/30 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                    
-                    {/* Floating LinkedIn Badge */}
-                    <div className="absolute top-3.5 right-3.5 z-10">
-                      <a 
-                        href={person.linkedin} 
-                        target="_blank" 
-                        rel="noopener noreferrer" 
-                        className="w-9 h-9 rounded-full bg-white/90 backdrop-blur-md border border-white/60 flex items-center justify-center text-ink hover:text-[#1A6FA8] hover:bg-white hover:scale-110 transition-all shadow-md"
-                        aria-label={`${person.name} on LinkedIn`}
-                      >
-                        <Linkedin className="w-4 h-4" />
-                      </a>
-                    </div>
-                  </div>
+          <div className="space-y-10 lg:space-y-12">
+            
+            {/* Leader 1: Yassir */}
+            <div className="reveal-up group flex flex-col md:flex-row items-stretch rounded-[2.5rem] bg-white shadow-[0_8px_30px_rgb(0,0,0,0.06)] hover:shadow-[0_20px_40px_rgba(41,168,224,0.15)] transition-shadow duration-500 overflow-hidden border border-[#1A6FA8]/5">
+              
+              {/* Image Box (Side) */}
+              <div className="w-full md:w-[320px] lg:w-[380px] shrink-0 relative aspect-square md:aspect-auto overflow-hidden bg-[#F0FAFF]">
+                <Image src="/images/yassir-humayun.jpg" alt="Yassir Humayun" fill className="object-cover transition-transform duration-700 group-hover:scale-105" />
+              </div>
 
-                  {/* Leader Info: Designation & Name Only */}
-                  <div className="pt-5 pb-2 px-2">
-                    <span className="block text-[11px] font-bold uppercase tracking-[0.18em] text-[#1A6FA8] font-ui mb-1.5">
-                      {person.role}
-                    </span>
-                    <h3 className="text-xl sm:text-[1.35rem] font-extrabold text-ink font-sans tracking-tight leading-snug">
-                      {person.name}
-                    </h3>
+              {/* Text Box (Skyblue Bg + Dots) */}
+              <div className="flex-1 relative bg-[#29A8E0] p-8 sm:p-10 lg:p-12 overflow-hidden">
+                <div 
+                  className="absolute inset-0 z-0 opacity-20 transition-opacity duration-500 group-hover:opacity-30"
+                  style={{ backgroundImage: 'radial-gradient(#ffffff 2px, transparent 2px)', backgroundSize: '24px 24px' }}
+                />
+                
+                <div className="relative z-10 text-left">
+                  <span className="text-white/80 font-bold text-[11px] tracking-[0.15em] uppercase font-ui block mb-3">Founder & Chairman</span>
+                  <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white font-heading mb-6 tracking-tight">Yassir Humayun <span className="text-white/70 font-medium text-xl lg:text-2xl ml-1">(Raja Yasir)</span></h3>
+                  <div className="space-y-4 text-[15px] sm:text-[1.05rem] font-sans leading-[1.7] max-w-2xl text-white/90">
+                    <p className="text-white/90"><strong className="text-white font-semibold">Based in Lahore, Pakistan. BSc Computer Engineering, University of Florida.</strong></p>
+                    <p className="text-white/90">An experienced entrepreneur and founding board member with a demonstrated history in business innovation, leadership, and strategic planning.</p>
+                    <p className="text-white/90">Yassir founded Myer Systems with the vision to deliver accountable, scalable AI systems for enterprise and commercial markets. He brings expertise in conflict resolution, management, and enterprise strategy.</p>
                   </div>
                 </div>
+              </div>
+            </div>
 
-                <div className="px-2 pt-3 pb-1 border-t border-[#1A6FA8]/15 text-[11px] font-semibold uppercase tracking-wider text-slate-500 font-ui flex items-center justify-between">
-                  <span>Executive Leadership</span>
-                  <span className="text-[#1A6FA8] font-bold">{person.role}</span>
+            {/* Leader 2: Osman */}
+            <div className="reveal-up group flex flex-col md:flex-row-reverse items-stretch rounded-[2.5rem] bg-white shadow-[0_8px_30px_rgb(0,0,0,0.06)] hover:shadow-[0_20px_40px_rgba(41,168,224,0.15)] transition-shadow duration-500 overflow-hidden border border-[#1A6FA8]/5">
+              
+              {/* Image Box (Side) */}
+              <div className="w-full md:w-[320px] lg:w-[380px] shrink-0 relative aspect-square md:aspect-auto overflow-hidden bg-[#F0FAFF]">
+                <Image src="/images/osman-akram.jpg" alt="Osman Akram" fill className="object-cover transition-transform duration-700 group-hover:scale-105" />
+              </div>
+
+              {/* Text Box (Skyblue Bg + Dots) */}
+              <div className="flex-1 relative bg-[#29A8E0] p-8 sm:p-10 lg:p-12 overflow-hidden">
+                <div 
+                  className="absolute inset-0 z-0 opacity-20 transition-opacity duration-500 group-hover:opacity-30"
+                  style={{ backgroundImage: 'radial-gradient(#ffffff 2px, transparent 2px)', backgroundSize: '24px 24px' }}
+                />
+                
+                <div className="relative z-10 text-left">
+                  <span className="text-white/80 font-bold text-[11px] tracking-[0.15em] uppercase font-ui block mb-3">Chief Executive Officer</span>
+                  <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white font-heading mb-6 tracking-tight">Osman Akram</h3>
+                  <div className="space-y-4 text-[15px] sm:text-[1.05rem] font-sans leading-[1.7] max-w-2xl text-white/90">
+                    <p className="text-white/90">Osman leads day-to-day operations, business development, and organisational execution at Myer Systems.</p>
+                    <p className="text-white/90">He is responsible for driving the company's growth strategy, building key partnerships, and delivering on the mission set by the Founder and Chairman.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Leader 3: Ali */}
+            <div className="reveal-up group flex flex-col md:flex-row items-stretch rounded-[2.5rem] bg-white shadow-[0_8px_30px_rgb(0,0,0,0.06)] hover:shadow-[0_20px_40px_rgba(41,168,224,0.15)] transition-shadow duration-500 overflow-hidden border border-[#1A6FA8]/5">
+              
+              {/* Image Box (Side) */}
+              <div className="w-full md:w-[320px] lg:w-[380px] shrink-0 relative aspect-square md:aspect-auto overflow-hidden bg-[#F0FAFF]">
+                <Image src="/images/ali-hamza.jpg" alt="Ali Hamza" fill className="object-cover object-top transition-transform duration-700 group-hover:scale-105" />
+              </div>
+
+              {/* Text Box (Skyblue Bg + Dots) */}
+              <div className="flex-1 relative bg-[#29A8E0] p-8 sm:p-10 lg:p-12 overflow-hidden">
+                <div 
+                  className="absolute inset-0 z-0 opacity-20 transition-opacity duration-500 group-hover:opacity-30"
+                  style={{ backgroundImage: 'radial-gradient(#ffffff 2px, transparent 2px)', backgroundSize: '24px 24px' }}
+                />
+                
+                <div className="relative z-10 text-left">
+                  <span className="text-white/80 font-bold text-[11px] tracking-[0.15em] uppercase font-ui block mb-3">Chief Technology Officer</span>
+                  <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white font-heading mb-6 tracking-tight">Ali Hamza</h3>
+                  <div className="space-y-4 text-[15px] sm:text-[1.05rem] font-sans leading-[1.7] max-w-2xl text-white/90">
+                    <p className="text-white/90">Ali drives the technical architecture and AI development strategy at Myer Systems.</p>
+                    <p className="text-white/90">He oversees engineering, AI systems development, and product innovation — ensuring the company's technology stack remains enterprise-ready, secure, and scalable.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* ─── 7. KEY TEAM MEMBERS (Elegant Roster) ───────────────── */}
+      <section className="py-20 lg:py-24 bg-white">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16 reveal">
+            <div>
+              <div className="flex items-center gap-2 mb-4">
+                <span className="h-1.5 w-1.5 rounded-full bg-[#1A6FA8] animate-pulse" />
+                <span className="text-[11px] font-bold uppercase tracking-[0.18em] text-[#1A6FA8] font-ui">
+                  CORE TEAM
+                </span>
+              </div>
+              <h2 className="text-3xl sm:text-4xl font-bold text-ink font-heading tracking-tight">Key Team Members</h2>
+            </div>
+            <div className="h-px bg-[#1A6FA8]/15 flex-1 ml-0 md:ml-12 mb-2" />
+          </div>
+
+          <div className="reveal-up max-w-5xl mx-auto rounded-[2rem] border border-[#1A6FA8]/10 bg-white shadow-sm flex flex-col md:flex-row overflow-hidden">
+            {[
+              { id: 'tasbhia-akbar', name: 'Tasbhia Akbar', role: 'Business & Operations Lead, Myer Systems' },
+              { id: 'vaneeza-fatima', name: 'Vaneeza Fatima', role: 'Operations Manager, MedSynthea' },
+              { id: 'hasnain-muavia', name: 'Hasnain Muavia', role: 'Senior Software Engineer (AI/ML, DevOps, Agents)' }
+            ].map((member, i) => (
+              <div 
+                key={i} 
+                className={`flex-1 p-8 sm:p-10 flex flex-col items-center text-center group relative overflow-hidden transition-all duration-300 bg-white ${
+                  i !== 0 ? 'border-t-[4px] md:border-t-0 md:border-l-[6px] border-[#8FD6F5]' : ''
+                }`}
+              >
+                {/* Slide Background Animation */}
+                <div className="absolute inset-0 bg-gradient-to-t from-[#E0F4FC] to-transparent translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out z-0" />
+                
+                {/* Square Profile Image */}
+                <div className="w-32 h-32 sm:w-40 sm:h-40 relative z-10 mb-6 rounded-2xl overflow-hidden bg-slate-100 shadow-sm border border-slate-200 group-hover:shadow-md group-hover:-translate-y-1 transition-all duration-500">
+                  <Image 
+                    src={`/images/${member.id}.jpg`} 
+                    alt={member.name} 
+                    fill 
+                    className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                  />
+                  {/* Subtle color overlay on hover */}
+                  <div className="absolute inset-0 bg-[#29A8E0]/10 mix-blend-overlay opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                </div>
+
+                {/* Text Content */}
+                <div className="relative z-10 transition-transform duration-500 group-hover:-translate-y-1">
+                  <h4 className="text-xl sm:text-[1.4rem] font-bold text-ink font-heading mb-2 tracking-tight group-hover:text-[#1A6FA8] transition-colors">
+                    {member.name}
+                  </h4>
+                  <span className="text-[10px] sm:text-[11px] font-bold text-[#29A8E0] font-ui uppercase tracking-[0.15em] leading-[1.6] max-w-[200px] mx-auto block">
+                    {member.role}
+                  </span>
                 </div>
               </div>
             ))}
           </div>
+
         </div>
       </section>
 
-      {/* ─── 5. GLOBAL REACH ──────────────────────────────────── */}
-      <section className="py-16 sm:py-20 lg:py-24 bg-[#F0FAFF] border-b border-[#1A6FA8]/15">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          
-          {/* Eyebrow Pill (Matches Home) */}
-          <div className="reveal mb-8">
-            <div className="inline-flex w-fit items-center gap-2 rounded-full border border-white/10 bg-[#29A8E0] px-4 py-1.5 mb-6 shadow-md shadow-[#29A8E0]/20">
-              <span className="h-1.5 w-1.5 rounded-full bg-white animate-pulse" />
-              <span className="text-[11px] font-bold uppercase tracking-[0.18em] text-white font-ui">
-                DUAL-HUB OPERATIONS · DALLAS &amp; LAHORE
-              </span>
-            </div>
-          </div>
-
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-            <div className="reveal">
-              <h2 className="text-3xl sm:text-4xl lg:text-[2.85rem]/[1.15] font-semibold tracking-tight text-ink font-sans leading-[1.15] mb-6">
-                Built for client operations, delivered through a{' '}
-                global delivery hub.
-              </h2>
-              <p className="text-base sm:text-lg text-slate-600 font-sans leading-relaxed mb-6">
-                Business registration and client-facing operations are based in Sugar Land, TX, while core engineering, RCM processing, and AI development operate from our hub in Lahore, Pakistan.
-              </p>
-              <div className="flex flex-wrap items-center gap-4 text-xs font-bold uppercase tracking-wider text-[#1A6FA8] font-ui">
-                <span className="flex items-center gap-1.5">
-                  <CheckCircle2 className="w-4 h-4 text-[#29A8E0]" /> Sugar Land, TX · US Headquarters
-                </span>
-                <span>•</span>
-                <span className="flex items-center gap-1.5">
-                  <CheckCircle2 className="w-4 h-4 text-[#29A8E0]" /> Lahore · Global Delivery Hub
-                </span>
-              </div>
-            </div>
-
-            <div className="reveal-up space-y-4">
-              {[
-                { 
-                  Icon: MapPin, 
-                  title: 'Sugar Land, TX · US Headquarters', 
-                  subtitle: 'United States · Sugar Land, TX',
-                  desc: 'Executive leadership, strategic advisory, client-facing operations, and business registration.' 
-                },
-                { 
-                  Icon: Globe2, 
-                  title: 'Lahore · Global Delivery Hub', 
-                  subtitle: 'Pakistan · Lahore, Punjab',
-                  desc: 'Core AI engineering, medical billing and coding operations, AI development, and delivery support.', 
-                  offset: true 
-                }
-              ].map(({ Icon, title, subtitle, desc, offset }, i) => (
-                <div key={i} className={`flex items-start gap-6 p-7 sm:p-8 bg-white rounded-3xl border border-[#1A6FA8]/20 shadow-2xs hover:shadow-lg hover:border-[#29A8E0]/50 transition-all duration-300 group ${offset ? 'ml-0 lg:ml-8' : ''}`}>
-                  <div className="w-12 h-12 rounded-2xl bg-[#F0FAFF] border border-[#1A6FA8]/20 flex items-center justify-center shrink-0 group-hover:scale-110 group-hover:border-[#29A8E0] transition-transform duration-300">
-                    <Icon className="w-5 h-5 text-[#1A6FA8] group-hover:text-[#29A8E0]" />
-                  </div>
-                  <div>
-                    <span className="block text-[10px] font-bold uppercase tracking-wider text-[#1A6FA8] font-ui mb-1">{subtitle}</span>
-                    <h4 className="text-xl font-extrabold text-ink font-sans mb-1">{title}</h4>
-                    <p className="text-[14px] text-slate-600 font-sans leading-relaxed">{desc}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ─── 6. VALUES & PROPOSITION — Steady Sticky Rail ───────────── */}
-      <section className="py-20 lg:py-28 bg-white border-b border-[#1A6FA8]/15">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start">
-            {/* Left Column: Rock-solid Steady Sticky Rail */}
-            <div className="lg:col-span-5 lg:sticky lg:top-32 self-start z-10 space-y-5">
-              {/* Eyebrow Pill */}
-              <div className="inline-flex w-fit items-center gap-2 rounded-full border border-white/10 bg-[#29A8E0] px-4 py-1.5 mb-6 shadow-md shadow-[#29A8E0]/20">
-              <span className="h-1.5 w-1.5 rounded-full bg-white animate-pulse" />
-              <span className="text-[11px] font-bold uppercase tracking-[0.18em] text-white font-ui">
-                GUIDING PRINCIPLES · VALUE PROPOSITION
-              </span>
-            </div>
-
-              {/* Heading */}
-              <h2 className="text-3xl sm:text-4xl lg:text-[2.85rem]/[1.15] font-semibold tracking-tight text-ink font-sans leading-[1.15]">
-                The principles that govern{' '}
-                our work.
-              </h2>
-
-              {/* Supporting Subtext */}
-              <p className="text-slate-600 font-sans text-sm sm:text-base leading-relaxed max-w-md">
-                Helping organisations transition from reactive operations to predictable, data-driven performance with greater accountability, visibility, and operational control.
-              </p>
-            </div>
-
-            {/* Right Column: Flowing Value Cards */}
-            <div className="lg:col-span-7 divide-y divide-[#1A6FA8]/15">
-              {[
-                { 
-                  title: 'Structure over promises', 
-                  desc: 'We begin by understanding the operational challenge, identifying workflow inefficiencies, and designing practical systems around measurable business needs.' 
-                },
-                { 
-                  title: 'Accountability & transparent ownership', 
-                  desc: 'We believe technology should be delivered with clear ownership, structured processes, and transparent accountability from planning through execution.' 
-                },
-                { 
-                  title: 'Predictable performance & error reduction', 
-                  desc: 'Reducing errors and manual workload through AI-powered automation, while improving revenue visibility and reducing payment-cycle friction.' 
-                },
-                { 
-                  title: 'The Delivery Model: Human expertise amplified by AI', 
-                  desc: 'Our mission is not to replace humans, but to empower them. We pair trained operational specialists with custom AI agents to give your organization scalable, dependable capacity.' 
-                },
-              ].map((value, i) => (
-                <div key={i} className="reveal-up py-8 sm:py-10 grid grid-cols-[56px_1fr] gap-6 group hover:pl-1 transition-all duration-300">
-                  <span className="text-4xl sm:text-5xl font-sans font-bold text-ink/15 group-hover:text-[#29A8E0] transition-colors duration-300 leading-none pt-1 select-none tabular-nums">
-                    0{i + 1}
-                  </span>
-                  <div>
-                    <h3 className="text-xl font-extrabold text-ink font-sans mb-2.5 group-hover:text-[#1A6FA8] transition-colors duration-300">{value.title}</h3>
-                    <p className="text-[14.5px] sm:text-[15px] text-slate-600 font-sans leading-relaxed">{value.desc}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ─── 7. FINAL CTA & FOOTER ────────────────────────────── */}
+      {/* ─── 8. FINAL CTA & FOOTER ────────────────────────────── */}
       <CtaBanner />
       <Footer />
     </div>

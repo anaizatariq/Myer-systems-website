@@ -39,8 +39,7 @@ export default function HowWeOperatePage() {
           <div 
             className="absolute bottom-5 left-10 h-[450px] w-[450px] rounded-full bg-[#29A8E0]/10 blur-[140px]" 
           />
-        </div>
-
+        
         <div className="mx-auto w-full max-w-7xl px-6 lg:px-8 relative z-10">
           <div className="reveal max-w-3xl">
             {/* Eyebrow Pill */}
@@ -364,5 +363,4 @@ export default function HowWeOperatePage() {
     </div>
   );
 }
-
 

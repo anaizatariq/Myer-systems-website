@@ -130,9 +130,7 @@ export function WhyChooseUs() {
                     <h3 className="text-xl lg:text-[1.35rem] font-medium tracking-tight text-ink group-hover:text-white transition-colors duration-500 mb-1 leading-tight font-sans">
                       {item.title}
                     </h3>
-                    <p className="text-[13px] lg:text-[14px] text-[#1A6FA8] group-hover:text-[#8FD6F5] transition-colors duration-500 italic mb-4 font-quote">
-                      {item.tagline}
-                    </p>
+
                     <p className="text-[14px] lg:text-[15px] font-normal text-ink/80 group-hover:text-white/80 transition-colors duration-500 leading-relaxed max-w-[280px] mx-auto md:mx-0 font-sans">
                       {item.description}
                     </p>

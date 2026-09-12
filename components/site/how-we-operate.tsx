@@ -85,7 +85,7 @@ export function HowWeOperate() {
             AI speed. Human judgment.
           </h2>
           <p className="mt-4 text-base sm:text-lg text-slate-600 font-sans leading-relaxed max-w-2xl font-normal">
-            We don't believe in replacing people with black-box AI. We combine fast automation with experienced human oversight to ensure total accuracy and control.
+            We don&apos;t believe in replacing people with black-box AI. We combine fast automation with experienced human oversight to ensure total accuracy and control.
           </p>
         </div>
 

@@ -1,63 +1,57 @@
 'use client';
 
-
 export function FlagshipPlatform() {
   return (
     <section 
       id="flagship" 
-      className="relative scroll-mt-24 bg-[#F0FAFF] pt-10 pb-14 sm:pt-14 sm:pb-18 py-4 lg:py-6 overflow-hidden"
+      className="relative scroll-mt-24 bg-[#F0FAFF] py-16 sm:py-24 lg:py-28 overflow-hidden"
     >
       {/* ── Ambient Background Depth ── */}
       <div 
-        className="pointer-events-none absolute top-1/4 right-0 h-[450px] w-[450px] rounded-full bg-[#29A8E0]/7 blur-[140px]" 
+        className="pointer-events-none absolute top-1/4 right-0 h-[500px] w-[500px] rounded-full bg-[#29A8E0]/10 blur-[150px]" 
         aria-hidden="true" 
       />
       <div 
-        className="pointer-events-none absolute bottom-10 left-10 h-[450px] w-[450px] rounded-full bg-[#1A6FA8]/6 blur-[130px]" 
+        className="pointer-events-none absolute bottom-10 left-10 h-[500px] w-[500px] rounded-full bg-[#1A6FA8]/10 blur-[150px]" 
         aria-hidden="true" 
       />
 
-      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center w-full max-w-7xl mx-auto mt-6 sm:mt-10">
+      <div className="relative mx-auto max-w-[85rem] px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center w-full mx-auto">
           
-          {/* ════════ LEFT COLUMN: Image Placeholder ════════ */}
-          <div className="order-2 lg:order-1 relative w-full aspect-[4/3] sm:aspect-[16/10] lg:aspect-square rounded-[2rem] bg-white border border-[#29A8E0]/15 shadow-2xl shadow-[#1A6FA8]/5 overflow-hidden flex flex-col items-center justify-center group">
-            {/* Ambient gradients */}
-            <div className="absolute inset-0 bg-gradient-to-tr from-[#E0F4FC]/80 via-white to-white" />
-            <div className="absolute -inset-x-20 -bottom-20 h-40 bg-[#29A8E0]/10 blur-3xl rounded-full" />
-            
-            {/* Placeholder UI */}
-            <div className="relative flex flex-col items-center justify-center space-y-3">
-              <div className="h-12 w-12 rounded-2xl bg-[#29A8E0]/10 flex items-center justify-center text-[#29A8E0]">
-                <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                </svg>
-              </div>
-              <div className="text-slate-400 font-ui font-medium text-xs tracking-widest uppercase flex items-center gap-2">
-                <span className="h-1.5 w-1.5 rounded-full bg-[#29A8E0] animate-pulse" />
-                Image Space Reserved
-              </div>
+          {/* ════════ LEFT COLUMN: Uncropped Natural Image (col-span-6) ════════ */}
+          <div className="order-2 lg:order-1 lg:col-span-6 relative w-full group">
+            <div className="relative rounded-[2rem] overflow-hidden shadow-[0_20px_50px_-12px_rgba(26,111,168,0.25)] border border-[#29A8E0]/20 bg-white p-1.5 sm:p-2">
+              <img 
+                src="/capabilities/workflow-automation.png" 
+                alt="MedSynthea Workflow Automation"
+                className="w-full h-auto rounded-[1.5rem] object-contain group-hover:scale-[1.015] transition-transform duration-700 ease-out"
+              />
+              <div className="absolute inset-0 bg-gradient-to-tr from-[#1A6FA8]/5 to-transparent pointer-events-none rounded-[2rem]" />
             </div>
+            
+            {/* Subtle decorative glow behind image */}
+            <div className="absolute -inset-4 bg-gradient-to-r from-[#29A8E0]/20 to-[#1A6FA8]/20 blur-2xl -z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
           </div>
 
-          {/* ════════ RIGHT COLUMN: Content ════════ */}
-          <div className="order-1 lg:order-2 flex flex-col items-start text-left space-y-5 lg:pr-8">
+          {/* ════════ RIGHT COLUMN: Upscaled Content (col-span-6) ════════ */}
+          <div className="order-1 lg:order-2 lg:col-span-6 flex flex-col items-start text-left space-y-6 lg:pl-10">
             
             {/* Eyebrow Chip */}
-            <div className="flex items-center gap-2">
-  <span className="h-1.5 w-1.5 rounded-full bg-[#1A6FA8] animate-pulse" />
-  <span className="text-[11px] uppercase tracking-[0.18em] text-[#1A6FA8] font-ui font-bold">
-    OUR FLAGSHIP PRODUCT
-  </span>
-</div>
+            <div className="flex items-center gap-2 mb-2">
+              <span className="h-1.5 w-1.5 rounded-full bg-[#1A6FA8] animate-pulse" />
+              <span className="text-[12px] uppercase tracking-[0.2em] text-[#1A6FA8] font-ui font-bold">
+                OUR FLAGSHIP PRODUCT
+              </span>
+            </div>
 
             {/* Display Headline */}
-            <h2 className="text-3xl sm:text-5xl lg:text-[3.5rem]/[1.12] font-bold tracking-tight text-ink font-heading mt-2">
+            <h2 className="text-4xl sm:text-5xl lg:text-[4.5rem] font-bold tracking-tight text-ink font-heading leading-[1.05]">
               MedSynthea
             </h2>
 
-            {/* Subhead */}
-            <p className="text-base sm:text-[1.1rem] leading-relaxed text-slate-600 font-sans font-normal max-w-xl mt-2">
+            {/* Subhead (Using font-ui to prevent serif fallbacks) */}
+            <p className="text-lg sm:text-xl lg:text-[1.25rem] leading-[1.7] text-slate-600 font-ui font-medium max-w-2xl mt-4">
               A healthcare-focused AI platform developed by Myer Systems, designed to synthesise medical data and streamline both clinical and administrative workflows for healthcare providers.
             </p>
           </div>

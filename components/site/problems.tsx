@@ -18,7 +18,7 @@ export function Problems() {
 
         {/* Massive Statement (Problem) */}
         <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.5rem]/[1.15] tracking-tight text-ink text-balance font-sans font-semibold">
-          Most companies waste thousands of hours every year on tasks that don't need a human. <br className="hidden md:block" /> 
+          Most companies waste thousands of hours every year on tasks that don&apos;t need a human. <br className="hidden md:block" /> 
           <span className="text-slate-400 font-medium tracking-normal mt-2 md:mt-0 inline-block">Data entry, document processing, report generation, manual approvals, repetitive workflows.</span>
         </h2>
 

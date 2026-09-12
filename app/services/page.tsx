@@ -58,7 +58,7 @@ export default function ServicesPage() {
               {/* Eyebrow Badge */}
               <div className="flex items-center gap-3">
                 <span className="h-2 w-2 rounded-full bg-[#8FD6F5] animate-pulse shadow-[0_0_8px_rgba(143,214,245,0.8)]" />
-                <span className="text-xs font-bold uppercase tracking-[0.2em] text-white font-ui drop-shadow-md">
+                <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#1A6FA8] font-ui drop-shadow-md">
                   CAPABILITIES &amp; SERVICES
                 </span>
               </div>
@@ -179,7 +179,7 @@ export default function ServicesPage() {
               <div className="relative z-10">
                 <div>
                   <h4 className="text-xl sm:text-[22px] font-bold text-ink font-heading mb-3 tracking-tight">Data-Driven Optimization</h4>
-                  <p className="text-[17px] text-slate-800 leading-[1.7] font-sans">We don't just automate blindly. We map your entire operational lifecycle, identifying bottlenecks and redundant handoffs, to ensure every AI deployment directly improves your bottom line.</p>
+                  <p className="text-[17px] text-slate-800 leading-[1.7] font-sans">We don&apos;t just automate blindly. We map your entire operational lifecycle, identifying bottlenecks and redundant handoffs, to ensure every AI deployment directly improves your bottom line.</p>
                 </div>
               </div>
             </div>

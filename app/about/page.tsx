@@ -98,7 +98,7 @@ export default function AboutPage() {
             <div className="lg:col-span-7 text-base sm:text-[1.15rem] leading-[1.85] text-slate-700 font-sans font-normal reveal-up lg:pt-8">
               <p className="mb-6">
                 <span className="font-bold text-ink text-xl mb-1 block">Myer Systems was founded in 2023 with a single conviction:</span>
-                businesses shouldn't waste human talent on work that machines can do better, faster, and more reliably.
+                businesses shouldn&apos;t waste human talent on work that machines can do better, faster, and more reliably.
               </p>
               <p className="mb-6">
                 We watched organisations hire more people to handle more volume, such as more data entry, more document processing, and more manual approvals, when the real solution was smarter systems, not bigger headcounts. Headquartered in Dallas, Texas with a dedicated delivery hub in Lahore, Pakistan, Myer Systems designs, builds, and deploys enterprise AI systems that automate manual work at scale.
@@ -108,7 +108,7 @@ export default function AboutPage() {
               </p>
               <div className="border-l-[3px] border-[#29A8E0] pl-6 py-4 bg-gradient-to-r from-[#29A8E0]/10 to-transparent rounded-r-2xl">
                 <p className="text-lg sm:text-[1.15rem] text-ink font-semibold leading-relaxed font-sans">
-                  We're not a consultancy that hands you a slide deck and walks away. We're engineers, AI specialists, and operations experts who build working systems, deploy them inside your workflows, and stand behind the results.
+                  We&apos;re not a consultancy that hands you a slide deck and walks away. We&apos;re engineers, AI specialists, and operations experts who build working systems, deploy them inside your workflows, and stand behind the results.
                 </p>
               </div>
             </div>
@@ -222,7 +222,7 @@ export default function AboutPage() {
               </div>
               <h3 className="text-xl font-bold text-white font-heading mb-3 leading-snug">Accountability First</h3>
               <p className="text-[14.5px] text-white/90 font-sans leading-relaxed">
-                Every AI system we build is auditable, explainable, and transparent. We don't ship black boxes.
+                Every AI system we build is auditable, explainable, and transparent. We don&apos;t ship black boxes.
               </p>
             </div>
 
@@ -296,19 +296,19 @@ export default function AboutPage() {
               </div>
 
               {/* Text Box (Skyblue Bg + Dots) */}
-              <div className="flex-1 relative bg-[#29A8E0] p-8 sm:p-10 lg:p-12 overflow-hidden">
+              <div className="flex-1 relative bg-[#8FD6F5] px-6 py-5 sm:px-8 sm:py-6 lg:px-10 lg:py-8 overflow-hidden">
                 <div 
-                  className="absolute inset-0 z-0 opacity-20 transition-opacity duration-500 group-hover:opacity-30"
+                  className="absolute inset-0 z-0 opacity-5 transition-opacity duration-500 group-hover:opacity-10"
                   style={{ backgroundImage: 'radial-gradient(#ffffff 2px, transparent 2px)', backgroundSize: '24px 24px' }}
                 />
                 
                 <div className="relative z-10 text-left">
-                  <span className="text-white/80 font-bold text-[11px] tracking-[0.15em] uppercase font-ui block mb-3">Founder & Chairman</span>
-                  <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white font-heading mb-6 tracking-tight">Yassir Humayun <span className="text-white/70 font-medium text-xl lg:text-2xl ml-1">(Raja Yasir)</span></h3>
-                  <div className="space-y-4 text-[15px] sm:text-[1.05rem] font-sans leading-[1.7] max-w-2xl text-white/90">
-                    <p className="text-white/90"><strong className="text-white font-semibold">Based in Lahore, Pakistan. BSc Computer Engineering, University of Florida.</strong></p>
-                    <p className="text-white/90">An experienced entrepreneur and founding board member with a demonstrated history in business innovation, leadership, and strategic planning.</p>
-                    <p className="text-white/90">Yassir founded Myer Systems with the vision to deliver accountable, scalable AI systems for enterprise and commercial markets. He brings expertise in conflict resolution, management, and enterprise strategy.</p>
+                  <span className="text-slate-700 font-bold text-[11px] tracking-[0.15em] uppercase font-ui block mb-3">Founder & Chairman</span>
+                  <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-ink font-heading mb-6 tracking-tight">Yassir Humayun <span className="text-slate-700 font-medium text-xl lg:text-2xl ml-1">(Raja Yasir)</span></h3>
+                  <div className="space-y-4 text-[15px] sm:text-[1.05rem] font-sans leading-[1.7] max-w-2xl text-slate-800">
+                    <p className="text-slate-800"><strong className="text-ink font-semibold">Based in Lahore, Pakistan. BSc Computer Engineering, University of Florida.</strong></p>
+                    <p className="text-slate-800">An experienced entrepreneur and founding board member with a demonstrated history in business innovation, leadership, and strategic planning.</p>
+                    <p className="text-slate-800">Yassir founded Myer Systems with the vision to deliver accountable, scalable AI systems for enterprise and commercial markets. He brings expertise in conflict resolution, management, and enterprise strategy.</p>
                   </div>
                 </div>
               </div>
@@ -323,18 +323,18 @@ export default function AboutPage() {
               </div>
 
               {/* Text Box (Skyblue Bg + Dots) */}
-              <div className="flex-1 relative bg-[#29A8E0] p-8 sm:p-10 lg:p-12 overflow-hidden">
+              <div className="flex-1 relative bg-[#8FD6F5] px-6 py-5 sm:px-8 sm:py-6 lg:px-10 lg:py-8 overflow-hidden">
                 <div 
-                  className="absolute inset-0 z-0 opacity-20 transition-opacity duration-500 group-hover:opacity-30"
+                  className="absolute inset-0 z-0 opacity-5 transition-opacity duration-500 group-hover:opacity-10"
                   style={{ backgroundImage: 'radial-gradient(#ffffff 2px, transparent 2px)', backgroundSize: '24px 24px' }}
                 />
                 
                 <div className="relative z-10 text-left">
-                  <span className="text-white/80 font-bold text-[11px] tracking-[0.15em] uppercase font-ui block mb-3">Chief Executive Officer</span>
-                  <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white font-heading mb-6 tracking-tight">Osman Akram</h3>
-                  <div className="space-y-4 text-[15px] sm:text-[1.05rem] font-sans leading-[1.7] max-w-2xl text-white/90">
-                    <p className="text-white/90">Osman leads day-to-day operations, business development, and organisational execution at Myer Systems.</p>
-                    <p className="text-white/90">He is responsible for driving the company's growth strategy, building key partnerships, and delivering on the mission set by the Founder and Chairman.</p>
+                  <span className="text-slate-700 font-bold text-[11px] tracking-[0.15em] uppercase font-ui block mb-3">Chief Executive Officer</span>
+                  <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-ink font-heading mb-6 tracking-tight">Osman Akram</h3>
+                  <div className="space-y-4 text-[15px] sm:text-[1.05rem] font-sans leading-[1.7] max-w-2xl text-slate-800">
+                    <p className="text-slate-800">Osman leads day-to-day operations, business development, and organisational execution at Myer Systems.</p>
+                    <p className="text-slate-800">He is responsible for driving the company&apos;s growth strategy, building key partnerships, and delivering on the mission set by the Founder and Chairman.</p>
                   </div>
                 </div>
               </div>
@@ -349,18 +349,18 @@ export default function AboutPage() {
               </div>
 
               {/* Text Box (Skyblue Bg + Dots) */}
-              <div className="flex-1 relative bg-[#29A8E0] p-8 sm:p-10 lg:p-12 overflow-hidden">
+              <div className="flex-1 relative bg-[#8FD6F5] px-6 py-5 sm:px-8 sm:py-6 lg:px-10 lg:py-8 overflow-hidden">
                 <div 
-                  className="absolute inset-0 z-0 opacity-20 transition-opacity duration-500 group-hover:opacity-30"
+                  className="absolute inset-0 z-0 opacity-5 transition-opacity duration-500 group-hover:opacity-10"
                   style={{ backgroundImage: 'radial-gradient(#ffffff 2px, transparent 2px)', backgroundSize: '24px 24px' }}
                 />
                 
                 <div className="relative z-10 text-left">
-                  <span className="text-white/80 font-bold text-[11px] tracking-[0.15em] uppercase font-ui block mb-3">Chief Technology Officer</span>
-                  <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white font-heading mb-6 tracking-tight">Ali Hamza</h3>
-                  <div className="space-y-4 text-[15px] sm:text-[1.05rem] font-sans leading-[1.7] max-w-2xl text-white/90">
-                    <p className="text-white/90">Ali drives the technical architecture and AI development strategy at Myer Systems.</p>
-                    <p className="text-white/90">He oversees engineering, AI systems development, and product innovation — ensuring the company's technology stack remains enterprise-ready, secure, and scalable.</p>
+                  <span className="text-slate-700 font-bold text-[11px] tracking-[0.15em] uppercase font-ui block mb-3">Chief Technology Officer</span>
+                  <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-ink font-heading mb-6 tracking-tight">Ali Hamza</h3>
+                  <div className="space-y-4 text-[15px] sm:text-[1.05rem] font-sans leading-[1.7] max-w-2xl text-slate-800">
+                    <p className="text-slate-800">Ali drives the technical architecture and AI development strategy at Myer Systems.</p>
+                    <p className="text-slate-800">He oversees engineering, AI systems development, and product innovation — ensuring the company&apos;s technology stack remains enterprise-ready, secure, and scalable.</p>
                   </div>
                 </div>
               </div>

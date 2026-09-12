@@ -38,12 +38,12 @@ export function CtaBanner() {
 
             {/* Headline */}
             <h2 className="text-3xl sm:text-5xl lg:text-[3.5rem]/[1.1] tracking-tight text-white font-sans font-semibold">
-              Ready to Automate What's Holding You Back?
+              Ready to Automate What&apos;s Holding You Back?
             </h2>
 
             {/* Subhead */}
             <p className="text-base sm:text-lg leading-relaxed text-white/90 font-sans max-w-2xl mx-auto font-normal">
-              Book a free discovery call. We'll walk through your operations and show you exactly where AI automation can make an impact.
+              Book a free discovery call. We&apos;ll walk through your operations and show you exactly where AI automation can make an impact.
             </p>
 
             {/* Dual CTAs */}

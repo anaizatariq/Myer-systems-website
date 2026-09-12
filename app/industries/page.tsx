@@ -355,3 +355,5 @@ export default function IndustriesPage() {
     </div>
   );
 }
+
+

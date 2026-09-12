@@ -17,47 +17,22 @@ export default function HowWeOperatePage() {
       <Navbar />
       
       {/* 1. HERO SECTION (#060D14 Midnight with Architectural Geometry) */}
-      <section className="relative w-full min-h-[540px] lg:min-h-[580px] bg-[#060D14] overflow-hidden flex items-center pt-32 pb-20 lg:pt-36 lg:pb-24 border-b border-[#1A6FA8]/20">
+      <section className="relative w-full pt-24 pb-16 lg:pt-32 lg:pb-20 overflow-hidden bg-[#060D14]">
         
-        {/* Background Decorative Mesh & Geometry */}
-        <div className="absolute inset-0 z-0 pointer-events-none" aria-hidden="true">
-          {/* Top Left Dotted Mesh */}
-          <div 
-            className="absolute -top-10 -left-10 w-[500px] h-[500px] opacity-20"
-            style={{
-              backgroundImage: 'radial-gradient(circle, #29A8E0 1.5px, transparent 1.5px)',
-              backgroundSize: '16px 16px',
-              maskImage: 'linear-gradient(135deg, black 10%, transparent 70%)',
-              WebkitMaskImage: 'linear-gradient(135deg, black 10%, transparent 70%)'
-            }}
-          />
+        {/* Background Image & Overlays */}
+        <div
+          className="absolute inset-0 z-0 bg-[url('/how-it-works-hero-bg.png')] bg-cover bg-center bg-no-repeat"
+          aria-hidden="true"
+        />
+        <div className="absolute inset-0 z-0 bg-[#060D14]/30" aria-hidden="true" />
+        <div className="absolute inset-0 z-0 bg-gradient-to-r from-[#060D14] via-[#060D14]/80 to-transparent" aria-hidden="true" />
+        <div className="absolute inset-0 z-0 bg-gradient-to-t from-[#060D14] via-transparent to-[#060D14]/40" aria-hidden="true" />
 
-          {/* Bottom Right Dotted Mesh */}
-          <div 
-            className="absolute -bottom-10 right-20 w-[600px] h-[400px] opacity-[0.12]"
-            style={{
-              backgroundImage: 'radial-gradient(circle, #ffffff 2px, transparent 2px)',
-              backgroundSize: '20px 20px',
-              maskImage: 'linear-gradient(to top left, black, transparent 80%)',
-              WebkitMaskImage: 'linear-gradient(to top left, black, transparent 80%)'
-            }}
-          />
+        {/* Precision Outline Circles (Optional tech accents) */}
+        <div className="absolute top-1/2 right-[10%] w-24 h-24 rounded-full border border-[#29A8E0]/10 -translate-y-1/2" />
+        <div className="absolute top-[35%] right-[6%] w-16 h-16 rounded-full border border-white/5" />
 
-          {/* Diagonal Architectural Beams */}
-          <div className="absolute -bottom-32 -right-10 w-[600px] h-[600px] opacity-15 rotate-[-35deg]">
-             <div className="absolute bottom-10 right-0 w-full h-1 bg-gradient-to-r from-transparent via-[#29A8E0] to-white" />
-             <div className="absolute bottom-20 right-0 w-[90%] h-1 bg-white" />
-             <div className="absolute bottom-32 right-0 w-[80%] h-2 bg-[#29A8E0]" />
-             <div className="absolute bottom-44 right-0 w-[70%] h-1 bg-white/70" />
-             <div className="absolute bottom-56 right-0 w-[50%] h-0.5 bg-[#29A8E0]/50" />
-          </div>
-
-          {/* Precision Outline Circles */}
-          <div className="absolute top-1/2 right-[10%] w-24 h-24 rounded-full border border-[#29A8E0]/20 -translate-y-1/2" />
-          <div className="absolute top-[35%] right-[6%] w-16 h-16 rounded-full border border-white/10" />
-          <div className="absolute bottom-16 left-[12%] w-14 h-14 rounded-full border border-[#29A8E0]/15" />
-
-          {/* Ambient Deep Glows */}
+        {/* Ambient Deep Glows */}
           <div 
             className="absolute top-10 right-1/4 h-[500px] w-[500px] rounded-full bg-[#1A6FA8]/15 blur-[160px]" 
           />
@@ -389,4 +364,5 @@ export default function HowWeOperatePage() {
     </div>
   );
 }
+
 

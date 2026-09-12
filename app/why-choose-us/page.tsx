@@ -16,34 +16,43 @@ export default function WhyChooseUsPage() {
       <Navbar />
       
       {/* 1. HERO */}
-      <main className="pt-28 pb-12 lg:pt-36 lg:pb-20 overflow-hidden relative">
-        <div className="pointer-events-none absolute inset-0 bg-grid opacity-25" aria-hidden="true" />
+      <main className="relative w-full pt-24 pb-16 lg:pt-32 lg:pb-20 overflow-hidden bg-[#060D14]">
+        
+        {/* Background Image & Overlays */}
+        <div
+          className="absolute inset-0 z-0 bg-[url('/industries-hero-dark.jpg')] bg-cover bg-center bg-no-repeat"
+          aria-hidden="true"
+        />
+        <div className="absolute inset-0 z-0 bg-[#060D14]/30" aria-hidden="true" />
+        <div className="absolute inset-0 z-0 bg-gradient-to-r from-[#060D14] via-[#060D14]/80 to-transparent" aria-hidden="true" />
+        <div className="absolute inset-0 z-0 bg-gradient-to-t from-[#060D14] via-transparent to-[#060D14]/40" aria-hidden="true" />
+
         <div 
-          className="pointer-events-none absolute -top-20 right-1/4 h-[500px] w-[500px] rounded-full bg-[#29A8E0]/10 blur-[140px]" 
+          className="pointer-events-none absolute -top-20 right-1/4 h-[500px] w-[500px] rounded-full bg-[#29A8E0]/15 blur-[140px]" 
           aria-hidden="true" 
         />
         <div 
-          className="pointer-events-none absolute bottom-0 left-10 h-[400px] w-[400px] rounded-full bg-[#1A6FA8]/8 blur-[120px]" 
+          className="pointer-events-none absolute bottom-0 left-10 h-[400px] w-[400px] rounded-full bg-[#1A6FA8]/10 blur-[120px]" 
           aria-hidden="true" 
         />
 
         <div className="mx-auto max-w-7xl px-6 lg:px-8 relative z-10">
           <div className="grid lg:grid-cols-12 gap-12 lg:gap-8 items-end">
             <div className="reveal lg:col-span-7">
-              <div className="inline-flex items-center gap-2 rounded-full border border-[#1A6FA8]/20 bg-white/90 px-3.5 py-1.5 mb-6 shadow-2xs backdrop-blur-md">
-                 <span className="h-1.5 w-1.5 rounded-full bg-[#29A8E0] animate-pulse" />
+              <div className="flex items-center gap-2 mb-6">
+                 <span className="h-1.5 w-1.5 rounded-full bg-[#1A6FA8] animate-pulse" />
                  <span className="text-[11px] font-bold uppercase tracking-[0.18em] text-[#1A6FA8] font-ui">
                    WHY CHOOSE US · STRATEGIC DIFFERENTIATORS
                  </span>
               </div>
-              <h1 className="text-4xl sm:text-5xl lg:text-[4.25rem] font-bold tracking-tight text-ink font-heading leading-[1.08]">
+              <h1 className="text-4xl sm:text-5xl lg:text-[4.25rem] font-bold tracking-tight text-white font-heading leading-[1.08] mb-6">
                 Control is never optional. <br/>
                 That&apos;s the actual difference.
               </h1>
             </div>
             <div className="reveal-up lg:col-span-5 lg:pb-4">
-              <div className="pl-6 border-l-[3px] border-[#1A6FA8]/25">
-                <p className="text-base sm:text-lg leading-relaxed text-slate-600 font-sans">
+              <div className="pl-6 border-l-[3px] border-[#29A8E0]/30">
+                <p className="text-base sm:text-lg leading-relaxed text-[#F0FAFF] font-sans drop-shadow-md">
                   We focus on building AI and operational systems around accountability, visibility, and control, so organisations can adopt technology with greater confidence.
                 </p>
                 <div className="mt-8 flex flex-wrap gap-4">
@@ -56,9 +65,9 @@ export default function WhyChooseUsPage() {
                   </Link>
                   <Link 
                     href="/how-we-operate" 
-                    className="inline-flex items-center justify-center gap-2 rounded-full border border-[#1A6FA8]/25 bg-white/90 px-6 py-3.5 text-sm font-semibold text-ink shadow-2xs backdrop-blur-md transition-all duration-200 hover:bg-white hover:border-[#29A8E0]/60 hover:shadow-md hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.99] font-ui cursor-pointer"
+                    className="inline-flex items-center justify-center gap-2 rounded-full border border-white/20 bg-white/5 px-6 py-3.5 text-sm font-semibold text-white shadow-2xs backdrop-blur-md transition-all duration-200 hover:bg-white/10 hover:border-white/30 hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.99] font-ui cursor-pointer"
                   >
-                    See How We Operate
+                    Our Approach
                   </Link>
                 </div>
               </div>
@@ -319,4 +328,6 @@ export default function WhyChooseUsPage() {
     </div>
   );
 }
+
+
 

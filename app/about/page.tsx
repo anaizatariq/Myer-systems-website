@@ -292,7 +292,7 @@ export default function AboutPage() {
               
               {/* Image Box (Side) */}
               <div className="w-full md:w-[320px] lg:w-[380px] shrink-0 relative aspect-square md:aspect-auto overflow-hidden bg-[#F0FAFF]">
-                <Image src="/images/yassir-humayun.jpg" alt="Yassir Humayun" fill className="object-cover transition-transform duration-700 group-hover:scale-105" />
+                <Image src="/images/yassir-humayun.svg" alt="Yassir Humayun" fill className="object-cover transition-transform duration-700 group-hover:scale-105" />
               </div>
 
               {/* Text Box (Skyblue Bg + Dots) */}
@@ -319,7 +319,7 @@ export default function AboutPage() {
               
               {/* Image Box (Side) */}
               <div className="w-full md:w-[320px] lg:w-[380px] shrink-0 relative aspect-square md:aspect-auto overflow-hidden bg-[#F0FAFF]">
-                <Image src="/images/osman-akram.jpg" alt="Osman Akram" fill className="object-cover transition-transform duration-700 group-hover:scale-105" />
+                <Image src="/images/osman-akram.svg" alt="Osman Akram" fill className="object-cover transition-transform duration-700 group-hover:scale-105" />
               </div>
 
               {/* Text Box (Skyblue Bg + Dots) */}
@@ -345,7 +345,7 @@ export default function AboutPage() {
               
               {/* Image Box (Side) */}
               <div className="w-full md:w-[320px] lg:w-[380px] shrink-0 relative aspect-square md:aspect-auto overflow-hidden bg-[#F0FAFF]">
-                <Image src="/images/ali-hamza.jpg" alt="Ali Hamza" fill className="object-cover object-top transition-transform duration-700 group-hover:scale-105" />
+                <Image src="/images/ali-hamza.svg" alt="Ali Hamza" fill className="object-cover object-top transition-transform duration-700 group-hover:scale-105" />
               </div>
 
               {/* Text Box (Skyblue Bg + Dots) */}
@@ -405,7 +405,7 @@ export default function AboutPage() {
                 {/* Square Profile Image */}
                 <div className="w-32 h-32 sm:w-40 sm:h-40 relative z-10 mb-6 rounded-2xl overflow-hidden bg-slate-100 shadow-sm border border-slate-200 group-hover:shadow-md group-hover:-translate-y-1 transition-all duration-500">
                   <Image 
-                    src={`/images/${member.id}.jpg`} 
+                    src={`/images/${member.id}.svg`} 
                     alt={member.name} 
                     fill 
                     className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
@@ -436,3 +436,4 @@ export default function AboutPage() {
     </div>
   );
 }
+

@@ -59,15 +59,20 @@ export default function TechnologyPage() {
       {/* ══════════════════════════════════════════════════════════════════
           1. HERO SECTION (Tech Dark Premium)
       ══════════════════════════════════════════════════════════════════ */}
-      <section className="relative w-full pt-32 pb-20 lg:pt-40 lg:pb-32 overflow-hidden bg-[#060D14]">
+      <section className="relative w-full pt-24 pb-16 lg:pt-32 lg:pb-20 overflow-hidden bg-[#060D14]">
         
-        {/* Background Gradients & Glows */}
-        <div className="absolute inset-0 z-0 bg-[url('/grid-dark.svg')] opacity-20" aria-hidden="true" />
-        <div className="absolute inset-0 z-0 bg-gradient-to-b from-transparent via-[#060D14]/80 to-[#060D14]" aria-hidden="true" />
-        
+        {/* Background Image & Overlays */}
+        <div
+          className="absolute inset-0 z-0 bg-[url('/tech-hero-bg.jpg')] bg-cover bg-center bg-no-repeat"
+          aria-hidden="true"
+        />
+        <div className="absolute inset-0 z-0 bg-[#060D14]/30" aria-hidden="true" />
+        <div className="absolute inset-0 z-0 bg-gradient-to-r from-[#060D14] via-[#060D14]/80 to-transparent" aria-hidden="true" />
+        <div className="absolute inset-0 z-0 bg-gradient-to-t from-[#060D14] via-transparent to-[#060D14]/40" aria-hidden="true" />
+
         {/* Tech Ambient Glows */}
         <div
-          className="pointer-events-none absolute top-1/4 left-1/4 h-[400px] w-[400px] rounded-full bg-[#1A6FA8]/20 blur-[130px]"
+          className="pointer-events-none absolute -top-10 left-10 h-[400px] w-[400px] rounded-full bg-[#1A6FA8]/20 blur-[130px]"
           aria-hidden="true"
         />
         <div
@@ -188,3 +193,5 @@ export default function TechnologyPage() {
     </div>
   );
 }
+
+

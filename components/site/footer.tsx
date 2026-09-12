@@ -46,7 +46,7 @@ export function Footer() {
           <div className="max-w-sm space-y-5">
             <Link href="/" className="flex items-center gap-3" aria-label="Myer Systems home">
               <Image
-                src="/myers-mark.png"
+                src="/myers-mark.webp"
                 alt="Myer Systems"
                 width={40}
                 height={40}

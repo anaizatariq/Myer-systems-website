@@ -45,17 +45,17 @@ export default function TermsPage() {
         
         <div className="mx-auto max-w-4xl px-6 lg:px-8 relative z-10 w-full text-left">
           <div className="reveal-up flex flex-col items-start">
-            <div className="flex items-center gap-2 mb-6">
-              <span className="h-1.5 w-1.5 rounded-full bg-[#8FD6F5] animate-pulse shadow-[0_0_10px_#8FD6F5]" />
-              <span className="text-[11px] uppercase tracking-[0.18em] text-[#8FD6F5] font-ui font-bold drop-shadow-md">
+            <div className="flex items-center gap-2">
+              <span className="h-1.5 w-1.5 rounded-full bg-[#8FD6F5] animate-pulse" />
+              <span className="text-[11px] uppercase tracking-[0.18em] text-[#8FD6F5] font-ui font-bold">
                 LEGAL POLICIES
               </span>
             </div>
             
-            <h1 className="text-4xl lg:text-5xl font-bold font-heading text-white tracking-tight mb-6 drop-shadow-lg">
+            <h1 className="mt-4 sm:mt-5 text-[2.2rem]/[1.15] sm:text-5xl lg:text-[3.5rem]/[1.12] xl:text-[3.9rem]/[1.12] font-bold tracking-tight text-white font-heading drop-shadow-[0_2px_14px_rgba(0,0,0,0.95)]">
               Terms of Service
             </h1>
-            <p className="text-lg text-slate-300 font-sans drop-shadow-md">
+            <p className="mt-3.5 sm:mt-4 max-w-xl text-base sm:text-[17px] leading-relaxed text-slate-200 drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)] font-sans font-normal">
               Last Updated: September 13, 2026
             </p>
           </div>

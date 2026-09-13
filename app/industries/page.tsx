@@ -52,21 +52,21 @@ export default function IndustriesPage() {
             <div className="reveal lg:col-span-8 xl:col-span-8 space-y-6 lg:space-y-8">
 
               {/* Eyebrow Badge */}
-              <div className="flex items-center gap-3">
-                <span className="h-2 w-2 rounded-full bg-[#8FD6F5] animate-pulse shadow-[0_0_8px_rgba(143,214,245,0.8)]" />
-                <span className="text-xs font-bold tracking-[0.2em] uppercase text-[#8FD6F5] font-ui">
+              <div className="flex items-center gap-2">
+                <span className="h-1.5 w-1.5 rounded-full bg-[#8FD6F5] animate-pulse" />
+                <span className="text-[11px] uppercase tracking-[0.18em] text-[#8FD6F5] font-ui font-bold">
                   MARKETS &amp; FOCUS
                 </span>
               </div>
 
               {/* Headline */}
-              <h1 className="text-5xl sm:text-6xl lg:text-[5rem] leading-[1.05] font-bold tracking-tight text-white font-heading">
+              <h1 className="mt-4 sm:mt-5 text-[2.2rem]/[1.15] sm:text-5xl lg:text-[3.5rem]/[1.12] xl:text-[3.9rem]/[1.12] font-bold tracking-tight text-white font-heading drop-shadow-[0_2px_14px_rgba(0,0,0,0.95)]">
                 Built around <br />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#8FD6F5] to-[#29A8E0]">real workflows.</span>
               </h1>
               
               {/* Description */}
-              <p className="text-lg sm:text-xl leading-[1.8] text-white/80 font-sans max-w-2xl">
+              <p className="mt-3.5 sm:mt-4 max-w-xl text-base sm:text-[17px] leading-relaxed text-slate-200 drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)] font-sans font-normal">
                 Our AI systems and automation solutions are engineered specifically for the compliance requirements, bottlenecks, and operational realities of your industry.
               </p>
 

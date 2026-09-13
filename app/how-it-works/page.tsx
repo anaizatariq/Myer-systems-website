@@ -82,20 +82,20 @@ export default function HowItWorksPage() {
             <div className="reveal lg:col-span-8 xl:col-span-8 space-y-6 lg:space-y-8">
               
               {/* Eyebrow */}
-              <div className="flex items-center gap-3">
-                <span className="h-2 w-2 rounded-full bg-[#8FD6F5] animate-pulse shadow-[0_0_8px_rgba(143,214,245,0.8)]" />
-                <span className="text-xs font-bold uppercase tracking-[0.2em] text-white font-ui drop-shadow-md">
+              <div className="flex items-center gap-2">
+                <span className="h-1.5 w-1.5 rounded-full bg-[#8FD6F5] animate-pulse" />
+                <span className="text-[11px] uppercase tracking-[0.18em] text-[#8FD6F5] font-ui font-bold">
                   PROCESS &amp; METHODOLOGY
                 </span>
               </div>
 
               {/* H1 */}
-              <h1 className="text-4xl sm:text-5xl lg:text-[3.5rem] xl:text-[4rem] leading-[1.1] font-bold tracking-tight text-white font-heading pt-2 drop-shadow-[0_4px_24px_rgba(0,0,0,0.6)]">
+              <h1 className="mt-4 sm:mt-5 text-[2.2rem]/[1.15] sm:text-5xl lg:text-[3.5rem]/[1.12] xl:text-[3.9rem]/[1.12] font-bold tracking-tight text-white font-heading drop-shadow-[0_2px_14px_rgba(0,0,0,0.95)]">
                 How We Work
               </h1>
 
               {/* Subtext */}
-              <p className="text-lg sm:text-xl lg:text-[22px] leading-relaxed text-[#F0FAFF] font-sans max-w-3xl drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)]">
+              <p className="mt-3.5 sm:mt-4 max-w-xl text-base sm:text-[17px] leading-relaxed text-slate-200 drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)] font-sans font-normal">
                 We follow a structured, transparent process to take you from manual operations to intelligent automation. No guesswork, no black boxes — just clear steps with defined deliverables at every stage.
               </p>
 

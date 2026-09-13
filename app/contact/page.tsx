@@ -67,18 +67,18 @@ export default function ContactPage() {
             {/* Left Column: Heading & CTAs */}
             <div className="reveal lg:col-span-7 space-y-6">
               
-              <div className="inline-flex items-center gap-2 rounded-full border border-[#29A8E0]/25 bg-[#29A8E0]/10 px-3.5 py-1.5 shadow-2xs backdrop-blur-sm">
-                <span className="h-1.5 w-1.5 rounded-full bg-[#29A8E0] animate-pulse" />
-                <span className="text-[11px] font-bold uppercase tracking-[0.18em] text-[#8FD6F5] font-ui">
+              <div className="flex items-center gap-2">
+                <span className="h-1.5 w-1.5 rounded-full bg-[#8FD6F5] animate-pulse" />
+                <span className="text-[11px] uppercase tracking-[0.18em] text-[#8FD6F5] font-ui font-bold">
                   NO SALES PRESSURE
                 </span>
               </div>
 
-              <h1 className="text-4xl font-semibold tracking-tight text-white sm:text-5xl lg:text-[4rem] leading-[1.1] font-heading">
+              <h1 className="mt-4 sm:mt-5 text-[2.2rem]/[1.15] sm:text-5xl lg:text-[3.5rem]/[1.12] xl:text-[3.9rem]/[1.12] font-bold tracking-tight text-white font-heading drop-shadow-[0_2px_14px_rgba(0,0,0,0.95)]">
                 Let&apos;s Talk
               </h1>
 
-              <p className="mt-4 text-lg sm:text-[20px] leading-relaxed text-[#F0FAFF] font-light max-w-xl font-sans drop-shadow-md">
+              <p className="mt-3.5 sm:mt-4 max-w-xl text-base sm:text-[17px] leading-relaxed text-slate-200 drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)] font-sans font-normal">
                 Whether you&apos;re ready to automate or just exploring what&apos;s possible, we&apos;re here to help. Just an honest conversation about what AI can do for your operations.
               </p>
 

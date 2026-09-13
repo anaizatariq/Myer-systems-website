@@ -81,7 +81,7 @@ export function Hero() {
             <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 sm:gap-4">
               <Link
                 href="/contact"
-                className="group inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-full bg-brand px-7 py-3.5 text-[14px] font-bold text-white shadow-[0_0_24px_rgba(41,168,224,0.45)] transition-all duration-200 hover:bg-[#209FD6] hover:shadow-[0_0_35px_rgba(41,168,224,0.65)] hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.99] font-ui"
+                className="group inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-full bg-brand px-7 py-3.5 text-[14px] font-bold text-ink shadow-[0_0_24px_rgba(41,168,224,0.45)] transition-all duration-200 hover:bg-[#209FD6] hover:shadow-[0_0_35px_rgba(41,168,224,0.65)] hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.99] font-ui"
               >
                 <span>Book a Discovery Call</span>
                 <span className="text-xs transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5">

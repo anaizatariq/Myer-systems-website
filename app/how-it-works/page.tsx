@@ -54,10 +54,16 @@ export default function HowItWorksPage() {
       {/* ══════════════════════════════════════════════════════════════════
           1. HERO SECTION (Dark Premium)
       ══════════════════════════════════════════════════════════════════ */}
-      <section className="relative w-full pt-32 pb-24 lg:pt-40 lg:pb-36 overflow-hidden bg-[#060D14]">
+      <section className="relative w-full min-h-[70vh] lg:min-h-[100vh] max-h-[850px] flex items-center pt-28 pb-16 lg:pt-32 lg:pb-20 overflow-hidden bg-[#060D14]">
         
-        {/* Background Gradients & Glows */}
-        <div className="absolute inset-0 z-0 bg-gradient-to-r from-[#060D14] via-[#060D14]/95 to-[#1A6FA8]/10" aria-hidden="true" />
+        {/* Background Image & Overlays */}
+        <div
+          className="absolute inset-0 z-0 bg-[url('/why-myers-section.png')] bg-cover bg-center bg-no-repeat"
+          aria-hidden="true"
+        />
+        <div className="absolute inset-0 z-0 bg-[#060D14]/30" aria-hidden="true" />
+        <div className="absolute inset-0 z-0 bg-gradient-to-r from-[#060D14] via-[#060D14]/80 to-transparent" aria-hidden="true" />
+        <div className="absolute inset-0 z-0 bg-gradient-to-t from-[#060D14] via-transparent to-[#060D14]/40" aria-hidden="true" />
         
         {/* Ambient Subtle Glow */}
         <div
@@ -121,51 +127,44 @@ export default function HowItWorksPage() {
             {/* Right Scrollable Timeline */}
             <div className="lg:col-span-8 relative">
               
-              {/* The Vertical Connecting Line */}
-              <div className="absolute left-[27px] sm:left-[35px] top-6 bottom-16 w-[2px] bg-gradient-to-b from-[#29A8E0] via-[#1A6FA8]/20 to-transparent hidden sm:block" />
+              {/* The Vertical Connecting Line (Visible on Mobile & Desktop) */}
+              <div className="absolute left-[27px] sm:left-[35px] top-6 bottom-16 w-[2px] bg-gradient-to-b from-[#29A8E0] via-[#1A6FA8]/20 to-transparent" />
 
-              <div className="space-y-16 lg:space-y-24 relative z-10">
+              <div className="space-y-12 sm:space-y-16 lg:space-y-24 relative z-10">
                 {steps.map((step, index) => (
-                  <div key={step.id} className="reveal-up relative flex flex-col sm:flex-row gap-6 sm:gap-12 group">
+                  <div key={step.id} className="reveal-up relative flex gap-5 sm:gap-12 group">
                     
-                    {/* Node / Icon Indicator */}
-                    <div className="relative flex-shrink-0 hidden sm:flex">
-                      <div className="w-[72px] h-[72px] rounded-full bg-white border border-[#1A6FA8]/15 shadow-md flex items-center justify-center relative z-10 group-hover:scale-110 group-hover:border-[#29A8E0]/40 transition-all duration-500">
-                        <step.icon className="w-7 h-7 text-[#1A6FA8] group-hover:text-[#29A8E0] transition-colors duration-500" />
+                    {/* Node / Icon Indicator (Visible on Mobile & Desktop) */}
+                    <div className="relative flex-shrink-0 flex pt-1 sm:pt-0">
+                      <div className="w-14 h-14 sm:w-[72px] sm:h-[72px] rounded-full bg-white border border-[#1A6FA8]/15 shadow-md flex items-center justify-center relative z-10 group-hover:scale-110 group-hover:border-[#29A8E0]/40 transition-all duration-500">
+                        <step.icon className="w-5 h-5 sm:w-7 sm:h-7 text-[#1A6FA8] group-hover:text-[#29A8E0] transition-colors duration-500" />
                       </div>
                       {/* Glow effect on hover */}
                       <div className="absolute inset-0 rounded-full bg-[#8FD6F5] blur-xl opacity-0 group-hover:opacity-30 transition-opacity duration-500" />
                     </div>
 
                     {/* Step Content */}
-                    <div className="flex-1 bg-white sm:bg-transparent p-6 sm:p-0 rounded-2xl sm:rounded-none border border-slate-200 sm:border-none shadow-sm sm:shadow-none">
+                    <div className="flex-1 bg-white sm:bg-transparent p-5 sm:p-0 rounded-2xl sm:rounded-none border border-slate-200 sm:border-none shadow-sm sm:shadow-none">
                       
-                      <div className="flex items-center gap-4 sm:hidden mb-4">
-                        <div className="w-12 h-12 rounded-full bg-[#F0FAFF] flex items-center justify-center border border-[#1A6FA8]/10">
-                          <step.icon className="w-5 h-5 text-[#29A8E0]" />
-                        </div>
-                        <span className="text-[#1A6FA8] font-bold text-sm tracking-widest uppercase font-ui">Step {step.id}</span>
-                      </div>
-
-                      <span className="hidden sm:block text-[#1A6FA8] font-bold text-[12px] tracking-[0.2em] uppercase font-ui mb-3">Step {step.id}</span>
+                      <span className="block text-[#1A6FA8] font-bold text-[11px] sm:text-[12px] tracking-[0.2em] uppercase font-ui mb-2 sm:mb-3">Step {step.id}</span>
                       
-                      <h3 className="text-2xl sm:text-3xl font-bold text-ink font-heading mb-4 tracking-tight group-hover:text-[#1A6FA8] transition-colors duration-300">
+                      <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-ink font-heading mb-3 sm:mb-4 tracking-tight group-hover:text-[#1A6FA8] transition-colors duration-300">
                         {step.title}
                       </h3>
                       
-                      <p className="text-[16px] sm:text-[17px] text-slate-700 leading-[1.75] font-sans mb-6">
+                      <p className="text-[15px] sm:text-[16px] lg:text-[17px] text-slate-700 leading-[1.7] lg:leading-[1.75] font-sans mb-5 sm:mb-6">
                         {step.description}
                       </p>
                       
                       {/* Outcome Highlight Box */}
-                      <div className="bg-gradient-to-r from-[#F0FAFF] to-white border-l-4 border-l-[#29A8E0] p-5 sm:p-6 rounded-r-xl shadow-sm group-hover:shadow-md transition-shadow duration-300">
+                      <div className="bg-gradient-to-r from-[#F0FAFF] to-white border-l-4 border-l-[#29A8E0] p-4 sm:p-5 lg:p-6 rounded-r-xl shadow-sm group-hover:shadow-md transition-shadow duration-300">
                         <div className="flex items-start gap-3">
-                          <span className="shrink-0 w-6 h-6 rounded-full bg-[#1A6FA8] flex items-center justify-center mt-0.5">
-                            <span className="text-white text-[10px] font-bold">✔</span>
+                          <span className="shrink-0 w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-[#1A6FA8] flex items-center justify-center mt-0.5 sm:mt-1">
+                            <span className="text-white text-[9px] sm:text-[10px] font-bold">✔</span>
                           </span>
                           <div>
-                            <span className="block text-[11px] font-bold uppercase tracking-[0.15em] text-[#1A6FA8] font-ui mb-1">Deliverable</span>
-                            <span className="text-slate-800 text-[15px] sm:text-[16px] font-medium leading-snug">{step.outcome}</span>
+                            <span className="block text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.15em] text-[#1A6FA8] font-ui mb-1">Deliverable</span>
+                            <span className="text-slate-800 text-[14px] sm:text-[15px] lg:text-[16px] font-medium leading-snug">{step.outcome}</span>
                           </div>
                         </div>
                       </div>
@@ -180,50 +179,50 @@ export default function HowItWorksPage() {
         </div>
       </section>
 
-      {/* ─── OUR DELIVERY MODEL (Premium Wide Banner) ────────────────── */}
-      <section className="py-24 lg:py-32 bg-white relative overflow-hidden">
-        
-        {/* Subtle Background Elements */}
-        <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-[#1A6FA8]/15 to-transparent" />
-        <div className="absolute -left-40 top-20 w-96 h-96 bg-[#F0FAFF] rounded-full blur-3xl opacity-60" />
-        <div className="absolute -right-40 bottom-10 w-96 h-96 bg-[#F0FAFF] rounded-full blur-3xl opacity-60" />
-
-        <div className="mx-auto max-w-5xl px-6 lg:px-8 text-center reveal-up relative z-10">
-          <div className="flex items-center justify-center gap-2 mb-6">
-            <span className="h-2 w-2 rounded-full bg-[#1A6FA8] animate-pulse" />
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#1A6FA8] font-ui">
-              GLOBAL OPERATIONS
-            </span>
-          </div>
+      {/* ─── OUR DELIVERY MODEL (Clean Enterprise Bar) ────────────────── */}
+      <section className="py-16 lg:py-24 bg-[#E0F4FC] relative overflow-hidden">
+        <div className="mx-auto max-w-5xl px-6 lg:px-8 text-center reveal-up">
           
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-ink font-heading tracking-tight mb-10">
-            Our Delivery Model
+          <h2 className="text-3xl sm:text-4xl font-bold text-ink font-heading tracking-tight mb-6">
+            Global Operations
           </h2>
           
-          <div className="p-10 sm:p-14 lg:p-20 rounded-[3rem] bg-gradient-to-br from-[#101820] to-[#1A6FA8] shadow-2xl shadow-[#1A6FA8]/20 border border-[#29A8E0]/20 relative overflow-hidden group">
+          <p className="text-[17px] text-slate-600 font-sans leading-[1.8] max-w-3xl mx-auto mb-16">
+            Myer Systems operates a distributed offshore-onshore model. Our client-facing operations in the US ensure close alignment, while our core engineering team in Pakistan delivers enterprise-quality AI systems at competitive value.
+          </p>
+
+          {/* Sleek Enterprise Location Bar */}
+          <div className="max-w-3xl mx-auto bg-[#060D14] rounded-2xl sm:rounded-full p-2 flex flex-col sm:flex-row items-center justify-between shadow-[0_20px_40px_-15px_rgba(26,111,168,0.3)] border border-[#1A6FA8]/20 relative group">
             
-            {/* Texture inside Banner */}
-            <div className="absolute inset-0 z-0 opacity-10" style={{ backgroundImage: 'radial-gradient(#F0FAFF 2px, transparent 2px)', backgroundSize: '24px 24px' }} />
-            
-            <div className="relative z-10">
-              <p className="text-[17px] sm:text-xl lg:text-[22px] text-white/90 font-sans leading-[1.8] font-light mb-12 max-w-4xl mx-auto drop-shadow-md">
-                Myer Systems operates a distributed offshore-onshore model. Our headquarters and client-facing operations are based in <strong className="text-white font-semibold">Dallas, Texas</strong>. Our core engineering and delivery team operates from <strong className="text-white font-semibold">Lahore, Pakistan</strong>. This structure allows us to deliver enterprise-quality AI systems at competitive value for North American and international clients.
-              </p>
-              
-              {/* Dual-Hub Badges (Dark Mode Version) */}
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-12">
-                <div className="flex items-center gap-3 bg-white/10 backdrop-blur-md px-7 py-4 rounded-full border border-white/20 shadow-lg transition-transform duration-300 group-hover:-translate-y-1">
-                  <MapPin className="w-5 h-5 text-[#8FD6F5]" />
-                  <span className="font-bold text-white font-ui text-sm tracking-wide">Headquarters: Dallas, Texas</span>
-                </div>
-                <div className="flex items-center gap-3 bg-white/10 backdrop-blur-md px-7 py-4 rounded-full border border-white/20 shadow-lg transition-transform duration-300 group-hover:-translate-y-1">
-                  <Globe className="w-5 h-5 text-[#8FD6F5]" />
-                  <span className="font-bold text-white font-ui text-sm tracking-wide">Delivery Hub: Lahore, Pakistan</span>
-                </div>
+            {/* Dallas */}
+            <div className="flex-1 flex items-center justify-center sm:justify-center gap-4 px-6 sm:px-8 py-5 w-full rounded-xl sm:rounded-full hover:bg-white/5 transition-colors">
+              <span className="relative flex h-2.5 w-2.5 shrink-0">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#29A8E0] opacity-50"></span>
+                <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-[#29A8E0]"></span>
+              </span>
+              <div className="text-left">
+                <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#8FD6F5]/80 font-ui mb-1">Headquarters</p>
+                <p className="font-semibold text-white text-[15px]">Dallas, TX <span className="text-white/40 font-normal ml-1 hidden sm:inline">United States</span></p>
               </div>
             </div>
-            
+
+            {/* Divider */}
+            <div className="w-full sm:w-px h-px sm:h-10 bg-white/10 my-1 sm:my-0 shrink-0" />
+
+            {/* Lahore */}
+            <div className="flex-1 flex items-center justify-center sm:justify-center gap-4 px-6 sm:px-8 py-5 w-full rounded-xl sm:rounded-full hover:bg-white/5 transition-colors">
+              <span className="relative flex h-2.5 w-2.5 shrink-0">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#29A8E0] opacity-50" style={{ animationDelay: '1s' }}></span>
+                <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-[#29A8E0]"></span>
+              </span>
+              <div className="text-left">
+                <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#8FD6F5]/80 font-ui mb-1">Delivery Hub</p>
+                <p className="font-semibold text-white text-[15px]">Lahore, PK <span className="text-white/40 font-normal ml-1 hidden sm:inline">Pakistan</span></p>
+              </div>
+            </div>
+
           </div>
+          
         </div>
       </section>
 

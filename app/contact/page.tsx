@@ -41,33 +41,24 @@ export default function ContactPage() {
       ══════════════════════════════════════════════════════════════════ */}
       <section className="relative w-full min-h-[560px] lg:min-h-[600px] bg-[#060D14] overflow-hidden flex items-center pt-28 pb-18 lg:pt-32 lg:pb-22 border-b border-[#1A6FA8]/20">
         
-        {/* Background Decorative Mesh & Architectural Geometry */}
-        <div className="absolute inset-0 z-0 pointer-events-none" aria-hidden="true">
-          <div 
-            className="absolute -top-10 -left-10 w-[500px] h-[500px] opacity-20"
-            style={{
-              backgroundImage: 'radial-gradient(circle, #29A8E0 1.5px, transparent 1.5px)',
-              backgroundSize: '16px 16px',
-              maskImage: 'linear-gradient(135deg, black 10%, transparent 70%)',
-              WebkitMaskImage: 'linear-gradient(135deg, black 10%, transparent 70%)'
-            }}
-          />
-          <div 
-            className="absolute -bottom-10 right-20 w-[600px] h-[400px] opacity-[0.12]"
-            style={{
-              backgroundImage: 'radial-gradient(circle, #ffffff 2px, transparent 2px)',
-              backgroundSize: '20px 20px',
-              maskImage: 'linear-gradient(to top left, black, transparent 80%)',
-              WebkitMaskImage: 'linear-gradient(to top left, black, transparent 80%)'
-            }}
-          />
-          <div 
-            className="absolute top-10 right-1/4 h-[500px] w-[500px] rounded-full bg-[#1A6FA8]/15 blur-[160px]" 
-          />
-          <div 
-            className="absolute bottom-5 left-10 h-[450px] w-[450px] rounded-full bg-[#29A8E0]/10 blur-[140px]" 
-          />
-        </div>
+        {/* Background Image & Overlays */}
+        <div
+          className="absolute inset-0 z-0 bg-[url('/images/contact-hero.jpg')] bg-cover bg-center bg-no-repeat"
+          aria-hidden="true"
+        />
+        <div className="absolute inset-0 z-0 bg-[#060D14]/30" aria-hidden="true" />
+        <div className="absolute inset-0 z-0 bg-gradient-to-r from-[#060D14] via-[#060D14]/80 to-transparent" aria-hidden="true" />
+        <div className="absolute inset-0 z-0 bg-gradient-to-t from-[#060D14] via-transparent to-[#060D14]/40" aria-hidden="true" />
+
+        {/* Tech Ambient Glows */}
+        <div
+          className="pointer-events-none absolute -top-10 left-10 h-[400px] w-[400px] rounded-full bg-[#1A6FA8]/20 blur-[130px]"
+          aria-hidden="true"
+        />
+        <div
+          className="pointer-events-none absolute bottom-0 right-1/4 h-[400px] w-[400px] rounded-full bg-[#29A8E0]/15 blur-[120px]"
+          aria-hidden="true"
+        />
 
         {/* Content Container */}
         <div className="mx-auto w-full max-w-7xl px-6 lg:px-8 relative z-10">

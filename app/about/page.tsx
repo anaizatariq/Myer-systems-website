@@ -15,63 +15,57 @@ export default function AboutPage() {
     <div className="bg-background min-h-screen">
       <Navbar />
 
-      {/* ─── 1. HERO (Contained Split Layout) ───────────────── */}
-      <main className="relative w-full pt-32 pb-16 lg:pt-40 lg:pb-24 bg-white overflow-hidden border-b border-slate-200">
-        <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
-            
-            {/* Left Content Side */}
-            <div className="relative z-10 w-full max-w-2xl lg:col-span-5">
-              
-              {/* Global Text-Only Eyebrow */}
-              <div className="flex items-center gap-2 mb-6">
-                <span className="h-1.5 w-1.5 rounded-full bg-[#1A6FA8] animate-pulse" />
-                <span className="text-[11px] font-bold uppercase tracking-[0.18em] text-[#1A6FA8] font-ui">
-                  ABOUT MYER SYSTEMS · FOUNDED 2023
-                </span>
-              </div>
+      {/* ─── 1. HERO (Full Background with Tight Content) ───────────────── */}
+      <main className="relative w-full min-h-[60vh] lg:min-h-[100vh] max-h-[700px] flex items-center pt-28 pb-16 lg:pt-32 lg:pb-20 overflow-hidden bg-[#060D14] border-b border-[#1A6FA8]/20">
 
-              {/* Display Heading */}
-              <h1 className="text-4xl sm:text-5xl lg:text-[3.8rem]/[1.1] font-extrabold tracking-tight text-ink mb-6 font-sans">
-                Engineering the future of enterprise operations.
-              </h1>
+        {/* Background Image & Overlays */}
+        <div
+          className="absolute inset-0 z-0 bg-[url('/about-hero-office.jpg')] bg-cover bg-center bg-no-repeat"
+          aria-hidden="true"
+        />
+        <div className="absolute inset-0 z-0 bg-[#060D14]/30" aria-hidden="true" />
+        <div className="absolute inset-0 z-0 bg-gradient-to-r from-[#060D14] via-[#060D14]/80 to-transparent" aria-hidden="true" />
+        <div className="absolute inset-0 z-0 bg-gradient-to-t from-[#060D14] via-transparent to-[#060D14]/40" aria-hidden="true" />
 
-              {/* Lead Narrative */}
-              <p className="text-base sm:text-lg text-slate-600 leading-relaxed max-w-xl font-sans mt-5">
-                We are a specialised engineering firm combining strategic governance from our US headquarters with round-the-clock technical execution from our global delivery center to build systems that scale.
-              </p>
+        <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="max-w-2xl reveal">
 
-              {/* Strategic CTAs */}
-              <div className="pt-10 flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
-                <Link 
-                  href="/contact" 
-                  className="group inline-flex items-center justify-center gap-2.5 rounded-full bg-[#29A8E0] px-8 py-4 text-[15px] font-bold text-white shadow-[0_4px_14px_rgba(41,168,224,0.3)] hover:bg-[#209FD6] hover:shadow-[0_6px_20px_rgba(41,168,224,0.4)] hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200 font-ui cursor-pointer"
-                >
-                  <span>Talk to Our Team</span>
-                  <ArrowRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-1" />
-                </Link>
-
-                <Link 
-                  href="/services" 
-                  className="group inline-flex items-center justify-center gap-2 rounded-full border border-slate-300 bg-white px-8 py-4 text-[15px] font-semibold text-ink hover:bg-slate-50 hover:border-slate-400 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200 font-ui cursor-pointer shadow-sm"
-                >
-                  <span>Explore Capabilities</span>
-                  <ChevronRight className="w-4 h-4 text-slate-400 group-hover:text-ink transition-colors" />
-                </Link>
-              </div>
+            {/* Eyebrow */}
+            <div className="flex items-center gap-2 mb-5">
+              <span className="h-1.5 w-1.5 rounded-full bg-[#29A8E0] animate-pulse" />
+              <span className="text-[11px] font-bold uppercase tracking-[0.18em] text-[#8FD6F5] font-ui">
+                ABOUT MYER SYSTEMS · FOUNDED 2023
+              </span>
             </div>
 
-            {/* Right Image Side (Wider Port to prevent cropping) */}
-            <div className="relative w-full aspect-video lg:aspect-[16/10] rounded-[2rem] overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.08)] border border-slate-200 bg-slate-100 lg:col-span-7">
-              <Image
-                src="/about-hero-office.jpg"
-                alt="Myer Systems Corporate Office"
-                fill
-                className="object-cover object-center"
-                priority
-              />
+            {/* Display Heading - Tightened */}
+            <h1 className="text-3xl sm:text-4xl lg:text-[2.75rem]/[1.15] font-bold tracking-tight text-white mb-4 font-heading">
+              Engineering the future of enterprise operations.
+            </h1>
+
+            {/* Lead Narrative - Shortened & Tightened */}
+            <p className="text-[15px] sm:text-base lg:text-[1.05rem] text-slate-300 leading-relaxed font-sans max-w-xl">
+              Combining strategic US governance with robust global execution to build systems that scale.
+            </p>
+
+            {/* Strategic CTAs */}
+            <div className="pt-8 flex flex-wrap items-center gap-4">
+              <Link
+                href="/contact"
+                className="w-full sm:w-auto group inline-flex items-center justify-center gap-2.5 rounded-full bg-[#29A8E0] px-7 py-3.5 text-sm font-bold text-[#060D14] shadow-[0_4px_14px_rgba(41,168,224,0.3)] hover:bg-[#8FD6F5] hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200 font-ui"
+              >
+                <span>Talk to Our Team</span>
+                <ArrowRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-1" />
+              </Link>
+              <Link
+                href="/services"
+                className="w-full sm:w-auto group inline-flex items-center justify-center gap-2 rounded-full border border-white/20 bg-white/5 px-7 py-3.5 text-sm font-semibold text-white backdrop-blur-md hover:bg-white/10 hover:border-white/40 transition-all duration-200 font-ui"
+              >
+                <span>Explore Capabilities</span>
+                <ChevronRight className="w-4 h-4 text-slate-400 group-hover:text-white transition-colors" />
+              </Link>
             </div>
-            
+
           </div>
         </div>
       </main>
@@ -80,7 +74,7 @@ export default function AboutPage() {
       <section className="py-20 lg:py-32 bg-white border-b border-slate-100">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
-            
+
             {/* Left: Sticky Title */}
             <div className="lg:col-span-5 lg:sticky lg:top-32 reveal">
               <div className="flex items-center gap-2 mb-6">
@@ -89,7 +83,7 @@ export default function AboutPage() {
                   OUR STORY
                 </span>
               </div>
-              <h2 className="text-4xl sm:text-5xl lg:text-[3.5rem]/[1.1] font-bold tracking-tight text-ink font-heading pr-8">
+              <h2 className="text-4xl sm:text-5xl lg:text-[3.5rem]/[1.1] font-bold tracking-tight text-ink font-heading pr-0 lg:pr-8">
                 We believe in structure over shortcuts.
               </h2>
             </div>
@@ -112,7 +106,7 @@ export default function AboutPage() {
                 </p>
               </div>
             </div>
-            
+
           </div>
         </div>
       </section>
@@ -125,9 +119,9 @@ export default function AboutPage() {
 
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 divide-y lg:divide-y-0 lg:divide-x divide-white/10">
-            
+
             {/* Mission */}
-            <div className="lg:pr-12 reveal">
+            <div className="pb-12 lg:pb-0 lg:pr-12 reveal">
               <div className="flex items-center gap-2 mb-8">
                 <span className="h-1.5 w-1.5 rounded-full bg-[#29A8E0] animate-pulse" />
                 <span className="text-[11px] font-bold uppercase tracking-[0.18em] text-[#8FD6F5] font-ui">
@@ -140,7 +134,7 @@ export default function AboutPage() {
             </div>
 
             {/* Vision */}
-            <div className="lg:pl-12 pt-16 lg:pt-0 reveal-up">
+            <div className="pt-12 lg:pt-0 lg:pl-12 reveal-up">
               <div className="flex items-center gap-2 mb-8">
                 <span className="h-1.5 w-1.5 rounded-full bg-[#29A8E0] animate-pulse" />
                 <span className="text-[11px] font-bold uppercase tracking-[0.18em] text-[#8FD6F5] font-ui">
@@ -159,7 +153,7 @@ export default function AboutPage() {
       {/* ─── 4. COMPANY AT A GLANCE (Minimalist Data Grid) ───────────────── */}
       <section className="py-20 lg:py-28 bg-[#E0F4FC]">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          
+
           <div className="flex flex-col items-center text-center mb-16 reveal">
             <div className="flex items-center gap-2 mb-6">
               <span className="h-1.5 w-1.5 rounded-full bg-[#1A6FA8] animate-pulse" />
@@ -183,11 +177,11 @@ export default function AboutPage() {
               { label: 'Clients', value: 'Global' },
               { label: 'Website', value: 'myersystems.ai' }
             ].map((stat, i) => (
-              <div key={i} className="reveal-up bg-[#8FD6F5] rounded-2xl p-6 lg:p-7 flex flex-col justify-start text-left hover:-translate-y-1 hover:shadow-lg hover:shadow-[#8FD6F5]/40 transition-all duration-300 group">
+              <div key={i} className="reveal-up bg-[#8FD6F5] rounded-2xl p-5 sm:p-6 lg:p-7 flex flex-col justify-start text-left hover:-translate-y-1 hover:shadow-lg hover:shadow-[#8FD6F5]/40 transition-all duration-300 group">
                 <span className="text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.18em] text-[#1A6FA8] font-ui mb-2 transition-colors">
                   {stat.label}
                 </span>
-                <span className="text-xl sm:text-2xl lg:text-[1.7rem] font-semibold text-ink font-sans tracking-tight">
+                <span className="text-lg sm:text-2xl lg:text-[1.7rem] font-semibold text-ink font-sans tracking-tight break-all sm:break-normal">
                   {stat.value}
                 </span>
               </div>
@@ -200,7 +194,7 @@ export default function AboutPage() {
       {/* ─── 5. WHAT DRIVES US (Horizontal Joined Box) ───────────────── */}
       <section className="pt-12 pb-20 lg:pt-16 lg:pb-28 bg-white overflow-hidden">
         <div className="mx-auto max-w-[90rem] px-4 sm:px-6 lg:px-8 relative">
-          
+
           <div className="max-w-2xl mb-12 lg:mb-16 reveal">
             <div className="flex items-center gap-2 mb-6">
               <span className="h-1.5 w-1.5 rounded-full bg-[#1A6FA8] animate-pulse" />
@@ -214,7 +208,7 @@ export default function AboutPage() {
           </div>
 
           <div className="reveal-up rounded-[10px] overflow-hidden border border-[#1A6FA8]/15 shadow-[0_8px_30px_rgb(0,0,0,0.06)] flex flex-col lg:flex-row bg-white">
-            
+
             {/* Column 1: Sky Blue */}
             <div className="lg:w-1/4 p-8 sm:p-10 bg-[#29A8E0] relative border-b lg:border-b-0 lg:border-r border-[#1A6FA8]/20">
               <div className="w-12 h-12 rounded-[10px] bg-white/10 border border-white/20 flex items-center justify-center text-white mb-6">
@@ -227,7 +221,7 @@ export default function AboutPage() {
             </div>
 
             {/* Column 2: Dots */}
-            <div 
+            <div
               className="lg:w-1/4 p-8 sm:p-10 relative bg-white border-b lg:border-b-0 lg:border-r border-[#1A6FA8]/15"
               style={{ backgroundImage: 'radial-gradient(rgba(143,214,245,0.4) 1px, transparent 1px)', backgroundSize: '16px 16px' }}
             >
@@ -252,7 +246,7 @@ export default function AboutPage() {
             </div>
 
             {/* Column 4: Dots */}
-            <div 
+            <div
               className="lg:w-1/4 p-8 sm:p-10 relative bg-white"
               style={{ backgroundImage: 'radial-gradient(rgba(143,214,245,0.4) 1px, transparent 1px)', backgroundSize: '16px 16px' }}
             >
@@ -272,7 +266,7 @@ export default function AboutPage() {
       {/* ─── 6. LEADERSHIP (Executive Deep Dives) ───────────────── */}
       <section className="py-16 lg:py-24 bg-[#E0F4FC]">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-          
+
           <div className="text-center mb-16 lg:mb-20 reveal">
             <div className="flex justify-center items-center gap-2 mb-4">
               <span className="h-1.5 w-1.5 rounded-full bg-[#1A6FA8] animate-pulse" />
@@ -286,22 +280,25 @@ export default function AboutPage() {
           </div>
 
           <div className="space-y-10 lg:space-y-12">
-            
+
             {/* Leader 1: Yassir */}
-            <div className="reveal-up group flex flex-col md:flex-row items-stretch rounded-[2.5rem] bg-white shadow-[0_8px_30px_rgb(0,0,0,0.06)] hover:shadow-[0_20px_40px_rgba(41,168,224,0.15)] transition-shadow duration-500 overflow-hidden border border-[#1A6FA8]/5">
-              
+            <div className="reveal-up group flex flex-col md:flex-row items-stretch rounded-3xl md:rounded-[2.5rem] bg-white shadow-[0_8px_30px_rgb(0,0,0,0.06)] hover:shadow-[0_20px_40px_rgba(41,168,224,0.15)] transition-shadow duration-500 overflow-hidden border border-[#1A6FA8]/5">
+
               {/* Image Box (Side) */}
-              <div className="w-full md:w-[320px] lg:w-[380px] shrink-0 relative aspect-square md:aspect-auto overflow-hidden bg-[#F0FAFF]">
-                <Image src="/images/yassir-humayun.svg" alt="Yassir Humayun" fill className="object-cover transition-transform duration-700 group-hover:scale-105" />
+              <div
+                className="w-full md:w-[320px] lg:w-[380px] shrink-0 relative aspect-square md:aspect-auto overflow-hidden bg-transparent"
+                style={{ backgroundImage: 'radial-gradient(rgba(26,111,168,0.08) 1px, transparent 1px)', backgroundSize: '16px 16px' }}
+              >
+                <Image src="/rajayassir.png" alt="Yassir Humayun" fill className="object-contain object-bottom transition-transform duration-700 group-hover:scale-105" />
               </div>
 
               {/* Text Box (Skyblue Bg + Dots) */}
               <div className="flex-1 relative bg-[#8FD6F5] px-6 py-5 sm:px-8 sm:py-6 lg:px-10 lg:py-8 overflow-hidden">
-                <div 
+                <div
                   className="absolute inset-0 z-0 opacity-5 transition-opacity duration-500 group-hover:opacity-10"
                   style={{ backgroundImage: 'radial-gradient(#ffffff 2px, transparent 2px)', backgroundSize: '24px 24px' }}
                 />
-                
+
                 <div className="relative z-10 text-left">
                   <span className="text-slate-700 font-bold text-[11px] tracking-[0.15em] uppercase font-ui block mb-3">Founder & Chairman</span>
                   <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-ink font-heading mb-6 tracking-tight">Yassir Humayun <span className="text-slate-700 font-medium text-xl lg:text-2xl ml-1">(Raja Yasir)</span></h3>
@@ -315,20 +312,23 @@ export default function AboutPage() {
             </div>
 
             {/* Leader 2: Osman */}
-            <div className="reveal-up group flex flex-col md:flex-row-reverse items-stretch rounded-[2.5rem] bg-white shadow-[0_8px_30px_rgb(0,0,0,0.06)] hover:shadow-[0_20px_40px_rgba(41,168,224,0.15)] transition-shadow duration-500 overflow-hidden border border-[#1A6FA8]/5">
-              
+            <div className="reveal-up group flex flex-col md:flex-row-reverse items-stretch rounded-3xl md:rounded-[2.5rem] bg-white shadow-[0_8px_30px_rgb(0,0,0,0.06)] hover:shadow-[0_20px_40px_rgba(41,168,224,0.15)] transition-shadow duration-500 overflow-hidden border border-[#1A6FA8]/5">
+
               {/* Image Box (Side) */}
-              <div className="w-full md:w-[320px] lg:w-[380px] shrink-0 relative aspect-square md:aspect-auto overflow-hidden bg-[#F0FAFF]">
-                <Image src="/images/osman-akram.svg" alt="Osman Akram" fill className="object-cover transition-transform duration-700 group-hover:scale-105" />
+              <div
+                className="w-full md:w-[320px] lg:w-[380px] shrink-0 relative aspect-square md:aspect-auto overflow-hidden bg-transparent"
+                style={{ backgroundImage: 'radial-gradient(rgba(26,111,168,0.08) 1px, transparent 1px)', backgroundSize: '16px 16px' }}
+              >
+                <Image src="/osman-akram.png" alt="Osman Akram" fill className="object-contain object-bottom transition-transform duration-700 group-hover:scale-105" />
               </div>
 
               {/* Text Box (Skyblue Bg + Dots) */}
               <div className="flex-1 relative bg-[#8FD6F5] px-6 py-5 sm:px-8 sm:py-6 lg:px-10 lg:py-8 overflow-hidden">
-                <div 
+                <div
                   className="absolute inset-0 z-0 opacity-5 transition-opacity duration-500 group-hover:opacity-10"
                   style={{ backgroundImage: 'radial-gradient(#ffffff 2px, transparent 2px)', backgroundSize: '24px 24px' }}
                 />
-                
+
                 <div className="relative z-10 text-left">
                   <span className="text-slate-700 font-bold text-[11px] tracking-[0.15em] uppercase font-ui block mb-3">Chief Executive Officer</span>
                   <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-ink font-heading mb-6 tracking-tight">Osman Akram</h3>
@@ -340,21 +340,24 @@ export default function AboutPage() {
               </div>
             </div>
 
-            {/* Leader 3: Ali */}
-            <div className="reveal-up group flex flex-col md:flex-row items-stretch rounded-[2.5rem] bg-white shadow-[0_8px_30px_rgb(0,0,0,0.06)] hover:shadow-[0_20px_40px_rgba(41,168,224,0.15)] transition-shadow duration-500 overflow-hidden border border-[#1A6FA8]/5">
-              
+            {/* Leader 3: Ali hamza*/}
+            <div className="reveal-up group flex flex-col md:flex-row items-stretch rounded-3xl md:rounded-[2.5rem] bg-white shadow-[0_8px_30px_rgb(0,0,0,0.06)] hover:shadow-[0_20px_40px_rgba(41,168,224,0.15)] transition-shadow duration-500 overflow-hidden border border-[#1A6FA8]/5">
+
               {/* Image Box (Side) */}
-              <div className="w-full md:w-[320px] lg:w-[380px] shrink-0 relative aspect-square md:aspect-auto overflow-hidden bg-[#F0FAFF]">
-                <Image src="/images/ali-hamza.svg" alt="Ali Hamza" fill className="object-cover object-top transition-transform duration-700 group-hover:scale-105" />
+              <div
+                className="w-full md:w-[320px] lg:w-[380px] shrink-0 relative aspect-square md:aspect-auto overflow-hidden bg-transparent"
+                style={{ backgroundImage: 'radial-gradient(rgba(26,111,168,0.08) 1px, transparent 1px)', backgroundSize: '16px 16px' }}
+              >
+                <Image src="/alihamza.png" alt="Ali Hamza" fill className="object-contain object-bottom transition-transform duration-700 group-hover:scale-105" />
               </div>
 
               {/* Text Box (Skyblue Bg + Dots) */}
               <div className="flex-1 relative bg-[#8FD6F5] px-6 py-5 sm:px-8 sm:py-6 lg:px-10 lg:py-8 overflow-hidden">
-                <div 
+                <div
                   className="absolute inset-0 z-0 opacity-5 transition-opacity duration-500 group-hover:opacity-10"
                   style={{ backgroundImage: 'radial-gradient(#ffffff 2px, transparent 2px)', backgroundSize: '24px 24px' }}
                 />
-                
+
                 <div className="relative z-10 text-left">
                   <span className="text-slate-700 font-bold text-[11px] tracking-[0.15em] uppercase font-ui block mb-3">Chief Technology Officer</span>
                   <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-ink font-heading mb-6 tracking-tight">Ali Hamza</h3>
@@ -373,7 +376,7 @@ export default function AboutPage() {
       {/* ─── 7. KEY TEAM MEMBERS (Elegant Roster) ───────────────── */}
       <section className="py-20 lg:py-24 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          
+
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16 reveal">
             <div>
               <div className="flex items-center gap-2 mb-4">
@@ -387,27 +390,26 @@ export default function AboutPage() {
             <div className="h-px bg-[#1A6FA8]/15 flex-1 ml-0 md:ml-12 mb-2" />
           </div>
 
-          <div className="reveal-up max-w-5xl mx-auto rounded-[2rem] border border-[#1A6FA8]/10 bg-white shadow-sm flex flex-col md:flex-row overflow-hidden">
+          <div className="reveal-up max-w-5xl mx-auto rounded-3xl md:rounded-[2rem] border border-[#1A6FA8]/10 bg-white shadow-sm flex flex-col md:flex-row overflow-hidden">
             {[
               { id: 'tasbhia-akbar', name: 'Tasbhia Akbar', role: 'Business & Operations Lead, Myer Systems' },
               { id: 'vaneeza-fatima', name: 'Vaneeza Fatima', role: 'Operations Manager, MedSynthea' },
               { id: 'hasnain-muavia', name: 'Hasnain Muavia', role: 'Senior Software Engineer (AI/ML, DevOps, Agents)' }
             ].map((member, i) => (
-              <div 
-                key={i} 
-                className={`flex-1 p-8 sm:p-10 flex flex-col items-center text-center group relative overflow-hidden transition-all duration-300 bg-white ${
-                  i !== 0 ? 'border-t-[4px] md:border-t-0 md:border-l-[6px] border-[#8FD6F5]' : ''
-                }`}
+              <div
+                key={i}
+                className={`flex-1 p-8 sm:p-10 flex flex-col items-center text-center group relative overflow-hidden transition-all duration-300 bg-white ${i !== 0 ? 'border-t-[4px] md:border-t-0 md:border-l-[6px] border-[#8FD6F5]' : ''
+                  }`}
               >
                 {/* Slide Background Animation */}
                 <div className="absolute inset-0 bg-gradient-to-t from-[#E0F4FC] to-transparent translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out z-0" />
-                
+
                 {/* Square Profile Image */}
                 <div className="w-32 h-32 sm:w-40 sm:h-40 relative z-10 mb-6 rounded-2xl overflow-hidden bg-slate-100 shadow-sm border border-slate-200 group-hover:shadow-md group-hover:-translate-y-1 transition-all duration-500">
-                  <Image 
-                    src={`/images/${member.id}.svg`} 
-                    alt={member.name} 
-                    fill 
+                  <Image
+                    src={`/images/${member.id}.svg`}
+                    alt={member.name}
+                    fill
                     className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
                   />
                   {/* Subtle color overlay on hover */}

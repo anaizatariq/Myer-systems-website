@@ -46,7 +46,7 @@ export function Footer() {
           <div className="max-w-sm space-y-5">
             <Link href="/" className="flex items-center gap-3" aria-label="Myer Systems home">
               <Image
-                src="/myers-mark.webp"
+                src="/myers-mark-dark.png"
                 alt="Myer Systems"
                 width={40}
                 height={40}
@@ -174,8 +174,8 @@ export function Footer() {
           </p>
           
           <div className="flex flex-wrap items-center gap-2.5 sm:gap-4 text-[10.5px] sm:text-[11px] font-ui uppercase tracking-wider">
-            <Link href="/faq" className="text-white hover:text-[#29A8E0] font-medium transition-colors">FAQ</Link>
-            <span>·</span>
+            {/* <Link href="/faq" className="text-white hover:text-[#29A8E0] font-medium transition-colors">FAQ</Link> */}
+            {/* <span>·</span> */}
             <Link href="/privacy" className="text-white hover:text-[#29A8E0] font-medium transition-colors">Privacy Policy</Link>
             <span>·</span>
             <Link href="/terms" className="text-white hover:text-[#29A8E0] font-medium transition-colors">Terms of Service</Link>

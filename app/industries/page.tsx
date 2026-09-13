@@ -31,11 +31,12 @@ export default function IndustriesPage() {
         
         {/* Background Image & Overlays */}
         <div 
-          className="absolute inset-0 z-0 bg-[url('/industries-hero-dark.jpg')] bg-cover bg-center bg-no-repeat"
+          className="absolute inset-0 z-0 bg-[url('/industries-hero-bg.jpg')] bg-cover bg-center bg-no-repeat"
           aria-hidden="true" 
         />
-        <div className="absolute inset-0 z-0 bg-gradient-to-r from-[#060D14]/90 via-[#060D14]/50 to-transparent" aria-hidden="true" />
-        <div className="absolute inset-0 z-0 bg-gradient-to-t from-[#060D14] via-transparent to-transparent opacity-80" aria-hidden="true" />
+        <div className="absolute inset-0 z-0 bg-[#060D14]/30" aria-hidden="true" />
+        <div className="absolute inset-0 z-0 bg-gradient-to-r from-[#060D14] via-[#060D14]/80 to-transparent" aria-hidden="true" />
+        <div className="absolute inset-0 z-0 bg-gradient-to-t from-[#060D14] via-transparent to-[#060D14]/40" aria-hidden="true" />
 
         {/* Ambient Subtle Glow */}
         <div

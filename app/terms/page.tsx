@@ -43,8 +43,8 @@ export default function TermsPage() {
           aria-hidden="true"
         />
         
-        <div className="mx-auto max-w-4xl px-6 lg:px-8 relative z-10 w-full text-left">
-          <div className="reveal-up flex flex-col items-start">
+        <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="reveal-up flex flex-col items-start max-w-4xl">
             <div className="flex items-center gap-2">
               <span className="h-1.5 w-1.5 rounded-full bg-[#8FD6F5] animate-pulse" />
               <span className="text-[11px] uppercase tracking-[0.18em] text-[#8FD6F5] font-ui font-bold">
@@ -63,8 +63,8 @@ export default function TermsPage() {
       </section>
 
       {/* Content */}
-      <main className="py-16 lg:py-24 mx-auto max-w-4xl px-6 lg:px-8 relative z-10">
-        <article className="reveal-up">
+      <main className="py-16 lg:py-24 mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
+        <article className="reveal-up max-w-4xl">
           
           <p className="text-[17px] text-slate-600 leading-relaxed font-sans mb-12">
             These Terms of Service (&quot;Terms&quot;) govern your use of the Myer Systems website (<strong>myersystems.ai</strong>) and any services provided by Myer Systems. By accessing our website or engaging our services, you agree to these Terms.

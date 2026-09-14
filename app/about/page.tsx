@@ -95,7 +95,7 @@ export default function AboutPage() {
                 businesses shouldn&apos;t waste human talent on work that machines can do better, faster, and more reliably.
               </p>
               <p className="mb-6">
-                We watched organisations hire more people to handle more volume, such as more data entry, more document processing, and more manual approvals, when the real solution was smarter systems, not bigger headcounts. Headquartered in Dallas, Texas with a dedicated delivery hub in Lahore, Pakistan, Myer Systems designs, builds, and deploys enterprise AI systems that automate manual work at scale.
+                We watched organisations hire more people to handle more volume, such as more data entry, more document processing, and more manual approvals, when the real solution was smarter systems, not bigger headcounts. Headquartered in Sugar Land, Texas with a dedicated delivery hub in Lahore, Pakistan, Myer Systems designs, builds, and deploys enterprise AI systems that automate manual work at scale.
               </p>
               <p className="mb-10">
                 We operate at the intersection of enterprise AI and operational efficiency to help organisations move from reactive operations to predictable, data-driven performance.
@@ -169,7 +169,7 @@ export default function AboutPage() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
             {[
               { label: 'Founded', value: '2023' },
-              { label: 'Headquarters', value: 'Dallas, TX' },
+              { label: 'Headquarters', value: 'Sugar Land, TX' },
               { label: 'Delivery Hub', value: 'Lahore, PK' },
               { label: 'Team Size', value: '11–50' },
               { label: 'Growth (25-26)', value: '250%' },

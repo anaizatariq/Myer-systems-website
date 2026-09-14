@@ -11,7 +11,7 @@ export function Problems() {
         {/* Eyebrow */}
         <div className="flex items-center gap-2">
   <span className="h-1.5 w-1.5 rounded-full bg-[#1A6FA8] animate-pulse" />
-  <span className="text-[11px] uppercase tracking-[0.18em] text-[#1A6FA8] font-ui font-bold">
+  <span className="text-[11px] uppercase tracking-[0.18em] text-[#1A6FA8] font-ui font-normal">
     WHAT WE DO IN 30 SECONDS
   </span>
 </div>

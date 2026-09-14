@@ -71,7 +71,7 @@ const PROJECTS = [
     category: 'AI-Native Operations',
     tags: ['AI-Native Team', 'Hybrid Delivery', 'Operational Scale'],
     headline: 'Scaled operational delivery capacity from 12 to 40 in just 6 weeks.',
-    description: "By pairing vetted specialists with custom AI agents inside the client's existing workflows, we expanded operational capacity rapidly under direct Dallas governance — maintaining full quality oversight and zero compliance gaps.",
+    description: "By pairing vetted specialists with custom AI agents inside the client's existing workflows, we expanded operational capacity rapidly under direct Sugar Land governance — maintaining full quality oversight and zero compliance gaps.",
     outcome: '3.3× team capacity',
     year: '2025',
     status: 'Ongoing',

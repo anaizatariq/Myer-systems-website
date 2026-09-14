@@ -40,18 +40,18 @@ export function FlagshipPlatform() {
             {/* Eyebrow Chip */}
             <div className="flex items-center gap-2 mb-2">
               <span className="h-1.5 w-1.5 rounded-full bg-[#1A6FA8] animate-pulse" />
-              <span className="text-[12px] uppercase tracking-[0.2em] text-[#1A6FA8] font-ui font-bold">
+              <span className="text-[12px] uppercase tracking-[0.2em] text-[#1A6FA8] font-ui font-normal">
                 OUR FLAGSHIP PRODUCT
               </span>
             </div>
 
             {/* Display Headline */}
-            <h2 className="text-4xl sm:text-5xl lg:text-[4.5rem] font-bold tracking-tight text-ink font-heading leading-[1.05]">
+            <h2 className="text-4xl sm:text-5xl lg:text-[4.5rem] font-semibold tracking-tight text-ink font-sans leading-[1.05]">
               MedSynthea
             </h2>
 
             {/* Subhead (Using font-ui to prevent serif fallbacks) */}
-            <p className="text-lg sm:text-xl lg:text-[1.25rem] leading-[1.7] text-slate-600 font-ui font-medium max-w-2xl mt-4">
+            <p className="text-lg sm:text-xl lg:text-[1.25rem] leading-[1.7] text-slate-600 font-sans font-normal max-w-2xl mt-4">
               A healthcare-focused AI platform developed by Myer Systems, designed to synthesise medical data and streamline both clinical and administrative workflows for healthcare providers.
             </p>
           </div>

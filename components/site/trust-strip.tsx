@@ -21,7 +21,7 @@ const METRICS: MetricItem[] = [
     isNumeric: true,
     value: 2023,
     title: 'Founded',
-    subtitle: 'Dallas, TX',
+    subtitle: 'Sugar Land, TX',
   },
   {
     id: 'growth',
@@ -36,7 +36,7 @@ const METRICS: MetricItem[] = [
     id: 'hubs',
     isNumeric: false,
     text: 'Dual Hubs',
-    title: 'Dallas HQ',
+    title: 'Sugar Land HQ',
     subtitle: 'Lahore Delivery Hub',
   },
   {

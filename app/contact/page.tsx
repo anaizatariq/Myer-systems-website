@@ -180,7 +180,7 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <div className="text-[13px] font-bold text-[#1A6FA8] uppercase tracking-widest font-ui mb-1">United States — Headquarters</div>
-                      <div className="text-lg font-bold text-ink font-sans">Dallas, Texas, USA</div>
+                      <div className="text-lg font-bold text-ink font-sans">Sugar Land, Texas, USA</div>
                     </div>
                   </div>
 

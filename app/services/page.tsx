@@ -291,7 +291,7 @@ export default function ServicesPage() {
           <h2 className="text-3xl sm:text-4xl font-bold text-ink font-heading tracking-tight mb-8 pb-2 leading-normal">Who We Work With</h2>
           <div className="p-10 lg:p-14 rounded-[2.5rem] bg-[#8FD6F5] shadow-sm border border-[#1A6FA8]/10">
             <p className="text-lg lg:text-[1.35rem] text-slate-800 font-sans leading-[1.8]">
-              Our clients include healthcare providers, commercial organisations, and enterprises across North America and international markets. We operate a distributed offshore-onshore model, with our headquarters in Dallas, Texas and our delivery hub in Lahore, Pakistan, enabling us to deliver high-quality AI and automation services at competitive value.
+              Our clients include healthcare providers, commercial organisations, and enterprises across North America and international markets. We operate a distributed offshore-onshore model, with our headquarters in Sugar Land, Texas and our delivery hub in Lahore, Pakistan, enabling us to deliver high-quality AI and automation services at competitive value.
             </p>
           </div>
         </div>

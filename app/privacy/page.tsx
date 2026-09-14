@@ -111,7 +111,7 @@ export default function PrivacyPage() {
 
           <h2 className="text-2xl font-bold text-ink font-heading mb-6">Contact</h2>
           <p className="text-[17px] text-slate-600 leading-relaxed font-sans mb-12">
-            For privacy-related questions, contact us through our website at <strong>myersystems.ai</strong> or write to our registered office in Dallas, Texas, USA.
+            For privacy-related questions, contact us through our website at <strong>myersystems.ai</strong> or write to our registered office in Sugar Land, Texas, USA.
           </p>
 
           <div className="p-6 bg-white/70 rounded-2xl border border-[#1A6FA8]/10 mt-8 backdrop-blur-sm">

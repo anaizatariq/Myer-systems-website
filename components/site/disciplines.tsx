@@ -57,11 +57,11 @@ export function Disciplines() {
         <div className="mb-10 sm:mb-12 lg:mb-16">
           <div className="flex items-center gap-2 mb-4">
             <span className="h-1.5 w-1.5 rounded-full bg-[#1A6FA8] animate-pulse" />
-            <span className="text-[11px] uppercase tracking-[0.18em] text-[#1A6FA8] font-ui font-bold">
+            <span className="text-[11px] uppercase tracking-[0.18em] text-[#1A6FA8] font-ui font-normal">
               WHAT WE DO
             </span>
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-[2.75rem] font-bold tracking-tight text-ink font-heading leading-[1.1]">
+          <h2 className="text-3xl sm:text-4xl lg:text-[2.75rem] font-semibold tracking-tight text-ink font-sans leading-[1.1]">
             Our Services at a Glance
           </h2>
         </div>
@@ -79,7 +79,7 @@ export function Disciplines() {
                 className="group flex items-center justify-between py-4 sm:py-5 lg:py-6 border-b border-slate-200 hover:border-[#29A8E0] transition-colors duration-500"
               >
                 <div className="flex items-center gap-5 sm:gap-8">
-                  <span className="text-lg lg:text-xl font-bold text-slate-300 group-hover:text-[#29A8E0] transition-colors duration-500 font-ui tracking-widest uppercase">
+                  <span className="text-lg lg:text-xl font-normal text-slate-300 group-hover:text-[#29A8E0] transition-colors duration-500 font-ui tracking-widest uppercase">
                     {pillar.num}
                   </span>
                   <span className="text-lg sm:text-xl lg:text-[1.35rem] font-normal text-ink group-hover:text-[#1A6FA8] font-sans tracking-tight transition-colors duration-500">

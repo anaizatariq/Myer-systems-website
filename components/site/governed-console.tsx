@@ -321,13 +321,13 @@ export function GovernedConsole() {
                   <div className="pt-3 border-t border-white/10 flex items-center justify-end gap-3">
                     <button 
                       onClick={handleNext}
-                      className="px-4 py-2 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-xs font-semibold text-white/80 font-ui transition-colors active:scale-95"
+                      className="px-4 py-2 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-xs font-normal text-white/80 font-ui transition-colors active:scale-95"
                     >
                       Request change
                     </button>
                     <button 
                       onClick={handleNext}
-                      className="px-5 py-2 rounded-xl bg-ink hover:bg-[#1A2530] border border-[#29A8E0]/40 text-xs font-bold text-white font-ui shadow-lg shadow-[#29A8E0]/15 flex items-center gap-1.5 transition-all active:scale-95"
+                      className="px-5 py-2 rounded-xl bg-ink hover:bg-[#1A2530] border border-[#29A8E0]/40 text-xs font-normal text-white font-ui shadow-lg shadow-[#29A8E0]/15 flex items-center gap-1.5 transition-all active:scale-95"
                     >
                       <Check className="h-3.5 w-3.5 text-[#29A8E0]" />
                       <span>Approve request</span>

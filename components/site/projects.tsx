@@ -74,7 +74,7 @@ export function Projects() {
         <div className="max-w-3xl">
           <div className="flex items-center gap-2">
   <span className="h-1.5 w-1.5 rounded-full bg-[#1A6FA8] animate-pulse" />
-  <span className="text-[11px] uppercase tracking-[0.18em] text-[#1A6FA8] font-ui font-bold">
+  <span className="text-[11px] uppercase tracking-[0.18em] text-[#1A6FA8] font-ui font-normal">
     CORE CAPABILITY AREAS
   </span>
 </div>
@@ -114,7 +114,7 @@ export function Projects() {
                   <div className="absolute inset-0 bg-gradient-to-t from-[#0D1B2A] via-transparent to-transparent" />
                   
                   {/* Badge with Live Signal Beacon */}
-                  <span className="absolute top-3 left-3 inline-flex items-center gap-1.5 rounded-full bg-black/60 px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-[#8FD6F5] backdrop-blur-md border border-white/10 font-ui">
+                  <span className="absolute top-3 left-3 inline-flex items-center gap-1.5 rounded-full bg-black/60 px-3 py-1 text-[10px] font-normal uppercase tracking-wider text-[#8FD6F5] backdrop-blur-md border border-white/10 font-ui">
                     <LiveSignalBeacon color="brand" size="sm" />
                     {project.badge}
                   </span>
@@ -127,7 +127,7 @@ export function Projects() {
                     {project.tags.map((tag) => (
                       <span 
                         key={tag}
-                        className="rounded-md bg-white/5 px-2.5 py-0.5 text-[10px] font-semibold text-[#8FD6F5] font-ui border border-white/5"
+                        className="rounded-md bg-white/5 px-2.5 py-0.5 text-[10px] font-normal text-[#8FD6F5] font-ui border border-white/5"
                       >
                         {tag}
                       </span>
@@ -152,7 +152,7 @@ export function Projects() {
 
                 <Link
                   href={project.url}
-                  className="group/link inline-flex items-center gap-1.5 text-xs font-bold text-white hover:text-[#29A8E0] transition-colors font-ui uppercase tracking-wider"
+                  className="group/link inline-flex items-center gap-1.5 text-xs font-normal text-white hover:text-[#29A8E0] transition-colors font-ui uppercase tracking-wider"
                 >
                   <span>Explore Capability</span>
                   <ArrowUpRight className="h-3.5 w-3.5 transition-transform duration-200 group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5" />
@@ -167,7 +167,7 @@ export function Projects() {
         <div className="mt-10 sm:mt-12 text-center">
           <Link
             href="/services"
-            className="group inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-full bg-[#29A8E0] px-8 py-3.5 text-xs sm:text-sm font-bold text-ink shadow-[0_4px_16px_rgba(41,168,224,0.3)] hover:bg-[#209FD6] hover:shadow-[0_6px_22px_rgba(41,168,224,0.42)] hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.99] transition-all duration-200 font-ui"
+            className="group inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-full bg-[#29A8E0] px-8 py-3.5 text-xs sm:text-sm font-normal text-ink shadow-[0_4px_16px_rgba(41,168,224,0.3)] hover:bg-[#209FD6] hover:shadow-[0_6px_22px_rgba(41,168,224,0.42)] hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.99] transition-all duration-200 font-ui"
           >
             <span>Explore All Architecture & Systems</span>
             <ArrowUpRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />

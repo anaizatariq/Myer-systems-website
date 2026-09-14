@@ -92,7 +92,7 @@ export default function TermsPage() {
 
           <h2 className="text-2xl font-bold text-ink font-heading mb-6">Governing Law</h2>
           <p className="text-[17px] text-slate-600 leading-relaxed font-sans mb-12">
-            These Terms are governed by the laws of the State of Texas, USA. Any disputes shall be resolved in the courts of Dallas County, Texas.
+            These Terms are governed by the laws of the State of Texas, USA. Any disputes shall be resolved in the courts of Sugar Land County, Texas.
           </p>
 
           <h2 className="text-2xl font-bold text-ink font-heading mb-6">Changes to Terms</h2>
@@ -102,7 +102,7 @@ export default function TermsPage() {
 
           <h2 className="text-2xl font-bold text-ink font-heading mb-6">Contact</h2>
           <p className="text-[17px] text-slate-600 leading-relaxed font-sans mb-12">
-            For questions about these Terms, contact us through our website at <strong>myersystems.ai</strong> or write to our registered office in Dallas, Texas, USA.
+            For questions about these Terms, contact us through our website at <strong>myersystems.ai</strong> or write to our registered office in Sugar Land, Texas, USA.
           </p>
 
           <div className="p-6 bg-white/70 rounded-2xl border border-[#1A6FA8]/10 mt-8 backdrop-blur-sm">

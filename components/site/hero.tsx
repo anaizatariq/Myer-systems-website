@@ -35,9 +35,9 @@ export function Hero() {
           <div className="lg:col-span-8 z-10">
             
             {/* Top Eyebrow Chip */}
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-2 mb-1 sm:mb-2">
   <span className="h-1.5 w-1.5 rounded-full bg-[#1A6FA8] animate-pulse" />
-  <span className="text-[11px] uppercase tracking-[0.18em] text-[#1A6FA8] font-ui font-bold">
+  <span className="text-[12px] sm:text-[13px] uppercase tracking-[0.18em] text-[#1A6FA8] font-ui font-normal">
     AUTONOMOUS ENTERPRISE AI &amp; WORKFLOW SYSTEMS
   </span>
 </div>
@@ -49,7 +49,7 @@ export function Hero() {
             </h1>
 
             {/* Concise Subtext */}
-            <p className="mt-3.5 sm:mt-4 max-w-xl text-base sm:text-[17px] leading-relaxed text-slate-200 drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)] font-sans font-normal">
+            <p className="mt-4 sm:mt-5 max-w-xl text-[17px] sm:text-[1.125rem] lg:text-[1.2rem] leading-[1.7] text-slate-200 drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)] font-sans font-normal">
               Myer Systems builds enterprise-grade AI systems that automate repetitive manual work, so your team can focus on decisions that actually move the business forward.
             </p>
 
@@ -57,7 +57,7 @@ export function Hero() {
             <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 sm:gap-4">
               <Link
                 href="/contact"
-                className="group inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-full bg-brand px-7 py-3.5 text-[14px] font-bold text-ink shadow-[0_0_24px_rgba(41,168,224,0.45)] transition-all duration-200 hover:bg-[#209FD6] hover:shadow-[0_0_35px_rgba(41,168,224,0.65)] hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.99] font-ui"
+                className="group inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-full bg-brand px-8 py-4 text-[15px] font-bold text-ink transition-all duration-200 hover:bg-[#209FD6] hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.99] font-ui"
               >
                 <span>Book a Discovery Call</span>
                 <span className="text-xs transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
@@ -67,7 +67,7 @@ export function Hero() {
               
               <a
                 href="#disciplines"
-                className="group inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-full border border-white/25 bg-white/10 px-7 py-3.5 text-[14px] font-semibold text-white shadow-xs backdrop-blur-md transition-all duration-200 hover:bg-white/20 hover:border-white/40 hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.99] font-ui"
+                className="group inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-full border border-white/25 bg-white/10 px-8 py-4 text-[15px] font-bold text-white shadow-xs backdrop-blur-md transition-all duration-200 hover:bg-white/20 hover:border-white/40 hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.99] font-ui"
               >
                 <span>Explore Our Services</span>
                 <span className="text-xs text-slate-300 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5">

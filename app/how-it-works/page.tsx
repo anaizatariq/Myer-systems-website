@@ -194,7 +194,7 @@ export default function HowItWorksPage() {
           {/* Sleek Enterprise Location Bar */}
           <div className="max-w-3xl mx-auto bg-[#060D14] rounded-2xl sm:rounded-full p-2 flex flex-col sm:flex-row items-center justify-between shadow-[0_20px_40px_-15px_rgba(26,111,168,0.3)] border border-[#1A6FA8]/20 relative group">
             
-            {/* Dallas */}
+            {/* Sugar Land */}
             <div className="flex-1 flex items-center justify-center sm:justify-center gap-4 px-6 sm:px-8 py-5 w-full rounded-xl sm:rounded-full hover:bg-white/5 transition-colors">
               <span className="relative flex h-2.5 w-2.5 shrink-0">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#29A8E0] opacity-50"></span>
@@ -202,7 +202,7 @@ export default function HowItWorksPage() {
               </span>
               <div className="text-left">
                 <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#8FD6F5]/80 font-ui mb-1">Headquarters</p>
-                <p className="font-semibold text-white text-[15px]">Dallas, TX <span className="text-white/40 font-normal ml-1 hidden sm:inline">United States</span></p>
+                <p className="font-semibold text-white text-[15px]">Sugar Land, TX <span className="text-white/40 font-normal ml-1 hidden sm:inline">United States</span></p>
               </div>
             </div>
 

@@ -314,13 +314,13 @@ export default function IndustriesPage() {
             
             <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-12 md:gap-8">
               
-              {/* Dallas Hub */}
+              {/* Sugar Land Hub */}
               <div className="flex-1 text-center md:text-left flex flex-col items-center md:items-start group">
                 <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 mb-6 backdrop-blur-md transition-colors group-hover:bg-white/10">
                   <span className="w-2 h-2 rounded-full bg-[#8FD6F5] shadow-[0_0_8px_rgba(143,214,245,0.8)] animate-pulse" />
                   <span className="text-[11px] font-bold uppercase tracking-widest text-white/90 font-ui">Headquarters</span>
                 </div>
-                <h3 className="text-4xl lg:text-5xl font-bold text-white font-heading tracking-tight mb-2">Dallas, TX</h3>
+                <h3 className="text-4xl lg:text-5xl font-bold text-white font-heading tracking-tight mb-2">Sugar Land, TX</h3>
                 <p className="text-[#8FD6F5] font-sans font-medium">United States</p>
               </div>
 

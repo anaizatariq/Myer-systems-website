@@ -70,7 +70,7 @@ export function Navbar() {
         <div className="hidden lg:flex items-center">
           <Link
             href="/contact"
-            className="group relative inline-flex items-center gap-1.5 rounded-full bg-brand px-5 py-2 text-[13px] font-bold text-ink shadow-[0_2px_12px_rgba(41,168,224,0.25)] transition-all duration-200 hover:bg-[#209FD6] hover:shadow-[0_4px_16px_rgba(41,168,224,0.38)] hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.99] font-ui"
+            className="group relative inline-flex items-center gap-1.5 rounded-full bg-brand px-6 py-2.5 text-[14px] font-bold text-ink shadow-[0_2px_12px_rgba(41,168,224,0.25)] transition-all duration-200 hover:bg-[#209FD6] hover:shadow-[0_4px_16px_rgba(41,168,224,0.38)] hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.99] font-ui"
           >
             <span>Contact Us</span>
             <span className="text-xs transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
@@ -137,7 +137,7 @@ export function Navbar() {
           <Link
             href="/contact"
             onClick={() => setMobileOpen(false)}
-            className="flex w-full items-center justify-center gap-2 rounded-full bg-[#29A8E0] py-3.5 text-[15px] font-bold text-ink transition-all hover:bg-[#209FD6] font-ui shadow-[0_4px_14px_rgba(41,168,224,0.3)] active:scale-[0.98]"
+            className="flex w-full items-center justify-center gap-2 rounded-full bg-[#29A8E0] py-3.5 text-[15px] font-normal text-ink transition-all hover:bg-[#209FD6] font-ui shadow-[0_4px_14px_rgba(41,168,224,0.3)] active:scale-[0.98]"
           >
             <span>Contact Us</span>
             <span>↗</span>

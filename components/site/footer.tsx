@@ -130,7 +130,7 @@ export function Footer() {
           {/* ════════ COLUMN 4: Dual-Hub Locations ════════ */}
           <div>
             <h3 className="text-xs uppercase tracking-[0.2em] text-white font-sans font-medium">
-              Dual-Hub Locations
+              Location
             </h3>
             <ul className="mt-5 space-y-4 text-xs sm:text-[13px] text-[#8FD6F5]/80 font-sans">
               <li className="flex items-start gap-2.5">
@@ -140,16 +140,6 @@ export function Footer() {
                     Headquarters (US):
                   </strong>
                   42 Dorothea Ln, Sugar Land, TX 77479
-                </div>
-              </li>
-
-              <li className="flex items-start gap-2.5">
-                <Globe className="h-4 w-4 text-[#29A8E0] shrink-0 mt-0.5" />
-                <div>
-                  <strong className="block text-white font-medium font-ui">
-                    Global Delivery Hub:
-                  </strong>
-                  Lahore, Punjab, Pakistan
                 </div>
               </li>
 

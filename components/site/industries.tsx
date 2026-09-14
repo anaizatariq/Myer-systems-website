@@ -99,7 +99,7 @@ export function Industries() {
           <div className="lg:col-span-7 flex flex-col items-center md:items-start text-center md:text-left lg:order-2 order-1 lg:pl-4 xl:pl-8">
             <div className="flex items-center gap-2">
   <span className="h-1.5 w-1.5 rounded-full bg-[#1A6FA8] animate-pulse" />
-  <span className="text-[11px] uppercase tracking-[0.18em] text-[#1A6FA8] font-ui font-bold">
+  <span className="text-[11px] uppercase tracking-[0.18em] text-[#1A6FA8] font-ui font-normal">
     WHO WE SERVE
   </span>
 </div>
@@ -114,7 +114,7 @@ export function Industries() {
             
             <Link 
               href="/services" 
-              className="group relative inline-flex items-center gap-1.5 rounded-full bg-[#29A8E0] px-6 py-3 text-[14px] font-bold text-ink shadow-[0_2px_12px_rgba(41,168,224,0.25)] transition-all duration-200 hover:bg-[#209FD6] hover:shadow-[0_4px_16px_rgba(41,168,224,0.38)] hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.99] font-ui"
+              className="group relative inline-flex items-center gap-1.5 rounded-full bg-[#29A8E0] px-6 py-3 text-[14px] font-normal text-ink shadow-[0_2px_12px_rgba(41,168,224,0.25)] transition-all duration-200 hover:bg-[#209FD6] hover:shadow-[0_4px_16px_rgba(41,168,224,0.38)] hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.99] font-ui"
             >
               <span>Explore Our Solutions</span>
               <span className="text-[10px] transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5">

@@ -230,7 +230,7 @@ export default function TechnologyPage() {
             {/* Feature 1 - Integration (Split Card) */}
             <div className="bg-white rounded-[2rem] border border-slate-200 shadow-sm overflow-hidden flex flex-col lg:flex-row hover:shadow-lg hover:border-[#8FD6F5]/50 transition-all duration-500 group">
                {/* Text Content */}
-               <div className="reveal-up p-6 sm:p-8 lg:p-10 xl:p-12 flex-1 flex flex-col justify-center order-2 lg:order-1 relative z-10 bg-[#29A8E0]">
+               <div className="reveal-up p-6 sm:p-8 lg:p-10 xl:p-12 flex-1 flex flex-col justify-center order-2 lg:order-1 relative z-10 bg-[#8FD6F5]">
                   <div className="w-14 h-14 rounded-2xl bg-[#F0FAFF] flex items-center justify-center border border-[#1A6FA8]/10 mb-6 lg:mb-8 shadow-sm">
                     <Plug className="w-6 h-6 text-[#1A6FA8]" />
                   </div>
@@ -262,7 +262,7 @@ export default function TechnologyPage() {
                   />
                </div>
                {/* Text Content */}
-               <div className="reveal-up p-6 sm:p-8 lg:p-10 xl:p-12 flex-1 flex flex-col justify-center order-2 lg:order-2 relative z-10 bg-[#29A8E0]">
+               <div className="reveal-up p-6 sm:p-8 lg:p-10 xl:p-12 flex-1 flex flex-col justify-center order-2 lg:order-2 relative z-10 bg-[#8FD6F5]">
                   <div className="w-14 h-14 rounded-2xl bg-[#F0FAFF] flex items-center justify-center border border-[#1A6FA8]/10 mb-6 lg:mb-8 shadow-sm">
                     <ShieldCheck className="w-6 h-6 text-[#1A6FA8]" />
                   </div>
@@ -276,7 +276,7 @@ export default function TechnologyPage() {
             {/* Feature 3 - Scalability (Split Card) */}
             <div className="bg-white rounded-[2rem] border border-slate-200 shadow-sm overflow-hidden flex flex-col lg:flex-row hover:shadow-lg hover:border-[#8FD6F5]/50 transition-all duration-500 group">
                {/* Text Content */}
-               <div className="reveal-up p-6 sm:p-8 lg:p-10 xl:p-12 flex-1 flex flex-col justify-center order-2 lg:order-1 relative z-10 bg-[#29A8E0]">
+               <div className="reveal-up p-6 sm:p-8 lg:p-10 xl:p-12 flex-1 flex flex-col justify-center order-2 lg:order-1 relative z-10 bg-[#8FD6F5]">
                   <div className="w-14 h-14 rounded-2xl bg-[#F0FAFF] flex items-center justify-center border border-[#1A6FA8]/10 mb-6 lg:mb-8 shadow-sm">
                     <Server className="w-6 h-6 text-[#1A6FA8]" />
                   </div>

@@ -1,31 +1,8 @@
 'use client';
 
-import { useState, useRef } from 'react';
 import Link from 'next/link';
-import { Volume2, VolumeX, Play, Pause } from 'lucide-react';
 
 export function Hero() {
-  const [isPlaying, setIsPlaying] = useState(true);
-  const [isMuted, setIsMuted] = useState(true);
-  const videoRef = useRef<HTMLVideoElement>(null);
-
-  const togglePlay = () => {
-    if (!videoRef.current) return;
-    if (isPlaying) {  
-      videoRef.current.pause();
-      setIsPlaying(false);
-    } else {
-      videoRef.current.play();
-      setIsPlaying(true);
-    }
-  };
-
-  const toggleMute = () => {
-    if (!videoRef.current) return;
-    videoRef.current.muted = !isMuted;
-    setIsMuted(!isMuted);
-  };
-
   return (
     <section 
       id="home" 
@@ -34,10 +11,9 @@ export function Hero() {
       {/* ── 1. Pure Background Video (No grids, no artificial effects) ── */}
       <div className="absolute inset-0 z-0 overflow-hidden">
         <video
-          ref={videoRef}
           autoPlay
           loop
-          muted={isMuted}
+          muted
           playsInline
           className="h-full w-full object-cover object-[75%_center] lg:object-[82%_center]"
         >
@@ -108,29 +84,7 @@ export function Hero() {
         </div>
       </div>
 
-      {/* ── 3. Bottom-Right Interactive Live Feed & Playback Controls ── */}
-      <div className="absolute bottom-5 right-6 z-30 hidden sm:flex items-center gap-2.5 rounded-full border border-white/15 bg-ink/80 px-3.5 py-1.5 backdrop-blur-xl shadow-lg">
-        <div className="flex items-center gap-2 pr-2 border-r border-white/15">
-          <span className="h-2 w-2 rounded-full bg-[#29A8E0] animate-ping" />
-          <span className="text-[11px] font-semibold tracking-wider uppercase text-slate-300 font-ui">
-            LIVE SYSTEM FEED
-          </span>
-        </div>
-        <button
-          onClick={togglePlay}
-          className="p-1 rounded-full text-slate-300 hover:text-white transition-colors cursor-pointer"
-          aria-label={isPlaying ? 'Pause background video' : 'Play background video'}
-        >
-          {isPlaying ? <Pause className="h-3.5 w-3.5" /> : <Play className="h-3.5 w-3.5" />}
-        </button>
-        <button
-          onClick={toggleMute}
-          className="p-1 rounded-full text-slate-300 hover:text-white transition-colors cursor-pointer"
-          aria-label={isMuted ? 'Unmute video' : 'Mute video'}
-        >
-          {isMuted ? <VolumeX className="h-3.5 w-3.5" /> : <Volume2 className="h-3.5 w-3.5" />}
-        </button>
-      </div>
+
 
     </section>
   );

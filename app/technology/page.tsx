@@ -146,7 +146,7 @@ export default function TechnologyPage() {
                   <FileText className="w-5 h-5 text-[#060D14]" />
                </div>
                <h3 className="text-xl font-bold text-ink font-heading mb-3 relative z-10">Natural Language Processing</h3>
-               <p className="text-slate-600 font-sans leading-[1.7] text-[15px] relative z-10">
+               <p className="text-slate-600 font-sans leading-[1.7] text-[17px] relative z-10">
                  Advanced NLP for comprehensive document understanding and data extraction.
                </p>
             </div>
@@ -159,7 +159,7 @@ export default function TechnologyPage() {
                   <BrainCircuit className="w-5 h-5 text-[#060D14]" />
                </div>
                <h3 className="text-xl font-bold text-ink font-heading mb-3 relative z-10">Domain-Specific Agents</h3>
-               <p className="text-[#060D14]/80 font-medium font-sans leading-[1.7] text-[15px] relative z-10">
+               <p className="text-[#060D14]/80 font-medium font-sans leading-[1.7] text-[17px] relative z-10">
                  AI agents specifically designed and trained for domain-specific tasks and workflows.
                </p>
             </div>
@@ -171,7 +171,7 @@ export default function TechnologyPage() {
                   <GitMerge className="w-5 h-5 text-[#060D14]" />
                </div>
                <h3 className="text-xl font-bold text-ink font-heading mb-3 relative z-10">Event-Driven Workflows</h3>
-               <p className="text-slate-600 font-sans leading-[1.7] text-[15px] relative z-10">
+               <p className="text-slate-600 font-sans leading-[1.7] text-[17px] relative z-10">
                  Event-driven workflows equipped with intelligent routing and autonomous escalation.
                </p>
             </div>
@@ -182,7 +182,7 @@ export default function TechnologyPage() {
                   <Activity className="w-5 h-5 text-[#060D14]" />
                </div>
                <h3 className="text-xl font-bold text-ink font-heading mb-3 relative z-10">Machine Learning Models</h3>
-               <p className="text-[#060D14]/80 font-medium font-sans leading-[1.7] text-[15px] relative z-10">
+               <p className="text-[#060D14]/80 font-medium font-sans leading-[1.7] text-[17px] relative z-10">
                  Machine learning models engineered for precise prediction, classification, and anomaly detection.
                </p>
             </div>
@@ -196,7 +196,7 @@ export default function TechnologyPage() {
                   <UserCheck className="w-5 h-5 text-[#060D14]" />
                </div>
                <h3 className="text-xl font-bold text-ink font-heading mb-3 relative z-10">Human-in-the-Loop</h3>
-               <p className="text-slate-600 font-sans leading-[1.7] text-[15px] relative z-10">
+               <p className="text-slate-600 font-sans leading-[1.7] text-[17px] relative z-10">
                  Built-in human-in-the-loop checkpoints, designed specifically for critical decisions that require nuanced judgment.
               </p>
             </div>

@@ -110,21 +110,21 @@ export default function IndustriesPage() {
                 <div className="w-12 h-12 shrink-0 bg-white rounded-xl flex items-center justify-center text-[#29A8E0] shadow-sm group-hover:scale-110 transition-transform">
                   <Activity className="w-6 h-6" />
                 </div>
-                <p className="text-[15px] font-semibold text-slate-700 leading-relaxed pt-0.5">Revenue cycle management and billing automation</p>
+                <p className="text-[17px] font-semibold text-slate-700 leading-relaxed pt-0.5">Revenue cycle management and billing automation</p>
               </div>
               
               <div className="flex items-start gap-4 bg-[#8FD6F5] border border-[#1A6FA8]/5 p-5 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgba(41,168,224,0.12)] hover:-translate-y-1 hover:border-[#29A8E0]/30 transition-all duration-300 group">
                 <div className="w-12 h-12 shrink-0 bg-white rounded-xl flex items-center justify-center text-[#29A8E0] shadow-sm group-hover:scale-110 transition-transform">
                   <Users className="w-6 h-6" />
                 </div>
-                <p className="text-[15px] font-semibold text-slate-700 leading-relaxed pt-0.5">Patient access and eligibility verification</p>
+                <p className="text-[17px] font-semibold text-slate-700 leading-relaxed pt-0.5">Patient access and eligibility verification</p>
               </div>
 
               <div className="flex items-start gap-4 bg-[#8FD6F5] border border-[#1A6FA8]/5 p-5 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgba(41,168,224,0.12)] hover:-translate-y-1 hover:border-[#29A8E0]/30 transition-all duration-300 group">
                 <div className="w-12 h-12 shrink-0 bg-white rounded-xl flex items-center justify-center text-[#29A8E0] shadow-sm group-hover:scale-110 transition-transform">
                   <FileText className="w-6 h-6" />
                 </div>
-                <p className="text-[15px] font-semibold text-slate-700 leading-relaxed pt-0.5">Clinical documentation and data synthesis</p>
+                <p className="text-[17px] font-semibold text-slate-700 leading-relaxed pt-0.5">Clinical documentation and data synthesis</p>
               </div>
             </div>
 
@@ -163,14 +163,14 @@ export default function IndustriesPage() {
                 <div className="w-12 h-12 shrink-0 bg-white rounded-xl flex items-center justify-center text-[#29A8E0] shadow-sm group-hover:scale-110 transition-transform">
                   <ShieldCheck className="w-6 h-6" />
                 </div>
-                <p className="text-[15px] font-semibold text-slate-700 leading-relaxed pt-0.5">Claims processing and denial management</p>
+                <p className="text-[17px] font-semibold text-slate-700 leading-relaxed pt-0.5">Claims processing and denial management</p>
               </div>
 
               <div className="flex items-start gap-4 bg-[#8FD6F5] border border-[#1A6FA8]/5 p-5 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgba(41,168,224,0.12)] hover:-translate-y-1 hover:border-[#29A8E0]/30 transition-all duration-300 group">
                 <div className="w-12 h-12 shrink-0 bg-white rounded-xl flex items-center justify-center text-[#29A8E0] shadow-sm group-hover:scale-110 transition-transform">
                   <FileText className="w-6 h-6" />
                 </div>
-                <p className="text-[15px] font-semibold text-slate-700 leading-relaxed pt-0.5">Compliance, audit readiness, and reporting</p>
+                <p className="text-[17px] font-semibold text-slate-700 leading-relaxed pt-0.5">Compliance, audit readiness, and reporting</p>
               </div>
             </div>
 
@@ -215,21 +215,21 @@ export default function IndustriesPage() {
                 <div className="w-12 h-12 shrink-0 bg-white rounded-xl flex items-center justify-center text-[#29A8E0] shadow-sm group-hover:scale-110 transition-transform">
                   <Workflow className="w-6 h-6" />
                 </div>
-                <p className="text-[15px] font-semibold text-slate-700 leading-relaxed pt-0.5">Workflow automation for operations, finance, and back-office teams</p>
+                <p className="text-[17px] font-semibold text-slate-700 leading-relaxed pt-0.5">Workflow automation for operations, finance, and back-office teams</p>
               </div>
               
               <div className="flex items-start gap-4 bg-[#8FD6F5] border border-[#1A6FA8]/5 p-5 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgba(41,168,224,0.12)] hover:-translate-y-1 hover:border-[#29A8E0]/30 transition-all duration-300 group">
                 <div className="w-12 h-12 shrink-0 bg-white rounded-xl flex items-center justify-center text-[#29A8E0] shadow-sm group-hover:scale-110 transition-transform">
                   <FileText className="w-6 h-6" />
                 </div>
-                <p className="text-[15px] font-semibold text-slate-700 leading-relaxed pt-0.5">Intelligent document processing and data extraction</p>
+                <p className="text-[17px] font-semibold text-slate-700 leading-relaxed pt-0.5">Intelligent document processing and data extraction</p>
               </div>
 
               <div className="flex items-start gap-4 bg-[#8FD6F5] border border-[#1A6FA8]/5 p-5 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgba(41,168,224,0.12)] hover:-translate-y-1 hover:border-[#29A8E0]/30 transition-all duration-300 group">
                 <div className="w-12 h-12 shrink-0 bg-white rounded-xl flex items-center justify-center text-[#29A8E0] shadow-sm group-hover:scale-110 transition-transform">
                   <Activity className="w-6 h-6" />
                 </div>
-                <p className="text-[15px] font-semibold text-slate-700 leading-relaxed pt-0.5">Business process reengineering and operational efficiency</p>
+                <p className="text-[17px] font-semibold text-slate-700 leading-relaxed pt-0.5">Business process reengineering and operational efficiency</p>
               </div>
             </div>
 
@@ -269,14 +269,14 @@ export default function IndustriesPage() {
                 <div className="w-12 h-12 shrink-0 bg-white rounded-xl flex items-center justify-center text-[#29A8E0] shadow-sm group-hover:scale-110 transition-transform">
                   <Users className="w-6 h-6" />
                 </div>
-                <p className="text-[15px] font-semibold text-slate-700 leading-relaxed pt-0.5">Resource augmentation with AI + human hybrid teams</p>
+                <p className="text-[17px] font-semibold text-slate-700 leading-relaxed pt-0.5">Resource augmentation with AI + human hybrid teams</p>
               </div>
 
               <div className="flex items-start gap-4 bg-[#8FD6F5] border border-[#1A6FA8]/5 p-5 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgba(41,168,224,0.12)] hover:-translate-y-1 hover:border-[#29A8E0]/30 transition-all duration-300 group">
                 <div className="w-12 h-12 shrink-0 bg-white rounded-xl flex items-center justify-center text-[#29A8E0] shadow-sm group-hover:scale-110 transition-transform">
                   <Cpu className="w-6 h-6" />
                 </div>
-                <p className="text-[15px] font-semibold text-slate-700 leading-relaxed pt-0.5">Custom SaaS and AI product development</p>
+                <p className="text-[17px] font-semibold text-slate-700 leading-relaxed pt-0.5">Custom SaaS and AI product development</p>
               </div>
             </div>
 

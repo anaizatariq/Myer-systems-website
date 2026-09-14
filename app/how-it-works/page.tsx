@@ -152,7 +152,7 @@ export default function HowItWorksPage() {
                         {step.title}
                       </h3>
                       
-                      <p className="text-[15px] sm:text-[16px] lg:text-[17px] text-slate-700 leading-[1.7] lg:leading-[1.75] font-sans mb-5 sm:mb-6">
+                      <p className="text-[17px] sm:text-[1.125rem] lg:text-[17px] text-slate-700 leading-[1.7] lg:leading-[1.75] font-sans mb-5 sm:mb-6">
                         {step.description}
                       </p>
                       
@@ -202,7 +202,7 @@ export default function HowItWorksPage() {
               </span>
               <div className="text-left">
                 <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#8FD6F5]/80 font-ui mb-1">Headquarters</p>
-                <p className="font-semibold text-white text-[15px]">Sugar Land, TX <span className="text-white/40 font-normal ml-1 hidden sm:inline">United States</span></p>
+                <p className="font-semibold text-white text-[17px]">Sugar Land, TX <span className="text-white/40 font-normal ml-1 hidden sm:inline">United States</span></p>
               </div>
             </div>
 
@@ -217,7 +217,7 @@ export default function HowItWorksPage() {
               </span>
               <div className="text-left">
                 <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#8FD6F5]/80 font-ui mb-1">Delivery Hub</p>
-                <p className="font-semibold text-white text-[15px]">Lahore, PK <span className="text-white/40 font-normal ml-1 hidden sm:inline">Pakistan</span></p>
+                <p className="font-semibold text-white text-[17px]">Lahore, PK <span className="text-white/40 font-normal ml-1 hidden sm:inline">Pakistan</span></p>
               </div>
             </div>
 

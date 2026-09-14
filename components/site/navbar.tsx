@@ -55,7 +55,7 @@ export function Navbar() {
               key={link.href}
               href={link.href}
               className={cn(
-                'text-[14.5px] font-semibold tracking-normal transition-colors font-ui duration-200',
+                'text-[16.5px] font-semibold tracking-normal transition-colors font-ui duration-200',
                 isActive(link.href)
                   ? 'text-[#1A6FA8] font-bold'
                   : 'text-ink/75 hover:text-ink'

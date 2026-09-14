@@ -215,7 +215,7 @@ export default function ContactPage() {
                       <CheckCircle2 className="w-8 h-8 text-[#29A8E0]" />
                     </div>
                     <h3 className="text-2xl font-bold text-ink font-heading">Message Sent Successfully</h3>
-                    <p className="text-base text-slate-600 font-sans max-w-md mx-auto">
+                    <p className="text-[17px] text-slate-600 font-sans max-w-md mx-auto">
                       Thank you for reaching out. We will review your message and contact you shortly.
                     </p>
                     <button

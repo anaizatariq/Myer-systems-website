@@ -117,7 +117,7 @@ export function Testimonials() {
                 </div>
 
                 {/* Quote Body */}
-                <p className="text-[14.5px] sm:text-[15px] leading-relaxed text-slate-700 italic font-quote">
+                <p className="text-[16.5px] sm:text-[15px] leading-relaxed text-slate-700 italic font-quote">
                   &ldquo;{item.quote}&rdquo;
                 </p>
               </div>

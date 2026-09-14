@@ -42,7 +42,7 @@ export function CtaBanner() {
             </h2>
 
             {/* Subhead */}
-            <p className="text-base sm:text-lg leading-relaxed text-white/90 font-sans max-w-2xl mx-auto font-normal">
+            <p className="text-[17px] sm:text-[1.125rem] leading-relaxed text-white/90 font-sans max-w-2xl mx-auto font-normal">
               Book a free discovery call. We&apos;ll walk through your operations and show you exactly where AI automation can make an impact.
             </p>
 

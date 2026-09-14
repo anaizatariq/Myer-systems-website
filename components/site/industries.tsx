@@ -108,7 +108,7 @@ export function Industries() {
               Solutions built for demanding industries.
             </h2>
             
-            <p className="text-base sm:text-lg text-slate-700 font-sans leading-relaxed mb-8 max-w-xl font-normal">
+            <p className="text-[17px] sm:text-[1.125rem] text-slate-700 font-sans leading-relaxed mb-8 max-w-xl font-normal">
               We work with organizations where efficiency, data accuracy, and reliable operations directly impact revenue and day-to-day performance. Our platforms are designed to handle complex workflows and high-volume data streams across critical sectors.
             </p>
             

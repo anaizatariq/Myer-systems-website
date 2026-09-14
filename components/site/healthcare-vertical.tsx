@@ -123,7 +123,7 @@ export function HealthcareVertical() {
                       
                       <ul className="space-y-2.5">
                         {item.points.map((pt, idx) => (
-                          <li key={idx} className={`flex items-start gap-2.5 text-[14.5px] font-sans font-medium ${textClass}`}>
+                          <li key={idx} className={`flex items-start gap-2.5 text-[16.5px] font-sans font-medium ${textClass}`}>
                             <CheckCircle2 className={`w-[18px] h-[18px] shrink-0 mt-0.5 ${checkClass}`} />
                             <span className="leading-snug">{pt}</span>
                           </li>

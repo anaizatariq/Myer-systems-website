@@ -84,7 +84,7 @@ export function HowWeOperate() {
           <h2 className="text-3xl sm:text-4xl lg:text-[3.25rem]/[1.1] font-semibold tracking-tight text-ink font-sans">
             AI speed. Human judgment.
           </h2>
-          <p className="mt-4 text-base sm:text-lg text-slate-600 font-sans leading-relaxed max-w-2xl font-normal">
+          <p className="mt-4 text-[17px] sm:text-[1.125rem] text-slate-600 font-sans leading-relaxed max-w-2xl font-normal">
             We don&apos;t believe in replacing people with black-box AI. We combine fast automation with experienced human oversight to ensure total accuracy and control.
           </p>
         </div>
@@ -169,7 +169,7 @@ export function HowWeOperate() {
                   {/* Benefits */}
                   <div className="mt-8 space-y-3.5 w-full">
                     {step.benefits.map((b, i) => (
-                      <div key={i} className="flex items-start gap-3 text-[14px] lg:text-[15px] text-slate-700 group-hover:text-slate-300 transition-colors duration-500 font-sans">
+                      <div key={i} className="flex items-start gap-3 text-[16px] lg:text-[17px] text-slate-700 group-hover:text-slate-300 transition-colors duration-500 font-sans">
                         <CheckCircle2 className="h-5 w-5 text-[#29A8E0] shrink-0 mt-0.5 group-hover:text-[#8FD6F5] transition-colors" />
                         <span className="leading-snug">{b}</span>
                       </div>

@@ -180,7 +180,7 @@ export default function WorkPage() {
                 when it actually matters.
               </h1>
 
-              <p className="reveal-up text-base text-slate-600 leading-relaxed max-w-lg mb-8 border-l-4 border-[#29A8E0]/40 pl-5 font-sans">
+              <p className="reveal-up text-[17px] text-slate-600 leading-relaxed max-w-lg mb-8 border-l-4 border-[#29A8E0]/40 pl-5 font-sans">
                 A selective look at how we apply enterprise AI, process reengineering, and specialized operations &mdash; with measurable, dependable outcomes.
               </p>
             </div>
@@ -334,7 +334,7 @@ export default function WorkPage() {
                     {p.headline}
                   </p>
 
-                  <p className="text-[14.5px] text-slate-600 leading-relaxed mb-8 font-sans">
+                  <p className="text-[16.5px] text-slate-600 leading-relaxed mb-8 font-sans">
                     {p.description}
                   </p>
 

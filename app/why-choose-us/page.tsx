@@ -52,7 +52,7 @@ export default function WhyChooseUsPage() {
             </div>
             <div className="reveal-up lg:col-span-5 lg:pb-4">
               <div className="pl-6 border-l-[3px] border-[#29A8E0]/30">
-                <p className="text-base sm:text-lg leading-relaxed text-[#F0FAFF] font-sans drop-shadow-md">
+                <p className="text-[17px] sm:text-[1.125rem] leading-relaxed text-[#F0FAFF] font-sans drop-shadow-md">
                   We focus on building AI and operational systems around accountability, visibility, and control, so organisations can adopt technology with greater confidence.
                 </p>
                 <div className="mt-8 flex flex-wrap gap-4">
@@ -154,7 +154,7 @@ export default function WhyChooseUsPage() {
                     {diff.icon}
                   </div>
                   <h3 className="text-xl font-bold text-ink mb-3 group-hover:text-[#1A6FA8] transition-colors font-heading">{diff.title}</h3>
-                  <p className="text-[15px] font-normal text-slate-600 leading-relaxed font-sans">
+                  <p className="text-[17px] font-normal text-slate-600 leading-relaxed font-sans">
                     {diff.short}
                   </p>
                 </div>
@@ -309,7 +309,7 @@ export default function WhyChooseUsPage() {
                   </div>
                   <div>
                     <span className="block text-[10px] font-bold uppercase tracking-wider text-[#1A6FA8] font-ui mb-1.5">The Myer Systems Way</span>
-                    <p className="text-[15px] font-bold text-ink font-sans leading-relaxed">{row.good}</p>
+                    <p className="text-[17px] font-bold text-ink font-sans leading-relaxed">{row.good}</p>
                   </div>
                 </div>
               </div>

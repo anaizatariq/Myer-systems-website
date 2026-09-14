@@ -55,7 +55,7 @@ export function GlobalDelivery() {
           <h2 className="text-2xl sm:text-4xl lg:text-[2.75rem]/[1.15] font-semibold tracking-tight text-ink font-sans">
             US accountability. Global delivery scale.
           </h2>
-          <p className="mt-3 text-base sm:text-lg text-slate-600 font-sans leading-relaxed font-normal">
+          <p className="mt-3 text-[17px] sm:text-[1.125rem] text-slate-600 font-sans leading-relaxed font-normal">
             We combine local, US-based leadership with dedicated technical and delivery centers to give you direct accountability paired with high-capacity execution.
           </p>
         </div>

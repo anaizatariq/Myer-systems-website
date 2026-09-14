@@ -127,7 +127,7 @@ export default function ServicesPage() {
               <span className="text-[#1A6FA8] font-bold text-[11px] tracking-[0.2em] uppercase font-ui block mb-4 transition-colors group-hover:text-[#29A8E0]">Service 01</span>
               <h3 className="text-[22px] sm:text-3xl lg:text-4xl font-bold text-ink font-heading mb-4 tracking-tight">Enterprise-Grade AI Solutions</h3>
               <p className="font-semibold text-slate-800 text-base sm:text-[17px] mb-3">Advanced AI systems engineered for accountability, scalability, and control.</p>
-              <p className="text-slate-600 text-[15px] sm:text-[16px] leading-relaxed max-w-xl">We design and build custom AI systems for enterprise environments, systems that automate repetitive workflows, process unstructured data, and deliver actionable insights at scale.</p>
+              <p className="text-slate-600 text-[17px] sm:text-[1.125rem] leading-relaxed max-w-xl">We design and build custom AI systems for enterprise environments, systems that automate repetitive workflows, process unstructured data, and deliver actionable insights at scale.</p>
             </div>
 
             <div className="w-full md:w-1/2 p-5 sm:p-6 lg:p-8 bg-[#060D14] rounded-b-[2rem] md:rounded-b-none md:rounded-l-[2.5rem] relative z-10 transition-transform duration-700 group-hover:-translate-x-2 flex flex-col justify-center shadow-[-10px_0_30px_rgba(41,168,224,0.15)] overflow-hidden">
@@ -150,7 +150,7 @@ export default function ServicesPage() {
               <span className="text-[#1A6FA8] font-bold text-[11px] tracking-[0.2em] uppercase font-ui block mb-4 transition-colors group-hover:text-[#29A8E0]">Service 02</span>
               <h3 className="text-[22px] sm:text-3xl lg:text-4xl font-bold text-ink font-heading mb-4 tracking-tight">Industry SaaS</h3>
               <p className="font-semibold text-slate-800 text-base sm:text-[17px] mb-3">Scalable, vertically-focused software-as-a-service products.</p>
-              <p className="text-slate-600 text-[15px] sm:text-[16px] leading-relaxed max-w-xl">We build SaaS products tailored to specific industries, not generic tools that require months of customisation. Built around real operational workflows and designed to scale.</p>
+              <p className="text-slate-600 text-[17px] sm:text-[1.125rem] leading-relaxed max-w-xl">We build SaaS products tailored to specific industries, not generic tools that require months of customisation. Built around real operational workflows and designed to scale.</p>
             </div>
 
             <div className="w-full md:w-1/2 p-5 sm:p-6 lg:p-8 bg-[#060D14] rounded-b-[2rem] md:rounded-b-none md:rounded-l-[2.5rem] relative z-10 transition-transform duration-700 group-hover:-translate-x-2 flex flex-col justify-center shadow-[-10px_0_30px_rgba(41,168,224,0.15)] overflow-hidden">
@@ -173,7 +173,7 @@ export default function ServicesPage() {
               <span className="text-[#1A6FA8] font-bold text-[11px] tracking-[0.2em] uppercase font-ui block mb-4 transition-colors group-hover:text-[#29A8E0]">Service 03</span>
               <h3 className="text-[22px] sm:text-3xl lg:text-4xl font-bold text-ink font-heading mb-4 tracking-tight">Business Reengineering</h3>
               <p className="font-semibold text-slate-800 text-base sm:text-[17px] mb-3">Eliminating workflow inefficiencies and rebuilding smarter processes.</p>
-              <p className="text-slate-600 text-[15px] sm:text-[16px] leading-relaxed max-w-xl">Before we automate anything, we audit your operations to find the real bottlenecks, the redundant steps, and manual handoffs that slow your business down.</p>
+              <p className="text-slate-600 text-[17px] sm:text-[1.125rem] leading-relaxed max-w-xl">Before we automate anything, we audit your operations to find the real bottlenecks, the redundant steps, and manual handoffs that slow your business down.</p>
             </div>
 
             <div className="w-full md:w-1/2 p-5 sm:p-6 lg:p-8 bg-[#060D14] rounded-b-[2rem] md:rounded-b-none md:rounded-l-[2.5rem] relative z-10 transition-transform duration-700 group-hover:-translate-x-2 flex flex-col justify-center shadow-[-10px_0_30px_rgba(41,168,224,0.15)] overflow-hidden">
@@ -196,7 +196,7 @@ export default function ServicesPage() {
               <span className="text-[#1A6FA8] font-bold text-[11px] tracking-[0.2em] uppercase font-ui block mb-4 transition-colors group-hover:text-[#29A8E0]">Service 04</span>
               <h3 className="text-[22px] sm:text-3xl lg:text-4xl font-bold text-ink font-heading mb-4 tracking-tight">Resource Augmentation</h3>
               <p className="font-semibold text-slate-800 text-base sm:text-[17px] mb-3">Combining AI agents with skilled human expertise to scale operations.</p>
-              <p className="text-slate-600 text-[15px] sm:text-[16px] leading-relaxed max-w-xl">We pair AI agents with trained human operators to create hybrid teams that handle your workload without the overhead of traditional hiring. AI handles the volume and routine tasks. Humans handle the judgment calls. You get both, without compromising quality.</p>
+              <p className="text-slate-600 text-[17px] sm:text-[1.125rem] leading-relaxed max-w-xl">We pair AI agents with trained human operators to create hybrid teams that handle your workload without the overhead of traditional hiring. AI handles the volume and routine tasks. Humans handle the judgment calls. You get both, without compromising quality.</p>
             </div>
 
             <div className="w-full md:w-1/2 p-5 sm:p-6 lg:p-8 bg-[#060D14] rounded-b-[2rem] md:rounded-b-none md:rounded-l-[2.5rem] relative z-10 transition-transform duration-700 group-hover:-translate-x-2 flex flex-col justify-center shadow-[-10px_0_30px_rgba(41,168,224,0.15)] overflow-hidden">
@@ -219,7 +219,7 @@ export default function ServicesPage() {
               <span className="text-[#1A6FA8] font-bold text-[11px] tracking-[0.2em] uppercase font-ui block mb-4 transition-colors group-hover:text-[#29A8E0]">Service 05</span>
               <h3 className="text-[22px] sm:text-3xl lg:text-4xl font-bold text-ink font-heading mb-4 tracking-tight">Revenue Cycle Management (RCM)</h3>
               <p className="font-semibold text-slate-800 text-base sm:text-[17px] mb-3">End-to-end AI-powered RCM for healthcare organisations.</p>
-              <p className="text-slate-600 text-[15px] sm:text-[16px] leading-relaxed max-w-xl">We deliver comprehensive, AI-powered revenue cycle management covering patient access, coding, billing, collections, and reporting, specifically built for US-based healthcare organisations looking to reduce errors, speed up reimbursements, and improve cash-flow visibility.</p>
+              <p className="text-slate-600 text-[17px] sm:text-[1.125rem] leading-relaxed max-w-xl">We deliver comprehensive, AI-powered revenue cycle management covering patient access, coding, billing, collections, and reporting, specifically built for US-based healthcare organisations looking to reduce errors, speed up reimbursements, and improve cash-flow visibility.</p>
             </div>
 
             <div className="w-full md:w-1/2 p-5 sm:p-6 lg:p-8 bg-[#060D14] rounded-b-[2rem] md:rounded-b-none md:rounded-l-[2.5rem] relative z-10 transition-transform duration-700 group-hover:-translate-x-2 flex flex-col justify-center shadow-[-10px_0_30px_rgba(41,168,224,0.15)] overflow-hidden">

@@ -132,7 +132,7 @@ export function GovernedConsole() {
                       className="w-full text-left transition-all duration-300 flex items-center justify-between group focus:outline-hidden cursor-pointer"
                     >
                       <div>
-                        <div className={`text-base sm:text-lg lg:text-xl font-bold font-heading transition-colors duration-200 ${
+                        <div className={`text-[17px] sm:text-[1.125rem] lg:text-xl font-bold font-heading transition-colors duration-200 ${
                           isActive ? 'text-white' : 'text-white/35 group-hover:text-white/70'
                         }`}>
                           {step.name}
@@ -219,7 +219,7 @@ export function GovernedConsole() {
                   {/* Card Header */}
                   <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-2.5 sm:gap-4 pb-4 border-b border-white/10">
                     <div className="space-y-1">
-                      <h4 className="text-base sm:text-lg lg:text-xl font-bold text-white font-heading leading-tight">
+                      <h4 className="text-[17px] sm:text-[1.125rem] lg:text-xl font-bold text-white font-heading leading-tight">
                         {current.cardTitle}
                       </h4>
                       <div className="flex items-center gap-2 text-xs font-mono text-[#8FD6F5]">

@@ -131,7 +131,7 @@ export function WhyChooseUs() {
                       {item.title}
                     </h3>
 
-                    <p className="text-[14px] lg:text-[15px] font-normal text-ink/80 group-hover:text-white/80 transition-colors duration-500 leading-relaxed max-w-[280px] mx-auto md:mx-0 font-sans">
+                    <p className="text-[16px] lg:text-[17px] font-normal text-ink/80 group-hover:text-white/80 transition-colors duration-500 leading-relaxed max-w-[280px] mx-auto md:mx-0 font-sans">
                       {item.description}
                     </p>
                   </div>

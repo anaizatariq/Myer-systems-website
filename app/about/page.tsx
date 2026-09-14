@@ -215,7 +215,7 @@ export default function AboutPage() {
                 <ShieldCheck className="w-6 h-6" />
               </div>
               <h3 className="text-xl font-bold text-white font-heading mb-3 leading-snug">Accountability First</h3>
-              <p className="text-[14.5px] text-white/90 font-sans leading-relaxed">
+              <p className="text-[16.5px] text-white/90 font-sans leading-relaxed">
                 Every AI system we build is auditable, explainable, and transparent. We don&apos;t ship black boxes.
               </p>
             </div>
@@ -229,7 +229,7 @@ export default function AboutPage() {
                 <Zap className="w-6 h-6" />
               </div>
               <h3 className="text-xl font-bold text-ink font-heading mb-3 leading-snug">Execution Over Theory</h3>
-              <p className="text-[14.5px] text-slate-600 font-sans leading-relaxed">
+              <p className="text-[16.5px] text-slate-600 font-sans leading-relaxed">
                 We deliver working systems — deployed, tested, and producing measurable results.
               </p>
             </div>
@@ -240,7 +240,7 @@ export default function AboutPage() {
                 <Users className="w-6 h-6" />
               </div>
               <h3 className="text-xl font-bold text-white font-heading mb-3 leading-snug">Human + AI Collaboration</h3>
-              <p className="text-[14.5px] text-white/90 font-sans leading-relaxed">
+              <p className="text-[16.5px] text-white/90 font-sans leading-relaxed">
                 The best outcomes come from pairing intelligent automation with skilled human oversight.
               </p>
             </div>
@@ -254,7 +254,7 @@ export default function AboutPage() {
                 <Network className="w-6 h-6" />
               </div>
               <h3 className="text-xl font-bold text-ink font-heading mb-3 leading-snug">Scale Without Compromise</h3>
-              <p className="text-[14.5px] text-slate-600 font-sans leading-relaxed">
+              <p className="text-[16.5px] text-slate-600 font-sans leading-relaxed">
                 Our systems handle enterprise volume without sacrificing accuracy, speed, or compliance.
               </p>
             </div>

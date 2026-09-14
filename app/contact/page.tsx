@@ -236,7 +236,7 @@ export default function ContactPage() {
                     
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                       <div className="space-y-2">
-                        <label htmlFor="full-name" className="text-[11px] font-bold uppercase tracking-wider text-ink font-ui">
+                        <label htmlFor="full-name" className="text-[12px] sm:text-[13px] font-bold uppercase tracking-wider text-ink font-ui">
                           Full Name *
                         </label>
                         <input
@@ -244,12 +244,12 @@ export default function ContactPage() {
                           id="full-name"
                           required
                           placeholder="John Doe"
-                          className="w-full rounded-xl bg-[#F8FAFD] border border-[#1A6FA8]/20 px-4 py-3.5 text-sm text-ink placeholder-slate-400 focus:bg-white focus:outline-none focus:border-[#29A8E0] focus:ring-2 focus:ring-[#29A8E0]/20 transition-all font-sans"
+                          className="w-full rounded-xl bg-[#F8FAFD] border border-[#1A6FA8]/20 px-5 py-4 text-[15px] sm:text-[16px] text-ink placeholder-slate-400 focus:bg-white focus:outline-none focus:border-[#29A8E0] focus:ring-2 focus:ring-[#29A8E0]/20 transition-all font-sans"
                         />
                       </div>
 
                       <div className="space-y-2">
-                        <label htmlFor="email" className="text-[11px] font-bold uppercase tracking-wider text-ink font-ui">
+                        <label htmlFor="email" className="text-[12px] sm:text-[13px] font-bold uppercase tracking-wider text-ink font-ui">
                           Email Address *
                         </label>
                         <input
@@ -257,14 +257,14 @@ export default function ContactPage() {
                           id="email"
                           required
                           placeholder="john@company.com"
-                          className="w-full rounded-xl bg-[#F8FAFD] border border-[#1A6FA8]/20 px-4 py-3.5 text-sm text-ink placeholder-slate-400 focus:bg-white focus:outline-none focus:border-[#29A8E0] focus:ring-2 focus:ring-[#29A8E0]/20 transition-all font-sans"
+                          className="w-full rounded-xl bg-[#F8FAFD] border border-[#1A6FA8]/20 px-5 py-4 text-[15px] sm:text-[16px] text-ink placeholder-slate-400 focus:bg-white focus:outline-none focus:border-[#29A8E0] focus:ring-2 focus:ring-[#29A8E0]/20 transition-all font-sans"
                         />
                       </div>
                     </div>
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                       <div className="space-y-2">
-                        <label htmlFor="company" className="text-[11px] font-bold uppercase tracking-wider text-ink font-ui">
+                        <label htmlFor="company" className="text-[12px] sm:text-[13px] font-bold uppercase tracking-wider text-ink font-ui">
                           Company Name *
                         </label>
                         <input
@@ -272,32 +272,32 @@ export default function ContactPage() {
                           id="company"
                           required
                           placeholder="Your Company"
-                          className="w-full rounded-xl bg-[#F8FAFD] border border-[#1A6FA8]/20 px-4 py-3.5 text-sm text-ink placeholder-slate-400 focus:bg-white focus:outline-none focus:border-[#29A8E0] focus:ring-2 focus:ring-[#29A8E0]/20 transition-all font-sans"
+                          className="w-full rounded-xl bg-[#F8FAFD] border border-[#1A6FA8]/20 px-5 py-4 text-[15px] sm:text-[16px] text-ink placeholder-slate-400 focus:bg-white focus:outline-none focus:border-[#29A8E0] focus:ring-2 focus:ring-[#29A8E0]/20 transition-all font-sans"
                         />
                       </div>
 
                       <div className="space-y-2">
-                        <label htmlFor="phone" className="text-[11px] font-bold uppercase tracking-wider text-ink font-ui">
+                        <label htmlFor="phone" className="text-[12px] sm:text-[13px] font-bold uppercase tracking-wider text-ink font-ui">
                           Phone Number (Optional)
                         </label>
                         <input
                           type="tel"
                           id="phone"
                           placeholder="+1 (555) 000-0000"
-                          className="w-full rounded-xl bg-[#F8FAFD] border border-[#1A6FA8]/20 px-4 py-3.5 text-sm text-ink placeholder-slate-400 focus:bg-white focus:outline-none focus:border-[#29A8E0] focus:ring-2 focus:ring-[#29A8E0]/20 transition-all font-sans"
+                          className="w-full rounded-xl bg-[#F8FAFD] border border-[#1A6FA8]/20 px-5 py-4 text-[15px] sm:text-[16px] text-ink placeholder-slate-400 focus:bg-white focus:outline-none focus:border-[#29A8E0] focus:ring-2 focus:ring-[#29A8E0]/20 transition-all font-sans"
                         />
                       </div>
                     </div>
 
                     <div className="space-y-2">
-                      <label htmlFor="interest" className="text-[11px] font-bold uppercase tracking-wider text-ink font-ui">
+                      <label htmlFor="interest" className="text-[12px] sm:text-[13px] font-bold uppercase tracking-wider text-ink font-ui">
                         What are you interested in?
                       </label>
                       <select
                         id="interest"
                         value={selectedInterest}
                         onChange={(e) => setSelectedInterest(e.target.value)}
-                        className="w-full rounded-xl bg-[#F8FAFD] border border-[#1A6FA8]/20 px-4 py-3.5 text-sm text-ink focus:bg-white focus:outline-none focus:border-[#29A8E0] focus:ring-2 focus:ring-[#29A8E0]/20 transition-all font-sans"
+                        className="w-full rounded-xl bg-[#F8FAFD] border border-[#1A6FA8]/20 px-5 py-4 text-[15px] sm:text-[16px] text-ink focus:bg-white focus:outline-none focus:border-[#29A8E0] focus:ring-2 focus:ring-[#29A8E0]/20 transition-all font-sans"
                       >
                         {INTEREST_OPTIONS.map(opt => (
                           <option key={opt} value={opt}>{opt}</option>
@@ -306,7 +306,7 @@ export default function ContactPage() {
                     </div>
 
                     <div className="space-y-2">
-                      <label htmlFor="message" className="text-[11px] font-bold uppercase tracking-wider text-ink font-ui">
+                      <label htmlFor="message" className="text-[12px] sm:text-[13px] font-bold uppercase tracking-wider text-ink font-ui">
                         Message *
                       </label>
                       <textarea
@@ -314,7 +314,7 @@ export default function ContactPage() {
                         required
                         rows={4}
                         placeholder="How can we help you?"
-                        className="w-full rounded-xl bg-[#F8FAFD] border border-[#1A6FA8]/20 px-4 py-3.5 text-sm text-ink placeholder-slate-400 focus:bg-white focus:outline-none focus:border-[#29A8E0] focus:ring-2 focus:ring-[#29A8E0]/20 transition-all resize-none font-sans"
+                        className="w-full rounded-xl bg-[#F8FAFD] border border-[#1A6FA8]/20 px-5 py-4 text-[15px] sm:text-[16px] text-ink placeholder-slate-400 focus:bg-white focus:outline-none focus:border-[#29A8E0] focus:ring-2 focus:ring-[#29A8E0]/20 transition-all resize-none font-sans"
                       />
                     </div>
 

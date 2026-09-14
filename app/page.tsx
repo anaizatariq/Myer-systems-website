@@ -7,8 +7,7 @@ import { Hero } from '@/components/site/hero';
 import { TrustStrip } from '@/components/site/trust-strip';
 import { Problems } from '@/components/site/problems';
 import { Disciplines } from '@/components/site/disciplines';
-import { HowWeOperate } from '@/components/site/how-we-operate';
-import { Industries } from '@/components/site/industries';
+
 import { FlagshipPlatform } from '@/components/site/flagship-platform';
 import { WhyChooseUs } from '@/components/site/why-choose-us';
 import { CtaBanner } from '@/components/site/cta-banner';
